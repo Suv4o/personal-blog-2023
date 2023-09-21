@@ -4,7 +4,7 @@
     <header>
         <NavBar />
     </header>
-    <main class="container mx-auto">
+    <main>
         <ContentDoc />
     </main>
 </template>
