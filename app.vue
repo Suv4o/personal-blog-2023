@@ -4,7 +4,7 @@
     <header>
         <NavBar />
     </header>
-    <main>
+    <main class="al-container">
         <ContentDoc />
     </main>
 </template>

@@ -16,12 +16,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
                         <div class="flex space-x-4">
                             <a
                                 href="#"
-                                class="px-3 py-2 text-large font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                                class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                                 >Articles</a
                             >
                             <a
                                 href="#"
-                                class="px-3 py-2 text-large font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                                class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                                 >Get In Touch</a
                             >
                         </div>
@@ -37,7 +37,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
                             <input
                                 id="search"
                                 name="search"
-                                class="block w-full rounded-md border-2 border-transparent py-1.5 pl-10 pr-3 text-gray placeholder:text-gray focus:ring-0 sm:text-sm sm:leading-6 focus:border-primary"
+                                class="block w-full rounded-md border-2 border-transparent py-1.5 pl-10 pr-3 text-gray placeholder:text-gray focus:ring-0 sm:text-lg sm:leading-6 focus:border-primary"
                                 placeholder="Search"
                                 type="search"
                             />
@@ -63,14 +63,14 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
                 <DisclosureButton
                     as="a"
                     href="#"
-                    class="block text-large font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                 >
                     Articles
                 </DisclosureButton>
                 <DisclosureButton
                     as="a"
                     href="#"
-                    class="block text-large font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                 >
                     Get In Touch
                 </DisclosureButton>
