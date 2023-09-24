@@ -1,15 +1,16 @@
 <template>
     <div class="flex" :class="classes">
-        <input
+        <button
             v-if="subscribe"
             type="submit"
-            :value="subscribeBtnName"
             class="btn hover:scale-105 focus:scale-105 transition-transform duration-300 ease-in-out focus:outline-none"
-        />
+        >
+            {{ subscribeBtnName }}
+        </button>
         <router-link v-else :to="link">
             <button
                 :class="`${smallFit ? 'small-fit' : ''}`"
-                class="btn animated pulse-hover"
+                class="btn hover:scale-105 focus:scale-105 transition-transform duration-300 ease-in-out focus:outline-none"
                 :style="`${width ? width : ''}`"
             >
                 <slot></slot>
@@ -51,25 +52,8 @@ export default {
 
 <style scoped>
 .btn {
-    font-size: 18px;
-    line-height: 1.6;
-    border: 1.5px solid #fff !important;
-    box-shadow: 5px 5px #d8d7c1;
-    cursor: pointer;
-    background: linear-gradient(90deg, #f1918b, #ee5f53);
-    color: #fff !important;
-    border-radius: 8px;
-    user-select: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    background-color: inherit;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-appearance: button;
-    margin: 0;
+    @apply text-lg border-2 border-white shadow-[5px_5px] shadow-beige cursor-pointer text-white rounded-lg inline-block px-4 py-2 overflow-hidden bg-inherit text-center whitespace-nowrap appearance-none m-0;
+    background: linear-gradient(90deg, rgb(var(--colour-primary-light)), rgb(var(--colour-primary)));
 }
 
 .small-width-100 {
@@ -77,72 +61,30 @@ export default {
 }
 
 .blue .btn {
-    font-size: 18px;
-    line-height: 1.6;
-    border: 1.5px solid #fff !important;
-    box-shadow: 5px 5px #d8d7c1;
-    cursor: pointer;
-    background: linear-gradient(90deg, #37506e, #173353);
-    color: #fff !important;
-    border-radius: 8px;
-    user-select: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    background-color: inherit;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-appearance: button;
-    margin: 0;
+    background: linear-gradient(90deg, rgb(var(--colour-secondary-light)), rgb(var(--colour-secondary)));
 }
 
 .small .btn {
-    font-size: 13px;
-    line-height: 1.6;
-    border: 1.5px solid #fff !important;
-    box-shadow: 5px 5px #d8d7c1;
-    cursor: pointer;
-    background: linear-gradient(90deg, #f1918b, #ee5f53);
-    color: #fff !important;
-    border-radius: 8px;
-    user-select: none;
-    display: inline-block;
-    padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    background-color: inherit;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-appearance: button;
-    margin: 0;
+    @apply text-sm border-2 border-white shadow-[5px_5px] shadow-beige cursor-pointer text-white rounded-lg inline-block px-4 py-2 overflow-hidden bg-inherit text-center whitespace-nowrap appearance-none m-0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
     .small-fit {
-        display: block;
-        width: 85vw;
-        white-space: nowrap;
-        overflow: hidden !important;
-        text-overflow: ellipsis;
+        @apply block w-[85vw] whitespace-nowrap overflow-hidden overflow-ellipsis;
     }
 }
 
 .reverse .btn {
-    background: linear-gradient(90deg, #ee5f53, #f1918b);
+    background: linear-gradient(90deg, rgb(var(--colour-primary)), rgb(var(--colour-primary-light)));
 }
 
-.btn:hover {
-    box-shadow: 7px 7px #d8d7c1;
-    font-size: 18px;
-    border: 1.5px solid #fff !important;
+.btn:hover,
+.btn:focus {
+    @apply shadow-[7px_7px] shadow-beige text-lg border-2 border-white;
 }
 
-.small .btn:hover {
-    box-shadow: 7px 7px #d8d7c1;
-    font-size: 13px;
-    border: 1.5px solid #fff !important;
+.small .btn:hover,
+.small .btn:focus {
+    @apply shadow-[7px_7px] shadow-beige text-sm border-2 border-white;
 }
 </style>

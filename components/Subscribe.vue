@@ -199,14 +199,20 @@ export default {
 
 <style scoped>
 .gradiant-orange {
-    background: rgb(241, 145, 139);
-    background: -moz-linear-gradient(90deg, rgba(241, 145, 139, 1) 0%, rgba(238, 95, 83, 1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(241, 145, 139, 1) 0%, rgba(238, 95, 83, 1) 100%);
-    background: linear-gradient(90deg, rgba(241, 145, 139, 1) 0%, rgba(238, 95, 83, 1) 100%);
+    background: rgb(var(--colour-primary-light));
+    background: -moz-linear-gradient(90deg, rgb(var(--colour-primary-light)) 0%, rgb(var(--colour-primary)) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(var(--colour-primary-light)) 0%, rgb(var(--colour-primary)) 100%);
+    background: linear-gradient(90deg, rgb(var(--colour-primary-light)) 0%, rgb(var(--colour-primary)) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1918b",endColorstr="#ee5f53",GradientType=1);
 }
 
 .error-input {
-    background: repeating-linear-gradient(45deg, #37506e, #37506e 10px, #173353 10px, #173353 20px);
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(var(--colour-secondary-light)),
+        rgb(var(--colour-secondary-light)) 10px,
+        rgb(var(--colour-secondary)) 10px,
+        rgb(var(--colour-secondary)) 20px
+    );
 }
 </style>
