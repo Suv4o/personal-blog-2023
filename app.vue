@@ -5,7 +5,11 @@
         <NavBar />
     </header>
     <main class="al-container">
-        <ContentDoc />
+        <ContentDoc>
+            <template #not-found>
+                <NotFound />
+            </template>
+        </ContentDoc>
     </main>
     <footer class="al-container">
         <Subscribe />
