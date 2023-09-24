@@ -7,4 +7,11 @@
     <main class="al-container">
         <ContentDoc />
     </main>
+    <footer class="al-container">
+        <Subscribe />
+        <HorizontalRule />
+        <p class="text-center text-secondary text-base mt-2 mb-12">
+            © <ClientOnly>{{ new Date().getFullYear() }}</ClientOnly> Aleksandar Trpkovski
+        </p>
+    </footer>
 </template>

@@ -3,6 +3,9 @@ export default {
     content: ["*.{vue,js,md}", "components/**/*.{vue,js}", "content/**/*.md", "layouts/**/*.vue", "pages/**/*.vue"],
     theme: {
         extend: {
+            screens: {
+                xs: "390px",
+            },
             colors: {
                 primary: "rgb(var(--colour-primary) / <alpha-value>)", // #ee5f53
                 "primary-light": "rgb(var(--colour-primary-light) / <alpha-value>)", // #f1918b
@@ -14,6 +17,7 @@ export default {
                 "beige-light": "rgb(var(--colour-beige-light) / <alpha-value>)", // #efe8df
                 "beige-gray": "rgb(var(--colour-beige-gray) / <alpha-value>)", // #9b9b9b
                 gray: "rgb(var(--colour-gray) / <alpha-value>)", // #6d6e71
+                "gray-secondary": "rgb(var(--colour-gray-secondary) / <alpha-value>)", // #74869b
                 "linkedin-blue": "rgb(var(--colour-linkedin-blue) / <alpha-value>)", // #1786b1
                 javascript: "rgb(var(--colour-javascript) / <alpha-value>)", // #ffd700
                 firebase: "rgb(var(--colour-firebase) / <alpha-value>)", // #ff9900
