@@ -4,28 +4,28 @@
 
 @layer base {
     :root {
-        --color-primary: 238 95 83; /* #ee5f53 */
-        --color-primary-light: 241 145 139; /*  #f1918b */
-        --color-secondary: 23 51 83; /*  #173353 */
-        --color-secondary-light: 55 80 110; /*  #37506e */
-        --color-green-light: 0 221 130; /*  #00dd82 */
-        --color-green: 64 151 157; /*  #40979d */
-        --color-beige: 216 215 193; /*  #d8d7c1 */
-        --color-beige-light: 239 232 223; /*  #efe8df */
-        --color-beige-gray: 155 155 155; /*  #9b9b9b */
-        --color-gray: 109 110 113; /*  #6d6e71 */
-        --color-linkedin-blue: 23 134 177; /*  #1786b1 */
-        --color-javascript: 255 215 0; /*  #ffd700 */
-        --color-firebase: 255 153 0; /*  #ff9900 */
-        --color-node: 62 134 61; /*  #3e863d */
-        --color-backend: 77 19 0; /*  #4d1300 */
-        --color-css: 163 13 138; /*  #a30d8a */
-        --color-typescript: 48 117 191; /*  #3075bf */
-        --color-nestjs: 212 33 72; /*  #d42148 */
-        --color-nuxtjs: 2 40 50; /*  #022832 */
-        --color-vscode: 58 168 240; /*  #3aa8f0 */
-        --color-vite: 189 52 254; /*  #bd34fe */
-        --color-other: 238 95 83; /*  #ee5f53 */
+        --colour-primary: 238 95 83; /* #ee5f53 */
+        --colour-primary-light: 241 145 139; /*  #f1918b */
+        --colour-secondary: 23 51 83; /*  #173353 */
+        --colour-secondary-light: 55 80 110; /*  #37506e */
+        --colour-green-light: 0 221 130; /*  #00dd82 */
+        --colour-green: 64 151 157; /*  #40979d */
+        --colour-beige: 216 215 193; /*  #d8d7c1 */
+        --colour-beige-light: 239 232 223; /*  #efe8df */
+        --colour-beige-gray: 155 155 155; /*  #9b9b9b */
+        --colour-gray: 109 110 113; /*  #6d6e71 */
+        --colour-linkedin-blue: 23 134 177; /*  #1786b1 */
+        --colour-javascript: 255 215 0; /*  #ffd700 */
+        --colour-firebase: 255 153 0; /*  #ff9900 */
+        --colour-node: 62 134 61; /*  #3e863d */
+        --colour-backend: 77 19 0; /*  #4d1300 */
+        --colour-css: 163 13 138; /*  #a30d8a */
+        --colour-typescript: 48 117 191; /*  #3075bf */
+        --colour-nestjs: 212 33 72; /*  #d42148 */
+        --colour-nuxtjs: 2 40 50; /*  #022832 */
+        --colour-vscode: 58 168 240; /*  #3aa8f0 */
+        --colour-vite: 189 52 254; /*  #bd34fe */
+        --colour-other: 238 95 83; /*  #ee5f53 */
     }
 
     html {
