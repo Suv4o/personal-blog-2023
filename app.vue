@@ -17,6 +17,7 @@ const applyBlogClass = computed(() => {
         <NavBar />
     </header>
     <main>
+        <HomeButton v-if="applyBlogClass" />
         <ContentDoc class="al-container blog-page" :class="applyBlogClass && 'blog-page'">
             <template #not-found>
                 <NotFound />

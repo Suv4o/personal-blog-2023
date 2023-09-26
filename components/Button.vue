@@ -7,15 +7,15 @@
         >
             {{ subscribeBtnName }}
         </button>
-        <router-link v-else :to="link">
-            <button
-                :class="`${smallFit ? 'small-fit' : ''}`"
-                class="btn hover:scale-105 focus:scale-105 transition-transform duration-300 ease-in-out focus:outline-none"
-                :style="`${width ? width : ''}`"
-            >
+        <NuxtLink
+            v-else
+            :to="link"
+            class="!pointer-events-auto btn hover:scale-105 focus:scale-105 transition-transform duration-300 ease-in-out focus:outline-none"
+        >
+            <div :class="`${smallFit ? 'small-fit' : ''}`" :style="`${width ? width : ''}`">
                 <slot></slot>
-            </button>
-        </router-link>
+            </div>
+        </NuxtLink>
     </div>
 </template>
 

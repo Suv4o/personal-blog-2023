@@ -10,7 +10,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
             <div class="relative flex h-16 items-center justify-between">
                 <div class="flex items-center px-2 lg:px-0">
                     <div class="flex-shrink-0">
-                        <NuxtLink to="/">
+                        <NuxtLink to="/" class="focus:outline-none">
                             <img class="h-11 w-auto" src="/favicon.png" alt="Aleks Trpkovski Personal Blog Logo" />
                         </NuxtLink>
                     </div>
