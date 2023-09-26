@@ -48,27 +48,27 @@
     }
 
     .blog-page h1 {
-        @apply text-4xl cursor-text;
+        @apply text-4xl sm:text-5xl cursor-text;
     }
 
     .blog-page h2 {
-        @apply text-2xl cursor-text;
+        @apply text-2xl sm:text-3xl cursor-text border-b border-green pb-1;
     }
 
     .blog-page h3 {
-        @apply text-xl cursor-text;
+        @apply text-xl sm:text-2xl cursor-text;
     }
 
     .blog-page h4 {
-        @apply text-lg cursor-text;
+        @apply text-lg sm:text-xl cursor-text;
     }
 
     .blog-page h5 {
-        @apply text-base cursor-text;
+        @apply text-base sm:text-lg cursor-text;
     }
 
     .blog-page h6 {
-        @apply text-sm cursor-text;
+        @apply text-sm sm:text-base cursor-text;
     }
 
     .blog-page p {
