@@ -1,52 +1,10 @@
 ---
 title: The mysterious this keyword in Vueland
-description: If you are new to Vue.JS you might have realised that "this" keyword is used everywhere. Some people might think that "this" keyword is part of the Vue.JS framework itself. Others may wonder why "this" keyword behaves a little differently in JavaScript, as compared to other languages such as Java, C++, PHP, etc. If you've experience an error that reads "this is undefined", you are not alone. In this article we will take a closer look at this common problem in Vue.JS, and how to solve it.
-type: article
-published: 12th May 2021
-readTime: 12
-author: Aleksandar Trpkovski
-img: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland
-tags:
-    - Vue.js
-    - JavaScript
-    - FrontEnd
-meta:
-    - name: title
-      content: The mysterious this keyword in Vueland
-    - name: description
-      content: If you are new to Vue.JS you might have realised that "this" keyword is used everywhere. Some people might think that "this" keyword is part of the Vue.JS framework itself. Others may wonder why "this" keyword behaves a little differently in JavaScript, as compared to other languages such as Java, C++, PHP, etc. If you've experience an error that reads "this is undefined", you are not alone. In this article we will take a closer look at this common problem in Vue.JS, and how to solve it.
-    - name: image
-      content: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland
-    - name: url
-      content: https://www.trpkovski.com/2021/05/12/the-mysterious-this-keyword-in-vueland/
-    - name: keywords
-      content: Vue.js, Javascript, Frontend, development, web developement, this keyword
-    - name: og:title
-      content: The mysterious this keyword in Vueland
-    - name: og:description
-      content: If you are new to Vue.JS you might have realised that "this" keyword is used everywhere. Some people might think that "this" keyword is part of the Vue.JS framework itself. Others may wonder why "this" keyword behaves a little differently in JavaScript, as compared to other languages such as Java, C++, PHP, etc. If you've experience an error that reads "this is undefined", you are not alone. In this article we will take a closer look at this common problem in Vue.JS, and how to solve it.
-    - name: og:image
-      content: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland
-    - name: og:url
-      content: https://www.trpkovski.com/2021/05/12/the-mysterious-this-keyword-in-vueland/
-    - name: og:site_name
-      content: Aleks Trpkovski — Blog
-    - name: twitter:image:alt
-      content: the_mysterious_this_keyword_in_vueland
-    - name: twitter:card
-      content: summary_large_image
-noGlobalSocialShare: true
+description: If you are new to Vue.JS you might have realised that "this" keyword is used everywhere. Some people might think that "this" keyword is part of the Vue.JS framework
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland
 ---
 
-<div>
-	<btn classes="justify-start">← Home</btn>
-</div>
-
 # The mysterious `this` keyword in Vueland
-
-<font size="4">_{{ $frontmatter.published }} • {{ $frontmatter.readTime }} min read — by_ [**_{{ $frontmatter.author }}_**](/)</font>
-
-<tag-pills :tags='$frontmatter.tags'></tag-pills>
 
 ![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland)
 
@@ -63,7 +21,7 @@ In Javascript we have two different types of functions, **regular functions** an
 ### Example of a Regular function
 
 ```js
-var sum = function(a, b) {
+var sum = function (a, b) {
     return a + b;
 };
 ```
@@ -443,21 +401,3 @@ I hope this make sense!
 3. The value of `this` in regular JavaScript function is determined by 4 rules: **Default Binding**, **Implicit Binding**, **Explicit Binding** and **`new` Binding**.
 4. Unlike the regular functions where the value of `this` is determined by the 4 rules, the arrow functions uses `this` from the outer function, or the global scope in which it is declared.
 5. The most challenging part when working with `this` in Vue.JS, is when we declare a function inside the current function. There are several ways to fix that.
-
----
-
-<further-reading :title="$frontmatter.title" :smallFitPrevious="true" :smallFitNext="true"></further-reading>
-
-<div style="font-size: 21px; font-weight: 600; margin-top: 25px;">Share this article:</div>
-<div>
-	<social-share style="margin-bottom: 25px;" :networks="['facebook', 'linkedin', 'twitter', 'telegram', 'reddit']"></social-share>
-</div>
-<div>
-	<subscribe></subscribe>
-</div>
-
----
-
-<div>
-	<footer-custom></footer-custom>
-</div>

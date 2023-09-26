@@ -4,7 +4,7 @@ description: "Welcome to my blog! I am a Frontend Web Developer with several yea
 image: "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait.jpg"
 ---
 
-<img src="https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait.jpg" alt="Aleks Trpkovski portrait image" class="mt-12 w-full md:w-5/6 lg:w-3/4 mx-auto rounded-md"/>
+<img src="https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait.jpg" alt="Aleks Trpkovski portrait image" class="mt-12 w-full rounded-md"/>
 
 <h1 class="text-center text-4xl sm:text-5xl font-bold text-secondary my-6 sm:my-10">I'm Aleks Trpkovski</h1>
 

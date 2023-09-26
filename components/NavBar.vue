@@ -6,11 +6,13 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 <template>
     <Disclosure as="nav" class="bg-secondary" v-slot="{ open }">
-        <div class="al-container">
+        <div class="lg:px-2">
             <div class="relative flex h-16 items-center justify-between">
                 <div class="flex items-center px-2 lg:px-0">
                     <div class="flex-shrink-0">
-                        <img class="h-11 w-auto" src="/favicon.png" alt="Aleks Trpkovski Personal Blog Logo" />
+                        <NuxtLink to="/">
+                            <img class="h-11 w-auto" src="/favicon.png" alt="Aleks Trpkovski Personal Blog Logo" />
+                        </NuxtLink>
                     </div>
                     <div class="hidden lg:ml-6 lg:block">
                         <div class="flex space-x-4">

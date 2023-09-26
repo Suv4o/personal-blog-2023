@@ -9,6 +9,7 @@ export default {
             colors: {
                 primary: "rgb(var(--colour-primary) / <alpha-value>)", // #ee5f53
                 "primary-light": "rgb(var(--colour-primary-light) / <alpha-value>)", // #f1918b
+                "code-inline-blue": "rgb(var(--colour-code-inline-blue) / <alpha-value>)", // #295a92
                 secondary: "rgb(var(--colour-secondary) / <alpha-value>)", // #173353
                 "secondary-light": "rgb(var(--colour-secondary-light) / <alpha-value>)", // #37506e
                 "green-light": "rgb(var(--colour-green-light) / <alpha-value>)", // #00dd82
