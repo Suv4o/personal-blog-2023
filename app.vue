@@ -1,10 +1,21 @@
 <script setup lang="ts">
 const route = useRoute();
-const { loadPrismScript } = usePrism();
+const { loadPrismScript, unloadPrismScript } = usePrism();
+const { delay } = useHelpers();
 
 onMounted(() => {
     loadPrismScript();
 });
+
+watch(
+    () => route.fullPath,
+    async () => {
+        await delay();
+        unloadPrismScript();
+        loadPrismScript();
+    },
+    { deep: true }
+);
 
 const applyBlogClass = computed(() => {
     const blogRoutes = ["/"];
