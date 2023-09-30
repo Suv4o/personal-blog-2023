@@ -2,9 +2,22 @@
 title: The mysterious this keyword in Vueland
 description: If you are new to Vue.JS you might have realised that "this" keyword is used everywhere. Some people might think that "this" keyword is part of the Vue.JS framework
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland
+type: article
+published: 12th May 2021
+readTime: 12
+author: Aleksandar Trpkovski
+articleTags:
+    - Vue.js
+    - JavaScript
+    - FrontEnd
 ---
 
 # The mysterious `this` keyword in Vueland
+
+_{{$document.published}} • {{$document.readTime}} min read — by **[{{$document.author}}](/)**_
+
+::tag-pills{:tags="articleTags"}
+::
 
 ![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland)
 
@@ -321,7 +334,7 @@ methods: {
 }
 ```
 
-Where most likely we will get into trouble using `this`, is when we declare another function inside the current function, as shown in the previous example. We have explained this scenario in the [**Implicit Binding**](#_2-implicit-binding) section under [**Implicit Binding with Nested Functions**](#_2a-implicit-binding-with-nested-functions).
+Where most likely we will get into trouble using `this`, is when we declare another function inside the current function, as shown in the previous example. We have explained this scenario in the **Implicit Binding** section under **Implicit Binding with Nested Functions**.
 
 This is a common problem in Vue.JS, especially when dealing with callbacks. `this` in the `bar` refers to the global object (the Window). As explained in the previous section in JavaScript, when you declare a new regular function, that function has it's own `this` variable, which is different from the outer function, in our case, `foo` in which it is declared. The confusing part in the example above is the **Default Binding** in the second function.
 

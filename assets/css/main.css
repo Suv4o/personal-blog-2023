@@ -27,6 +27,7 @@
         --colour-nuxtjs: 2 40 50; /*  #022832 */
         --colour-vscode: 58 168 240; /*  #3aa8f0 */
         --colour-vite: 189 52 254; /*  #bd34fe */
+        --colour-mustard: 255 195 29; /*  #ffc31d */
         --colour-other: 238 95 83; /*  #ee5f53 */
     }
 
@@ -48,27 +49,51 @@
     }
 
     .blog-page h1 {
-        @apply text-4xl sm:text-5xl cursor-text;
+        @apply text-4xl cursor-text;
+    }
+
+    .blog-page h1 a {
+        @apply pointer-events-none focus:outline-none;
     }
 
     .blog-page h2 {
         @apply text-2xl sm:text-3xl cursor-text border-b border-green pb-1;
     }
 
+    .blog-page h2 a {
+        @apply pointer-events-none focus:outline-none;
+    }
+
     .blog-page h3 {
         @apply text-xl sm:text-2xl cursor-text;
+    }
+
+    .blog-page h3 a {
+        @apply pointer-events-none focus:outline-none;
     }
 
     .blog-page h4 {
         @apply text-lg sm:text-xl cursor-text;
     }
 
+    .blog-page h4 a {
+        @apply pointer-events-none focus:outline-none;
+    }
+
     .blog-page h5 {
         @apply text-base sm:text-lg cursor-text;
     }
 
+    .blog-page h5 a {
+        @apply pointer-events-none focus:outline-none;
+    }
+
     .blog-page h6 {
         @apply text-sm sm:text-base cursor-text;
+    }
+
+    .blog-page h6 a {
+        @apply pointer-events-none focus:outline-none;
     }
 
     .blog-page p {
@@ -76,7 +101,7 @@
     }
 
     .blog-page img {
-        @apply w-full h-full rounded-md;
+        @apply w-full h-full rounded-md mb-6;
     }
 
     .blog-page h1 code {
@@ -125,7 +150,7 @@
 
     .blog-page pre {
         font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-        @apply bg-secondary rounded-md text-base;
+        @apply bg-secondary rounded-md text-base focus:outline-none;
     }
 
     .blog-page .code-toolbar .toolbar {
@@ -142,8 +167,8 @@
         border-left: 5px solid #ccc;
     } */
 
-    .blog-page a {
-        @apply pointer-events-none focus:outline-primary focus:outline-offset-4;
+    .blog-page :not(h1, h2, h3, h4, h5, h6) a {
+        @apply text-primary;
     }
 
     ::selection {
