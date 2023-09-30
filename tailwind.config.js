@@ -13,6 +13,7 @@ export default {
                 secondary: "rgb(var(--colour-secondary) / <alpha-value>)", // #173353
                 "secondary-light": "rgb(var(--colour-secondary-light) / <alpha-value>)", // #37506e
                 "green-light": "rgb(var(--colour-green-light) / <alpha-value>)", // #00dd82
+                "green-blue": "rgb(var(--colour-green-blue) / <alpha-value>)", // #bfd9db
                 green: "rgb(var(--colour-green) / <alpha-value>)", // #40979d
                 beige: "rgb(var(--colour-beige) / <alpha-value>)", // #d8d7c1
                 "beige-light": "rgb(var(--colour-beige-light) / <alpha-value>)", // #efe8df

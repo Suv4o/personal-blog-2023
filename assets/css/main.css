@@ -10,6 +10,7 @@
         --colour-secondary: 23 51 83; /*  #173353 */
         --colour-secondary-light: 55 80 110; /*  #37506e */
         --colour-green-light: 0 221 130; /*  #00dd82 */
+        --colour-green-blue: 191 217 219; /*  #bfd9db */
         --colour-green: 64 151 157; /*  #40979d */
         --colour-beige: 216 215 193; /*  #d8d7c1 */
         --colour-beige-light: 239 232 223; /*  #efe8df */
@@ -133,11 +134,11 @@
     }
 
     .blog-page ol li {
-        @apply my-2 list-decimal list-inside;
+        @apply my-2 list-decimal list-outside relative left-4;
     }
 
     .blog-page ul li {
-        @apply my-2 list-decimal list-inside;
+        @apply my-2 list-decimal list-outside relative left-4;
     }
 
     .blog-page li code {
@@ -161,11 +162,13 @@
         @apply bg-transparent shadow-none hover:bg-transparent hover:text-gray-secondary text-gray-secondary;
     }
 
-    /* .blog-page blockquote {
-        margin: 1em 0;
-        padding: 0.5em 1em;
-        border-left: 5px solid #ccc;
-    } */
+    .blog-page hr {
+        @apply border-t border-green mt-4;
+    }
+
+    .blog-page blockquote {
+        @apply antialiased my-4 px-4 py-1 bg-green-blue text-secondary border-l-4 border-secondary rounded-md;
+    }
 
     .blog-page :not(h1, h2, h3, h4, h5, h6) a {
         @apply text-primary;
