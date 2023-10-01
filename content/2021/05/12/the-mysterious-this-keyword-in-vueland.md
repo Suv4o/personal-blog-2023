@@ -19,7 +19,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland)
 
 If you are new to Vue.JS you might have realised that `this` keyword is used everywhere. Some people might think that `this` keyword is part of the Vue.JS framework itself. Others may wonder why `this` keyword behaves a little differently in JavaScript, as compared to other languages such as Java, C++, PHP, etc. If you've experience an error that reads `this is undefined`, you are not alone. In this article we will take a closer look at this common problem in Vue.JS, and how to solve it.
 

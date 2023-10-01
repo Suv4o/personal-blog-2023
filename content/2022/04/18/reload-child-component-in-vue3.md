@@ -19,7 +19,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1650277793/blog/reload-child-component-in-vue-3/reload-child-component-in-vue-3-1_ccze7d)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1650277793/blog/reload-child-component-in-vue-3/reload-child-component-in-vue-3-1_ccze7d)
 
 Components in Vue are reusable custom elements (for example `<card>` ) that can be reused in Vue templates throughout the app. In a large scale application, we will come across a situation where we have nested components such as parents and children.
 
@@ -104,7 +104,7 @@ In the code above, we’ve create a button whereby upon each click of the button
 
 Now, with each click of the button, only the `<RandomNumber>` component reloads. Hence, a different number is displayed.
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1650277793/blog/reload-child-component-in-vue-3/reload-child-component-in-vue-3-2_gnt1zf)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1650277793/blog/reload-child-component-in-vue-3/reload-child-component-in-vue-3-2_gnt1zf)
 
 All examples above can be found in the following Github repository [link](https://github.com/Suv4o/reload-child-component-in-vue3).
 

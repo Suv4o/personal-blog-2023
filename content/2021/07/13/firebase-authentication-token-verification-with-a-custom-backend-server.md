@@ -19,7 +19,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1626001455/blog/firebase-authentication-token-verification-with-a-custom-backend-server)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1626001455/blog/firebase-authentication-token-verification-with-a-custom-backend-server)
 
 Firebase as a platform that offers a wide range of services to developers to build, improve, and grow their apps with little or almost no effort. This includes services like authentication, databases, analytics, file storage, push messaging and more. When it comes to user authentication, Firebase provides an Authentication service that allows for codes to be written in order for users to be logged into an app right from the client side, and limit user access to resources in other Firebase products. This is fairly simple to use without the need to implement any backend solution. Firebase also provides an Admin SDK that allows developers to build a custom backend if required.
 

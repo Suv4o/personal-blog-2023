@@ -19,7 +19,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1627371334/blog/create-a-custom-HTML-element-using-Web-Components-and-Vuejs)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1627371334/blog/create-a-custom-HTML-element-using-Web-Components-and-Vuejs)
 
 In this day and age writing reusable components that can be used multiple times in your application or shared between other web platforms can actually save you a lot of time and effort. Web Components offer this benefit and makes it easier to build custom complex components. At the same time, this improves its reusability.
 
@@ -29,7 +29,7 @@ Web components are a set of web platform APIs that allow you to create new custo
 
 For example, let's imagine that we've created a custom reusable HTML element `<user-register>` and subsequently used this in every web application that we need to register new users. See picture below.
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1627387526/blog/register-form)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1627387526/blog/register-form)
 
 We will be creating this component later in the article using Web Components and Vue.js. However, before this takes place, we will need to build a simple web component.
 
@@ -96,7 +96,7 @@ Our custom HTML element is now available to use on our page. We can use the cust
 
 This will be reflected in the browser:
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1627387526/blog/this-is-a-paragraph)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1627387526/blog/this-is-a-paragraph)
 
 A full documentation on Web Components can be found on [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
 

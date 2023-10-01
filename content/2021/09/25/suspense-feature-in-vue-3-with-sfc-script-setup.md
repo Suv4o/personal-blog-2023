@@ -19,7 +19,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1632533795/blog/vue3-suspense/vue3-suspence-cover)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1632533795/blog/vue3-suspense/vue3-suspence-cover)
 
 `<Suspense>` is a special component in Vue 3 that lets us wait for some data to be loaded, before our component can be rendered. In other words, Suspense allows us to render some fallback content. A good example will be a loading spinner while waiting for an asynchronous API call to fetch some data from the server. Once the data has been loaded, the main content will show up. This feature allows us to create a smooth user experience.
 
@@ -127,7 +127,7 @@ onErrorCaptured(() => {
 
 In the above, we created `onErrorCaptured` hook and a reactive variable called `error`. Now when an error occurs, Vue hook will be able to capture it and assign value to the `error` reactive variable. In our template, we have a condition, if the error exists then we display the error message: **Ohh! Something went wrong!**, otherwise we continue with the Suspense component.
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1632533777/blog/vue3-suspense/vue3-suspense_mpqxff)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1632533777/blog/vue3-suspense/vue3-suspense_mpqxff)
 
 ## Conclusion
 

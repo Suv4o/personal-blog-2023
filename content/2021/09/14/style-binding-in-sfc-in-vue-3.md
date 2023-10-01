@@ -19,7 +19,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631578776/blog/style-binding-in-sfc-in-vue-3/style-binding-in-sfc-in-vue-3)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631578776/blog/style-binding-in-sfc-in-vue-3/style-binding-in-sfc-in-vue-3)
 
 For a long time, Vue as a framework had a built-in feature of binding inline styles in HTML templates. But what has changed since the new Vue 3.2 release is that we can now also use the existing `v-bind` syntax with reactive variables inside our `<style>` tag in the `.vue` files aka Single File Components (SFC). Let's take a look how can we do that:
 
@@ -124,7 +124,7 @@ export default {
 
 With each click of the button we get different styles. See the gif animation below:
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1631578836/blog/style-binding-in-sfc-in-vue-3/style-binding-random-colour)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1631578836/blog/style-binding-in-sfc-in-vue-3/style-binding-random-colour)
 
 ## Conclusion
 

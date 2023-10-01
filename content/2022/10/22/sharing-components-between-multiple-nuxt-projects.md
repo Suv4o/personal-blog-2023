@@ -182,7 +182,7 @@ And that's it. We can run our application and see two components in action:
 npm run dev
 ```
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/v1666403383/blog/nuxt-extends/nuxt-extends-640gif_ryloin)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/v1666403383/blog/nuxt-extends/nuxt-extends-640gif_ryloin)
 
 ## Generate static site
 

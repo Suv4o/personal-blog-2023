@@ -19,7 +19,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1649846664/blog/gsap-animation-with-vue3-and-vite/gsap-animation-with-vue3-and-vite)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1649846664/blog/gsap-animation-with-vue3-and-vite/gsap-animation-with-vue3-and-vite)
 
 GreenSock Animation Platform (GSAP) is the most robust JavaScript animation library to date that allows developers to animate literally any DOM element with a breeze. GSAP provides an API that can be used for complex animation to be created. Hence, is still supported by all major browsers. In comparison to CSS animation, sequencing in GSAP is very easy. So let's have a look at GSAP. We are going to use GSAP in a Vue 3 project. We will use Vite as a build tool.
 
@@ -93,7 +93,7 @@ onMounted(() => {
 
 If we run our application, we will observe the logo moving to the right by 300px for a duration of 2 seconds. See the animation below:
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848120/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848120/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue)
 
 Now let's animate more properties. For example, we can animate a `background-color`. Since GSAP is a JavaScript library, we have to use camelcase syntax instead of the dash so that the`background-color` will become `backgroundColor`. We can also animate the `borderRadius` and the `border` properties:
 
@@ -111,7 +111,7 @@ onMounted(() => {
 
 If we run our app, we should now observe GSAP animating all values at the same time. Refer to the animation below:
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848297/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-aphtg9)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848297/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-aphtg9)
 
 As we mentioned earlier, configuration objects have special properties such as `duration` or `delay`. Another useful special property is the `ease`property. In GSAP there are many built-in easing options to choose from such as: `back`, `elastic`, `bounce` etc.
 
@@ -130,7 +130,7 @@ gsap.to(logo.value, {
 });
 ```
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848437/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-dk8mt9)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848437/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-dk8mt9)
 
 GSAP also has a few handy callback functions: `onStart`, `onUpdate`, `onComplete` etc. For example, if we want to listen in on style updates we can use `onUpdate` and then pass a callback function. Please see the example below:
 
@@ -222,7 +222,7 @@ onMounted(() => {
 
 Let's have a look at how the animation would now look like:
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848645/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-bo1gml)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848645/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-bo1gml)
 
 For more utility functions like the one above, please check out the GSAP full documentation in the following [link](https://greensock.com/docs/v3/GSAP/UtilityMethods).
 
@@ -322,7 +322,7 @@ onMounted(() => {
 </template>
 ```
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848849/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-iyigej)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848849/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-iyigej)
 
 We can also use `-=1`. In this case, the animation will start 1 second before the end of the timeline. Hence, creates overlaps. The full documentation of the timeline position parameters can be found at this [link](https://greensock.com/docs/v3/GSAP/Timeline).
 

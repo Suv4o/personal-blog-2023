@@ -19,7 +19,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602643/blog/including-local-nodejs-modules-in-firebase-cloud-functions/including-local-modules)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602643/blog/including-local-nodejs-modules-in-firebase-cloud-functions/including-local-modules)
 
 Modules have become a major part of the JavaScript ecosystem. They allow us to split our JavaScript programs up into separate smaller parts, called modules, that can be imported when needed.
 
@@ -95,15 +95,15 @@ Once firebase tools have been installed, we need to login to our firebase. We ca
 
 In our root directory, we will now initialise our firebase functions. We initialise our functions with `firebase init`. Firebase CLI will give us options to select. We need to chose **_Functions: Configure a Cloud Functions directory and its files._**
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602642/blog/including-local-nodejs-modules-in-firebase-cloud-functions/image-1_nxs6lz)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602642/blog/including-local-nodejs-modules-in-firebase-cloud-functions/image-1_nxs6lz)
 
 We next choose the project that we've created earlier in the firebase console:
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602642/blog/including-local-nodejs-modules-in-firebase-cloud-functions/image-2_bm8o63)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602642/blog/including-local-nodejs-modules-in-firebase-cloud-functions/image-2_bm8o63)
 
 Select JavaScript as a language, **No** to ESLint, and lastly choose to install dependencies with npm.
 
-![alt text](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602643/blog/including-local-nodejs-modules-in-firebase-cloud-functions/image-3_rbawf6)
+![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602643/blog/including-local-nodejs-modules-in-firebase-cloud-functions/image-3_rbawf6)
 
 Now we have **functions** folder with **index.js** file. Our directory structure should look like this:
 

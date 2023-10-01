@@ -17,7 +17,7 @@ watch(
     { deep: true }
 );
 
-const applyBlogClass = computed(() => {
+const isBlogArticle = computed(() => {
     const blogRoutes = ["/"];
     return blogRoutes.findIndex((r) => r !== route.fullPath) >= 0;
 });
@@ -28,8 +28,8 @@ const applyBlogClass = computed(() => {
         <NavBar />
     </header>
     <main>
-        <HomeButton v-if="applyBlogClass" />
-        <ContentDoc class="al-container blog-page" :class="applyBlogClass && 'blog-page'">
+        <HomeButton v-if="isBlogArticle" />
+        <ContentDoc class="al-container" :class="[isBlogArticle && 'blog-page']">
             <template #not-found>
                 <NotFound />
             </template>

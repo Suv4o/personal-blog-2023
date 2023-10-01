@@ -20,5 +20,8 @@ image: "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sha
 
 ## Latest Posts
 
+::single-post
+::
+
 ::horizontal-rule
 ::
