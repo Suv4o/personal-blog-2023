@@ -31,7 +31,7 @@ export default {
                 nuxtjs: "rgb(var(--colour-nuxtjs) / <alpha-value>)", // #022832
                 vscode: "rgb(var(--colour-vscode) / <alpha-value>)", // #3aa8f0
                 vite: "rgb(var(--colour-vite) / <alpha-value>)", // #bd34fe
-                mustard: "rgb(var(--colour-vite) / <alpha-value>)", // #ffc31d
+                mustard: "rgb(var(--colour-mustard) / <alpha-value>)", // #ffc31d
                 other: "rgb(var(--colour-other) / <alpha-value>)", // #ee5f53
             },
             fontFamily: {
