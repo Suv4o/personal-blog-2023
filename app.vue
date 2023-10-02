@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const nuxtApp = useNuxtApp();
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
 const { delay } = useHelpers();
@@ -10,6 +11,7 @@ onMounted(() => {
 watch(
     () => route.fullPath,
     async () => {
+        window.scrollTo(0, 0);
         await delay();
         unloadPrismScript();
         loadPrismScript();

@@ -132,7 +132,8 @@ export default {
     @apply opacity-80;
 }
 
-.tags-large > a:not(:last-child) {
+.tags-large > a:not(:last-child),
+button:not(:last-child) {
     @apply mr-3 mb-3;
 }
 
@@ -140,7 +141,8 @@ export default {
     @apply px-4 py-2 rounded-full text-sm;
 }
 
-.tags-small > a:not(:last-child) {
+.tags-small > a:not(:last-child),
+button:not(:last-child) {
     @apply mr-2 mb-2;
 }
 
