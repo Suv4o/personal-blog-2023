@@ -4,5 +4,5 @@ description: Articles by Aleks Trpkovski
 type: page
 ---
 
-::posts{:limit=10}
+::posts{:pagination=true :limit=10}
 ::

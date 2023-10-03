@@ -51,6 +51,10 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
+    pagination: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 onMounted(async () => {
@@ -130,10 +134,16 @@ function getNumberOfForDescriptionLines() {
             <ArrowDown />
         </div>
     </div>
-    <!-- <div class="flex justify-between flex-wrap">
-        <Button :link="`?page=1`" classes="mt-10 mb-10 mr-10" :width="'width: 130px;'">← Previous</Button>
-        <Button :link="`?page=1`" classes="mt-10 mb-10 mr-10" :width="'width: 130px;'">Next →</Button>
-    </div> -->
+    <div v-if="pagination && index === length - 1">
+        <div class="flex justify-between flex-wrap">
+            <Button :link="`?page=1`" classes="mt-2" :width="'width: 130px;'">← Previous</Button>
+            <Button :link="`?page=1`" classes="mt-2" :width="'width: 130px;'">Next →</Button>
+        </div>
+        <div class="mt-6 mb-6">
+            <ArrowDown />
+        </div>
+        <HorizontalRule />
+    </div>
 </template>
 
 <style scoped>

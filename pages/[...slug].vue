@@ -2,26 +2,19 @@
 const nuxtApp = useNuxtApp();
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
-const { delay } = useHelpers();
 
-onMounted(() => {
+nuxtApp.hook("page:finish", () => {
+    window.scrollTo(0, 0);
+});
+
+onMounted(async () => {
+    unloadPrismScript();
     loadPrismScript();
 });
 
-watch(
-    () => route.fullPath,
-    async () => {
-        window.scrollTo(0, 0);
-        await delay();
-        unloadPrismScript();
-        loadPrismScript();
-    },
-    { deep: true }
-);
-
 const isBlogArticle = computed(() => {
-    const blogRoutes = ["/"];
-    return blogRoutes.findIndex((r) => r !== route.fullPath) >= 0;
+    const blogRoutes = ["/", "/articles", "/vite"];
+    return !blogRoutes.includes(route.fullPath);
 });
 </script>
 

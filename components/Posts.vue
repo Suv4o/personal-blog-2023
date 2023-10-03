@@ -16,6 +16,10 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
+    pagination: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 const articles = ref();
@@ -40,6 +44,7 @@ onMounted(async () => {
                 :startWithArrow="startWithArrow"
                 :endWithArrow="endWithArrow"
                 :readMore="readMore"
+                :pagination="pagination"
             />
         </template>
     </div>
