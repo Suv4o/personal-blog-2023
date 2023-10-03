@@ -53,7 +53,7 @@ const props = defineProps({
     },
 });
 
-onMounted(() => {
+onMounted(async () => {
     addResizeListener();
     setLineClamp();
 });
@@ -126,7 +126,7 @@ function getNumberOfForDescriptionLines() {
     <ArrowDown v-if="endWithArrow && index === length - 1" />
     <div class="mt-10" v-if="readMore && index === length - 1">
         <Button link="/articles">Read More Articles →</Button>
-        <div class="mt-10">
+        <div class="mt-10 mb-6">
             <ArrowDown />
         </div>
     </div>

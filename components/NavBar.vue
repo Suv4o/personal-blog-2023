@@ -16,15 +16,15 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
                     </div>
                     <div class="hidden lg:ml-6 lg:block">
                         <div class="flex space-x-4">
-                            <a
-                                href="#"
+                            <NuxtLink
+                                to="/articles"
                                 class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
-                                >Articles</a
+                                >Articles</NuxtLink
                             >
-                            <a
-                                href="#"
+                            <NuxtLink
+                                to="/"
                                 class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
-                                >Get In Touch</a
+                                >Get In Touch</NuxtLink
                             >
                         </div>
                     </div>
@@ -62,20 +62,18 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
         <DisclosurePanel class="lg:hidden">
             <div class="space-y-1 px-2 pb-3 pt-2">
-                <DisclosureButton
-                    as="a"
-                    href="#"
+                <NuxtLink
+                    to="/articles"
                     class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                 >
                     Articles
-                </DisclosureButton>
-                <DisclosureButton
-                    as="a"
-                    href="#"
+                </NuxtLink>
+                <NuxtLink
+                    to="/"
                     class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                 >
                     Get In Touch
-                </DisclosureButton>
+                </NuxtLink>
             </div>
         </DisclosurePanel>
     </Disclosure>

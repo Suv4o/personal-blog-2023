@@ -31,7 +31,7 @@ const isBlogArticle = computed(() => {
     </header>
     <main>
         <HomeButton v-if="isBlogArticle" />
-        <ContentDoc class="al-container" :class="[isBlogArticle && 'blog-page']">
+        <ContentDoc class="al-container" :class="[isBlogArticle && 'blog-page']" :key="route.fullPath">
             <template #not-found>
                 <NotFound />
             </template>
