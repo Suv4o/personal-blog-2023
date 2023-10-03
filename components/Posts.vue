@@ -24,6 +24,14 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
+    searchTag: {
+        type: Array,
+        default: () => [],
+    },
+});
+
+const searchTerm = computed(() => {
+    return props.searchTag as string[];
 });
 
 const pageNumber = computed(() => {
@@ -39,12 +47,14 @@ const hasPreviousPage = computed(() => {
 });
 
 function getTheNumberOfAllArticles() {
-    return queryContent().where({ type: "article" }).count();
+    return queryContent()
+        .where({ type: "article", articleTags: { $contains: searchTerm.value } })
+        .count();
 }
 
 function getArticlesFromCurrentPage() {
     return queryContent()
-        .where({ type: "article" })
+        .where({ type: "article", articleTags: { $contains: searchTerm.value } })
         .sort({ _path: -1 })
         .limit(props.limit)
         .skip(pageNumber.value * props.limit - props.limit)

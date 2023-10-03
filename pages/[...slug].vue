@@ -13,7 +13,23 @@ onMounted(async () => {
 });
 
 const isBlogArticle = computed(() => {
-    const blogRoutes = ["/", "/articles", "/vite"];
+    const blogRoutes = [
+        "/",
+        "/articles",
+        "/vuejs",
+        "/javascript",
+        "/frontend",
+        "/firebase",
+        "/nodejs",
+        "/backend",
+        "/css",
+        "/typescript",
+        "/nestjs",
+        "/nuxtjs",
+        "/vscode",
+        "/vite",
+        "/other",
+    ];
     return !blogRoutes.includes(route.path);
 });
 </script>
