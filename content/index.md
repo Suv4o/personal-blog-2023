@@ -19,7 +19,7 @@ type: page
 ::horizontal-rule
 ::
 
-## Latest Posts
+<h2 class="text-center text-4xl text-secondary font-bold py-8">Latest Articles</h2>
 
 ::posts{:startWithArrow=true :endWithArrow=true :readMore=true :limit=3}
 ::
