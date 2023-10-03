@@ -55,6 +55,18 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
+    hasNextPage: {
+        type: Boolean,
+        default: false,
+    },
+    hasPreviousPage: {
+        type: Boolean,
+        default: false,
+    },
+    pageNumber: {
+        type: Number,
+        default: 1,
+    },
 });
 
 onMounted(async () => {
@@ -136,8 +148,14 @@ function getNumberOfForDescriptionLines() {
     </div>
     <div v-if="pagination && index === length - 1">
         <div class="flex justify-between flex-wrap">
-            <Button :link="`?page=1`" classes="mt-2" :width="'width: 130px;'">← Previous</Button>
-            <Button :link="`?page=1`" classes="mt-2" :width="'width: 130px;'">Next →</Button>
+            <Button v-if="hasPreviousPage" :link="`?page=${pageNumber - 1}`" classes="mt-2" :width="'width: 130px;'"
+                >← Previous</Button
+            >
+            <div v-else></div>
+            <Button v-if="hasNextPage" :link="`?page=${pageNumber + 1}`" classes="mt-2" :width="'width: 130px;'"
+                >Next →</Button
+            >
+            <div v-else></div>
         </div>
         <div class="mt-6 mb-6">
             <ArrowDown />

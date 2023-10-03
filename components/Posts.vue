@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const route = useRoute();
+const articles = ref();
+const articlesCount = ref();
+
 const props = defineProps({
     limit: {
         type: Number,
@@ -22,10 +26,38 @@ const props = defineProps({
     },
 });
 
-const articles = ref();
+const pageNumber = computed(() => {
+    return route.query.page ? parseInt(route.query.page as string) : 1;
+});
+
+const hasNextPage = computed(() => {
+    return pageNumber.value * props.limit < articlesCount.value;
+});
+
+const hasPreviousPage = computed(() => {
+    return pageNumber.value > 1;
+});
+
+function getTheNumberOfAllArticles() {
+    return queryContent().where({ type: "article" }).count();
+}
+
+function getArticlesFromCurrentPage() {
+    return queryContent()
+        .where({ type: "article" })
+        .sort({ _path: -1 })
+        .limit(props.limit)
+        .skip(pageNumber.value * props.limit - props.limit)
+        .find();
+}
 
 onMounted(async () => {
-    articles.value = await queryContent().where({ type: "article" }).sort({ _path: -1 }).limit(props.limit).find();
+    const [numberOfAllArticles, allArticles] = await Promise.all([
+        getTheNumberOfAllArticles(),
+        getArticlesFromCurrentPage(),
+    ]);
+    articlesCount.value = numberOfAllArticles;
+    articles.value = allArticles;
 });
 </script>
 
@@ -45,6 +77,9 @@ onMounted(async () => {
                 :endWithArrow="endWithArrow"
                 :readMore="readMore"
                 :pagination="pagination"
+                :hasNextPage="hasNextPage"
+                :hasPreviousPage="hasPreviousPage"
+                :pageNumber="pageNumber"
             />
         </template>
     </div>

@@ -14,7 +14,7 @@ onMounted(async () => {
 
 const isBlogArticle = computed(() => {
     const blogRoutes = ["/", "/articles", "/vite"];
-    return !blogRoutes.includes(route.fullPath);
+    return !blogRoutes.includes(route.path);
 });
 </script>
 
