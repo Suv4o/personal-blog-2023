@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const route = useRoute();
+const serverRenderedArticles = ref();
+const serverRenderedArticlesCount = ref();
 const articles = ref();
 const articlesCount = ref();
 
@@ -42,6 +44,10 @@ const hasNextPage = computed(() => {
     return pageNumber.value * props.limit < articlesCount.value;
 });
 
+const serverRenderedHasNextPage = computed(() => {
+    return pageNumber.value * props.limit < serverRenderedArticlesCount.value;
+});
+
 const hasPreviousPage = computed(() => {
     return pageNumber.value > 1;
 });
@@ -61,11 +67,19 @@ function getArticlesFromCurrentPage() {
         .find();
 }
 
-onMounted(async () => {
-    const [numberOfAllArticles, allArticles] = await Promise.all([
-        getTheNumberOfAllArticles(),
-        getArticlesFromCurrentPage(),
-    ]);
+const [numberOfAllArticles, allArticles] = await Promise.all([
+    getTheNumberOfAllArticles(),
+    getArticlesFromCurrentPage(),
+]);
+
+if (!allArticles.length) {
+    throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
+}
+
+serverRenderedArticlesCount.value = numberOfAllArticles;
+serverRenderedArticles.value = allArticles;
+
+onMounted(() => {
     articlesCount.value = numberOfAllArticles;
     articles.value = allArticles;
 });
@@ -73,6 +87,25 @@ onMounted(async () => {
 
 <template>
     <div>
+        <div class="relative overflow-hidden">
+            <template v-for="(article, index) in serverRenderedArticles" :key="article._path + 'server'">
+                <ServerRenderedSinglePost
+                    :index="index"
+                    :length="serverRenderedArticles.length"
+                    :url="article._path"
+                    :image="article.image"
+                    :title="article.title"
+                    :date="article.published"
+                    :tags="article.articleTags"
+                    :description="article.description"
+                    :readMore="readMore"
+                    :pagination="pagination"
+                    :hasNextPage="serverRenderedHasNextPage"
+                    :hasPreviousPage="hasPreviousPage"
+                    :pageNumber="pageNumber"
+                />
+            </template>
+        </div>
         <template v-for="(article, index) in articles" :key="article._path">
             <SinglePost
                 :index="index"
