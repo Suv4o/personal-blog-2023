@@ -113,5 +113,3 @@ All examples above can be found in the following Github repository [link](https:
 1. In a large scale application we will come across a situation where we have nested components such as parents and children.
 2. To be able to reload only the child component, and not the entire website, we need to assign a `key` to the component.
 3. Each time we assign different key to the component, the component automatically reloads.
-
----

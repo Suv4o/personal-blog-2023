@@ -288,5 +288,3 @@ New:  Chris Old:  April
 4.  Creating **subscribe** and **unsubscribe** functions allow us to add and remove a watcher to the variable. That way, we can stop watching a variable change when we need to. Remember to add set `configurable: true` in the descriptor. This will allow us to redefined the property when we unsubscribe.
 
 All examples above can be found in the following github repository [link](https://github.com/Suv4o/watch-javascript-variables).
-
----

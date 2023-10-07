@@ -288,5 +288,3 @@ The heavy work is already done by Vue-CLI. We now can use our custom component i
 5. The Vue-CLI version 3 and above allow us to export our Vue.js components into Web Components. The heavy lifting would be carried out by Vue-CLI.
 
 All examples above can be found in the following github repository [link](https://github.com/Suv4o/Web-Components-and-Vue.js).
-
----

@@ -125,5 +125,3 @@ And that's it, we can now choose the testing environment we want within seconds.
 ## Conclusion
 
 The REST Client VS Code extension is a handy tool for testing REST API endpoints. Although it may not have all the advanced features of Postman, it is convenient to use since it is integrated into VS Code. I frequently use this extension and find setting global variables to be a big time-saver. This article outlines the steps to quickly set up and use global variables for several different environments in the REST Client extension. I hope you find this article helpful.
-
----

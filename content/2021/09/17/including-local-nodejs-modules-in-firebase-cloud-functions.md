@@ -171,5 +171,3 @@ To deploy our cloud functions, we use the following command in our terminal `fir
 4. In order to use local modules in Firebase Cloud Functions, we need to declare our module in **functions/package.json** using the file: prefix.
 
 All examples above can be found in the following github repository [link](https://github.com/Suv4o/local-nodejs-modules-in-firebase-cloud-functions).
-
----

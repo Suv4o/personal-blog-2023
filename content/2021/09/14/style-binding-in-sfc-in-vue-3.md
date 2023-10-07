@@ -150,5 +150,3 @@ With the two examples above, we saw how easy it was to implement a style binding
 So what Vue has done is to assign native CSS variables to each the elements in their inline styles so that Vue can update the values of the variables when needed.
 
 All examples above can be found in the following github repository [link](https://github.com/Suv4o/style-binding-in-single-file-component-in-vue-3).
-
----

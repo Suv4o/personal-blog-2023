@@ -220,5 +220,3 @@ All examples above can be found in the following Github repositories: [`nuxt-bas
 3. The extends feature allows us to set a relative config path or remote git repositories such as GitHub, GitLab, Bitbucket or https:// pointing to the source directories of a project.
 4. To use another project inside our Nuxt app, we need to include the project’s path in the `nuxt.config.ts` file.
 5. To generate our project statically, we need to add `"vue/server-renderer"` to our `vite.config.ts` file.
-
----

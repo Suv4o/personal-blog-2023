@@ -558,5 +558,3 @@ All examples above can be found in the following Github repository [link](https:
 2. To create and validate users in our app we used the Firebase Admin package for Node.js SDK link [link](https://www.npmjs.com/package/firebase-admin).
 3. Nest has built in Guards mechanisms to handle the protected endpoints. The official documentation has great examples on how to use [guards](https://docs.nestjs.com/guards).
 4. To be able to get the access token, we will need to setup the Firebase client SDK. Firebase has great documentation and examples on that topic with all the major frontend frameworks. You can find these examples in the following [link](https://firebase.google.com/docs/build).
-
----

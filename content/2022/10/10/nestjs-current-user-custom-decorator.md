@@ -176,5 +176,3 @@ All examples above can be found in the following Github repository [link](https:
 2. To be able to get the current user, we made use of a custom interceptor in Nest.
 3. In our custom decorator we can also pass data. To be able to verify the data that is passed, we created a `type` called `UserRecord` from the `auth.UserRecord` interface. With the TypeScript built in method called `keyof`, we were able to extract all the properties from the `auth.UserRecord`.
 4. This article was continuation from the previous article about Nest.js Authorisation with Firebase Auth. If you have’t read that article, you can find the article in the following [link](https://www.trpkovski.com/2022/10/07/nestjs-authorisation-with-firebase-auth/).
-
----

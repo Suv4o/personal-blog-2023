@@ -535,5 +535,3 @@ Firebase Authentication is a widely used authentication service for web applicat
 To enable SSO with Firebase Authentication across multiple domains, we created an authentication project where we implemented all the logic to handle authentication. We then embedded the authentication project in two other applications hosted on different domains using an iframe. To communicate between the authentication project and the other two projects, we used the `postMessage` [API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
 
 By the end of the blog article, we were able to seamlessly authenticate users across all domains, enabling them to sign in once and remain signed in across all applications.
-
----

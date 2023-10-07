@@ -158,5 +158,3 @@ Lastly on the backend server we compare both ID tokens, one that we've received 
 3. To be able to interact with Firebase from a backend server, use the Firebase Admin SDK.
 4. For verifying ID Tokens on the server, use the build-in method `verifyIdToken()` from the Firebase Admin SDK to verify and decode the ID token on the server. However, note the limitation of ID tokens having a validity period of only one hour; and the ID token remaining active even after the user has signed-out.
 5. A solution to verify only signed-in users on the server is by storing the user ID token in the Firestore and comparing that with the ID token that has been sent from the client app.
-
----

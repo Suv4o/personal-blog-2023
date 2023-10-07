@@ -370,5 +370,3 @@ If you are curious to see all the above methods in action please view my app on 
 3. The configuration object in GSAP has some special properties such as `duration`, `delay, ease`, `stagger`, `delay` that can be used to add or enhance an animation.
 4. GSAP also has a few handy callback functions: `onStart`, `onUpdate`, `onComplete` etc. that can be used to define custom functionalities.
 5. The timeline feature in GSAP allows us to easily build complex animations.
-
----

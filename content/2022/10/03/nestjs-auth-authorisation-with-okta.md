@@ -631,5 +631,3 @@ All examples above can be found in the following Github repository [link](https:
     - Okta Node.js Management SDK [link](https://www.npmjs.com/package/@okta/okta-sdk-nodejs).
 4. Nest has built in Guards mechanisms to handle the protected endpoints. The official documentation has great examples on how to use [guards](https://docs.nestjs.com/guards).
 5. To be able to get the access token, we will need to setup the Okta client SDK. Okta has great documentation and examples on that topic with all the major frontend frameworks. You can find these examples in the following [link](https://developer.okta.com/).
-
----

@@ -3,5 +3,23 @@ export function useHelpers() {
         return new Promise((resolve) => setTimeout(resolve, timeout));
     }
 
-    return { delay };
+    const pagePaths = [
+        "/",
+        "/articles",
+        "/vuejs",
+        "/javascript",
+        "/frontend",
+        "/firebase",
+        "/nodejs",
+        "/backend",
+        "/css",
+        "/typescript",
+        "/nestjs",
+        "/nuxtjs",
+        "/vscode",
+        "/vite",
+        "/other",
+    ];
+
+    return { pagePaths, delay };
 }

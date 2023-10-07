@@ -2,6 +2,7 @@
 const nuxtApp = useNuxtApp();
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
+const { pagePaths } = useHelpers();
 
 nuxtApp.hook("page:finish", () => {
     window.scrollTo(0, 0);
@@ -13,24 +14,7 @@ onMounted(() => {
 });
 
 const isBlogArticle = computed(() => {
-    const blogRoutes = [
-        "/",
-        "/articles",
-        "/vuejs",
-        "/javascript",
-        "/frontend",
-        "/firebase",
-        "/nodejs",
-        "/backend",
-        "/css",
-        "/typescript",
-        "/nestjs",
-        "/nuxtjs",
-        "/vscode",
-        "/vite",
-        "/other",
-    ];
-    return !blogRoutes.includes(route.path);
+    return !pagePaths.includes(route.path);
 });
 </script>
 
@@ -45,6 +29,7 @@ const isBlogArticle = computed(() => {
                 <NotFound />
             </template>
         </ContentDoc>
+        <FurtherReading v-if="isBlogArticle" />
     </main>
     <footer class="al-container">
         <Subscribe />

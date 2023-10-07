@@ -137,5 +137,3 @@ In the above, we created `onErrorCaptured` hook and a reactive variable called `
 4. Dealing with errors in Vue is simple. Vue 3 provides `onErrorCaptured` lifecycle hook that can listen to errors.
 
 All examples above can be found in the following Github repository [link](https://github.com/Suv4o/suspense-feature-in-vue-3).
-
----

@@ -414,5 +414,3 @@ I hope this make sense!
 3. The value of `this` in regular JavaScript function is determined by 4 rules: **Default Binding**, **Implicit Binding**, **Explicit Binding** and **`new` Binding**.
 4. Unlike the regular functions where the value of `this` is determined by the 4 rules, the arrow functions uses `this` from the outer function, or the global scope in which it is declared.
 5. The most challenging part when working with `this` in Vue.JS, is when we declare a function inside the current function. There are several ways to fix that.
-
----

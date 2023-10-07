@@ -227,5 +227,3 @@ Here are the differences: in Vue, we use `ref` instead of `signal` to define a r
 ![demo in animated video gif](https://res.cloudinary.com/suv4o/image/upload/w_750/v1682415127/blog/signals-in-vanilla-js/signals-in-vanilla-js_uecikt)
 
 I hope you find this article helpful. You can find code examples in the following GitHub repository [here](https://github.com/Suv4o/signals-in-vanilla-js).
-
----
