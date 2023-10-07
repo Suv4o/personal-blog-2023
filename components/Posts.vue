@@ -4,6 +4,7 @@ const serverRenderedArticles = ref();
 const serverRenderedArticlesCount = ref();
 const articles = ref();
 const articlesCount = ref();
+const fetchCompleted = ref(false);
 
 const props = defineProps({
     limit: {
@@ -67,17 +68,26 @@ function getArticlesFromCurrentPage() {
         .find();
 }
 
-const [numberOfAllArticles, allArticles] = await Promise.all([
-    getTheNumberOfAllArticles(),
-    getArticlesFromCurrentPage(),
-]);
+let numberOfAllArticles: number;
+let allArticles: any[];
 
-if (!allArticles.length) {
-    throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
+try {
+    const [number, posts] = await Promise.all([getTheNumberOfAllArticles(), getArticlesFromCurrentPage()]);
+    numberOfAllArticles = number;
+    allArticles = posts;
+
+    serverRenderedArticlesCount.value = number;
+    serverRenderedArticles.value = posts;
+} catch (error) {
+    fetchCompleted.value = true;
 }
 
-serverRenderedArticlesCount.value = numberOfAllArticles;
-serverRenderedArticles.value = allArticles;
+watch(
+    () => articles.value,
+    () => {
+        fetchCompleted.value = true;
+    }
+);
 
 onMounted(() => {
     articlesCount.value = numberOfAllArticles;
@@ -87,6 +97,8 @@ onMounted(() => {
 
 <template>
     <div>
+        <HomeButton v-if="fetchCompleted && !articles?.length" />
+        <NotFound v-if="fetchCompleted && !articles?.length" />
         <div class="relative overflow-hidden">
             <template v-for="(article, index) in serverRenderedArticles" :key="article._path + 'server'">
                 <ServerRenderedSinglePost
