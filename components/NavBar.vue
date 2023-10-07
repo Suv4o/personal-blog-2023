@@ -10,7 +10,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
             <div class="relative flex h-16 items-center justify-between">
                 <div class="flex items-center px-2 lg:px-0">
                     <div class="flex-shrink-0">
-                        <NuxtLink to="/" class="focus:outline-none">
+                        <NuxtLink to="/" class="logo focus:outline-none">
                             <img class="h-11 w-auto" src="/favicon.png" alt="Aleks Trpkovski Personal Blog Logo" />
                         </NuxtLink>
                     </div>
@@ -78,3 +78,13 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
         </DisclosurePanel>
     </Disclosure>
 </template>
+
+<style scoped>
+.router-link-active {
+    @apply before:absolute before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full;
+}
+
+.logo.router-link-active {
+    @apply before:absolute before:bottom-0 before:right-0 before:h-0 before:w-0;
+}
+</style>

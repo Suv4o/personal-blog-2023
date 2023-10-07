@@ -7,7 +7,7 @@ nuxtApp.hook("page:finish", () => {
     window.scrollTo(0, 0);
 });
 
-onMounted(async () => {
+onMounted(() => {
     unloadPrismScript();
     loadPrismScript();
 });
