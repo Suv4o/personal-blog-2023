@@ -2,6 +2,36 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import { MagnifyingGlassIcon } from "@heroicons/vue/20/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { computed, ref } from "vue";
+import { Combobox, ComboboxInput, ComboboxLabel, ComboboxOption, ComboboxOptions } from "@headlessui/vue";
+import { Article } from "~/types";
+const router = useRouter();
+
+const articles = ref();
+const query = ref("");
+const selectedArticle = ref();
+
+function getArticles() {
+    return queryContent().where({ type: "article" }).find();
+}
+
+articles.value = await getArticles();
+
+const filteredArticles = computed(() =>
+    query.value === ""
+        ? articles.value
+        : articles.value.filter((article: Article) => {
+              return article.title.toLowerCase().includes(query.value.toLowerCase());
+          })
+);
+
+async function navigateToArticle() {
+    await nextTick();
+    if (!filteredArticles.value.length) {
+        return;
+    }
+    router.push(selectedArticle.value._path);
+}
 </script>
 
 <template>
@@ -31,19 +61,47 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
                 </div>
                 <div class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
                     <div class="w-full max-w-lg lg:max-w-xs">
-                        <label for="search" class="sr-only">Search</label>
-                        <div class="relative">
-                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                                <MagnifyingGlassIcon class="h-5 w-5 text-gray" aria-hidden="true" />
+                        <Combobox as="div" v-model="selectedArticle">
+                            <ComboboxLabel class="sr-only">Search</ComboboxLabel>
+                            <div class="relative">
+                                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                                    <MagnifyingGlassIcon class="h-5 w-5 text-gray" aria-hidden="true" />
+                                </div>
+                                <ComboboxInput
+                                    class="block w-full rounded-md border-2 border-transparent py-1.5 pl-10 pr-3 text-gray placeholder:text-gray focus:ring-0 sm:text-lg sm:leading-6 focus:border-primary"
+                                    @change="query = $event.target.value"
+                                    @keydown.enter="navigateToArticle"
+                                    placeholder="Search"
+                                    type="search"
+                                />
+
+                                <ComboboxOptions
+                                    v-if="filteredArticles.length > 0"
+                                    class="search_results absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-beige py-1 shadow-lg ring-1 ring-primary ring-opacity-5 focus:outline-none sm:text-lg border border-secondary"
+                                >
+                                    <ComboboxOption
+                                        v-for="article in filteredArticles"
+                                        :key="article._path"
+                                        :value="article"
+                                        as="template"
+                                        v-slot="{ active }"
+                                    >
+                                        <NuxtLink :to="article._path">
+                                            <li
+                                                :class="[
+                                                    'relative cursor-pointer select-none py-2 pl-3 pr-9',
+                                                    active ? 'bg-secondary text-primary' : 'text-secondary',
+                                                ]"
+                                            >
+                                                <span :class="['block truncate']">
+                                                    {{ article.title }}
+                                                </span>
+                                            </li>
+                                        </NuxtLink>
+                                    </ComboboxOption>
+                                </ComboboxOptions>
                             </div>
-                            <input
-                                id="search"
-                                name="search"
-                                class="block w-full rounded-md border-2 border-transparent py-1.5 pl-10 pr-3 text-gray placeholder:text-gray focus:ring-0 sm:text-lg sm:leading-6 focus:border-primary"
-                                placeholder="Search"
-                                type="search"
-                            />
-                        </div>
+                        </Combobox>
                     </div>
                 </div>
                 <div class="flex lg:hidden">
@@ -82,6 +140,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 <style scoped>
 .router-link-active {
     @apply before:absolute before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full;
+}
+
+.search_results .router-link-active {
+    @apply before:absolute before:bottom-0 before:right-0 before:h-0 before:w-0;
 }
 
 .logo.router-link-active {
