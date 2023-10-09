@@ -1,6 +1,6 @@
 ---
-title: Aleks Trpkovski — Blog
-description: Articles by Aleks Trpkovski
+title: Aleks Trpkovski — VueJS
+description: VueJS articles by Aleks Trpkovski
 type: page
 ---
 

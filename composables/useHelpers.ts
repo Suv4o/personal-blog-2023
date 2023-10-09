@@ -19,6 +19,7 @@ export function useHelpers() {
         "/vscode",
         "/vite",
         "/other",
+        "/get-in-touch",
     ];
 
     return { pagePaths, delay };

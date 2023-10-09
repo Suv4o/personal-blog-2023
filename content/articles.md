@@ -1,5 +1,5 @@
 ---
-title: Aleks Trpkovski — Blog
+title: Aleks Trpkovski — Articles
 description: Articles by Aleks Trpkovski
 type: page
 ---

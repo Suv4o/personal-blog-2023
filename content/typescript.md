@@ -1,6 +1,6 @@
 ---
-title: Aleks Trpkovski — Blog
-description: Articles by Aleks Trpkovski
+title: Aleks Trpkovski — TypeScript
+description: TypeScript articles by Aleks Trpkovski
 type: page
 ---
 

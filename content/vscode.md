@@ -1,6 +1,6 @@
 ---
-title: Aleks Trpkovski — Blog
-description: Articles by Aleks Trpkovski
+title: Aleks Trpkovski — VScode
+description: VScode articles by Aleks Trpkovski
 type: page
 ---
 
