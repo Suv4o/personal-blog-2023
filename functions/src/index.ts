@@ -17,6 +17,7 @@ import { getFirestore } from "firebase-admin/firestore";
 
 let initialised = false;
 
+// Subscribe to newsletters
 export const subscribe_to_newsletters = onRequest(async (request, response) => {
     if (!initialised) {
         initializeApp();
@@ -61,7 +62,7 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
     // Has not been subscribed. Most likely existing subscriber but unsubscribed
     if (subscribers.size > 0 && !hasBeenSubscribed) {
         const [subscriber] = subscribers.docs;
-        await subscriber.ref.update({ subscribed: true });
+        await subscriber.ref.update({ name, subscribed: true });
         response.send({
             success: true,
             message: "Thank you for subscribing again.",
@@ -74,5 +75,42 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
     response.send({
         success: true,
         message: "Thank you for subscribing.",
+    });
+});
+
+// Unsubscribe from newsletters
+export const unsubscribe_to_newsletters = onRequest(async (request, response) => {
+    if (!initialised) {
+        initializeApp();
+        initialised = true;
+    }
+
+    const { "0": subscriberId } = request.params;
+
+    const db = getFirestore();
+
+    const subscribersRef = db.collection("subscribers");
+    // Get subscriber by uuid
+    const subscriber = await subscribersRef.doc(subscriberId).get();
+    const subscriberData = subscriber.data();
+
+    if (!subscriberData) {
+        response.status(404).send({
+            message: "Subscriber not found",
+        });
+        return;
+    }
+
+    if (!subscriberData?.subscribed) {
+        response.status(400).send({
+            message: "You have already unsubscribed.",
+        });
+        return;
+    }
+
+    await subscriber.ref.update({ subscribed: false });
+
+    response.send({
+        message: "You have been unsubscribed.",
     });
 });
