@@ -1,30 +1,3 @@
-import fs from "fs";
-import path from "path";
-
-function getAllMarkdownFiles(dirPath: string): string[] {
-    const files: string[] = [];
-
-    function traverseDirectory(currentPath: string) {
-        const entries = fs.readdirSync(currentPath, { withFileTypes: true });
-
-        for (const entry of entries) {
-            const fullPath = path.join(currentPath, entry.name);
-
-            if (entry.isDirectory()) {
-                traverseDirectory(fullPath);
-            } else if (entry.isFile() && path.extname(fullPath) === ".md") {
-                files.push(fullPath);
-            }
-        }
-    }
-
-    traverseDirectory(dirPath);
-
-    return files.map((file) => {
-        return file.replace("content/", "/").replace(".md", "").replace("index", "");
-    });
-}
-
 export default defineNuxtConfig({
     devtools: { enabled: true },
     components: {
@@ -50,6 +23,16 @@ export default defineNuxtConfig({
                 {
                     src: `https://www.google.com/recaptcha/api.js?render=${process.env.RE_CAPTCHA_SITE_KEY}`,
                 },
+                {
+                    src: `https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`,
+                    async: true,
+                },
+                {
+                    innerHTML: `window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');`,
+                },
             ],
         },
     },
@@ -74,8 +57,6 @@ export default defineNuxtConfig({
     nitro: {
         prerender: {
             crawlLinks: true,
-            routes: getAllMarkdownFiles("content"),
         },
     },
-    // generate: { routes: getAllMarkdownFiles("content") },
 });
