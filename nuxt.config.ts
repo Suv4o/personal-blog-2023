@@ -46,6 +46,11 @@ export default defineNuxtConfig({
                     href: "/prism/prism.css",
                 },
             ],
+            script: [
+                {
+                    src: `https://www.google.com/recaptcha/api.js?render=${process.env.RE_CAPTCHA_SITE_KEY}`,
+                },
+            ],
         },
     },
     modules: ["@nuxt/content"],
@@ -63,6 +68,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             BACKEND_API_URL: process.env.BACKEND_API_URL,
+            RE_CAPTCHA_SITE_KEY: process.env.RE_CAPTCHA_SITE_KEY,
         },
     },
     nitro: {

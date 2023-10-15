@@ -154,74 +154,80 @@ export default {
         };
     },
     methods: {
-        async submit() {
-            this.isFormLoading = true;
-            this.applyNameValidation();
-            this.applyEmailValidation();
-            this.applyMobileValidation();
-            this.applySubjectValidation();
-            this.applyMessageValidation();
-
-            if (
-                this.isNameValid.error ||
-                this.isEmailValid.error ||
-                this.isMobileValid.error ||
-                this.isSubjectValid.error ||
-                this.isMessageValid.error
-            ) {
-                return;
-            }
-
-            try {
-                const response = await fetch(`${config.public.BACKEND_API_URL}/contact_form`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        name: this.name,
-                        email: this.email,
-                        mobile: this.mobile,
-                        subject: this.subject,
-                        message: this.message,
-                    }),
+        async submit(e) {
+            e.preventDefault();
+            grecaptcha.ready(async () => {
+                const recaptchaToken = await grecaptcha.execute(config.public.RE_CAPTCHA_SITE_KEY, {
+                    action: "submit",
                 });
 
-                if (!response.ok) {
-                    const data = await response.json();
-                    if (data?.name?.message) {
-                        this.isNameValid.message = data.name.message;
-                        this.isNameValid.error = true;
-                    }
-                    if (data?.email?.message) {
-                        this.isEmailValid.message = data.email.message;
-                        this.isEmailValid.error = true;
-                    }
-                    if (data?.mobile?.message) {
-                        this.isMobileValid.message = data.mobile.message;
-                        this.isMobileValid.error = true;
-                    }
-                    if (data?.subject?.message) {
-                        this.isSubjectValid.message = data.subject.message;
-                        this.isSubjectValid.error = true;
-                    }
-                    if (data?.message?.message) {
-                        this.isMessageValid.message = data.message.message;
-                        this.isMessageValid.error = true;
-                    }
-                    throw new Error(data?.message ?? "Something went wrong.");
+                this.isFormLoading = true;
+                this.applyNameValidation();
+                this.applyEmailValidation();
+                this.applyMobileValidation();
+                this.applySubjectValidation();
+                this.applyMessageValidation();
+
+                if (
+                    this.isNameValid.error ||
+                    this.isEmailValid.error ||
+                    this.isMobileValid.error ||
+                    this.isSubjectValid.error ||
+                    this.isMessageValid.error
+                ) {
+                    return;
                 }
 
-                const data = await response.json();
-                this.sentMessage = data?.message;
-                this.isFormLoading = false;
-                this.resetForm();
-            } catch (error) {
-                this.isFormLoading = false;
-                this.sentMessage = error?.message ?? "Something went wrong.";
-            }
+                try {
+                    const response = await fetch(`${config.public.BACKEND_API_URL}/contact_form`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            name: this.name,
+                            email: this.email,
+                            mobile: this.mobile,
+                            subject: this.subject,
+                            message: this.message,
+                            recaptchaToken,
+                        }),
+                    });
 
-            // this.resetForm();
+                    if (!response.ok) {
+                        const data = await response.json();
+                        if (data?.name?.message) {
+                            this.isNameValid.message = data.name.message;
+                            this.isNameValid.error = true;
+                        }
+                        if (data?.email?.message) {
+                            this.isEmailValid.message = data.email.message;
+                            this.isEmailValid.error = true;
+                        }
+                        if (data?.mobile?.message) {
+                            this.isMobileValid.message = data.mobile.message;
+                            this.isMobileValid.error = true;
+                        }
+                        if (data?.subject?.message) {
+                            this.isSubjectValid.message = data.subject.message;
+                            this.isSubjectValid.error = true;
+                        }
+                        if (data?.message?.message) {
+                            this.isMessageValid.message = data.message.message;
+                            this.isMessageValid.error = true;
+                        }
+                        throw new Error(data?.message ?? "Something went wrong.");
+                    }
+
+                    const data = await response.json();
+                    this.sentMessage = data?.message;
+                    this.isFormLoading = false;
+                    this.resetForm();
+                } catch (error) {
+                    this.isFormLoading = false;
+                    this.sentMessage = error?.message ?? "Something went wrong.";
+                }
+            });
         },
         applyNameValidation(reset = false) {
             if (this.name.trim() === "" && !reset) {

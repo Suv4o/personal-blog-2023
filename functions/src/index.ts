@@ -98,13 +98,34 @@ export const contact_form = onRequest(async (request, response) => {
 
     const db = getFirestore();
 
-    const { name, email, mobile, subject, message } = request.body as {
+    const { name, email, mobile, subject, message, recaptchaToken } = request.body as {
         name: string;
         email: string;
         mobile: string;
         subject: string;
         message: string;
+        recaptchaToken: string;
     };
+
+    // Validate recaptcha
+    const RE_CAPTCHA_SECRET_KEY = process.env.RE_CAPTCHA_SECRET_KEY as string;
+
+    const responseRecaptcha = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `secret=${RE_CAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+    });
+
+    const { success } = await responseRecaptcha.json();
+
+    if (!success) {
+        response.status(400).send({
+            message: "Invalid recaptcha",
+        });
+        return;
+    }
 
     const v = new Validator(
         { name, email, mobile, subject, message },
@@ -147,7 +168,27 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
 
     const db = getFirestore();
 
-    const { name, email } = request.body as { name: string; email: string };
+    const { name, email, recaptchaToken } = request.body as { name: string; email: string; recaptchaToken: string };
+
+    // Validate recaptcha
+    const RE_CAPTCHA_SECRET_KEY = process.env.RE_CAPTCHA_SECRET_KEY as string;
+
+    const responseRecaptcha = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `secret=${RE_CAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+    });
+
+    const { success } = await responseRecaptcha.json();
+
+    if (!success) {
+        response.status(400).send({
+            message: "Invalid recaptcha",
+        });
+        return;
+    }
 
     const v = new Validator(
         { name, email },
@@ -167,7 +208,7 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
     }
 
     const subscribersRef = db.collection("subscribers");
-    const subscribers = await subscribersRef.where("email", "==", email).get();
+    const subscribers = await subscribersRef.where("email", "==", email?.toLowerCase()).get();
     const [hasBeenSubscribed] = subscribers?.docs?.map((doc) => doc?.data()?.subscribed);
 
     // Has been subscribed
@@ -182,7 +223,7 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
     if (subscribers.size > 0 && !hasBeenSubscribed) {
         const [subscriber] = subscribers.docs;
         await subscriber.ref.update({ name, subscribed: true });
-        await sendEmail(buildEmailMessageForSubscriberAgain(name, email));
+        await sendEmail(buildEmailMessageForSubscriberAgain(name, email?.toLowerCase()));
 
         response.send({
             success: true,
@@ -191,8 +232,8 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
         return;
     }
 
-    await subscribersRef.add({ name, email, subscribed: true });
-    await sendEmail(buildEmailMessageForNewSubscriber(name, email));
+    await subscribersRef.add({ name, email: email?.toLowerCase(), subscribed: true });
+    await sendEmail(buildEmailMessageForNewSubscriber(name, email?.toLowerCase()));
 
     response.send({
         success: true,

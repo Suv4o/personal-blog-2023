@@ -75,44 +75,52 @@ export default {
         };
     },
     methods: {
-        async submit() {
-            this.isFormLoading = true;
-            this.applyNameValidation();
-            this.applyEmailValidation();
-
-            if (this.isNameValid.error || this.isEmailValid.error) {
-                return;
-            }
-
-            try {
-                const response = await fetch(`${config.public.BACKEND_API_URL}/subscribe_to_newsletters`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        name: this.name,
-                        email: this.email,
-                    }),
+        async submit(e) {
+            e.preventDefault();
+            grecaptcha.ready(async () => {
+                const recaptchaToken = await grecaptcha.execute(config.public.RE_CAPTCHA_SITE_KEY, {
+                    action: "submit",
                 });
 
-                if (!response.ok) {
-                    const data = await response.json();
-                    if (data?.name?.message) {
-                        this.isNameValid.message = data.name.message;
-                        this.isNameValid.error = true;
-                    }
-                    throw new Error(data?.message ?? "Something went wrong.");
+                this.isFormLoading = true;
+                this.applyNameValidation();
+                this.applyEmailValidation();
+
+                if (this.isNameValid.error || this.isEmailValid.error) {
+                    return;
                 }
 
-                const data = await response.json();
-                this.message = data.message;
-                this.resetForm();
-                this.isFormLoading = false;
-            } catch (error) {
-                this.isFormLoading = false;
-                this.message = error?.message ?? "Something went wrong.";
-            }
+                try {
+                    const response = await fetch(`${config.public.BACKEND_API_URL}/subscribe_to_newsletters`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            name: this.name,
+                            email: this.email,
+                            recaptchaToken,
+                        }),
+                    });
+
+                    if (!response.ok) {
+                        const data = await response.json();
+                        if (data?.name?.message) {
+                            this.isNameValid.message = data.name.message;
+                            this.isNameValid.error = true;
+                        }
+                        throw new Error(data?.message ?? "Something went wrong.");
+                    }
+
+                    const data = await response.json();
+                    this.message = data.message;
+                    this.resetForm();
+                    this.isFormLoading = false;
+                } catch (error) {
+                    this.isFormLoading = false;
+                    this.message = error?.message ?? "Something went wrong.";
+                }
+            });
         },
         applyNameValidation(reset = false) {
             if (this.name.trim() === "" && !reset) {

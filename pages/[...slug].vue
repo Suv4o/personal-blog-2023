@@ -43,3 +43,9 @@ const isListingPage = computed(() => {
         </p>
     </footer>
 </template>
+
+<style>
+.grecaptcha-badge {
+    @apply hidden;
+}
+</style>
