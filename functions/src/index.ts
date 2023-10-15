@@ -8,14 +8,77 @@
  *
  */
 
+import * as sgMail from "@sendgrid/mail";
 import { onRequest } from "firebase-functions/v2/https";
 import { Validator } from "node-input-validator";
 import { initializeApp } from "firebase-admin";
 import { getFirestore } from "firebase-admin/firestore";
-// import * as logger from "firebase-functions/logger";
+import * as logger from "firebase-functions/logger";
+
+type EmailMessage = {
+    to: string;
+    from: string;
+    subject: string;
+    text: string;
+    html: string;
+};
 // logger.info("Hello logs!", { structuredData: true });
 
 let initialised = false;
+
+async function sendEmail(message: EmailMessage) {
+    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY as string;
+
+    sgMail.setApiKey(SENDGRID_API_KEY);
+
+    try {
+        await sgMail.send(message);
+    } catch (error) {
+        logger.error(error);
+    }
+}
+
+function buildEmailMessageForNewSubscriber(name: string, email: string) {
+    const NOTIFICATION_TO_EMAIL = process.env.NOTIFICATION_TO_EMAIL as string;
+    const NOTIFICATION_FROM_EMAIL = process.env.NOTIFICATION_FROM_EMAIL as string;
+
+    const message = {
+        to: NOTIFICATION_TO_EMAIL,
+        from: NOTIFICATION_FROM_EMAIL,
+        subject: "New Subscriber",
+        text: `New Subscriber\n\n Name: ${name} \n Email: ${email}`,
+        html: `New Subscriber<br/><br/><strong>Name:</strong>  ${name}<br/> <strong>Email:</strong> ${email}`,
+    };
+    return message;
+}
+
+function buildEmailMessageForUnsubscribe(name: string, email: string) {
+    const NOTIFICATION_TO_EMAIL = process.env.NOTIFICATION_TO_EMAIL as string;
+    const NOTIFICATION_FROM_EMAIL = process.env.NOTIFICATION_FROM_EMAIL as string;
+
+    const message = {
+        to: NOTIFICATION_TO_EMAIL,
+        from: NOTIFICATION_FROM_EMAIL,
+        subject: "Unsubscribe",
+        text: `Unsubscribe\n\n Name: ${name} \n Email: ${email}`,
+        html: `Unsubscribe<br/><br/><strong>Name:</strong>  ${name}<br/> <strong>Email:</strong> ${email}`,
+    };
+    return message;
+}
+
+function buildEmailMessageForSubscriberAgain(name: string, email: string) {
+    const NOTIFICATION_TO_EMAIL = process.env.NOTIFICATION_TO_EMAIL as string;
+    const NOTIFICATION_FROM_EMAIL = process.env.NOTIFICATION_FROM_EMAIL as string;
+
+    const message = {
+        to: NOTIFICATION_TO_EMAIL,
+        from: NOTIFICATION_FROM_EMAIL,
+        subject: "Subscriber Again",
+        text: `Subscriber Again\n\n Name: ${name} \n Email: ${email}`,
+        html: `Subscriber Again<br/><br/><strong>Name:</strong>  ${name}<br/> <strong>Email:</strong> ${email}`,
+    };
+    return message;
+}
 
 // Subscribe to newsletters
 export const subscribe_to_newsletters = onRequest(async (request, response) => {
@@ -26,7 +89,7 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
 
     const db = getFirestore();
 
-    const { name, email } = request.body;
+    const { name, email } = request.body as { name: string; email: string };
 
     const v = new Validator(
         { name, email },
@@ -63,6 +126,8 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
     if (subscribers.size > 0 && !hasBeenSubscribed) {
         const [subscriber] = subscribers.docs;
         await subscriber.ref.update({ name, subscribed: true });
+        await sendEmail(buildEmailMessageForSubscriberAgain(name, email));
+
         response.send({
             success: true,
             message: "Thank you for subscribing again.",
@@ -71,6 +136,7 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
     }
 
     await subscribersRef.add({ name, email, subscribed: true });
+    await sendEmail(buildEmailMessageForNewSubscriber(name, email));
 
     response.send({
         success: true,
@@ -108,7 +174,9 @@ export const unsubscribe_to_newsletters = onRequest(async (request, response) =>
         return;
     }
 
+    const { name, email } = subscriberData as { name: string; email: string };
     await subscriber.ref.update({ subscribed: false });
+    await sendEmail(buildEmailMessageForUnsubscribe(name, email));
 
     response.send({
         message: "You have been unsubscribed.",
