@@ -22,7 +22,6 @@ type EmailMessage = {
     text: string;
     html: string;
 };
-// logger.info("Hello logs!", { structuredData: true });
 
 let initialised = false;
 
@@ -36,6 +35,20 @@ async function sendEmail(message: EmailMessage) {
     } catch (error) {
         logger.error(error);
     }
+}
+
+function buildEmailMessageForContactForm(name: string, email: string, mobile: string, subject: string, message: string) {
+    const NOTIFICATION_TO_EMAIL = process.env.NOTIFICATION_TO_EMAIL as string;
+    const NOTIFICATION_FROM_EMAIL = process.env.NOTIFICATION_FROM_EMAIL as string;
+
+    const emailMessage = {
+        to: NOTIFICATION_TO_EMAIL,
+        from: NOTIFICATION_FROM_EMAIL,
+        subject: "New Contact Form",
+        text: `New Contact Form\n\n Name: ${name} \n Email: ${email} \n Mobile: ${mobile} \n Subject: ${subject} \n Message: ${message}`,
+        html: `New Contact Form<br/><br/><strong>Name:</strong>  ${name}<br/> <strong>Email:</strong> ${email}<br/> <strong>Mobile:</strong> ${mobile}<br/> <strong>Subject:</strong> ${subject}<br/> <strong>Message:</strong> ${message}`,
+    };
+    return emailMessage;
 }
 
 function buildEmailMessageForNewSubscriber(name: string, email: string) {
@@ -79,6 +92,55 @@ function buildEmailMessageForSubscriberAgain(name: string, email: string) {
     };
     return message;
 }
+
+// Contact form
+export const contact_form = onRequest(async (request, response) => {
+    if (!initialised) {
+        initializeApp();
+        initialised = true;
+    }
+
+    const db = getFirestore();
+
+    const { name, email, mobile, subject, message } = request.body as {
+        name: string;
+        email: string;
+        mobile: string;
+        subject: string;
+        message: string;
+    };
+
+    const v = new Validator(
+        { name, email, mobile, subject, message },
+        {
+            name: "required|minLength:2|maxLength:50|regex:^[a-zA-Z\\s]+$",
+            email: "required|email",
+            mobile: "required|maxLength:20",
+            subject: "required|minLength:2|maxLength:50",
+            message: "required|minLength:2|maxLength:1000",
+        }
+    );
+
+    const matched = await v.check();
+
+    if (!matched) {
+        const error = v.errors;
+        if (error?.name?.rule === "regex") {
+            error.name.message = "The name must be alphabetic characters only.";
+        }
+        response.status(400).send(v.errors);
+        return;
+    }
+
+    const contactUsRef = db.collection("contact-form");
+    await contactUsRef.add({ name, email, mobile, subject, message });
+    await sendEmail(buildEmailMessageForContactForm(name, email, mobile, subject, message));
+
+    response.send({
+        success: true,
+        message: "Thank you for contacting us. We will get back to you shortly.",
+    });
+});
 
 // Subscribe to newsletters
 export const subscribe_to_newsletters = onRequest(async (request, response) => {
