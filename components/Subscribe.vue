@@ -41,7 +41,7 @@
                 <div class="sm:w-24 w-20 hidden xs:block"></div>
                 <div class="text-sm text-secondary">{{ isEmailValid.message }}</div>
             </div>
-            <Button ref="submitButton" classes="blue mt-4" subscribe />
+            <Button ref="submitButton" :disabled="isFormLoading" classes="blue mt-4" subscribe />
         </form>
         <div v-if="message" class="mt-6 text-secondary">
             {{ message }}
@@ -71,10 +71,12 @@ export default {
                 error: false,
                 blur: false,
             },
+            isFormLoading: false,
         };
     },
     methods: {
         async submit() {
+            this.isFormLoading = true;
             this.applyNameValidation();
             this.applyEmailValidation();
 
@@ -106,7 +108,9 @@ export default {
                 const data = await response.json();
                 this.message = data.message;
                 this.resetForm();
+                this.isFormLoading = false;
             } catch (error) {
+                this.isFormLoading = false;
                 this.message = error?.message ?? "Something went wrong.";
             }
         },

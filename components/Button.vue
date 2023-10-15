@@ -2,8 +2,9 @@
     <div class="flex" :class="classes">
         <button
             v-if="subscribe"
+            :disabled="disabled"
             type="submit"
-            class="btn hover:scale-105 focus:scale-105 transition-transform duration-300 ease-in-out focus:outline-none"
+            class="btn hover:scale-105 focus:scale-105 transition-transform duration-300 ease-in-out focus:outline-none disabled:cursor-default"
         >
             {{ subscribeBtnName }}
         </button>
@@ -22,6 +23,10 @@
 <script>
 export default {
     props: {
+        disabled: {
+            type: Boolean,
+            default: false,
+        },
         link: {
             type: String,
             default: "/",

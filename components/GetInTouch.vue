@@ -96,16 +96,27 @@
                     <div class="error-message">{{ isMessageValid.message }}</div>
                 </div>
             </div>
-            <Button ref="submitButton" classes="mt-6 mb-8" subscribe subscribeBtnName="Send a message" />
+            <Button
+                ref="submitButton"
+                :disabled="isFormLoading"
+                classes="mt-6 mb-8"
+                subscribe
+                subscribeBtnName="Send a message"
+            />
         </form>
-        <div v-if="sentMessage" class="mb-8">sadas{{ sentMessage }}</div>
+        <div v-if="sentMessage" class="mb-8 text-secondary">{{ sentMessage }}</div>
     </div>
     <arrow-down class="mb-6"></arrow-down>
     <HorizontalRule />
 </template>
 
 <script>
+let config = {};
 export default {
+    setup() {
+        config = useRuntimeConfig();
+        return { config };
+    },
     data() {
         return {
             name: "",
@@ -139,10 +150,12 @@ export default {
                 error: false,
                 blur: false,
             },
+            isFormLoading: false,
         };
     },
     methods: {
         async submit() {
+            this.isFormLoading = true;
             this.applyNameValidation();
             this.applyEmailValidation();
             this.applyMobileValidation();
@@ -159,16 +172,56 @@ export default {
                 return;
             }
 
-            // send the new subscriber's data to the firestore
-            await this.sendToFirebase();
-            // send an email to me
-            this.sendingEmailToMe();
-            this.sentMessage = "Thank you for contacting me! I`ll get in touch with you as soon as possible!";
-            setTimeout(() => {
-                this.sentMessage = "";
-            }, 5000);
-            //restart the form
-            this.resetForm();
+            try {
+                const response = await fetch(`${config.public.BACKEND_API_URL}/contact_form`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name: this.name,
+                        email: this.email,
+                        mobile: this.mobile,
+                        subject: this.subject,
+                        message: this.message,
+                    }),
+                });
+
+                if (!response.ok) {
+                    const data = await response.json();
+                    if (data?.name?.message) {
+                        this.isNameValid.message = data.name.message;
+                        this.isNameValid.error = true;
+                    }
+                    if (data?.email?.message) {
+                        this.isEmailValid.message = data.email.message;
+                        this.isEmailValid.error = true;
+                    }
+                    if (data?.mobile?.message) {
+                        this.isMobileValid.message = data.mobile.message;
+                        this.isMobileValid.error = true;
+                    }
+                    if (data?.subject?.message) {
+                        this.isSubjectValid.message = data.subject.message;
+                        this.isSubjectValid.error = true;
+                    }
+                    if (data?.message?.message) {
+                        this.isMessageValid.message = data.message.message;
+                        this.isMessageValid.error = true;
+                    }
+                    throw new Error(data?.message ?? "Something went wrong.");
+                }
+
+                const data = await response.json();
+                this.sentMessage = data?.message;
+                this.isFormLoading = false;
+                this.resetForm();
+            } catch (error) {
+                this.isFormLoading = false;
+                this.sentMessage = error?.message ?? "Something went wrong.";
+            }
+
+            // this.resetForm();
         },
         applyNameValidation(reset = false) {
             if (this.name.trim() === "" && !reset) {
@@ -249,39 +302,6 @@ export default {
                 this.applyMobileValidation(true);
                 this.applySubjectValidation(true);
                 this.applyMessageValidation(true);
-            });
-        },
-        sendToFirebase() {
-            return new Promise((resolve, reject) => {
-                firestore
-                    .collection("contact-form")
-                    .add({
-                        Name: this.name,
-                        Email: this.email.toLowerCase(),
-                        Mobile: this.mobile,
-                        Subject: this.subject,
-                        Message: this.message,
-                    })
-                    .then(() => {
-                        resolve("Done");
-                    })
-                    .catch((error) => {
-                        reject("Error");
-                        console.error("Error adding document in the database: ", error);
-                    });
-            });
-        },
-        sendingEmailToMe() {
-            return new Promise((resolve, reject) => {
-                const sendContactFormEmail = functions.httpsCallable("sendContactFormEmail");
-                sendContactFormEmail({
-                    Name: this.name,
-                    Email: this.email.toLowerCase(),
-                    Mobile: this.mobile,
-                    Subject: this.subject,
-                    Message: this.message,
-                });
-                resolve("Email has been sent!");
             });
         },
     },
