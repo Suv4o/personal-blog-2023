@@ -1,30 +1,3 @@
-import fs from "fs";
-import path from "path";
-
-function getAllMarkdownFiles(dirPath: string): string[] {
-    const files: string[] = [];
-
-    function traverseDirectory(currentPath: string) {
-        const entries = fs.readdirSync(currentPath, { withFileTypes: true });
-
-        for (const entry of entries) {
-            const fullPath = path.join(currentPath, entry.name);
-
-            if (entry.isDirectory()) {
-                traverseDirectory(fullPath);
-            } else if (entry.isFile() && path.extname(fullPath) === ".md") {
-                files.push(fullPath);
-            }
-        }
-    }
-
-    traverseDirectory(dirPath);
-
-    return files.map((file) => {
-        return file.replace("content/", "/").replace(".md", "").replace("index", "");
-    });
-}
-
 export default defineNuxtConfig({
     devtools: { enabled: true },
     components: {
@@ -84,7 +57,6 @@ export default defineNuxtConfig({
     nitro: {
         prerender: {
             crawlLinks: true,
-            routes: getAllMarkdownFiles("content"),
         },
     },
 });
