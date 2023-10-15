@@ -50,7 +50,12 @@
 </template>
 
 <script>
+let config = {};
 export default {
+    setup() {
+        config = useRuntimeConfig();
+        return { config };
+    },
     data() {
         return {
             name: "",
@@ -76,26 +81,34 @@ export default {
             if (this.isNameValid.error || this.isEmailValid.error) {
                 return;
             }
-            // check if there is a subscriber with the same email address already. If so, return!
-            const checkResult = await this.checkingForExistingSubscribers();
-            if (checkResult.data === "Exist") {
-                this.message = "You're Already Subscribed!";
-                setTimeout(() => {
-                    this.message = "";
-                }, 5000);
+
+            try {
+                const response = await fetch(`${config.public.BACKEND_API_URL}/subscribe_to_newsletters`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name: this.name,
+                        email: this.email,
+                    }),
+                });
+
+                if (!response.ok) {
+                    const data = await response.json();
+                    if (data?.name?.message) {
+                        this.isNameValid.message = data.name.message;
+                        this.isNameValid.error = true;
+                    }
+                    throw new Error(data?.message ?? "Something went wrong.");
+                }
+
+                const data = await response.json();
+                this.message = data.message;
                 this.resetForm();
-                return;
+            } catch (error) {
+                this.message = error?.message ?? "Something went wrong.";
             }
-            // send the new subscriber's data to the firestore
-            await this.sendToFirebase();
-            // send an email to me
-            this.sendingEmailToMe();
-            this.message = "Thank you for Subscribing :-)";
-            setTimeout(() => {
-                this.message = "";
-            }, 5000);
-            //restart the form
-            this.resetForm();
         },
         applyNameValidation(reset = false) {
             if (this.name.trim() === "" && !reset) {
@@ -128,51 +141,6 @@ export default {
                 this.$refs.email.blur();
                 this.applyNameValidation(true);
                 this.applyEmailValidation(true);
-            });
-        },
-        checkingForExistingSubscribers() {
-            return new Promise((resolve, reject) => {
-                firestore
-                    .collection("subscribers")
-                    .where("email", "==", this.email.toLowerCase())
-                    .get()
-                    .then((result) => {
-                        if (!result.empty) {
-                            resolve({ data: "Exist" });
-                        } else {
-                            resolve({ data: "NotExist" });
-                        }
-                    });
-            }).catch(function (error) {
-                reject("Error");
-                console.log("Error getting documents: ", error);
-            });
-        },
-        sendToFirebase() {
-            return new Promise((resolve, reject) => {
-                firestore
-                    .collection("subscribers")
-                    .add({
-                        name: this.name,
-                        email: this.email.toLowerCase(),
-                    })
-                    .then(() => {
-                        resolve("Done");
-                    })
-                    .catch((error) => {
-                        reject("Error");
-                        console.error("Error adding document in the database: ", error);
-                    });
-            });
-        },
-        sendingEmailToMe() {
-            return new Promise((resolve, reject) => {
-                const sendSubscriberEmail = functions.httpsCallable("sendSubscriberEmail");
-                sendSubscriberEmail({
-                    name: this.name,
-                    email: this.email.toLowerCase(),
-                });
-                resolve("Email has been sent!");
             });
         },
     },

@@ -60,6 +60,11 @@ export default defineNuxtConfig({
         typeCheck: true,
         strict: true,
     },
+    runtimeConfig: {
+        public: {
+            BACKEND_API_URL: process.env.BACKEND_API_URL,
+        },
+    },
     nitro: {
         prerender: {
             crawlLinks: true,
