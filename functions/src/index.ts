@@ -27,7 +27,13 @@ async function sendEmail(message: EmailMessage) {
     }
 }
 
-function buildEmailMessageForContactForm(name: string, email: string, mobile: string, subject: string, message: string) {
+function buildEmailMessageForContactForm(
+    name: string,
+    email: string,
+    mobile: string,
+    subject: string,
+    message: string
+) {
     const NOTIFICATION_TO_EMAIL = process.env.NOTIFICATION_TO_EMAIL as string;
     const NOTIFICATION_FROM_EMAIL = process.env.NOTIFICATION_FROM_EMAIL as string;
 
@@ -167,9 +173,7 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
     // Has been subscribed
     if (subscribers.size > 0 && hasBeenSubscribed) {
         response.status(400).send({
-            email: {
-                message: "You have already subscribed. Thank you",
-            },
+            message: "You have already subscribed. Thank you",
         });
         return;
     }
