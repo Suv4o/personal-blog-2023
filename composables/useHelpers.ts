@@ -22,5 +22,22 @@ export function useHelpers() {
         "/get-in-touch",
     ];
 
-    return { pagePaths, delay };
+    const listingPaths = [
+        "/articles",
+        "/vuejs",
+        "/javascript",
+        "/frontend",
+        "/firebase",
+        "/nodejs",
+        "/backend",
+        "/css",
+        "/typescript",
+        "/nestjs",
+        "/nuxtjs",
+        "/vscode",
+        "/vite",
+        "/other",
+    ];
+
+    return { pagePaths, listingPaths, delay };
 }
