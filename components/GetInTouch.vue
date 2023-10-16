@@ -179,7 +179,7 @@ export default {
                 }
 
                 try {
-                    const response = await fetch(`${config.public.BACKEND_API_URL}/contact_form`, {
+                    const response = await fetch(config.public.CONTACT_FORM_URL, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",

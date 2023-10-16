@@ -50,7 +50,8 @@ export default defineNuxtConfig({
     },
     runtimeConfig: {
         public: {
-            BACKEND_API_URL: process.env.BACKEND_API_URL,
+            SUBSCRIBE_TO_NEWSLETTERS_URL: process.env.SUBSCRIBE_TO_NEWSLETTERS_URL,
+            CONTACT_FORM_URL: process.env.CONTACT_FORM_URL,
             RE_CAPTCHA_SITE_KEY: process.env.RE_CAPTCHA_SITE_KEY,
         },
     },

@@ -91,7 +91,7 @@ export default {
                 }
 
                 try {
-                    const response = await fetch(`${config.public.BACKEND_API_URL}/subscribe_to_newsletters`, {
+                    const response = await fetch(config.public.SUBSCRIBE_TO_NEWSLETTERS_URL, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
