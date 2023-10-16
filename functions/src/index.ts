@@ -1,4 +1,5 @@
 import * as sgMail from "@sendgrid/mail";
+import { setGlobalOptions } from "firebase-functions/v2";
 import { onRequest } from "firebase-functions/v2/https";
 import { Validator } from "node-input-validator";
 import { initializeApp } from "firebase-admin";
@@ -13,6 +14,7 @@ type EmailMessage = {
     html: string;
 };
 
+setGlobalOptions({ maxInstances: 10 });
 let initialised = false;
 
 async function sendEmail(message: EmailMessage) {
