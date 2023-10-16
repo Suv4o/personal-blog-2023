@@ -32,6 +32,8 @@ export default {
                 vscode: "rgb(var(--colour-vscode) / <alpha-value>)", // #3aa8f0
                 vite: "rgb(var(--colour-vite) / <alpha-value>)", // #bd34fe
                 mustard: "rgb(var(--colour-mustard) / <alpha-value>)", // #ffc31d
+                ai: "rgb(var(--colour-ai) / <alpha-value>)", // #03e3fc
+                langchain: "rgb(var(--colour-langchain) / <alpha-value>)", // #6ffc03
                 other: "rgb(var(--colour-other) / <alpha-value>)", // #ee5f53
             },
             fontFamily: {

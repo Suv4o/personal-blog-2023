@@ -18,6 +18,8 @@ export function useHelpers() {
         "/nuxtjs",
         "/vscode",
         "/vite",
+        "/langchain",
+        "/ai",
         "/other",
         "/get-in-touch",
     ];
@@ -36,6 +38,8 @@ export function useHelpers() {
         "/nuxtjs",
         "/vscode",
         "/vite",
+        "/langchain",
+        "/ai",
         "/other",
     ];
 

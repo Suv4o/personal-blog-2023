@@ -29,7 +29,11 @@
                     ? tagDetails[10].link
                     : tag == 'Vite'
                     ? tagDetails[11].link
-                    : tagDetails[12].link
+                    : tag == 'AI'
+                    ? tagDetails[12].link
+                    : tag == 'LangChain'
+                    ? tagDetails[13].link
+                    : tagDetails[14].link
             }`"
         >
             <div
@@ -58,6 +62,10 @@
                         ? 'bg-vscode'
                         : tag == 'Vite'
                         ? 'bg-vite'
+                        : tag == 'AI'
+                        ? 'bg-ai'
+                        : tag == 'LangChain'
+                        ? 'bg-langchain'
                         : 'bg-other',
                     small ? 'text-xs' : 'text-sm',
                     tag == 'Vue.js'
@@ -83,7 +91,11 @@
                         : tag == 'VSCode'
                         ? 'text-white'
                         : tag == 'Vite'
-                        ? 'text-mustard'
+                        ? 'text-white'
+                        : tag == 'AI'
+                        ? 'text-secondary'
+                        : tag == 'LangChain'
+                        ? 'text-secondary'
                         : 'text-white',
                 ]"
             >
@@ -120,6 +132,8 @@ export default {
                 { bg: "#022832", txt: "#00dd82", link: "/nuxtjs" },
                 { bg: "#3aa8f0", txt: "#ffffff", link: "/vscode" },
                 { bg: "#bd34fe", txt: "#ffc31d", link: "/vite" },
+                { bg: "#03e3fc", txt: "#ffffff", link: "/ai" },
+                { bg: "#6ffc03", txt: "#ffffff", link: "/langchain" },
                 { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
             ],
         };
