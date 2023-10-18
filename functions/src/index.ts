@@ -1,4 +1,4 @@
-import sgMail from "@sendgrid/mail";
+import * as sgMail from "@sendgrid/mail";
 import { setGlobalOptions } from "firebase-functions/v2";
 import { onRequest } from "firebase-functions/v2/https";
 import { Validator } from "node-input-validator";

@@ -10,6 +10,11 @@ $ yarn dev
 # generate static project
 $ yarn generate:prod
 
-# deploy to netlify
+# deploy to netlify - draft
 $ netlify deploy
+
+# deploy to netlify - prod
+$ netlify deploy --prod
 ```
+
+Deploy to Netlify `.output/public` folder
