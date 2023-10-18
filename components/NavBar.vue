@@ -127,7 +127,7 @@ async function navigateToArticle() {
                     Articles
                 </NuxtLink>
                 <NuxtLink
-                    to="/"
+                    to="/get-in-touch"
                     class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                 >
                     Get In Touch
