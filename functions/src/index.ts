@@ -1,10 +1,10 @@
-import * as sgMail from "@sendgrid/mail";
+import sgMail from "@sendgrid/mail";
 import { setGlobalOptions } from "firebase-functions/v2";
 import { onRequest } from "firebase-functions/v2/https";
 import { Validator } from "node-input-validator";
-import { initializeApp } from "firebase-admin";
+import admin from "firebase-admin";
 import { getFirestore } from "firebase-admin/firestore";
-import * as logger from "firebase-functions/logger";
+import logger from "firebase-functions/logger";
 
 type EmailMessage = {
     to: string;
@@ -92,9 +92,9 @@ function buildEmailMessageForSubscriberAgain(name: string, email: string) {
 }
 
 // Contact form
-export const contact_form = onRequest(async (request, response) => {
+export const contact_form = onRequest({ cors: "*" }, async (request, response) => {
     if (!initialised) {
-        initializeApp();
+        admin.initializeApp();
         initialised = true;
     }
 
@@ -162,9 +162,9 @@ export const contact_form = onRequest(async (request, response) => {
 });
 
 // Subscribe to newsletters
-export const subscribe_to_newsletters = onRequest(async (request, response) => {
+export const subscribe_to_newsletters = onRequest({ cors: "*" }, async (request, response) => {
     if (!initialised) {
-        initializeApp();
+        admin.initializeApp();
         initialised = true;
     }
 
@@ -244,9 +244,9 @@ export const subscribe_to_newsletters = onRequest(async (request, response) => {
 });
 
 // Unsubscribe from newsletters
-export const unsubscribe_to_newsletters = onRequest(async (request, response) => {
+export const unsubscribe_to_newsletters = onRequest({ cors: "*" }, async (request, response) => {
     if (!initialised) {
-        initializeApp();
+        admin.initializeApp();
         initialised = true;
     }
 
