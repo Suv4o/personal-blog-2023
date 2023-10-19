@@ -18,3 +18,13 @@ $ netlify deploy --prod
 ```
 
 Deploy to Netlify `.output/public` folder
+
+```bash
+# run server locally
+$ yarn build:watch
+$ yarn serve
+
+
+# firebase deploy
+$ yarn deploy
+```

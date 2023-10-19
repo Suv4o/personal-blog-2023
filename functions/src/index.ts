@@ -92,156 +92,162 @@ function buildEmailMessageForSubscriberAgain(name: string, email: string) {
 }
 
 // Contact form
-export const contact_form = onRequest({ cors: "*" }, async (request, response) => {
-    if (!initialised) {
-        admin.initializeApp();
-        initialised = true;
-    }
-
-    const db = getFirestore();
-
-    const { name, email, mobile, subject, message, recaptchaToken } = request.body as {
-        name: string;
-        email: string;
-        mobile: string;
-        subject: string;
-        message: string;
-        recaptchaToken: string;
-    };
-
-    // Validate recaptcha
-    const RE_CAPTCHA_SECRET_KEY = process.env.RE_CAPTCHA_SECRET_KEY as string;
-
-    const responseRecaptcha = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `secret=${RE_CAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
-    });
-
-    const { success } = await responseRecaptcha.json();
-
-    if (!success) {
-        response.status(400).send({
-            message: "Invalid recaptcha",
-        });
-        return;
-    }
-
-    const v = new Validator(
-        { name, email, mobile, subject, message },
-        {
-            name: "required|minLength:2|maxLength:50|regex:^[a-zA-Z\\s]+$",
-            email: "required|email",
-            mobile: "required|maxLength:20",
-            subject: "required|minLength:2|maxLength:50",
-            message: "required|minLength:2|maxLength:1000",
-        }
-    );
-
-    const matched = await v.check();
-
-    if (!matched) {
-        const error = v.errors;
-        if (error?.name?.rule === "regex") {
-            error.name.message = "The name must be alphabetic characters only.";
-        }
-        response.status(400).send(v.errors);
-        return;
-    }
-
-    const contactUsRef = db.collection("contact-form");
-    await contactUsRef.add({ name, email, mobile, subject, message });
-    await sendEmail(buildEmailMessageForContactForm(name, email, mobile, subject, message));
-
-    response.send({
-        success: true,
-        message: "Thank you for contacting us. We will get back to you shortly.",
-    });
-});
-
-// Subscribe to newsletters
-export const subscribe_to_newsletters = onRequest({ cors: "*" }, async (request, response) => {
-    if (!initialised) {
-        admin.initializeApp();
-        initialised = true;
-    }
-
-    const db = getFirestore();
-
-    const { name, email, recaptchaToken } = request.body as { name: string; email: string; recaptchaToken: string };
-
-    // Validate recaptcha
-    const RE_CAPTCHA_SECRET_KEY = process.env.RE_CAPTCHA_SECRET_KEY as string;
-
-    const responseRecaptcha = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `secret=${RE_CAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
-    });
-
-    const { success } = await responseRecaptcha.json();
-
-    if (!success) {
-        response.status(400).send({
-            message: "Invalid recaptcha",
-        });
-        return;
-    }
-
-    const v = new Validator(
-        { name, email },
-        { name: "required|minLength:2|maxLength:50|regex:^[a-zA-Z\\s]+$", email: "required|email" }
-    );
-
-    const matched = await v.check();
-
-    if (!matched) {
-        const error = v.errors;
-        if (error?.name?.rule === "regex") {
-            error.name.message = "The name must be alphabetic characters only.";
+export const contact_form = onRequest(
+    { cors: ["https://www.trpkovski.com", "https://trpkovski.com"] },
+    async (request, response) => {
+        if (!initialised) {
+            admin.initializeApp();
+            initialised = true;
         }
 
-        response.status(400).send(v.errors);
-        return;
-    }
+        const db = getFirestore();
 
-    const subscribersRef = db.collection("subscribers");
-    const subscribers = await subscribersRef.where("email", "==", email?.toLowerCase()).get();
-    const [hasBeenSubscribed] = subscribers?.docs?.map((doc) => doc?.data()?.subscribed);
+        const { name, email, mobile, subject, message, recaptchaToken } = request.body as {
+            name: string;
+            email: string;
+            mobile: string;
+            subject: string;
+            message: string;
+            recaptchaToken: string;
+        };
 
-    // Has been subscribed
-    if (subscribers.size > 0 && hasBeenSubscribed) {
-        response.status(400).send({
-            message: "You have already subscribed. Thank you",
+        // Validate recaptcha
+        const RE_CAPTCHA_SECRET_KEY = process.env.RE_CAPTCHA_SECRET_KEY as string;
+
+        const responseRecaptcha = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: `secret=${RE_CAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
         });
-        return;
-    }
 
-    // Has not been subscribed. Most likely existing subscriber but unsubscribed
-    if (subscribers.size > 0 && !hasBeenSubscribed) {
-        const [subscriber] = subscribers.docs;
-        await subscriber.ref.update({ name, subscribed: true });
-        await sendEmail(buildEmailMessageForSubscriberAgain(name, email?.toLowerCase()));
+        const { success } = await responseRecaptcha.json();
+
+        if (!success) {
+            response.status(400).send({
+                message: "Invalid recaptcha",
+            });
+            return;
+        }
+
+        const v = new Validator(
+            { name, email, mobile, subject, message },
+            {
+                name: "required|minLength:2|maxLength:50|regex:^[a-zA-Z\\s]+$",
+                email: "required|email",
+                mobile: "required|maxLength:20",
+                subject: "required|minLength:2|maxLength:50",
+                message: "required|minLength:2|maxLength:1000",
+            }
+        );
+
+        const matched = await v.check();
+
+        if (!matched) {
+            const error = v.errors;
+            if (error?.name?.rule === "regex") {
+                error.name.message = "The name must be alphabetic characters only.";
+            }
+            response.status(400).send(v.errors);
+            return;
+        }
+
+        const contactUsRef = db.collection("contact-form");
+        await contactUsRef.add({ name, email, mobile, subject, message });
+        await sendEmail(buildEmailMessageForContactForm(name, email, mobile, subject, message));
 
         response.send({
             success: true,
-            message: "Thank you for subscribing again.",
+            message: "Thank you for contacting us. We will get back to you shortly.",
         });
-        return;
     }
+);
 
-    await subscribersRef.add({ name, email: email?.toLowerCase(), subscribed: true });
-    await sendEmail(buildEmailMessageForNewSubscriber(name, email?.toLowerCase()));
+// Subscribe to newsletters
+export const subscribe_to_newsletters = onRequest(
+    { cors: ["https://www.trpkovski.com", "https://trpkovski.com"] },
+    async (request, response) => {
+        if (!initialised) {
+            admin.initializeApp();
+            initialised = true;
+        }
 
-    response.send({
-        success: true,
-        message: "Thank you for subscribing.",
-    });
-});
+        const db = getFirestore();
+
+        const { name, email, recaptchaToken } = request.body as { name: string; email: string; recaptchaToken: string };
+
+        // Validate recaptcha
+        const RE_CAPTCHA_SECRET_KEY = process.env.RE_CAPTCHA_SECRET_KEY as string;
+
+        const responseRecaptcha = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: `secret=${RE_CAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+        });
+
+        const { success } = await responseRecaptcha.json();
+
+        if (!success) {
+            response.status(400).send({
+                message: "Invalid recaptcha",
+            });
+            return;
+        }
+
+        const v = new Validator(
+            { name, email },
+            { name: "required|minLength:2|maxLength:50|regex:^[a-zA-Z\\s]+$", email: "required|email" }
+        );
+
+        const matched = await v.check();
+
+        if (!matched) {
+            const error = v.errors;
+            if (error?.name?.rule === "regex") {
+                error.name.message = "The name must be alphabetic characters only.";
+            }
+
+            response.status(400).send(v.errors);
+            return;
+        }
+
+        const subscribersRef = db.collection("subscribers");
+        const subscribers = await subscribersRef.where("email", "==", email?.toLowerCase()).get();
+        const [hasBeenSubscribed] = subscribers?.docs?.map((doc) => doc?.data()?.subscribed);
+
+        // Has been subscribed
+        if (subscribers.size > 0 && hasBeenSubscribed) {
+            response.status(400).send({
+                message: "You have already subscribed. Thank you",
+            });
+            return;
+        }
+
+        // Has not been subscribed. Most likely existing subscriber but unsubscribed
+        if (subscribers.size > 0 && !hasBeenSubscribed) {
+            const [subscriber] = subscribers.docs;
+            await subscriber.ref.update({ name, subscribed: true });
+            await sendEmail(buildEmailMessageForSubscriberAgain(name, email?.toLowerCase()));
+
+            response.send({
+                success: true,
+                message: "Thank you for subscribing again.",
+            });
+            return;
+        }
+
+        await subscribersRef.add({ name, email: email?.toLowerCase(), subscribed: true });
+        await sendEmail(buildEmailMessageForNewSubscriber(name, email?.toLowerCase()));
+
+        response.send({
+            success: true,
+            message: "Thank you for subscribing.",
+        });
+    }
+);
 
 // Unsubscribe from newsletters
 export const unsubscribe_to_newsletters = onRequest({ cors: "*" }, async (request, response) => {

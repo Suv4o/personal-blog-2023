@@ -26,7 +26,7 @@ const isListingPage = computed(() => {
     <header>
         <NavBar />
     </header>
-    <main>
+    <main class="overflow-hidden">
         <HomeButton v-if="isBlogArticle || isListingPage" />
         <ContentDoc class="al-container" :class="[isBlogArticle && 'blog-page']" :key="route.fullPath">
             <template #not-found>

@@ -104,7 +104,7 @@ async function navigateToArticle() {
                         </Combobox>
                     </div>
                 </div>
-                <div class="flex lg:hidden">
+                <div class="flex lg:hidden overflow-x-hidden">
                     <!-- Mobile menu button -->
                     <DisclosureButton
                         class="relative inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"

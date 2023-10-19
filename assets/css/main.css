@@ -136,11 +136,11 @@
     }
 
     .blog-page ol li {
-        @apply my-2 list-decimal list-outside relative left-4;
+        @apply my-2 list-decimal list-outside relative left-4 pr-4;
     }
 
     .blog-page ul li {
-        @apply my-2 list-decimal list-outside relative left-4;
+        @apply my-2 list-decimal list-outside relative left-4 pr-4;
     }
 
     .blog-page li code {
