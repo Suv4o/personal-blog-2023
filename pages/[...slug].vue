@@ -8,6 +8,17 @@ nuxtApp.hook("page:finish", () => {
     window.scrollTo(0, 0);
 });
 
+useSeoMeta({
+    // keywords:
+    //     "Vue.js, Javascript, Frontend, Development, Web, Web Developer, PHP, Python, AI, CSS, HTML, Photos, Photography, Melbourne, Australia",
+    // ogDescription: "Still about my about page",
+    // ogTitle: "About",
+    // ogImage: "<>",
+    // ogUrl: "https://aleksandartrpkovski.com/about",
+    // ogSiteName: "Aleksandar Trpkovski",
+    // twitterCard: "summary_large_image",
+});
+
 onMounted(() => {
     unloadPrismScript();
     loadPrismScript();
