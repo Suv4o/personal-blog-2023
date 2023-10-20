@@ -2,6 +2,15 @@
 title: Suspense feature in Vue 3 with SFC Script Setup
 description: <Suspense> is a special component in Vue 3 that lets us wait for some data to be loaded, before our component can be rendered. In other words, Suspense allows us to render some fallback content. A good example will be a loading spinner while waiting for an asynchronous API call to fetch some data from the server. Once the data has been loaded, the main content will show up. This feature allows us to create a smooth user experience. The <script setup> has top-level await, this means that the reactive variable msg won't be shown in the template until the fetch is completed. To improve the user experience, it would be nice if we displayed a loading message before the data has been loaded. This is where Suspense comes handy.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1632533795/blog/vue3-suspense/vue3-suspence-cover
+keywords:
+    - Suspense feature in Vue 3 with SFC Script Setup
+    - Vue.js
+    - Suspense
+    - JavaScript
+    - Loading
+    - Show Spinner
+    - Development
+    - Web Development
 type: article
 published: 25th Sep 2021
 readTime: 6

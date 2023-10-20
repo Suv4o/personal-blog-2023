@@ -2,6 +2,15 @@
 title: Nest.js Authorisation with Firebase Auth
 description: In this blog article we will be creating a Nest application where users (with different roles) can sign-up and sign-in to the application. Specific permissions can be configured for each user access to specific endpoints, based on the user role. We are going to use Firebase Auth to help us with user Authentication and Authorisation. Before we continue let’s first install the Nest CLI. That will help us create our project much quicker. To install Nest CLI globally use the following command in your terminal
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1664868269/blog/nestjs-authorisation-with-firebase-auth/nestjs-authorisation-with-firebase-auth
+keywords: 
+    - Nest.js Authorisation with Firebase Auth
+    - Nest.js
+    - TypeScript
+    - Authentication
+    - Authorization
+    - Firebase Auth
+    - Development
+    - Web Development
 type: article
 published: 7th Oct 2022
 readTime: 15

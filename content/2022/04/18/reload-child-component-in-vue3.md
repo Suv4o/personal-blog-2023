@@ -2,6 +2,15 @@
 title: Reload Child component in Vue 3
 description: Components in Vue are reusable custom elements that can be reused in Vue templates throughout the app. In a large scale application, we will come across a situation where we have nested components such as parents and children. In recent work, I faced the challenge of having to reload the child component only. This article will explain the intricacies to the challenge. Looking back, it took me unbelievably long to figure out a solution. Nevertheless, my blog post will provide quick and easy, short, sharp steps to any developer who might be faced with the same challenge. Let’s get started. We can easily scaffold our Vue 3 project using Vite with the following command
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1650277793/blog/reload-child-component-in-vue-3/reload-child-component-in-vue-3-1_ccze7d
+keywords:
+    - Reload Child component in Vue 3
+    - Vue.js
+    - Reload
+    - JavaScript
+    - Tips
+    - Composition API
+    - Development
+    - Web Development
 type: article
 published: 18th Apr 2022
 readTime: 4

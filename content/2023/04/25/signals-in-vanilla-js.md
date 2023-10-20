@@ -2,6 +2,16 @@
 title: Signals in Vanilla JS
 description: If you're a JavaScript developer, you may have heard about the buzz around signals lately. Several popular JavaScript frameworks, such as Vue, Preact, Solid, Angular, and Quick, have recently implemented and supported the use of signals. But what exactly are signals? As web applications become more complex, managing the state of JavaScript applications becomes a challenge. This is where signals can be a valuable tool, allowing the application to respond to changes in the state, such as a variable change. In this article, we will explore the concept of signals and how they can be used in Vanilla JavaScript applications. We will use the Vue and Preact reactivity libraries and see how easy and similar these two approaches are to implement. For the demo project, we will use Vite. So let's get started by creating a Vite app.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1682415127/blog/signals-in-vanilla-js/signals-in-vanilla-js-hero_lsdah8
+keywords: 
+    - Signals in Vanilla JS
+    - signals
+    - javascript
+    - vite
+    - typescript
+    - reactivity
+    - ref
+    - vue
+    - preact
 type: article
 published: 25th April 2023
 readTime: 1

@@ -2,6 +2,14 @@
 title: Style Binding in SFC in Vue 3
 description: For a long time, Vue as a framework had a built-in feature of binding inline styles in HTML templates. But what has changed since the new Vue 3.2 release is that we can now also use the existing v-bind syntax with reactive variables inside our <style> tag in the .vue files aka Single File Components (SFC). Let's take a look how can we do that. With the two examples above, we saw how easy it was to implement a style binding using v-bind syntax in Vue 3.2. But the question is, how has Vue allowed for this? If we inspect the elements in the DevTools of the browser, we will see that all elements used v-bind have their inline styles with CSS variable in them.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631578776/blog/style-binding-in-sfc-in-vue-3/style-binding-in-sfc-in-vue-3
+keywords: 
+    - Style Binding in SFC in Vue 3
+    - v-bind
+    - Vue 3
+    - Binding Styles in Vue
+    - CSS Variables
+    - Development
+    - Web Development
 type: article
 published: 14th Sep 2021
 readTime: 3
