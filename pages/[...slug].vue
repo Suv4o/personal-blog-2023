@@ -1,22 +1,30 @@
 <script setup lang="ts">
+import { Article } from "~/types";
+
 const nuxtApp = useNuxtApp();
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
 const { pagePaths, listingPaths } = useHelpers();
+const article = ref<Partial<Article>>();
 
 nuxtApp.hook("page:finish", () => {
     window.scrollTo(0, 0);
 });
 
+async function getCurrentArticle() {
+    return await queryContent().where({ _path: route.path }).findOne();
+}
+
+article.value = await getCurrentArticle();
+
 useSeoMeta({
-    // keywords:
-    //     "Vue.js, Javascript, Frontend, Development, Web, Web Developer, PHP, Python, AI, CSS, HTML, Photos, Photography, Melbourne, Australia",
-    // ogDescription: "Still about my about page",
-    // ogTitle: "About",
-    // ogImage: "<>",
-    // ogUrl: "https://aleksandartrpkovski.com/about",
-    // ogSiteName: "Aleksandar Trpkovski",
-    // twitterCard: "summary_large_image",
+    keywords: article.value?.keywords?.join(", ") ?? "",
+    ogDescription: article.value?.description ?? "",
+    ogTitle: article.value?.title ?? "",
+    ogImage: article.value?.image ?? "",
+    ogUrl: `https://www.trpkovski.com/${route.path}`,
+    ogSiteName: article.value?.title ?? "",
+    twitterCard: "summary_large_image",
 });
 
 onMounted(() => {

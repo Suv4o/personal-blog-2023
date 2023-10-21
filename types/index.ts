@@ -4,6 +4,7 @@ export interface Article {
     body: any;
     description: string;
     image: string;
+    keywords: string[];
     published: boolean;
     readTime: number;
     title: string;

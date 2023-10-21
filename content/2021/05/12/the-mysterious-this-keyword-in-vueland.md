@@ -2,13 +2,13 @@
 title: The mysterious this keyword in Vueland
 description: If you are new to Vue.JS you might have realised that "this" keyword is used everywhere. Some people might think that "this" keyword is part of the Vue.JS framework
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1618488085/blog/the_misterios_this_keyword_in_vueland
-keywords: 
-	- Vue.js
-	- Javascript
-	- Frontend
-	- development
-	- web development
-	- this keyword
+keywords:
+    - Vue.js
+    - Javascript
+    - Frontend
+    - development
+    - web development
+    - this keyword
 type: article
 published: 12th May 2021
 readTime: 12
