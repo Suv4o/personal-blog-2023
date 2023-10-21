@@ -1,7 +1,6 @@
 <mjml>
     <mj-head>
         <mj-attributes>
-            <mj-all padding="0px"></mj-all>
             <mj-class
                 name="preheader"
                 color="#000000"
@@ -13,124 +12,103 @@
         <mj-style inline="inline">a { text-decoration: none; color: inherit; }</mj-style>
     </mj-head>
     <mj-body background-color="#e0f2ff">
-        <mj-section background-color="#2a5cab" padding="10px 0">
-            <mj-column width="33%">
+        <mj-section background-color="#173353">
+            <mj-column width="45%">
                 <mj-image
-                    src="http://go.mailjet.com/tplimg/mtrq/b/ox8s/mg1qg.png"
+                    href="https://www.trpkovski.com"
+                    src="https://res.cloudinary.com/suv4o/image/upload/f_auto,w_70/v1697884715/blog/logo"
                     alt="logo"
-                    width="150px"
-                    padding="10px 0"
+                    align="left"
+                    width="40px"
+                    padding="0px 10px"
                 ></mj-image>
             </mj-column>
-            <mj-column width="66%">
-                <mj-text
-                    align="left"
-                    color="#ffffff"
-                    font-size="20px"
-                    font-family="Lato, Helvetica, Arial, sans-serif"
-                    padding="18px 0px"
-                    >From Pixels to Words: Exploring the Capabilities of Image-to-Text AI Tools</mj-text
-                >
+            <mj-column width="55%">
+                <mj-navbar base-url="https://www.trpkovski.com" hamburger="hamburger" ico-color="#ee5f53">
+                    <mj-navbar-link font-size="16px" href="https://www.trpkovski.com" color="#ffffff"
+                        >home</mj-navbar-link
+                    >
+                    <mj-navbar-link font-size="16px" href="https://www.trpkovski.com/articles" color="#ffffff"
+                        >articles</mj-navbar-link
+                    >
+                    <mj-navbar-link font-size="16px" href="https://www.trpkovski.com/get-in-touch" color="#ffffff"
+                        >get in touch</mj-navbar-link
+                    >
+                </mj-navbar>
             </mj-column>
         </mj-section>
-        <mj-section background-color="#ffffff" padding-top="20px">
+        <mj-section background-color="#efe8df" padding-top="20px">
             <mj-column width="100%">
                 <mj-image
-                    src="https://res.cloudinary.com/suv4o/image/upload/v1697369313/blog/from-pixels-to-words/hero.jpg"
-                    alt="tickets"
-                    width="192px"
+                    src="{{blog_image_url}}"
+                    alt="blog post hero image"
+                    width="400px"
                     padding="10px 25px"
                 ></mj-image>
                 <mj-text
                     align="center"
-                    color="#FAB701"
-                    font-size="25px"
-                    font-family="Lato, Helvetica, Arial, sans-serif"
-                    padding="10px 25px"
-                    ><strong
-                        >Hey {{FirstName}}
-                        <br />
-                        <br />
-                        It&apos;s been a long time since you last traveled with us.
-                    </strong></mj-text
+                    color="#6d6e71"
+                    font-size="24px"
+                    font-family="Ubuntu, Helvetica, Arial, sans-serif"
+                    padding="0px 10px"
                 >
-                <mj-text
-                    align="center"
-                    color="#EC652D"
-                    font-size="18px"
-                    font-family="Lato, Helvetica, Arial, sans-serif"
-                    padding="10px 30px"
-                    ><strong>Have a look at some of the top destinations people are booking right now!</strong></mj-text
-                >
-            </mj-column>
-        </mj-section>
-        <mj-section background-color="#ffffff" padding="20px 0">
-            <mj-column>
-                <mj-image
-                    src="http://go.mailjet.com/tplimg/mtrq/b/ox8s/mg1qy.png"
-                    alt="New York"
-                    width="184px"
-                    padding="0 25px"
-                ></mj-image>
-                <mj-text
-                    align="center"
-                    color="#EC652D"
-                    font-size="20px"
-                    font-family="Lato, Helvetica, Arial, sans-serif"
-                    vertical-align="top"
-                    padding="20px 25px"
-                    ><strong>New York</strong> <br />
-                    <p style="font-size: 15px; color: #000000">$399&#xA0;</p>
-                </mj-text>
-            </mj-column>
-            <mj-column>
-                <mj-image
-                    src="http://go.mailjet.com/tplimg/mtrq/b/ox8s/mg1qr.png"
-                    alt="London"
-                    width="184px"
-                    padding="0 25px"
-                ></mj-image>
-                <mj-text
-                    align="center"
-                    color="#EC652D"
-                    font-size="20px"
-                    font-family="Lato, Helvetica, Arial, sans-serif"
-                    vertical-align="top"
-                    padding="20px 25px"
-                    ><strong>London</strong> <br />
-                    <p style="font-size: 15px; color: #000000">$399&#xA0;</p>
-                </mj-text>
-            </mj-column>
-            <mj-column>
-                <mj-image
-                    src="http://go.mailjet.com/tplimg/mtrq/b/ox8s/mg1qv.png"
-                    alt="Berlin"
-                    width="184px"
-                    padding="0 25px"
-                ></mj-image>
-                <mj-text
-                    align="center"
-                    color="#EC652D"
-                    font-size="20px"
-                    font-family="Lato, Helvetica, Arial, sans-serif"
-                    vertical-align="top"
-                    padding="20px 25px"
-                    ><strong>Berlin</strong> <br />
-                    <p style="font-size: 15px; color: #000000">$399&#xA0;</p>
+                    <p>Hey {{subscriber_name}},</p>
+                    <p>
+                        I am excited to share with you my latest article,
+                        <a href="{{blog_url}}" style="text-decoration: none; color: #ee5f53; font-weight: bold"
+                            >{{blog_name}}</a
+                        >
+                    </p>
+                    <p>
+                        In this article, I delve deep into {{blog_briefly_describe}}. Whether you're an experienced
+                        developer or just starting your journey in web development, there's valuable information for
+                        everyone.
+                    </p>
+                    <p>Here are some highlights:</p>
+                    <ul>
+                        <li>{{blog_highlight}}</li>
+                    </ul>
+                    <p>Thank you for being a part of my web development community.</p>
+                    <p>Happy coding!</p>
+                    <p>Warm regards,</p>
+                    <p>Aleksandar Trpkovski</p>
                 </mj-text>
             </mj-column>
         </mj-section>
-        <mj-section background-color="#FAB700" padding="10px">
-            <mj-column vertical-align="top" width="100%">
+        <mj-section background-color="#ee5f53" padding-bottom="20px" padding-top="0">
+            <mj-column>
                 <mj-text
+                    font-size="16px"
                     align="center"
-                    color="#EC652D"
-                    font-size="20px"
-                    font-family="Lato, Helvetica, Arial, sans-serif"
-                    padding="10px 25px"
-                    >Best, <br /><br />
-                    The {{Company}} Team</mj-text
+                    color="#ffffff"
+                    font-size="13px"
+                    padding-left="25px"
+                    padding-right="25px"
+                    padding-bottom="0px"
+                    padding-top="20px"
                 >
+                    <p>
+                        <a
+                            href="https://unsubscribe-to-newsletters-l3igmdcjra-uc.a.run.app/{{subscriber_id}}"
+                            style="text-decoration: none; color: inherit"
+                            >Unsubscribe</a
+                        >
+                    </p>
+                </mj-text>
+            </mj-column>
+            <mj-column>
+                <mj-social padding-top="30px">
+                    <mj-social-element name="twitter" href="https://twitter.com/aleks_trpkovski"></mj-social-element>
+                    <mj-social-element
+                        name="linkedin"
+                        href="https://www.linkedin.com/in/aleksandar-trpkovski"
+                    ></mj-social-element>
+                    <mj-social-element name="github" href="https://github.com/Suv4o"></mj-social-element>
+                    <mj-social-element
+                        name="instagram"
+                        href="https://www.instagram.com/aleksandar_trpkovski"
+                    ></mj-social-element>
+                </mj-social>
             </mj-column>
         </mj-section>
     </mj-body>
