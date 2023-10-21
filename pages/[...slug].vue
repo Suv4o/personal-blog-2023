@@ -24,7 +24,7 @@ useSeoMeta({
     ogImage: article.value?.image ?? "",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: article.value?.title ?? "",
-    twitterCard: "summary_large_image",
+    twitterCard: "summary",
 });
 
 onMounted(() => {
