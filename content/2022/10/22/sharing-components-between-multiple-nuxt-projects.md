@@ -1,7 +1,7 @@
 ---
 title: Sharing components between multiple Nuxt projects
 description: Nuxt 3 and its new foundation come with many powerful new features, such as the new server engine Nitro that made the framework lighter and faster and supported by Vue's 3 Composition API and Vite. But one of Nuxt's features that not many people talk about is the ability to merge two or more applications and share functionalities between them. The extends feature in Nuxt 3 allows us to set a relative config path or remote git repositories such as GitHub, GitLab, Bitbucket or https:// pointing to the source directories of a project. This feature is a perfect use case for complex projects such us developing applications with a few different pieces, for example, an Admin and a User area that are designed separately but share the same components.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1666399302/blog/nuxt-extends/nuxt-extends
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1666399302/blog/nuxt-extends/nuxt-extends
 keywords:
     - Sharing components between multiple Nuxt projects
     - Nuxt.js

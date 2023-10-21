@@ -1,7 +1,7 @@
 ---
 title: Watch JavaScript Variables for Change
 description: We all know that in JavaScript there is no event that fires when a value of a variable changes. But by defining getters and setters in the object this is now possible. First, define a new property on an object with "Object.defineProperty" method. As a first argument, we pass the object on which to define the property. If the object is defined in the global scope, "this" will refer to the window object. In the second argument, we will define the name of the property. In our case, we define a property with name "name". The third argument is the descriptor for the property being defined.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1630971440/blog/watch-javascript-variables-for-change
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1630971440/blog/watch-javascript-variables-for-change
 keywords:
     - Watch JavaScript Variables for change
     - Listen to variables

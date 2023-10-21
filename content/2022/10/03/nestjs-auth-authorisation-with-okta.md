@@ -1,7 +1,7 @@
 ---
 title: Nest.js Auth/Authorisation with Okta
 description: In this blog article we will be creating a Nest application where users (with different roles) can sign-up and sign-in to the application. Specific permissions can be configured for each user access to specific endpoints, based on the user role. We are going to use Okta to help us with user Authentication and Authorisation. Okta is an Identity as a Service (IDaaS). This is a cloud-based authentication or identity management subscription service. Okta can be used for a number of different applications such as Adaptive multi-factor authentication, single sign-on, Universal Directory etc. Nest is a progressive Node.js framework for building efficient, reliable and scalable server-side applications with TypeScript.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1664708491/blog/nestjs-auth-authorisation-with-okta/nestjs-auth-authorisation-with-okta
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1664708491/blog/nestjs-auth-authorisation-with-okta/nestjs-auth-authorisation-with-okta
 keywords:
     - Nest.js Auth/Authorisation with Okta
     - Nest.js

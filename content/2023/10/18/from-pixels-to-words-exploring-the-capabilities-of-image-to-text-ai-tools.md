@@ -1,7 +1,7 @@
 ---
 title: From Pixels to Words - Exploring the Capabilities of Image-to-Text AI Tools
 description: I had an idea to create an image-to-text automation tool for writing descriptions for my images. As a hobby landscape photographer, I have a lot of images, and this tool would speed up my workflow when posting on Instagram. I thought, "Well, I am a software developer. I can develop something like that very quickly, right?" I only need to add my credit card details to OpenAI, and then I can start using their API. This sounds simple enough. Well, let's discuss how it all went. Imagine attaching an image and then starting a conversation with an AI assistant about the description you need help writing for that image. It would look something like this.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1697369313/blog/from-pixels-to-words/hero
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1697369313/blog/from-pixels-to-words/hero
 keywords:
     - LangChain
     - AI

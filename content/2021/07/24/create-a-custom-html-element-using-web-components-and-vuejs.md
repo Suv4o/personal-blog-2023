@@ -1,7 +1,7 @@
 ---
 title: Create a custom HTML element using Web Components and Vue.js
 description: In this day and age writing reusable components that can be used multiple times in your application or shared between other web platforms can actually save you a lot of time and effort. Web Components offer this benefit and makes it easier to build custom complex components. At the same time, this improves its reusability. Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Think native HTML elements <div>, <section>, <button>, but something that we can create ourselves with encapsulated functionality that can be reused across modern web browsers or any JavaScript library or framework that works with HTML.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1627371334/blog/create-a-custom-HTML-element-using-Web-Components-and-Vuejs
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1627371334/blog/create-a-custom-HTML-element-using-Web-Components-and-Vuejs
 keywords:
     - Custom HTML element
     - Custom Elements

@@ -1,8 +1,8 @@
 ---
 title: Nest.js @CurrentUser Custom Decorator
 description: This blog article is a continuation from the previous blog article about Nest.js Authorisation with Firebase Auth. If you have’t read that article you will not be able to follow along. The previous article can be found below. In this article we will be using custom route decorators in Nest. We will be creating our own @CurrentUser decorator and use it in the module controllers anytime we want to get the current logged user. Let’s have a look at how we can achieve this.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1665138447/blog/nestjs-current-user-custom-decorator/nestjs-current-user-custom-decorator
-keywords: 
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1665138447/blog/nestjs-current-user-custom-decorator/nestjs-current-user-custom-decorator
+keywords:
     - Nest.js @CurrentUser Custom Decorator
     - Nest.js
     - TypeScript

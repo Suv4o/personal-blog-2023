@@ -1,7 +1,7 @@
 ---
 title: Single Sign On (SSO) with Firebase Authentication across multiple domains
 description: Firebase is a great platform that offers a wide range of services to developers, making it easy to build, improve, and grow their apps. One of these services is Firebase Auth, which allows for easy user authentication using its JavaScript SDK. Despite Firebase Auth being an awesome service and abstracting a lot of the complex code needed to build user authentication, I recently found one limitation. Firebase Auth doesn't persist the session across multiple domains. This means that if we use the same Firebase Auth for two different domains, such as https://example1.com and https://example2.com, we have to sign in to both applications on both domains independently. Currently, Firebase doesn't have a built-in feature to handle this situation out of the box.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1680413367/blog/single-sign-on-with-firebase-authentication-across-multiple-domains/SSO-with-firebase-authentication-across-multiple-domains_nil2ba
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1680413367/blog/single-sign-on-with-firebase-authentication-across-multiple-domains/SSO-with-firebase-authentication-across-multiple-domains_nil2ba
 keywords:
     - Single Sign On (SSO) with Firebase Authentication across multiple domains
     - Firebase

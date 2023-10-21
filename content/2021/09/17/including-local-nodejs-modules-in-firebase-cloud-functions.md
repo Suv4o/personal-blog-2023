@@ -1,7 +1,7 @@
 ---
 title: Including local Node.js modules in Firebase Cloud Functions
 description: Modules have become a major part of the JavaScript ecosystem. They allow us to split our JavaScript programs up into separate smaller parts, called modules, that can be imported when needed. In this article, we will have a look at how we can include local modules in our Node.js app, and then see how that differentiates from including them in Firebase Cloud Functions. Before we continue, do note that this is not an introduction to Firebase. A basic understanding of Firebase and JavaScript is required before reading on about the examples that I'm about to explain.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602643/blog/including-local-nodejs-modules-in-firebase-cloud-functions/including-local-modules
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1631602643/blog/including-local-nodejs-modules-in-firebase-cloud-functions/including-local-modules
 keywords:
     - Including local Node.js modules in Firebase Cloud Functions
     - Node.js
