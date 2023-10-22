@@ -22,6 +22,7 @@ export function useHelpers() {
         "/ai",
         "/other",
         "/get-in-touch",
+        "/unsubscribe",
     ];
 
     const listingPaths = [

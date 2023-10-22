@@ -53,6 +53,9 @@ const isListingPage = computed(() => {
             </template>
         </ContentDoc>
         <FurtherReading v-if="isBlogArticle" />
+        <NuxtLink to="/unsubscribe" class="block h-0 w-0 invisible pointer-events-none" tabindex="0"
+            >unsubscribe</NuxtLink
+        >
     </main>
     <footer class="al-container">
         <Subscribe />
