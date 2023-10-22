@@ -15,6 +15,7 @@ type EmailMessage = {
 };
 
 type BodySendEmail = {
+    test: boolean;
     blog_image_url: string;
     blog_url: string;
     blog_name: string;
@@ -322,7 +323,7 @@ export const send_blog_post_info_to_subscribers = onRequest({ cors: "*" }, async
         return;
     }
 
-    const { blog_image_url, blog_url, blog_name, blog_briefly_describe, blog_highlights } =
+    const { test, blog_image_url, blog_url, blog_name, blog_briefly_describe, blog_highlights } =
         request.body as BodySendEmail;
 
     if (!blog_image_url || !blog_url || !blog_name || !blog_briefly_describe || !blog_highlights) {
@@ -332,22 +333,39 @@ export const send_blog_post_info_to_subscribers = onRequest({ cors: "*" }, async
         return;
     }
 
-    const onlySubscribedSubscribers = [
-        {
-            id: "F7Mv8EvOYarz03AbUNWf",
-            name: "Aleksandar Trpkovski",
-            email: "aleksandar.trpkovski@gmail.com",
-            subscribed: true,
-        },
-        {
-            id: "F7Mv8EvOYarz03AbUNWf",
-            name: "Aleks Trpkovski",
-            email: "a_trpkovski_1988@yahoo.com",
-            subscribed: true,
-        },
-    ];
+    let onlySubscribedSubscribers = null;
 
-    // For Testing
+    if (test) {
+        onlySubscribedSubscribers = [
+            {
+                id: "F7Mv8EvOYarz03AbUNWf",
+                name: "Aleksandar Trpkovski",
+                email: "aleksandar.trpkovski@gmail.com",
+                subscribed: true,
+            },
+            {
+                id: "F7Mv8EvOYarz03AbUNWf",
+                name: "Aleks Trpkovski",
+                email: "a_trpkovski_1988@yahoo.com",
+                subscribed: true,
+            },
+        ];
+    } else {
+        // const db = getFirestore();
+        // const subscribersRef = db.collection("subscribers");
+        // const subscribers = await subscribersRef.get();
+        // const subscribersData = subscribers.docs.map((doc) => {
+        //     return {
+        //         id: doc.id,
+        //         name: doc.data()?.name,
+        //         email: doc.data()?.email,
+        //         subscribed: doc.data()?.subscribed,
+        //     };
+        // });
+        // onlySubscribedSubscribers = subscribersData.filter((subscriber) => subscriber.subscribed);
+    }
+
+    // @ts-ignore
     for (const subscriber of onlySubscribedSubscribers) {
         const html = buildHtmlNewBlogPostEmailNewsletters({
             ...request.body,
@@ -365,24 +383,6 @@ export const send_blog_post_info_to_subscribers = onRequest({ cors: "*" }, async
     response.send({
         message: "The email has been sent to all subscribers.",
     });
-
-    // const db = getFirestore();
-
-    // const subscribersRef = db.collection("subscribers");
-    // const subscribers = await subscribersRef.get();
-    // const subscribersData = subscribers.docs.map((doc) => {
-    //     return {
-    //         id: doc.id,
-    //         name: doc.data()?.name,
-    //         email: doc.data()?.email,
-    //         subscribed: doc.data()?.subscribed,
-    //     };
-    // });
-    // const onlySubscribedSubscribers = subscribersData.filter((subscriber) => subscriber.subscribed);
-
-    // response.send({
-    //     message: onlySubscribedSubscribers,
-    // });
 });
 
 function buildEmailMessageForNewBlogPostEmailNewsletters(email: string, subject: string, text: string, html: string) {

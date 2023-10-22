@@ -33,7 +33,9 @@
                     ? tagDetails[12].link
                     : tag == 'LangChain'
                     ? tagDetails[13].link
-                    : tagDetails[14].link
+                    : tag == 'Python'
+                    ? tagDetails[14].link
+                    : tagDetails[15].link
             }`"
         >
             <div
@@ -66,6 +68,8 @@
                         ? 'bg-ai'
                         : tag == 'LangChain'
                         ? 'bg-langchain'
+                        : tag == 'Python'
+                        ? 'bg-python'
                         : 'bg-other',
                     small ? 'text-xs' : 'text-sm',
                     tag == 'Vue.js'
@@ -96,6 +100,8 @@
                         ? 'text-secondary'
                         : tag == 'LangChain'
                         ? 'text-secondary'
+                        : tag == 'Python'
+                        ? 'text-white'
                         : 'text-white',
                 ]"
             >
@@ -134,6 +140,7 @@ export default {
                 { bg: "#bd34fe", txt: "#ffc31d", link: "/vite" },
                 { bg: "#03e3fc", txt: "#ffffff", link: "/ai" },
                 { bg: "#6ffc03", txt: "#ffffff", link: "/langchain" },
+                { bg: "#356B99", txt: "#ffffff", link: "/python" },
                 { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
             ],
         };

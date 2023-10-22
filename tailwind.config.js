@@ -34,6 +34,7 @@ export default {
                 mustard: "rgb(var(--colour-mustard) / <alpha-value>)", // #ffc31d
                 ai: "rgb(var(--colour-ai) / <alpha-value>)", // #03e3fc
                 langchain: "rgb(var(--colour-langchain) / <alpha-value>)", // #6ffc03
+                python: "rgb(var(--colour-python) / <alpha-value>)", // #356B99
                 other: "rgb(var(--colour-other) / <alpha-value>)", // #ee5f53
             },
             fontFamily: {

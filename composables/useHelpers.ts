@@ -19,6 +19,7 @@ export function useHelpers() {
         "/vscode",
         "/vite",
         "/langchain",
+        "/python",
         "/ai",
         "/other",
         "/get-in-touch",
@@ -40,6 +41,7 @@ export function useHelpers() {
         "/vscode",
         "/vite",
         "/langchain",
+        "/python",
         "/ai",
         "/other",
     ];
