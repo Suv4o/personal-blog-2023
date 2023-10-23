@@ -351,18 +351,18 @@ export const send_blog_post_info_to_subscribers = onRequest({ cors: "*" }, async
             },
         ];
     } else {
-        // const db = getFirestore();
-        // const subscribersRef = db.collection("subscribers");
-        // const subscribers = await subscribersRef.get();
-        // const subscribersData = subscribers.docs.map((doc) => {
-        //     return {
-        //         id: doc.id,
-        //         name: doc.data()?.name,
-        //         email: doc.data()?.email,
-        //         subscribed: doc.data()?.subscribed,
-        //     };
-        // });
-        // onlySubscribedSubscribers = subscribersData.filter((subscriber) => subscriber.subscribed);
+        const db = getFirestore();
+        const subscribersRef = db.collection("subscribers");
+        const subscribers = await subscribersRef.get();
+        const subscribersData = subscribers.docs.map((doc) => {
+            return {
+                id: doc.id,
+                name: doc.data()?.name,
+                email: doc.data()?.email,
+                subscribed: doc.data()?.subscribed,
+            };
+        });
+        onlySubscribedSubscribers = subscribersData.filter((subscriber) => subscriber.subscribed);
     }
 
     // @ts-ignore
