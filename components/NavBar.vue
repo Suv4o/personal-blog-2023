@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon } from "@heroicons/vue/20/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { computed, ref } from "vue";
 import { Combobox, ComboboxInput, ComboboxLabel, ComboboxOption, ComboboxOptions } from "@headlessui/vue";
-import { Article } from "~/types";
+import type { Article } from "~/types";
 const router = useRouter();
 
 const articles = ref();

@@ -40,7 +40,7 @@
     }
 
     .blog-page {
-        @apply al-container text-secondary text-lg;
+        @apply al-container text-secondary text-lg break-words;
     }
 
     .blog-page h1,
