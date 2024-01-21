@@ -15,8 +15,8 @@ readTime: 5
 author: Aleksandar Trpkovski
 articleTags:
     - VSCode
-    - FrontEnd
     - BackEnd
+    - Other
 ---
 
 # Setting up global variables in the REST Client VS Code extension

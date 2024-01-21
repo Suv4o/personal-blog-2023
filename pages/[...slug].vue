@@ -5,6 +5,7 @@ const nuxtApp = useNuxtApp();
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
 const { pagePaths, listingPaths } = useHelpers();
+const isError = ref(false);
 const article = ref<Partial<Article>>();
 
 nuxtApp.hook("page:finish", () => {
@@ -12,7 +13,12 @@ nuxtApp.hook("page:finish", () => {
 });
 
 async function getCurrentArticle() {
-    return await queryContent().where({ _path: route.path }).findOne();
+    try {
+        return await queryContent().where({ _path: route.path }).findOne();
+    } catch (error) {
+        isError.value = true;
+        console.error(error);
+    }
 }
 
 article.value = await getCurrentArticle();
@@ -42,28 +48,30 @@ const isListingPage = computed(() => {
 </script>
 
 <template>
-    <header>
-        <NavBar />
-    </header>
-    <main class="overflow-hidden">
-        <HomeButton v-if="isBlogArticle || isListingPage" />
-        <ContentDoc class="al-container" :class="[isBlogArticle && 'blog-page']" :key="route.fullPath">
-            <template #not-found>
-                <NotFound />
-            </template>
-        </ContentDoc>
-        <FurtherReading v-if="isBlogArticle" />
-        <NuxtLink to="/unsubscribe" class="block h-0 w-0 invisible pointer-events-none" tabindex="0"
-            >unsubscribe</NuxtLink
-        >
-    </main>
-    <footer class="al-container">
-        <Subscribe />
-        <HorizontalRule />
-        <p class="text-center text-secondary text-base mt-2 mb-12">
-            © <ClientOnly>{{ new Date().getFullYear() }}</ClientOnly> Aleksandar Trpkovski
-        </p>
-    </footer>
+    <div :class="isError && 'flex flex-col h-screen'">
+        <header>
+            <NavBar />
+        </header>
+        <main class="overflow-hidden" :class="isError && 'flex-grow'">
+            <HomeButton v-if="isBlogArticle || isListingPage" />
+            <ContentDoc class="al-container" :class="[isBlogArticle && 'blog-page']" :key="route.fullPath">
+                <template #not-found>
+                    <NotFound />
+                </template>
+            </ContentDoc>
+            <FurtherReading v-if="isBlogArticle && !isError" />
+            <NuxtLink to="/unsubscribe" class="block h-0 w-0 invisible pointer-events-none" tabindex="0"
+                >unsubscribe</NuxtLink
+            >
+        </main>
+        <footer class="al-container" :class="isError && 'flex-shrink-0'">
+            <Subscribe v-if="!isError" />
+            <HorizontalRule />
+            <p class="text-center text-secondary text-base mt-2 mb-12">
+                © <ClientOnly>{{ new Date().getFullYear() }}</ClientOnly> Aleksandar Trpkovski
+            </p>
+        </footer>
+    </div>
 </template>
 
 <style>

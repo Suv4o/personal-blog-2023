@@ -8,34 +8,34 @@
                 tag == 'Vue.js'
                     ? tagDetails[0].link
                     : tag == 'JavaScript'
-                    ? tagDetails[1].link
-                    : tag == 'FrontEnd'
-                    ? tagDetails[2].link
-                    : tag == 'Firebase'
-                    ? tagDetails[3].link
-                    : tag == 'Node.js'
-                    ? tagDetails[4].link
-                    : tag == 'BackEnd'
-                    ? tagDetails[5].link
-                    : tag == 'CSS'
-                    ? tagDetails[6].link
-                    : tag == 'TypeScript'
-                    ? tagDetails[7].link
-                    : tag == 'Nest.js'
-                    ? tagDetails[8].link
-                    : tag == 'Nuxt.js'
-                    ? tagDetails[9].link
-                    : tag == 'VSCode'
-                    ? tagDetails[10].link
-                    : tag == 'Vite'
-                    ? tagDetails[11].link
-                    : tag == 'AI'
-                    ? tagDetails[12].link
-                    : tag == 'LangChain'
-                    ? tagDetails[13].link
-                    : tag == 'Python'
-                    ? tagDetails[14].link
-                    : tagDetails[15].link
+                      ? tagDetails[1].link
+                      : tag == 'FrontEnd'
+                        ? tagDetails[2].link
+                        : tag == 'Firebase'
+                          ? tagDetails[3].link
+                          : tag == 'Node.js'
+                            ? tagDetails[4].link
+                            : tag == 'BackEnd'
+                              ? tagDetails[5].link
+                              : tag == 'CSS'
+                                ? tagDetails[6].link
+                                : tag == 'TypeScript'
+                                  ? tagDetails[7].link
+                                  : tag == 'Nest.js'
+                                    ? tagDetails[8].link
+                                    : tag == 'Nuxt.js'
+                                      ? tagDetails[9].link
+                                      : tag == 'VSCode'
+                                        ? tagDetails[10].link
+                                        : tag == 'Vite'
+                                          ? tagDetails[11].link
+                                          : tag == 'AI'
+                                            ? tagDetails[12].link
+                                            : tag == 'LangChain'
+                                              ? tagDetails[13].link
+                                              : tag == 'Python'
+                                                ? tagDetails[14].link
+                                                : tagDetails[15].link
             }`"
         >
             <div
@@ -43,66 +43,66 @@
                     tag == 'Vue.js'
                         ? 'bg-green'
                         : tag == 'JavaScript'
-                        ? 'bg-javascript'
-                        : tag == 'FrontEnd'
-                        ? 'bg-secondary'
-                        : tag == 'Firebase'
-                        ? 'bg-firebase'
-                        : tag == 'Node.js'
-                        ? 'bg-node'
-                        : tag == 'BackEnd'
-                        ? 'bg-backend'
-                        : tag == 'CSS'
-                        ? 'bg-css'
-                        : tag == 'TypeScript'
-                        ? 'bg-typescript'
-                        : tag == 'Nest.js'
-                        ? 'bg-nestjs'
-                        : tag == 'Nuxt.js'
-                        ? 'bg-nuxtjs'
-                        : tag == 'VSCode'
-                        ? 'bg-vscode'
-                        : tag == 'Vite'
-                        ? 'bg-vite'
-                        : tag == 'AI'
-                        ? 'bg-ai'
-                        : tag == 'LangChain'
-                        ? 'bg-langchain'
-                        : tag == 'Python'
-                        ? 'bg-python'
-                        : 'bg-other',
+                          ? 'bg-javascript'
+                          : tag == 'FrontEnd'
+                            ? 'bg-secondary'
+                            : tag == 'Firebase'
+                              ? 'bg-firebase'
+                              : tag == 'Node.js'
+                                ? 'bg-node'
+                                : tag == 'BackEnd'
+                                  ? 'bg-backend'
+                                  : tag == 'CSS'
+                                    ? 'bg-css'
+                                    : tag == 'TypeScript'
+                                      ? 'bg-typescript'
+                                      : tag == 'Nest.js'
+                                        ? 'bg-nestjs'
+                                        : tag == 'Nuxt.js'
+                                          ? 'bg-nuxtjs'
+                                          : tag == 'VSCode'
+                                            ? 'bg-vscode'
+                                            : tag == 'Vite'
+                                              ? 'bg-vite'
+                                              : tag == 'AI'
+                                                ? 'bg-ai'
+                                                : tag == 'LangChain'
+                                                  ? 'bg-langchain'
+                                                  : tag == 'Python'
+                                                    ? 'bg-python'
+                                                    : 'bg-other',
                     small ? 'text-xs' : 'text-sm',
                     tag == 'Vue.js'
                         ? '!text-white'
                         : tag == 'JavaScript'
-                        ? 'text-secondary'
-                        : tag == 'FrontEnd'
-                        ? 'text-white'
-                        : tag == 'Firebase'
-                        ? 'text-secondary'
-                        : tag == 'Node.js'
-                        ? 'text-white'
-                        : tag == 'BackEnd'
-                        ? 'text-white'
-                        : tag == 'CSS'
-                        ? 'text-white'
-                        : tag == 'TypeScript'
-                        ? 'text-white'
-                        : tag == 'Nest.js'
-                        ? 'text-white'
-                        : tag == 'Nuxt.js'
-                        ? 'text-green-light'
-                        : tag == 'VSCode'
-                        ? 'text-white'
-                        : tag == 'Vite'
-                        ? 'text-white'
-                        : tag == 'AI'
-                        ? 'text-secondary'
-                        : tag == 'LangChain'
-                        ? 'text-secondary'
-                        : tag == 'Python'
-                        ? 'text-white'
-                        : 'text-white',
+                          ? 'text-secondary'
+                          : tag == 'FrontEnd'
+                            ? 'text-white'
+                            : tag == 'Firebase'
+                              ? 'text-secondary'
+                              : tag == 'Node.js'
+                                ? 'text-white'
+                                : tag == 'BackEnd'
+                                  ? 'text-white'
+                                  : tag == 'CSS'
+                                    ? 'text-white'
+                                    : tag == 'TypeScript'
+                                      ? 'text-white'
+                                      : tag == 'Nest.js'
+                                        ? 'text-white'
+                                        : tag == 'Nuxt.js'
+                                          ? 'text-green-light'
+                                          : tag == 'VSCode'
+                                            ? 'text-white'
+                                            : tag == 'Vite'
+                                              ? 'text-white'
+                                              : tag == 'AI'
+                                                ? 'text-secondary'
+                                                : tag == 'LangChain'
+                                                  ? 'text-secondary'
+                                                  : tag == 'Python'
+                                                    ? 'text-white'
+                                                    : 'text-white',
                 ]"
             >
                 {{ tag }}
