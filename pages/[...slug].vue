@@ -23,6 +23,10 @@ async function getCurrentArticle() {
 
 article.value = await getCurrentArticle();
 
+if (!article.value?.body?.children?.length) {
+    isError.value = true;
+}
+
 useSeoMeta({
     keywords: article.value?.keywords?.join(", ") ?? "",
     ogDescription: article.value?.description ?? "",
@@ -56,6 +60,9 @@ const isListingPage = computed(() => {
             <HomeButton v-if="isBlogArticle || isListingPage" />
             <ContentDoc class="al-container" :class="[isBlogArticle && 'blog-page']" :key="route.fullPath">
                 <template #not-found>
+                    <NotFound />
+                </template>
+                <template #empty>
                     <NotFound />
                 </template>
             </ContentDoc>
