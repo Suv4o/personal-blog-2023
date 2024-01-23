@@ -83,7 +83,7 @@ Then let's define our first `<CustomLink/>` JSX component:
 
 ```ts
 <script setup lang="tsx">
-    const CustomLink = (props: { href: string; name: string }) => <a href={props.href}>{props.name}</a>;
+    const CustomLink = (props: { href: string; name: string }) => <a href="{props.href}>{props.name}"</a>;
 <script>
 ```
 
@@ -101,7 +101,7 @@ We can even declare reactive `ref` variables as we usually do in the Vue composi
 <script setup lang="tsx">
 	const href = "https://vitejs.dev";
 	const name = "Vite";
-    const CustomLink = (props: { href: string; name: string }) => <a href={props.href}>{props.name}</a>;
+    const CustomLink = (props: { href: string; name: string }) => <a href="{props.href}>{props.name}"</a>;
 <script>
 ```
 
