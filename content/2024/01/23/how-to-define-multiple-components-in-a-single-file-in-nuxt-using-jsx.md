@@ -16,7 +16,7 @@ keywords:
     - Web Development
     - Development
 type: article
-published: 21st January 2024
+published: 23rd January 2024
 readTime: 10
 author: Aleksandar Trpkovski
 articleTags:
