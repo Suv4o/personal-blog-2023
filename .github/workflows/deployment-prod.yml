@@ -27,15 +27,20 @@ jobs:
               with:
                   cmd: install # will run `yarn install` command
 
-            - name: Install dependencies inside function folder
+            - name: Remove yarn.lock and node_modules in firebase functions folder
               run: |
                   cd functions
                   rm -f yarn.lock
                   rm -rf node_modules
+
+            - name: Run install in firebase functions folder
               uses: borales/actions-yarn@v4
               with:
                   cmd: install # will run `yarn install` command
-              run: cd ..
+
+            - name: Go back to root folder
+              run: |
+                  cd ..
 
             - name: Build production bundle
               uses: borales/actions-yarn@v4
