@@ -8,6 +8,12 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+            SUBSCRIBE_TO_NEWSLETTERS_URL: ${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}
+            CONTACT_FORM_URL: ${{ vars.CONTACT_FORM_URL }}
+            UNSUBSCRIBE_TO_NEWSLETTERS_URL: ${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}
+            RE_CAPTCHA_SITE_KEY: ${{ vars.RE_CAPTCHA_SITE_KEY }}
+            GOOGLE_ANALYTICS_ID: ${{ vars.GOOGLE_ANALYTICS_ID }}
 
         steps:
             - uses: actions/checkout@v2
@@ -40,16 +46,16 @@ jobs:
 
             - name: Create .env.prod file
               run: |
-                  echo "::add-mask::${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}"
-                  echo "SUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod
-                  echo "::add-mask::${{ vars.CONTACT_FORM_URL }}"
-                  echo "CONTACT_FORM_URL=${{ vars.CONTACT_FORM_URL }}" >> .env.prod
-                  echo "::add-mask::${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}"
-                  echo "UNSUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod
-                  echo "::add-mask::${{ vars.RE_CAPTCHA_SITE_KEY }}"
-                  echo "RE_CAPTCHA_SITE_KEY=${{ vars.RE_CAPTCHA_SITE_KEY }}" >> .env.prod
-                  echo "::add-mask::${{ vars.GOOGLE_ANALYTICS_ID }}"
-                  echo "GOOGLE_ANALYTICS_ID=${{ vars.GOOGLE_ANALYTICS_ID }}" >> .env.prod
+                  echo "::add-mask::$SUBSCRIBE_TO_NEWSLETTERS_URL"
+                  echo "SUBSCRIBE_TO_NEWSLETTERS_URL=$SUBSCRIBE_TO_NEWSLETTERS_URL" >> .env.prod
+                  echo "::add-mask::$CONTACT_FORM_URL"
+                  echo "CONTACT_FORM_URL=$CONTACT_FORM_URL" >> .env.prod
+                  echo "::add-mask::$UNSUBSCRIBE_TO_NEWSLETTERS_URL"
+                  echo "UNSUBSCRIBE_TO_NEWSLETTERS_URL=$UNSUBSCRIBE_TO_NEWSLETTERS_URL" >> .env.prod
+                  echo "::add-mask::$vars.RE_CAPTCHA_SITE_KEY"
+                  echo "RE_CAPTCHA_SITE_KEY=$vars.RE_CAPTCHA_SITE_KEY" >> .env.prod
+                  echo "::add-mask::$vars.GOOGLE_ANALYTICS_ID"
+                  echo "GOOGLE_ANALYTICS_ID=$vars.GOOGLE_ANALYTICS_ID" >> .env.prod
 
             - name: Run Generate
               run: |
