@@ -18,7 +18,7 @@ jobs:
                   node-version: "18"
 
             - name: Install dependencies
-              run: yarn install
+              run: yarn install --force
 
             - name: Build static site
               run: yarn generate:prod
