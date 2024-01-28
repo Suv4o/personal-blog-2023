@@ -17,8 +17,8 @@ jobs:
               with:
                   node-version: "18"
 
-            - name: Test
-              run: echo "${{ vars.GOOGLE_ANALYTICS_ID }}!"
+            # - name: Test
+            #   run: echo "${{ vars.GOOGLE_ANALYTICS_ID }}!"
 
             - name: Remove yarn.lock and node_modules
               run: |
@@ -40,6 +40,14 @@ jobs:
                   cd functions
                   yarn install
                   cd ..
+
+            - name: Create .env.prod file
+              run: |
+                  echo "SUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod
+                  echo "CONTACT_FORM_URL=${{ vars.CONTACT_FORM_URL }}" >> .env.prod
+                  echo "UNSUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod
+                  echo "RE_CAPTCHA_SITE_KEY=${{ vars.RE_CAPTCHA_SITE_KEY }}" >> .env.prod
+                  echo "GOOGLE_ANALYTICS_ID=${{ vars.GOOGLE_ANALYTICS_ID }}" >> .env.prod
 
             - name: Run Generate
               run: |
