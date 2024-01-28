@@ -1,7 +1,7 @@
-const fs = require("fs");
+import { writeFileSync } from "fs";
 
 function createEnvFile(envVariables) {
-    fs.writeFileSync(
+    writeFileSync(
         ".env.prod",
         Object.entries(envVariables)
             .map(([key, value]) => `${key}=${value}`)
