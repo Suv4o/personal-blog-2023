@@ -40,11 +40,11 @@ jobs:
 
             - name: Create .env.prod file
               run: |
-                  echo "SUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod 2>&1 >/dev/null
-                  echo "CONTACT_FORM_URL=${{ vars.CONTACT_FORM_URL }}" >> .env.prod 2>&1 >/dev/null
-                  echo "UNSUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod 2>&1 >/dev/null
-                  echo "RE_CAPTCHA_SITE_KEY=${{ vars.RE_CAPTCHA_SITE_KEY }}" >> .env.prod 2>&1 >/dev/null
-                  echo "GOOGLE_ANALYTICS_ID=${{ vars.GOOGLE_ANALYTICS_ID }}" >> .env.prod 2>&1 >/dev/null
+                  echo "SUBSCRIBE_TO_NEWSLETTERS_URL=::add-mask::${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod
+                  echo "CONTACT_FORM_URL=::add-mask::${{ vars.CONTACT_FORM_URL }}" >> .env.prod
+                  echo "UNSUBSCRIBE_TO_NEWSLETTERS_URL=::add-mask::${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod
+                  echo "RE_CAPTCHA_SITE_KEY=::add-mask::${{ vars.RE_CAPTCHA_SITE_KEY }}" >> .env.prod
+                  echo "GOOGLE_ANALYTICS_ID=::add-mask::${{ vars.GOOGLE_ANALYTICS_ID }}" >> .env.prod
 
             - name: Run Generate
               run: |
