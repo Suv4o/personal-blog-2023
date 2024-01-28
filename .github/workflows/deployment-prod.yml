@@ -18,7 +18,7 @@ jobs:
                   node-version: "18"
 
             - name: Test
-              run: echo "${{ env.GOOGLE_ANALYTICS_ID }}!"
+              run: echo "${{ econtext.GOOGLE_ANALYTICS_ID }}!"
 
             - name: Remove yarn.lock and node_modules
               run: |
