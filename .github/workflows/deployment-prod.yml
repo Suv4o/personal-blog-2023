@@ -17,6 +17,11 @@ jobs:
               with:
                   node-version: "18"
 
+            - name: Remove yarn.lock and node_modules
+              run: |
+                  rm -f yarn.lock
+                  rm -rf node_modules
+
             - name: Run install
               uses: borales/actions-yarn@v4
               with:
