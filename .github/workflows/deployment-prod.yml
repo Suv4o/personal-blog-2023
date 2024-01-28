@@ -45,7 +45,7 @@ jobs:
                   cd ..
 
             - name: Create .env.prod file
-              run: node create-env.js
+              run: create-env-prod.js
               env:
                   SUBSCRIBE_TO_NEWSLETTERS_URL: $SUBSCRIBE_TO_NEWSLETTERS_URL
                   CONTACT_FORM_URL: $CONTACT_FORM_URL
