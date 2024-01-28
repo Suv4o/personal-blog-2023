@@ -8,23 +8,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        env:
-            SUBSCRIBE_TO_NEWSLETTERS_URL: ${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}
-            CONTACT_FORM_URL: ${{ vars.CONTACT_FORM_URL }}
-            UNSUBSCRIBE_TO_NEWSLETTERS_URL: ${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}
-            RE_CAPTCHA_SITE_KEY: ${{ vars.RE_CAPTCHA_SITE_KEY }}
-            GOOGLE_ANALYTICS_ID: ${{ vars.GOOGLE_ANALYTICS_ID }}
 
         steps:
             - uses: actions/checkout@v2
-
-            - name: Mask environment variables
-              run: |
-                  echo "::add-mask::${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}"
-                  echo "::add-mask::${{ vars.CONTACT_FORM_URL }}"
-                  echo "::add-mask::${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}"
-                  echo "::add-mask::${{ vars.RE_CAPTCHA_SITE_KEY }}"
-                  echo "::add-mask::${{ vars.GOOGLE_ANALYTICS_ID }}"
 
             - name: Use Node.js
               uses: actions/setup-node@v2
@@ -53,6 +39,12 @@ jobs:
                   cd ..
 
             - name: Create .env.prod file
+              env:
+                  SUBSCRIBE_TO_NEWSLETTERS_URL: ${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}
+                  CONTACT_FORM_URL: ${{ vars.CONTACT_FORM_URL }}
+                  UNSUBSCRIBE_TO_NEWSLETTERS_URL: ${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}
+                  RE_CAPTCHA_SITE_KEY: ${{ vars.RE_CAPTCHA_SITE_KEY }}
+                  GOOGLE_ANALYTICS_ID: ${{ vars.GOOGLE_ANALYTICS_ID }}
               run: |
                   echo "::add-mask::$SUBSCRIBE_TO_NEWSLETTERS_URL"
                   echo "SUBSCRIBE_TO_NEWSLETTERS_URL=$SUBSCRIBE_TO_NEWSLETTERS_URL" >> .env.prod
