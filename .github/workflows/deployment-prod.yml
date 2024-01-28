@@ -23,7 +23,7 @@ jobs:
                   rm -rf node_modules
 
             - name: Run install root
-                run: yarn install
+              run: yarn install
 
             - name: Remove yarn.lock and node_modules in firebase functions folder
               run: |
