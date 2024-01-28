@@ -17,6 +17,9 @@ jobs:
               with:
                   node-version: "18"
 
+            - name: Test
+              run: echo "${{ env.GOOGLE_ANALYTICS_ID }}!"
+
             - name: Remove yarn.lock and node_modules
               run: |
                   rm -f yarn.lock
@@ -41,16 +44,6 @@ jobs:
             - name: Run Generate
               run: |
                   yarn generate:prod
-            # - name: Deploy to Netlify
-            #   uses: South-Paw/action-netlify-cli@v2
-            #   id: netlify
-            #   with:
-            #       args: "deploy --prod"
-            #   env:
-            #       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-            #       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-            #       NETLIFY_DEPLOY_TO_PROD: true
-            #       build_directory: ".output/public"
 
             - name: Deploy to Netlify
               uses: jsmrcaga/action-netlify-deploy@v2.0.0
