@@ -27,6 +27,16 @@ jobs:
               with:
                   cmd: install # will run `yarn install` command
 
+            - name: Install dependencies inside function folder
+              run: |
+                  cd functions
+                  rm -f yarn.lock
+                  rm -rf node_modules
+              uses: borales/actions-yarn@v4
+              with:
+                  cmd: install # will run `yarn install` command
+              run: cd ..
+
             - name: Build production bundle
               uses: borales/actions-yarn@v4
               with:
