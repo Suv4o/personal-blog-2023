@@ -22,30 +22,24 @@ jobs:
                   rm -f yarn.lock
                   rm -rf node_modules
 
-            - name: Run install
-              uses: borales/actions-yarn@v4
-              with:
-                  cmd: install # will run `yarn install` command
+            - name: Run install root
+                run: yarn install
 
             - name: Remove yarn.lock and node_modules in firebase functions folder
               run: |
                   cd functions
                   rm -f yarn.lock
                   rm -rf node_modules
+                  cd ..
 
             - name: Run install in firebase functions folder
-              uses: borales/actions-yarn@v4
-              with:
-                  cmd: install # will run `yarn install` command
-
-            - name: Go back to root folder
               run: |
+                  cd functions
+                  yarn install
                   cd ..
 
             - name: Build production bundle
-              uses: borales/actions-yarn@v4
-              with:
-                  cmd: generate:prod # will run `yarn generate:prod` command
+              run: yarn generate:prod
 
             - name: Deploy to Netlify
               uses: jsmrcaga/action-netlify-deploy@v2.0.0
