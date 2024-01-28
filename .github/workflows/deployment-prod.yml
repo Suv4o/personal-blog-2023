@@ -45,17 +45,25 @@ jobs:
                   cd ..
 
             - name: Create .env.prod file
-              run: |
-                  echo "::add-mask::$SUBSCRIBE_TO_NEWSLETTERS_URL"
-                  echo "SUBSCRIBE_TO_NEWSLETTERS_URL=$SUBSCRIBE_TO_NEWSLETTERS_URL" >> .env.prod
-                  echo "::add-mask::$CONTACT_FORM_URL"
-                  echo "CONTACT_FORM_URL=$CONTACT_FORM_URL" >> .env.prod
-                  echo "::add-mask::$UNSUBSCRIBE_TO_NEWSLETTERS_URL"
-                  echo "UNSUBSCRIBE_TO_NEWSLETTERS_URL=$UNSUBSCRIBE_TO_NEWSLETTERS_URL" >> .env.prod
-                  echo "::add-mask::$RE_CAPTCHA_SITE_KEY"
-                  echo "RE_CAPTCHA_SITE_KEY=$RE_CAPTCHA_SITE_KEY" >> .env.prod
-                  echo "::add-mask::$GOOGLE_ANALYTICS_ID"
-                  echo "GOOGLE_ANALYTICS_ID=$GOOGLE_ANALYTICS_ID" >> .env.prod
+              run: node create-env.js
+              env:
+                  SUBSCRIBE_TO_NEWSLETTERS_URL: $SUBSCRIBE_TO_NEWSLETTERS_URL
+                  CONTACT_FORM_URL: $CONTACT_FORM_URL
+                  UNSUBSCRIBE_TO_NEWSLETTERS_URL: $UNSUBSCRIBE_TO_NEWSLETTERS_URL
+                  RE_CAPTCHA_SITE_KEY: $RE_CAPTCHA_SITE_KEY
+                  GOOGLE_ANALYTICS_ID: $GOOGLE_ANALYTICS_ID
+            # - name: Create .env.prod file
+            #   run: |
+            #       echo "::add-mask::$SUBSCRIBE_TO_NEWSLETTERS_URL"
+            #       echo "SUBSCRIBE_TO_NEWSLETTERS_URL=$SUBSCRIBE_TO_NEWSLETTERS_URL" >> .env.prod
+            #       echo "::add-mask::$CONTACT_FORM_URL"
+            #       echo "CONTACT_FORM_URL=$CONTACT_FORM_URL" >> .env.prod
+            #       echo "::add-mask::$UNSUBSCRIBE_TO_NEWSLETTERS_URL"
+            #       echo "UNSUBSCRIBE_TO_NEWSLETTERS_URL=$UNSUBSCRIBE_TO_NEWSLETTERS_URL" >> .env.prod
+            #       echo "::add-mask::$RE_CAPTCHA_SITE_KEY"
+            #       echo "RE_CAPTCHA_SITE_KEY=$RE_CAPTCHA_SITE_KEY" >> .env.prod
+            #       echo "::add-mask::$GOOGLE_ANALYTICS_ID"
+            #       echo "GOOGLE_ANALYTICS_ID=$GOOGLE_ANALYTICS_ID" >> .env.prod
 
             - name: Run Generate
               run: |
