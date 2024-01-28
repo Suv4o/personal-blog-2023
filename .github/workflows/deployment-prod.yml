@@ -17,9 +17,6 @@ jobs:
               with:
                   node-version: "18"
 
-            # - name: Test
-            #   run: echo "${{ vars.GOOGLE_ANALYTICS_ID }}!"
-
             - name: Remove yarn.lock and node_modules
               run: |
                   rm -f yarn.lock
@@ -43,11 +40,11 @@ jobs:
 
             - name: Create .env.prod file
               run: |
-                  echo "SUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod
-                  echo "CONTACT_FORM_URL=${{ vars.CONTACT_FORM_URL }}" >> .env.prod
-                  echo "UNSUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod
-                  echo "RE_CAPTCHA_SITE_KEY=${{ vars.RE_CAPTCHA_SITE_KEY }}" >> .env.prod
-                  echo "GOOGLE_ANALYTICS_ID=${{ vars.GOOGLE_ANALYTICS_ID }}" >> .env.prod
+                  echo "SUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.SUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod 2>&1 >/dev/null
+                  echo "CONTACT_FORM_URL=${{ vars.CONTACT_FORM_URL }}" >> .env.prod 2>&1 >/dev/null
+                  echo "UNSUBSCRIBE_TO_NEWSLETTERS_URL=${{ vars.UNSUBSCRIBE_TO_NEWSLETTERS_URL }}" >> .env.prod 2>&1 >/dev/null
+                  echo "RE_CAPTCHA_SITE_KEY=${{ vars.RE_CAPTCHA_SITE_KEY }}" >> .env.prod 2>&1 >/dev/null
+                  echo "GOOGLE_ANALYTICS_ID=${{ vars.GOOGLE_ANALYTICS_ID }}" >> .env.prod 2>&1 >/dev/null
 
             - name: Run Generate
               run: |
