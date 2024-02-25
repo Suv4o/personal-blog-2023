@@ -35,7 +35,9 @@
                                               ? tagDetails[13].link
                                               : tag == 'Python'
                                                 ? tagDetails[14].link
-                                                : tagDetails[15].link
+                                                : tag == 'Nitro'
+                                                  ? tagDetails[15].link
+                                                  : tagDetails[16].link
             }`"
         >
             <div
@@ -70,7 +72,9 @@
                                                   ? 'bg-langchain'
                                                   : tag == 'Python'
                                                     ? 'bg-python'
-                                                    : 'bg-other',
+                                                    : tag == 'Nitro'
+                                                      ? 'bg-nitro'
+                                                      : 'bg-other',
                     small ? 'text-xs' : 'text-sm',
                     tag == 'Vue.js'
                         ? '!text-white'
@@ -102,7 +106,9 @@
                                                   ? 'text-secondary'
                                                   : tag == 'Python'
                                                     ? 'text-white'
-                                                    : 'text-white',
+                                                    : tag == 'Nitro'
+                                                      ? 'text-black'
+                                                      : 'text-white',
                 ]"
             >
                 {{ tag }}
@@ -141,6 +147,7 @@ export default {
                 { bg: "#03e3fc", txt: "#ffffff", link: "/ai" },
                 { bg: "#6ffc03", txt: "#ffffff", link: "/langchain" },
                 { bg: "#356B99", txt: "#ffffff", link: "/python" },
+                { bg: "#f777b0", txt: "#191919", link: "/nitro" },
                 { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
             ],
         };

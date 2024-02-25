@@ -35,6 +35,7 @@ export default {
                 ai: "rgb(var(--colour-ai) / <alpha-value>)", // #03e3fc
                 langchain: "rgb(var(--colour-langchain) / <alpha-value>)", // #6ffc03
                 python: "rgb(var(--colour-python) / <alpha-value>)", // #356B99
+                nitro: "rgb(var(--colour-nitro) / <alpha-value>)", // #f777b0
                 other: "rgb(var(--colour-other) / <alpha-value>)", // #ee5f53
             },
             fontFamily: {
