@@ -20,6 +20,7 @@ export function useHelpers() {
         "/vite",
         "/langchain",
         "/python",
+        "/nitro",
         "/ai",
         "/other",
         "/get-in-touch",
@@ -42,6 +43,7 @@ export function useHelpers() {
         "/vite",
         "/langchain",
         "/python",
+        "/nitro",
         "/ai",
         "/other",
     ];

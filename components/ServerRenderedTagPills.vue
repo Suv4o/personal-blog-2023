@@ -8,28 +8,36 @@
                 tag == 'Vue.js'
                     ? tagDetails[0].link
                     : tag == 'JavaScript'
-                    ? tagDetails[1].link
-                    : tag == 'FrontEnd'
-                    ? tagDetails[2].link
-                    : tag == 'Firebase'
-                    ? tagDetails[3].link
-                    : tag == 'Node.js'
-                    ? tagDetails[4].link
-                    : tag == 'BackEnd'
-                    ? tagDetails[5].link
-                    : tag == 'CSS'
-                    ? tagDetails[6].link
-                    : tag == 'TypeScript'
-                    ? tagDetails[7].link
-                    : tag == 'Nest.js'
-                    ? tagDetails[8].link
-                    : tag == 'Nuxt.js'
-                    ? tagDetails[9].link
-                    : tag == 'VSCode'
-                    ? tagDetails[10].link
-                    : tag == 'Vite'
-                    ? tagDetails[11].link
-                    : tagDetails[12].link
+                      ? tagDetails[1].link
+                      : tag == 'FrontEnd'
+                        ? tagDetails[2].link
+                        : tag == 'Firebase'
+                          ? tagDetails[3].link
+                          : tag == 'Node.js'
+                            ? tagDetails[4].link
+                            : tag == 'BackEnd'
+                              ? tagDetails[5].link
+                              : tag == 'CSS'
+                                ? tagDetails[6].link
+                                : tag == 'TypeScript'
+                                  ? tagDetails[7].link
+                                  : tag == 'Nest.js'
+                                    ? tagDetails[8].link
+                                    : tag == 'Nuxt.js'
+                                      ? tagDetails[9].link
+                                      : tag == 'VSCode'
+                                        ? tagDetails[10].link
+                                        : tag == 'Vite'
+                                          ? tagDetails[11].link
+                                          : tag == 'AI'
+                                            ? tagDetails[12].link
+                                            : tag == 'LangChain'
+                                              ? tagDetails[13].link
+                                              : tag == 'Python'
+                                                ? tagDetails[14].link
+                                                : tag == 'Nitro'
+                                                  ? tagDetails[15].link
+                                                  : tagDetails[16].link
             }`"
         >
             <div>
@@ -66,6 +74,10 @@ export default {
                 { bg: "#022832", txt: "#00dd82", link: "/nuxtjs" },
                 { bg: "#3aa8f0", txt: "#ffffff", link: "/vscode" },
                 { bg: "#bd34fe", txt: "#ffc31d", link: "/vite" },
+                { bg: "#03e3fc", txt: "#ffffff", link: "/ai" },
+                { bg: "#6ffc03", txt: "#ffffff", link: "/langchain" },
+                { bg: "#356B99", txt: "#ffffff", link: "/python" },
+                { bg: "#f777b0", txt: "#191919", link: "/nitro" },
                 { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
             ],
         };
