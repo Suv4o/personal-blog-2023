@@ -61,6 +61,10 @@ jobs:
               run: |
                   yarn generate:prod
 
+            - name: Create redirect file
+              run: |
+                  echo "/2024/25/02/create-a-web-server-using-nitro-sqlite-and-typeorm    /2024/02/25/create-a-web-server-using-nitro-sqlite-and-typeorm" > .output/public/_redirects
+
             - name: Deploy to Netlify
               uses: jsmrcaga/action-netlify-deploy@v2.0.0
               with:
