@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { MagnifyingGlassIcon } from "@heroicons/vue/20/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { computed, ref } from "vue";
@@ -10,6 +10,13 @@ const router = useRouter();
 const articles = ref();
 const query = ref("");
 const selectedArticle = ref();
+
+watch(
+    () => selectedArticle.value,
+    () => {
+        navigateToArticle();
+    }
+);
 
 function getArticles() {
     return queryContent().where({ type: "article" }).find();
@@ -70,7 +77,6 @@ async function navigateToArticle() {
                                 <ComboboxInput
                                     class="block w-full rounded-md border-2 border-transparent py-1.5 pl-10 pr-3 text-gray placeholder:text-gray focus:ring-0 sm:text-lg sm:leading-6 focus:border-primary"
                                     @change="query = $event.target.value"
-                                    @keydown.enter="navigateToArticle"
                                     placeholder="Search"
                                     type="search"
                                 />
