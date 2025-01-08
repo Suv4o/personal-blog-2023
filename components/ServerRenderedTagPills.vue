@@ -37,7 +37,9 @@
                                                 ? tagDetails[14].link
                                                 : tag == 'Nitro'
                                                   ? tagDetails[15].link
-                                                  : tagDetails[16].link
+                                                  : tag == 'React.js'
+                                                    ? tagDetails[16].link
+                                                    : tagDetails[17].link
             }`"
         >
             <div>
@@ -78,6 +80,7 @@ export default {
                 { bg: "#6ffc03", txt: "#ffffff", link: "/langchain" },
                 { bg: "#356B99", txt: "#ffffff", link: "/python" },
                 { bg: "#f777b0", txt: "#191919", link: "/nitro" },
+                { bg: "#61dafb", txt: "#3d3d3d", link: "/reactjs" },
                 { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
             ],
         };

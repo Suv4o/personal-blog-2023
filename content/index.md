@@ -4,6 +4,7 @@ description: Welcome to my blog! I am a Frontend Web Developer with several year
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait
 keywords:
     - Vue.js
+    - React.js
     - Nuxt.js
     - Node.js
     - Nest.js

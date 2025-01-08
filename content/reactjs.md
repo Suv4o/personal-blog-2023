@@ -1,6 +1,6 @@
 ---
-title: Aleks Trpkovski — TypeScript
-description: TypeScript articles by Aleks Trpkovski
+title: Aleks Trpkovski — React JS
+description: React JS articles by Aleks Trpkovski
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait
 keywords:
     - Vue.js
@@ -28,5 +28,5 @@ keywords:
 type: page
 ---
 
-::posts{:pagination=true :limit=10 :search-tag='["TypeScript"]'}
+::posts{:pagination=true :limit=10 :search-tag='["React.js"]'}
 ::
