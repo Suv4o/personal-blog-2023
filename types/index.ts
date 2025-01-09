@@ -5,7 +5,7 @@ export interface Article {
     description: string;
     image: string;
     keywords: string[];
-    published: boolean;
+    published: string;
     readTime: number;
     title: string;
     type: string;

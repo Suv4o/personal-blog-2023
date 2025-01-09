@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const route = useRoute();
-const serverRenderedArticles = ref();
-const serverRenderedArticlesCount = ref();
-const articles = ref();
-const articlesCount = ref();
-const fetchCompleted = ref(false);
+import type { Article } from "~/types";
 
 const props = defineProps({
     limit: {
@@ -32,6 +27,39 @@ const props = defineProps({
         default: () => [],
     },
 });
+
+const route = useRoute();
+const serverRenderedArticles = ref();
+const serverRenderedArticlesCount = ref();
+const articles = ref<Article[]>([]);
+const articlesCount = ref();
+const fetchCompleted = ref(false);
+
+// Filling the articles array with empty objects to avoid the error of rendering the component before the data is fetched
+for (let i = 0; i < props.limit; i++) {
+    articles.value.push({
+        articleTags: [],
+        author: "",
+        body: "",
+        description: "",
+        image: "",
+        keywords: [],
+        published: "",
+        readTime: 5,
+        title: "",
+        type: "",
+        _dir: "",
+        _draft: false,
+        _extension: "",
+        _file: "",
+        _id: "",
+        _locale: "",
+        _partial: false,
+        _path: "",
+        _source: "",
+        _type: "",
+    });
+}
 
 const searchTerm = computed(() => {
     return props.searchTag as string[];
