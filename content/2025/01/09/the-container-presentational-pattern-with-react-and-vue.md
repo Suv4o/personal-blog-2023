@@ -36,7 +36,7 @@ articleTags:
     - JavaScript
 ---
 
-# Understanding JavaScript Reactivity with Proxy and TypeScript
+# The Container/Presentational Pattern with React and Vue
 
 _{{$document.published}} • {{$document.readTime}} min read — by **[{{$document.author}}](/)**_
 
@@ -45,203 +45,348 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1736332534/blog/the-container-presentational-pattern-with-react-and-vue/the-container-presentational-pattern-with-react-and-vue_tx5c9t)
 
-Reactivity is a core concept in modern JavaScript frameworks like Vue.js, where UI automatically updates when the underlying data changes. But have you ever wondered how to implement a similar reactivity system yourself? In this blog post, we’ll explore how you can use JavaScript's `Proxy` to monitor and react to data changes. By the end, we’ll create a simple reactive system with two-way HTML bindings using TypeScript.
+The **Container/Presentational Pattern** is a fundamental concept in frontend development. By separating logic and UI, it creates clean, reusable, and testable components. Traditionally, this pattern was implemented using "container components" to manage state and "presentational components" to handle UI rendering. However, modern tools like **React Hooks** and **Vue Composables** provide an alternative, more modular way to achieve the same goals, without relying on explicit container components.
 
-## Step 1: Monitoring Changes with JavaScript Proxy
+In this blog post, we’ll:
 
-The `Proxy` object in JavaScript allows you to intercept and customise operations performed on an object, such as reading or setting a property. Let’s start with a simple example:
+1. Explore the traditional implementation of the Container/Presentational Pattern in **React** and **Vue**.
+2. Enhance the pattern using **Hooks** and **Composables** for a cleaner, reusable design approach.
 
-```javascript
-// Define a target object
-let target = { value: 0 };
+## **Introduction to the Container/Presentational Pattern**
 
-// Create a Proxy handler to track changes
-const handler = {
-    set(obj, prop, value) {
-        console.log(`Property "${prop}" changed from ${obj[prop]} to ${value}`);
-        obj[prop] = value; // Update the value
-        return true; // Indicate success
-    },
-};
+The Container/Presentational Pattern divides components into two types:
 
-// Create a proxy for the target object
-const proxy = new Proxy(target, handler);
+1. **Presentational Components**:
+    - Focus on rendering the UI.
+    - Receive data via props.
+    - Are stateless and reusable across different contexts.
+2. **Container Components**:
+    - Manage state, handle logic, and perform data fetching.
+    - Pass data to presentational components.
 
-// Monitor changes
-proxy.value = 42; // Logs: Property "value" changed from 0 to 42
-proxy.value = 100; // Logs: Property "value" changed from 42 to 100
-```
+This separation of concerns promotes maintainability and reusability. However, in modern frameworks like React and Vue, container components can be replaced by **Hooks** and **Composable functions**, encapsulating logic in reusable, framework-specific utilities.
 
-Here, every time the `value` property changes, the `set` trap is triggered, and we log the change. This is the foundation for building a reactive system.
+## **React Implementation with Traditional Container Components**
 
-## Step 2: Creating a Reusable `watch` Function
+### Presentational Component - `Card.jsx`
 
-Next, let’s create a reusable function called `watch`. This function will monitor changes to a specific property and execute a callback whenever the property changes.
+The `Card` component in React is focused purely on displaying user information:
 
-```javascript
-function watch(target, property, callback) {
-    const handler = {
-        set(obj, prop, value) {
-            if (prop === property) {
-                callback(value, obj[prop]); // Call the callback
-            }
-            obj[prop] = value; // Update the value
-            return true;
-        },
-    };
-
-    return new Proxy(target, handler);
+```jsx
+function Card({ data }) {
+    return (
+        <div className="card">
+            <h2>{data.name}</h2>
+            <p>Age: {data.age}</p>
+        </div>
+    );
 }
 
-// Usage example
-let data = { value: 0 };
-const watchedData = watch(data, "value", (newValue, oldValue) => {
-    console.log(`Value changed from ${oldValue} to ${newValue}`);
-});
-
-watchedData.value = 42; // Logs: Value changed from 0 to 42
-watchedData.value = 100; // Logs: Value changed from 42 to 100
+export default Card;
 ```
 
-This abstraction makes it easy to monitor changes for any property in any object.
+### Presentational Component - `Details.jsx`
 
-## Step 3: Simplifying Reactivity with `ref`
+Similarly, the `Details` component handles additional user details:
 
-Inspired by Vue.js, we can simplify our system by wrapping a value in a `ref`. A `ref` is an object with a single `value` property that is reactive. Here’s how it looks in JavaScript:
-
-```javascript
-function ref(initialValue, onChange) {
-    const target = { value: initialValue };
-
-    const handler = {
-        set(obj, prop, newValue) {
-            if (prop === "value") {
-                onChange?.(newValue, obj[prop]); // Trigger callback
-            }
-            obj[prop] = newValue; // Update the value
-            return true;
-        },
-    };
-
-    return new Proxy(target, handler);
+```jsx
+function Card({ data }) {
+    return (
+        <div className="card">
+            <p>Email: {data.email}</p>
+            <p>Address: {data.address}</p>
+            <p>City: {data.city}</p>
+            <p>State: {data.state}</p>
+            <p>Zip: {data.zip}</p>
+            <p>Phone: {data.phone}</p>
+            <p>Occupation: {data.occupation}</p>
+            <p>Company: {data.company}</p>
+            <p>Hobbies: {data.hobbies?.join(", ")}</p>
+            <p>Website: {data.website}</p>
+        </div>
+    );
 }
 
-// Example usage
-const name = ref("Alex", (newValue, oldValue) => {
-    console.log(`Name changed from ${oldValue} to ${newValue}`);
-});
-
-console.log(name.value); // Alex
-name.value = "John"; // Logs: Name changed from Alex to John
+export default Card;
 ```
 
-This implementation is simple and reusable, but we can make it even better by adding type safety with TypeScript.
+### Container Component - `DataContainer.jsx`
 
-## Step 4: Adding TypeScript for Type Safety
+The `DataContainer` component manages data fetching and distributes the fetched data to child components.
 
-With TypeScript, we can make the `ref` function type-safe. This ensures that the `value` property always has the correct type and the callback receives properly typed arguments.
+```jsx
+import { useState, useEffect, Children, cloneElement } from "react";
 
-```typescript
-type RefCallback<T> = (newValue: T, oldValue: T) => void;
+function DataContainer({ children }) {
+    const [data, setData] = useState(null);
 
-function ref<T>(initialValue: T, onChange?: RefCallback<T>) {
-    const target = { value: initialValue };
+    useEffect(() => {
+        // Simulating data fetching
+        setTimeout(() => {
+            setData({
+                name: "John Doe",
+                age: 30,
+                email: "john.doe@example.com",
+                address: "123 Main St",
+                city: "Anytown",
+                state: "CA",
+                zip: "12345",
+                phone: "555-1234",
+                occupation: "Software Developer",
+                company: "Tech Corp",
+                hobbies: ["reading", "gaming", "hiking"],
+                website: "https://johndoe.com",
+            });
+        }, 1000);
+    }, []);
 
-    const handler: ProxyHandler<{ value: T }> = {
-        set(obj, prop, newValue) {
-            if (prop === "value" && obj.value !== newValue) {
-                onChange?.(newValue as T, obj.value); // Trigger callback
-            }
-            obj[prop as keyof typeof obj] = newValue;
-            return true;
-        },
-    };
-
-    return new Proxy(target, handler);
+    return <>{children && Children.map(children, (child) => cloneElement(child, { data }))}</>;
 }
 
-// Usage with TypeScript
-const age = ref(25, (newValue, oldValue) => {
-    console.log(`Age changed from ${oldValue} to ${newValue}`);
-});
-
-age.value = 30; // Logs: Age changed from 25 to 30
+export default DataContainer;
 ```
 
-With TypeScript, you get type safety, better IDE support, and fewer runtime errors.
+### Using the Components Together
 
-## Step 5: Building a Reactive HTML System
+```jsx
+import Card from "./components/Card";
+import Details from "./components/Details";
+import DataContainer from "./components/DataContainer";
 
-Finally, let’s create a system where changes to a `ref` update the DOM reactively. We’ll use our `ref` implementation from the previous step.
+function App() {
+    return (
+        <>
+            <DataContainer>
+                <Card />
+                <Details />
+            </DataContainer>
+        </>
+    );
+}
+
+export default App;
+```
+
+## Vue 3 Implementation with Traditional Container Components
+
+### Presentational Component - `Card.vue`
+
+The `Card` component in Vue focuses on rendering basic user information:
 
 ```html
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Reactivity with Proxy and TypeScript</title>
-    </head>
-    <body>
-        <div>
-            <p id="text"></p>
-            <input id="input" type="text" placeholder="Enter text..." />
-        </div>
-        <script>
-            function ref(initialValue, onChange) {
-                const target = { value: initialValue };
+<script setup>
+    import { defineProps } from "vue";
 
-                const handler = {
-                    set(obj, prop, newValue) {
-                        if (prop === "value" && obj.value !== newValue) {
-                            onChange?.(newValue, obj.value); // Trigger callback
-                        }
-                        obj[prop] = newValue;
-                        return true;
-                    },
-                };
+    defineProps({
+        data: Object,
+    });
+</script>
 
-                return new Proxy(target, handler);
-            }
-
-            document.body.innerHTML = `
-          <div>
-            <p id="text"></p>
-            <input id="input" type="text" placeholder="Enter text..." />
-          </div>
-        `;
-
-            const textElement = document.getElementById("text");
-            const inputElement = document.getElementById("input");
-
-            // Create a reactive ref
-            const name = ref("Alex", (newValue) => {
-                textElement.textContent = `Hello, ${newValue}!`; // Update the DOM reactively
-            });
-
-            // Initialize the DOM
-            textElement.textContent = `Hello, ${name.value}!`;
-
-            // Listen for input changes
-            inputElement.addEventListener("input", (event) => {
-                const target = event.target;
-                name.value = target.value; // Trigger reactivity
-            });
-        </script>
-    </body>
-</html>
+<template>
+    <div class="card">
+        <h2>{{ data.name }}</h2>
+        <p>Age: {{ data.age }}</p>
+    </div>
+</template>
 ```
 
-### How It Works:
+### Presentational Component - `Details.vue`
 
-1. **Reactive Updates:** When `name.value` changes, the callback updates the DOM (`<p>` element).
-2. **Two-Way Binding:** Changes in the input field update the `name.value`, and the DOM reacts accordingly.
-3. **Reactivity Simplified:** This mimics Vue.js's two-way data binding system with minimal code.
+The `Details` component renders additional user details:
 
-## Conclusion
+```html
+<script setup>
+    import { defineProps } from "vue";
 
-Using JavaScript's `Proxy`, we’ve built a simple yet powerful reactivity system. We started with basic change tracking, moved to a reusable `watch` function, simplified it with `ref`, added type safety with TypeScript, and finally created a reactive HTML system.
+    defineProps({
+        data: Object,
+    });
+</script>
 
-This demonstrates how modern frameworks implement reactivity under the hood, and you can now experiment with your own lightweight reactive systems.
+<template>
+    <div class="card">
+        <p>Email: {{ data.email }}</p>
+        <p>Address: {{ data.address }}</p>
+        <p>City: {{ data.city }}</p>
+        <p>State: {{ data.state }}</p>
+        <p>Zip: {{ data.zip }}</p>
+        <p>Phone: {{ data.phone }}</p>
+        <p>Occupation: {{ data.occupation }}</p>
+        <p>Company: {{ data.company }}</p>
+        <p>Hobbies: {{ data.hobbies?.join(", ") }}</p>
+        <p>Website: {{ data.website }}</p>
+    </div>
+</template>
+```
+
+### Container Component - `DataContainer.vue`
+
+The `DataContainer` encapsulates data fetching and passes it to its slot:
+
+```html
+<script setup>
+    import { ref, onMounted } from "vue";
+
+    const data = ref(null);
+
+    onMounted(() => {
+        // Simulating data fetching
+        setTimeout(() => {
+            data.value = {
+                name: "John Doe",
+                age: 30,
+                email: "john.doe@example.com",
+                address: "123 Main St",
+                city: "Anytown",
+                state: "CA",
+                zip: "12345",
+                phone: "555-1234",
+                occupation: "Software Developer",
+                company: "Tech Corp",
+                hobbies: ["reading", "gaming", "hiking"],
+                website: "https://johndoe.com",
+            };
+        }, 1000);
+    });
+</script>
+
+<template>
+    <slot :data="data"></slot>
+</template>
+```
+
+### Using the Components Together
+
+```html
+<script setup>
+    import DataContainer from "./components/DataContainer.vue";
+    import Card from "./components/Card.vue";
+    import Details from "./components/Details.vue";
+</script>
+
+<template>
+    <DataContainer v-slot="{ data }">
+        <Card :data="data" />
+        <details :data="data" />
+    </DataContainer>
+</template>
+```
+
+## Enhancing the Pattern with Modern Approaches
+
+### Using React Hooks
+
+Encapsulate logic with a custom hook:
+
+```js
+import { useState, useEffect } from "react";
+
+function useData() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setData({
+                name: "John Doe",
+                age: 30,
+                email: "john.doe@example.com",
+                address: "123 Main St",
+                city: "Anytown",
+                state: "CA",
+                zip: "12345",
+                phone: "555-1234",
+                occupation: "Software Developer",
+                company: "Tech Corp",
+                hobbies: ["reading", "gaming", "hiking"],
+                website: "https://johndoe.com",
+            });
+        }, 1000);
+    }, []);
+
+    return { data };
+}
+
+export default useData;
+```
+
+### Using the React Custom Hook in a Component
+
+```html
+import Card from "./components/Card";
+import Details from "./components/Details";
+import useData from "./components/useData";
+
+function App() {
+    const { data } = useData();
+
+    return (
+        <>
+            <Card data={data} />
+            <Details data={data} />
+        </>
+    );
+}
+
+export default App;
+```
+
+### Using Vue 3 Composables
+
+Similarly, encapsulate logic with a composable function:
+
+```js
+import { ref, onMounted } from "vue";
+const data = ref(null);
+
+export default function useData() {
+    onMounted(() => {
+        setTimeout(() => {
+            data.value = {
+                name: "John Doe",
+                age: 30,
+                email: "john.doe@example.com",
+                address: "123 Main St",
+                city: "Anytown",
+                state: "CA",
+                zip: "12345",
+                phone: "555-1234",
+                occupation: "Software Developer",
+                company: "Tech Corp",
+                hobbies: ["reading", "gaming", "hiking"],
+                website: "https://johndoe.com",
+            };
+        }, 1000);
+    });
+
+    return { data };
+}
+```
+
+### Using the Vue Composable in a Component
+
+```html
+<script setup>
+    import Card from "./components/Card.vue";
+    import Details from "./components/Details.vue";
+    import useData from "./components/useData";
+
+    const { data } = useData();
+</script>
+
+<template>
+    <Card :data="data" />
+    <details :data="data" />
+</template>
+```
+
+## **Conclusion**
+
+The **Container/Presentational Pattern** remains a powerful approach for separating UI and logic in modern frontend development. While traditional container components are effective, **React Hooks** and **Vue 3 Composables** provide an even more elegant solution through modular, reusable functions. By moving logic into dedicated functions like `useData`, we gain several advantages:
+
+- Better reusability across components
+- Cleaner code with less boilerplate
+- Improved testing and scalability
+
+For modern frontend projects, embracing **React** **Hooks** or **Vue** **3 Composables** can significantly enhance your development workflow and align with contemporary component design principles.
 
 The code for this is available in the following GitHub repository [here](https://github.com/Suv4o/understanding-javascript-reactivity-with-proxy-and-typescript?tab=readme-ov-file).
