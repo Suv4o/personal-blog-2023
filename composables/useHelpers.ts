@@ -23,6 +23,7 @@ export function useHelpers() {
         "/nitro",
         "/ai",
         "/other",
+        "/reactjs",
         "/get-in-touch",
         "/unsubscribe",
     ];
@@ -46,6 +47,7 @@ export function useHelpers() {
         "/nitro",
         "/ai",
         "/other",
+        "/reactjs",
     ];
 
     return { pagePaths, listingPaths, delay };

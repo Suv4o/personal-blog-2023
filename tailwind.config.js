@@ -36,6 +36,7 @@ export default {
                 langchain: "rgb(var(--colour-langchain) / <alpha-value>)", // #6ffc03
                 python: "rgb(var(--colour-python) / <alpha-value>)", // #356B99
                 nitro: "rgb(var(--colour-nitro) / <alpha-value>)", // #f777b0
+                reactjs: "rgb(var(--colour-reactjs) / <alpha-value>)", // #61dafb
                 other: "rgb(var(--colour-other) / <alpha-value>)", // #ee5f53
             },
             fontFamily: {
