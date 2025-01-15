@@ -9,6 +9,7 @@ keywords:
     - Reactivity in React.js
     - Reactivity
     - Vue 3
+    - v-model
     - Web Development
     - Development
     - JavaScript reactivity
@@ -36,7 +37,7 @@ keywords:
     - Vue reactive variables
     - Vue ref vs React useState
     - Vue hooks
-    - transitioning from React to Vue.
+    - transitioning from React to Vue
 type: article
 published: 15th January 2025
 readTime: 12
