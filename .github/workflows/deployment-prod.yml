@@ -66,7 +66,7 @@ jobs:
                   echo "/2024/25/02/create-a-web-server-using-nitro-sqlite-and-typeorm    /2024/02/25/create-a-web-server-using-nitro-sqlite-and-typeorm" > .output/public/_redirects
 
             - name: Deploy to Netlify
-              uses: jsmrcaga/action-netlify-deploy@v2.0.0
+              uses: jsmrcaga/action-netlify-deploy@v2.4.0
               with:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
