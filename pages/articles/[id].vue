@@ -1,11 +1,10 @@
 <script setup lang="ts">
-const nuxtApp = useNuxtApp();
 const { isBlogArticle, isListingPage } = useHelpers();
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
 
-nuxtApp.hook("page:finish", () => {
-    window.scrollTo(0, 0);
+definePageMeta({
+    scrollToTop: true,
 });
 
 useSeoMeta({

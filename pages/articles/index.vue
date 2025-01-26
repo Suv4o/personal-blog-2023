@@ -1,11 +1,10 @@
 <script setup lang="ts">
-const nuxtApp = useNuxtApp();
 const { isBlogArticle, isListingPage } = useHelpers();
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
 
-nuxtApp.hook("page:finish", () => {
-    window.scrollTo(0, 0);
+definePageMeta({
+    scrollToTop: true,
 });
 
 useSeoMeta({
@@ -15,8 +14,8 @@ useSeoMeta({
         "Explore insightful articles and tutorials by Aleks Trpkovski on web development, JavaScript frameworks, AI, and more.",
     ogDescription:
         "Explore insightful articles and tutorials by Aleks Trpkovski on web development, JavaScript frameworks, AI, and more.",
-    title: "Aleks Trpkovski — Articles",
-    ogTitle: "Aleks Trpkovski — Articles",
+    title: "Aleks Trpkovski — Articles | Web Development, JavaScript, AI, and More",
+    ogTitle: "Aleks Trpkovski — Articles | Web Development, JavaScript, AI, and More",
     ogImage:
         "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     ogUrl: `https://www.trpkovski.com/${route.path}`,

@@ -1,16 +1,11 @@
 <script setup lang="ts">
 import type { Article } from "~/types";
 
-const nuxtApp = useNuxtApp();
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
 const { pagePaths, listingPaths } = useHelpers();
 const isError = ref(false);
 const article = ref<Partial<Article>>();
-
-nuxtApp.hook("page:finish", () => {
-    window.scrollTo(0, 0);
-});
 
 async function getCurrentArticle() {
     try {
@@ -29,6 +24,10 @@ article.value = await getCurrentArticle();
 if (!article.value?.body?.value?.length) {
     isError.value = true;
 }
+
+definePageMeta({
+    scrollToTop: true,
+});
 
 useSeoMeta({
     keywords: article.value?.keywords?.join(", ") ?? "",
