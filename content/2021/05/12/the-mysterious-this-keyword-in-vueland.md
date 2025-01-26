@@ -9,7 +9,8 @@ keywords:
     - development
     - web development
     - this keyword
-type: article
+type: page
+blog: post
 published: 12th May 2021
 readTime: 12
 author: Aleksandar Trpkovski
@@ -184,9 +185,9 @@ Although bar appears to be reference to `obj.foo()`, `bar()` directly refers to 
 
 Explicit binding of `this` happens when one of the three `.call()`, .`apply()`, or .`bind()` are used in a function. In that way we can force a function to use a certain object as `this`. For instance, when calling `foo.call(obj)`, the value of `this` in the function `foo` becomes `obj`. **Call**, **apply** and **bind** do the same thing, with some little differences.
 
--   `.call()`: Pass in the required object (value of `this`) as the first parameter, along with additional parameters that are separated by comma. For example `foo.call(obj, param1, param2, …)`.
+- `.call()`: Pass in the required object (value of `this`) as the first parameter, along with additional parameters that are separated by comma. For example `foo.call(obj, param1, param2, …)`.
 
--   `.apply`: Is almost the same as `.call()` with only difference in the way the actual parameters are passed. Unlikely **Call**, **Apply** accepts parameters as an array. For example `foo.apply(obj, [param1, param2, …])`.
+- `.apply`: Is almost the same as `.call()` with only difference in the way the actual parameters are passed. Unlikely **Call**, **Apply** accepts parameters as an array. For example `foo.apply(obj, [param1, param2, …])`.
 
 ```js
 function foo(age, city) {
@@ -204,7 +205,7 @@ foo.call(obj, age, city); // Output: My full name is Aleks Trpkovski 32 years ol
 foo.apply(obj, [age, city]); // Output: My full name is Aleks Trpkovski 32 years old, living in Melbourne
 ```
 
--   `.bind()`: Is a little bit different than **Call** and **Apply**. When call a function with **Bind**, returns new function of the same name.
+- `.bind()`: Is a little bit different than **Call** and **Apply**. When call a function with **Bind**, returns new function of the same name.
 
 ```js
 function foo(age, city) {

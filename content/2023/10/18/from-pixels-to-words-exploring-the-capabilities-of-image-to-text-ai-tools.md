@@ -24,7 +24,8 @@ keywords:
     - Nuxt.js
     - Chat
     - Chatbot
-type: article
+type: page
+blog: post
 published: 18th October 2023
 readTime: 15
 author: Aleksandar Trpkovski

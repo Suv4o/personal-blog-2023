@@ -11,7 +11,8 @@ keywords:
     - Composition API
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 18th Apr 2022
 readTime: 4
 author: Aleksandar Trpkovski

@@ -11,7 +11,8 @@ keywords:
     - Firebase Auth
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 7th Oct 2022
 readTime: 15
 author: Aleksandar Trpkovski

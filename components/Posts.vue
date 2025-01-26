@@ -29,8 +29,6 @@ const props = defineProps({
 });
 
 const route = useRoute();
-const serverRenderedArticles = ref();
-const serverRenderedArticlesCount = ref();
 const articles = ref<Article[]>([]);
 const articlesCount = ref();
 const fetchCompleted = ref(false);
@@ -40,48 +38,79 @@ const searchTerm = computed(() => {
 });
 
 const pageNumber = computed(() => {
-    return route.query.page ? parseInt(route.query.page as string) : 1;
+    return route.params?.id ? parseInt(route.params?.id as string) : 1;
 });
 
 const hasNextPage = computed(() => {
     return pageNumber.value * props.limit < articlesCount.value;
 });
 
-const serverRenderedHasNextPage = computed(() => {
-    return pageNumber.value * props.limit < serverRenderedArticlesCount.value;
-});
-
 const hasPreviousPage = computed(() => {
     return pageNumber.value > 1;
 });
 
-function getTheNumberOfAllArticles() {
-    return queryContent()
-        .where({ type: "article", articleTags: { $contains: searchTerm.value } })
-        .count();
+async function getTheNumberOfAllArticles() {
+    if (!searchTerm.value.length) {
+        const { data } = await useAsyncData(route.fullPath + "-number-of-pages", () => {
+            return queryCollection("content").where("blog", "=", "post").count();
+        });
+
+        return data.value ?? 0;
+    }
+
+    const { data } = await useAsyncData(route.fullPath + "-number-of-pages-with-tags", () => {
+        return queryCollection("content")
+            .where("blog", "=", "post")
+            .andWhere((qb) => qb.where("articleTags", "LIKE", `%${searchTerm.value.join(",")}%`))
+            .count();
+    });
+
+    return data.value ?? 0;
 }
 
-function getArticlesFromCurrentPage() {
-    return queryContent()
-        .where({ type: "article", articleTags: { $contains: searchTerm.value } })
-        .sort({ _path: -1 })
-        .limit(props.limit)
-        .skip(pageNumber.value * props.limit - props.limit)
-        .find();
+async function getArticlesFromCurrentPage() {
+    if (!searchTerm.value.length) {
+        const { data } = await useAsyncData(route.fullPath + "-articles", () => {
+            return queryCollection("content")
+                .where("blog", "=", "post")
+                .limit(props.limit)
+                .skip(pageNumber.value * props.limit - props.limit)
+                .order("path", "DESC")
+                .all();
+        });
+        return data.value as Article[];
+    }
+
+    const { data } = await useAsyncData(route.fullPath + "-articles-with-tags", () => {
+        return queryCollection("content")
+            .where("blog", "=", "post")
+            .andWhere((qb) => qb.where("articleTags", "LIKE", `%${searchTerm.value.join(",")}%`))
+            .limit(props.limit)
+            .skip(pageNumber.value * props.limit - props.limit)
+            .order("path", "DESC")
+            .all();
+    });
+    return data.value as Article[];
 }
 
-let numberOfAllArticles: number;
-let allArticles: any[];
+// let numberOfAllArticles: number;
+// let allArticles: Article[];
 
-try {
-    const [number, posts] = await Promise.all([getTheNumberOfAllArticles(), getArticlesFromCurrentPage()]);
-    numberOfAllArticles = number;
-    allArticles = posts;
-
-    serverRenderedArticlesCount.value = number;
-    serverRenderedArticles.value = posts;
-} catch (error) {
-    fetchCompleted.value = true;
+async function getArticles() {
+    try {
+        const [number, posts] = await Promise.all([getTheNumberOfAllArticles(), getArticlesFromCurrentPage()]);
+        // numberOfAllArticles = number;
+        // allArticles = posts;
+        // articlesCount.value = numberOfAllArticles;
+        // articles.value = allArticles;
+        if (import.meta.prerender) {
+            articlesCount.value = number;
+            articles.value = posts;
+        }
+        return [number, posts];
+    } catch (error) {
+        fetchCompleted.value = true;
+    }
 }
 
 watch(
@@ -91,40 +120,27 @@ watch(
     }
 );
 
-onMounted(() => {
-    articlesCount.value = numberOfAllArticles;
-    articles.value = allArticles;
+onMounted(async () => {
+    const [number, posts] = (await getArticles()) as [number, Article[]];
+    articlesCount.value = number;
+    articles.value = posts;
+
+    // articlesCount.value = numberOfAllArticles;
+    // articles.value = allArticles;
 });
+
+await getArticles();
 </script>
 
 <template>
     <div>
         <HomeButton v-if="fetchCompleted && !articles?.length" />
         <NotFound v-if="fetchCompleted && !articles?.length" />
-        <div class="relative overflow-hidden">
-            <template v-for="(article, index) in serverRenderedArticles" :key="article._path + 'server'">
-                <ServerRenderedSinglePost
-                    :index="index"
-                    :length="serverRenderedArticles.length"
-                    :url="article._path"
-                    :image="article.image"
-                    :title="article.title"
-                    :date="article.published"
-                    :tags="article.articleTags"
-                    :description="article.description"
-                    :readMore="readMore"
-                    :pagination="pagination"
-                    :hasNextPage="serverRenderedHasNextPage"
-                    :hasPreviousPage="hasPreviousPage"
-                    :pageNumber="pageNumber"
-                />
-            </template>
-        </div>
-        <template v-for="(article, index) in articles" :key="article._path">
+        <template v-for="(article, index) in articles" :key="article.path">
             <SinglePost
                 :index="index"
                 :length="articles.length"
-                :url="article._path"
+                :url="article.path"
                 :image="article.image"
                 :title="article.title"
                 :date="article.published"

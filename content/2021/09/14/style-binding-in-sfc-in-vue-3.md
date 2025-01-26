@@ -10,7 +10,8 @@ keywords:
     - CSS Variables
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 14th Sep 2021
 readTime: 3
 author: Aleksandar Trpkovski

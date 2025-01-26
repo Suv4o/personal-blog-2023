@@ -10,7 +10,8 @@ keywords:
     - Reusing components
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 22nd Oct 2022
 readTime: 5
 author: Aleksandar Trpkovski

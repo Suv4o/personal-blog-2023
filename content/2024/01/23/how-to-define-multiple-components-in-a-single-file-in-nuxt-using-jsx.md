@@ -15,7 +15,8 @@ keywords:
     - Vue 3
     - Web Development
     - Development
-type: article
+type: page
+blog: post
 published: 23rd January 2024
 readTime: 10
 author: Aleksandar Trpkovski
@@ -169,10 +170,10 @@ We will build the following Card component:
 
 However, before we start building the component, we will divide it into several smaller individual components.
 
--   `<CardImage />`: This will be a regular Vue component defined inside the `/components` directory. We are using a Vue component to demonstrate the ability to mix and match Vue and JSX components.
--   `<CardDescription />`: This will be a JSX component.
--   `<CardButton />`: This will also be a JSX component.
--   `<Card />`: This will be the master component, also built with JSX, that will include all of the components mentioned above.
+- `<CardImage />`: This will be a regular Vue component defined inside the `/components` directory. We are using a Vue component to demonstrate the ability to mix and match Vue and JSX components.
+- `<CardDescription />`: This will be a JSX component.
+- `<CardButton />`: This will also be a JSX component.
+- `<Card />`: This will be the master component, also built with JSX, that will include all of the components mentioned above.
 
 Now that we have listed our components, let's start building them.
 

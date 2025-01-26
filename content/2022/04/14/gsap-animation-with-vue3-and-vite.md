@@ -12,7 +12,8 @@ keywords:
     - Development
     - Web Development
     - CSS
-type: article
+type: page
+blog: post
 published: 14th Apr 2022
 readTime: 10
 author: Aleksandar Trpkovski

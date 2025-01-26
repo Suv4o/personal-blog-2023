@@ -27,7 +27,8 @@ keywords:
     - Reactive programming tutorial
     - Proxy-based reactivity
     - TypeScript DOM reactivity
-type: article
+type: page
+blog: post
 published: 4th January 2025
 readTime: 5
 author: Aleksandar Trpkovski

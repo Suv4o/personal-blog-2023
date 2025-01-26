@@ -6,10 +6,13 @@ import { computed, ref } from "vue";
 import { Combobox, ComboboxInput, ComboboxLabel, ComboboxOption, ComboboxOptions } from "@headlessui/vue";
 import type { Article } from "~/types";
 const router = useRouter();
+const route = useRoute();
 
 const articles = ref();
 const query = ref("");
-const selectedArticle = ref();
+const selectedArticle = ref<Article>();
+
+const hasArticlesPath = computed(() => route.path.includes("/articles/"));
 
 watch(
     () => selectedArticle.value,
@@ -18,8 +21,11 @@ watch(
     }
 );
 
-function getArticles() {
-    return queryContent().where({ type: "article" }).find();
+async function getArticles() {
+    const { data } = await useAsyncData(route.fullPath + "-nav", () => {
+        return queryCollection("content").where("blog", "=", "post").all();
+    });
+    return data.value ?? [];
 }
 
 articles.value = await getArticles();
@@ -37,7 +43,12 @@ async function navigateToArticle() {
     if (!filteredArticles.value.length) {
         return;
     }
-    router.push(selectedArticle.value._path);
+
+    if (!selectedArticle.value) {
+        return;
+    }
+
+    router.push(selectedArticle.value.path);
 }
 </script>
 
@@ -56,6 +67,7 @@ async function navigateToArticle() {
                             <NuxtLink
                                 to="/articles"
                                 class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                                :class="{ 'router-link-active': hasArticlesPath }"
                                 >Articles</NuxtLink
                             >
                             <NuxtLink
@@ -87,12 +99,12 @@ async function navigateToArticle() {
                                 >
                                     <ComboboxOption
                                         v-for="article in filteredArticles"
-                                        :key="article._path"
+                                        :key="article.path"
                                         :value="article"
                                         as="template"
                                         v-slot="{ active }"
                                     >
-                                        <NuxtLink :to="article._path">
+                                        <NuxtLink :to="article.path">
                                             <li
                                                 :class="[
                                                     'relative cursor-pointer select-none py-2 pl-3 pr-9',

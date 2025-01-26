@@ -11,7 +11,8 @@ keywords:
     - Show Spinner
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 25th Sep 2021
 readTime: 6
 author: Aleksandar Trpkovski
