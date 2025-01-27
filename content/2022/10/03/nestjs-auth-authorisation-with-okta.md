@@ -11,7 +11,8 @@ keywords:
     - Okta Auth
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 3rd Oct 2022
 readTime: 16
 author: Aleksandar Trpkovski

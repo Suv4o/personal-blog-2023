@@ -10,7 +10,8 @@ keywords:
     - Object.defineProperty
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 7th Sep 2021
 readTime: 6
 author: Aleksandar Trpkovski

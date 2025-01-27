@@ -14,7 +14,8 @@ keywords:
     - Render html content
     - Web Development
     - Development
-type: article
+type: page
+blog: post
 published: 24th March 2024
 readTime: 6
 author: Aleksandar Trpkovski
@@ -65,14 +66,14 @@ export default defineNuxtPlugin((nuxtApp) => {
 
 Let's break down the code above to understand each part:
 
--   **`defineNuxtPlugin`:** This function creates a Nuxt plugin, making its features available throughout the application.
--   **`nuxtApp.vueApp.directive`:** This registers a custom Vue directive called `nuxtHtml`. We can use `v-nuxt-html` later in the `.vue` file.
+- **`defineNuxtPlugin`:** This function creates a Nuxt plugin, making its features available throughout the application.
+- **`nuxtApp.vueApp.directive`:** This registers a custom Vue directive called `nuxtHtml`. We can use `v-nuxt-html` later in the `.vue` file.
 
 **Directive Lifecycle Hooks:**
 
--   **`mounted`:** Executes when the element using the directive is inserted into the DOM.
--   **`updated`:** Executes when the value bound to the directive changes.
--   **`unmounted`:** Executes when the element is removed from the DOM.
+- **`mounted`:** Executes when the element using the directive is inserted into the DOM.
+- **`updated`:** Executes when the value bound to the directive changes.
+- **`unmounted`:** Executes when the element is removed from the DOM.
 
 Next, let's examine the key functions we'll use within our directive: `assignAnchorsIds`, `convertAnchorToNuxtLink`, and `removeListeners`. We'll add these functions in the `nuxt-html.ts`, above the plugin definition.
 
@@ -132,21 +133,21 @@ function removeListeners() {
 
 Now, let's delve into the specifics of each function and understand how they contribute to the overall functionality of the directive.
 
--   **`assignAnchorsIds`:**
-    -   Parses the provided HTML string into a DOM document.
-    -   Identifies anchor elements (`<a>`) without IDs.
-    -   Assigns unique IDs (using `generateUuid`) to those anchors for tracking and linking.
-    -   Returns the modified HTML string.
--   **`convertAnchorToNuxtLink`:**
-    -   Finds anchor elements within a given HTML element.
-    -   Identifies anchors with IDs that haven't been handled yet.
-    -   Attaches click event listeners to those anchors:
-        -   Prevents default browser behaviour (page reload).
-        -   Retrieves the anchor's `href` attribute.
-        -   Utilises Nuxt's `$router` to programmatically navigate to the specified route, effectively converting basic anchors into Nuxt-powered navigation links.
--   **`removeListeners`:**
-    -   Iterates through the IDs of anchors with event listeners.
-    -   Removes the click event listeners to prevent memory leaks or unintended behaviour.
+- **`assignAnchorsIds`:**
+    - Parses the provided HTML string into a DOM document.
+    - Identifies anchor elements (`<a>`) without IDs.
+    - Assigns unique IDs (using `generateUuid`) to those anchors for tracking and linking.
+    - Returns the modified HTML string.
+- **`convertAnchorToNuxtLink`:**
+    - Finds anchor elements within a given HTML element.
+    - Identifies anchors with IDs that haven't been handled yet.
+    - Attaches click event listeners to those anchors:
+        - Prevents default browser behaviour (page reload).
+        - Retrieves the anchor's `href` attribute.
+        - Utilises Nuxt's `$router` to programmatically navigate to the specified route, effectively converting basic anchors into Nuxt-powered navigation links.
+- **`removeListeners`:**
+    - Iterates through the IDs of anchors with event listeners.
+    - Removes the click event listeners to prevent memory leaks or unintended behaviour.
 
 ## Using the `v-nuxt-html` directive
 
@@ -183,22 +184,22 @@ Now, we can use our `v-nuxt-html` as follows in our `.vue` file:
 
 Alright, let's break down the code above piece by piece, so we can get a good grasp on how everything fits together.
 
--   **Dynamic HTML Content:** The code defines a `ref` named `htmlString` that holds HTML content as a string. This allows for dynamic updates to the displayed HTML.
--   **Initial Render:**
-    -   The template section includes a `div` element containing another `div` with the `v-nuxt-html` directive applied.
-    -   When the component mounts, the initial value of `htmlString` (defined in the `script setup` section) is used.
-    -   The `v-nuxt-html` directive intercepts this and performs the following actions:
-        -   It parses the HTML string using the `assignAnchorsIds` function. This ensures any anchor (`<a>`) elements without IDs are assigned unique ones.
-        -   It then calls the `convertAnchorToNuxtLink` function. This function finds the anchors within the parsed HTML and attaches click event listeners to them.
-        -   When an anchor with a `href` attribute is clicked, the event listener:
-            -   Prevents default behavior (stopping the browser from navigating away from the current page).
-            -   Extracts the `href` attribute value (e.g., `/example-1`).
-            -   Uses Nuxt's router (`$router`) to programmatically navigate to the specified route, effectively turning the anchor into a Nuxt link.
--   **Dynamic Update:** After a 4-second delay using `setTimeout`, the `htmlString` is updated with a new string containing an additional anchor element (`<a href="/example-4">Example 4</a>`).
--   **Re-rendering and Event Listener Management:**
-    -   The component re-renders due to the change in `htmlString`.
-    -   The `v-nuxt-html` directive again parses and processes the updated HTML.
-    -   Importantly, the directive's `unmounted` lifecycle hook ensures any previously attached event listeners are removed using the `removeListeners` function. This prevents memory leaks and unintended behavior when the HTML content changes.
+- **Dynamic HTML Content:** The code defines a `ref` named `htmlString` that holds HTML content as a string. This allows for dynamic updates to the displayed HTML.
+- **Initial Render:**
+    - The template section includes a `div` element containing another `div` with the `v-nuxt-html` directive applied.
+    - When the component mounts, the initial value of `htmlString` (defined in the `script setup` section) is used.
+    - The `v-nuxt-html` directive intercepts this and performs the following actions:
+        - It parses the HTML string using the `assignAnchorsIds` function. This ensures any anchor (`<a>`) elements without IDs are assigned unique ones.
+        - It then calls the `convertAnchorToNuxtLink` function. This function finds the anchors within the parsed HTML and attaches click event listeners to them.
+        - When an anchor with a `href` attribute is clicked, the event listener:
+            - Prevents default behavior (stopping the browser from navigating away from the current page).
+            - Extracts the `href` attribute value (e.g., `/example-1`).
+            - Uses Nuxt's router (`$router`) to programmatically navigate to the specified route, effectively turning the anchor into a Nuxt link.
+- **Dynamic Update:** After a 4-second delay using `setTimeout`, the `htmlString` is updated with a new string containing an additional anchor element (`<a href="/example-4">Example 4</a>`).
+- **Re-rendering and Event Listener Management:**
+    - The component re-renders due to the change in `htmlString`.
+    - The `v-nuxt-html` directive again parses and processes the updated HTML.
+    - Importantly, the directive's `unmounted` lifecycle hook ensures any previously attached event listeners are removed using the `removeListeners` function. This prevents memory leaks and unintended behavior when the HTML content changes.
 
 ## Conclusion
 

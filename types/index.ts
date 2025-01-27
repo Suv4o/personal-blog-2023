@@ -3,20 +3,17 @@ export interface Article {
     author: string;
     body: any;
     description: string;
+    extension: string;
+    id: string;
     image: string;
     keywords: string[];
+    meta: object;
+    navigation: boolean;
+    path: string;
     published: string;
     readTime: number;
+    stem: string;
     title: string;
+    blog: string;
     type: string;
-    _dir: string;
-    _draft: boolean;
-    _extension: string;
-    _file: string;
-    _id: string;
-    _locale: string;
-    _partial: boolean;
-    _path: string;
-    _source: string;
-    _type: string;
 }

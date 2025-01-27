@@ -26,7 +26,8 @@ keywords:
     - Vue 3 patterns
     - scalable frontend design
     - reusable frontend logic
-type: article
+type: page
+blog: post
 published: 9th January 2025
 readTime: 6
 author: Aleksandar Trpkovski

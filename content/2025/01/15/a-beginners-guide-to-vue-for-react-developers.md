@@ -38,7 +38,8 @@ keywords:
     - Vue ref vs React useState
     - Vue hooks
     - transitioning from React to Vue
-type: article
+type: page
+blog: post
 published: 15th January 2025
 readTime: 12
 author: Aleksandar Trpkovski

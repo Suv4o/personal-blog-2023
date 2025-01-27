@@ -13,7 +13,8 @@ keywords:
     - Image Classification
     - Web Development
     - Development
-type: article
+type: page
+blog: post
 published: 23rd October 2023
 readTime: 8
 author: Aleksandar Trpkovski
@@ -56,10 +57,10 @@ While it is not a big deal when we have just 10 images, as we can easily group t
 
 For my solution to automatically sort images based on hues, I utilised several technologies. In the following sections, I will provide a detailed explanation of how each technology was implemented. Here is a brief overview of the technologies used:
 
--   [Python](https://www.python.org/) (programming language)
--   [LangChain](https://www.langchain.com/) (framework for working with LLMs)
--   [ChatGPT](https://chat.openai.com/) 3.5 turbo (LLM)
--   [SentenceTransformer](https://www.sbert.net/) with the `all-MiniLM-L6-v2` open source model (used for generating embeddings to calculate similarities)
+- [Python](https://www.python.org/) (programming language)
+- [LangChain](https://www.langchain.com/) (framework for working with LLMs)
+- [ChatGPT](https://chat.openai.com/) 3.5 turbo (LLM)
+- [SentenceTransformer](https://www.sbert.net/) with the `all-MiniLM-L6-v2` open source model (used for generating embeddings to calculate similarities)
 
 The diagram below provides an overview of the implementation. Lets analyse each step of the diagram in more detail below.
 
@@ -127,15 +128,15 @@ The number of clusters was specified to be 3, since the number of photos in this
 
 For this example, I used several different setups to measure the time it takes to run the photo grouping:
 
--   10 photos with a resolution of 1024px on the longer side and 5 colour clusters: 157.10 seconds
--   10 photos with a resolution of 2048px on the longer side and 5 colour clusters: 210.68 seconds
--   10 photos with a resolution of 2048px on the longer side and 10 colour clusters: 397.74 seconds
--   14 photos with a resolution of 2048px on the longer side and 10 colour clusters: 1029.08 seconds
+- 10 photos with a resolution of 1024px on the longer side and 5 colour clusters: 157.10 seconds
+- 10 photos with a resolution of 2048px on the longer side and 5 colour clusters: 210.68 seconds
+- 10 photos with a resolution of 2048px on the longer side and 10 colour clusters: 397.74 seconds
+- 14 photos with a resolution of 2048px on the longer side and 10 colour clusters: 1029.08 seconds
 
 I used my personal machine, which has an Apple M1 Max with 64GB of memory. As expected, the performance was slower when using higher photo resolutions and more clusters.
 
 # Resources
 
--   Project GitHub repository: https://github.com/Suv4o/image_classification_based_on_colours
--   Shamima Hossain - Extract colours from an image using KMeans clustering: https://huggingface.co/spaces/Shamima/extract-color-from-image
--   Hugging Face - `all-MiniLM-L6-v2` model: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+- Project GitHub repository: https://github.com/Suv4o/image_classification_based_on_colours
+- Shamima Hossain - Extract colours from an image using KMeans clustering: https://huggingface.co/spaces/Shamima/extract-color-from-image
+- Hugging Face - `all-MiniLM-L6-v2` model: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2

@@ -11,7 +11,8 @@ keywords:
     - Firebase Auth
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 10th Oct 2022
 readTime: 5
 author: Aleksandar Trpkovski
@@ -74,8 +75,8 @@ export class AuthGuard implements CanActivate {
 
 The two changes made to the existing file are:
 
--   Getting the request object: `const request = context.switchToHttp().getRequest()`;
--   Assigning the user claims in a new property in the request object: `request.claims = claims;`
+- Getting the request object: `const request = context.switchToHttp().getRequest()`;
+- Assigning the user claims in a new property in the request object: `request.claims = claims;`
 
 We will next create an interceptor that will help us to get the current user from Firebase.
 

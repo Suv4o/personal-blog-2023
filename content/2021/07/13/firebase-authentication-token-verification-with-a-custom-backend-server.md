@@ -2,7 +2,7 @@
 title: Firebase Auth token verification with a custom backend server
 description: Firebase as a platform that offers a wide range of services to developers to build, improve, and grow their apps with little or almost no effort. This includes services like authentication, databases,  analytics, file storage, push messaging and more. When it comes to user authentication, Firebase provides an Authentication service that allows for codes to be written in order for users to be logged into an app right from the client side, and limit user access to resources in other Firebase products. This is fairly simple to use without the need to implement any backend solution. Firebase also provides an Admin SDK that allows developers to build a custom backend if required.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1626001455/blog/firebase-authentication-token-verification-with-a-custom-backend-server
-keywords: 
+keywords:
     - Firebase
     - Authentication
     - Firestore
@@ -13,7 +13,8 @@ keywords:
     - Frontend, Backend
     - development
     - web development
-type: article
+type: page
+blog: post
 published: 13th Jul 2021
 readTime: 9
 author: Aleksandar Trpkovski
@@ -153,10 +154,10 @@ service cloud.firestore {
 
 The explanation of the code above can be found below:
 
--   Documents under the collection "tokens" can be read and written only if their document id is the same as the sent request's uid.
--   The rest of the collection are only accessible from the backend server using the Firebase Admin SDK.
--   `isSignedIn()` function checks if request is authorised.
--   `isUser(id)` function checks if id matches the authorised request's uid.
+- Documents under the collection "tokens" can be read and written only if their document id is the same as the sent request's uid.
+- The rest of the collection are only accessible from the backend server using the Firebase Admin SDK.
+- `isSignedIn()` function checks if request is authorised.
+- `isUser(id)` function checks if id matches the authorised request's uid.
 
 Lastly on the backend server we compare both ID tokens, one that we've received from the client app and the one we have stored in the Firestore. If the tokens are the same, then the user is granted access to resources in other Firebase products.
 

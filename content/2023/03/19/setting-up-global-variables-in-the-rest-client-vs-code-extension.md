@@ -9,7 +9,8 @@ keywords:
     - Request
     - Postman
     - HTTP
-type: article
+type: page
+blog: post
 published: 19th Mar 2023
 readTime: 5
 author: Aleksandar Trpkovski

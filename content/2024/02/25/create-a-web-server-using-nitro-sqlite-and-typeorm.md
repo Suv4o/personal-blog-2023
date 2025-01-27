@@ -14,7 +14,8 @@ keywords:
     - Decorators
     - Web Development
     - Development
-type: article
+type: page
+blog: post
 published: 25th February 2024
 readTime: 12
 author: Aleksandar Trpkovski
@@ -250,9 +251,9 @@ Nitro supports file-based routing for your API routes. You can define a route si
 
 In this project, we will define three routes:
 
--   `POST` route to create users: `/create-user`
--   `GET` route to retrieve all users: `/get-users`
--   `GET` route to retrieve a single user: `/get-user/:id`
+- `POST` route to create users: `/create-user`
+- `GET` route to retrieve all users: `/get-users`
+- `GET` route to retrieve a single user: `/get-user/:id`
 
 Let's begin with the first route for creating users.
 

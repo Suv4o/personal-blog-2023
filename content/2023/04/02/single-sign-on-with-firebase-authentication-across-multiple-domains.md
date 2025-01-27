@@ -12,7 +12,8 @@ keywords:
     - iframe
     - persist session
     - multiple domains
-type: article
+type: page
+blog: post
 published: 2nd April 2023
 readTime: 11
 author: Aleksandar Trpkovski

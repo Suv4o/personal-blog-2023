@@ -5,8 +5,9 @@ const tagsRef = ref();
 const contentBlockRef = ref();
 const descriptionRef = ref();
 const lineClamp = ref();
+const route = useRoute();
 
-const props = defineProps({
+defineProps({
     index: {
         type: Number,
         required: true,
@@ -113,6 +114,18 @@ function getNumberOfForDescriptionLines() {
     const numRows = Math.ceil(descriptionHeight / lineHeight);
     return numRows;
 }
+
+const basePath = computed(() => {
+    let routePath = route.path;
+    if (routePath.endsWith("/")) {
+        routePath = routePath.slice(0, -1);
+    }
+    const basePath = routePath.split("/").slice(0, -1).join("/");
+    if (routePath.match(/\/\d+$/)) {
+        return `${basePath}`;
+    }
+    return routePath;
+});
 </script>
 
 <template>
@@ -148,11 +161,15 @@ function getNumberOfForDescriptionLines() {
     </div>
     <div v-if="pagination && index === length - 1">
         <div class="flex justify-between flex-wrap">
-            <Button v-if="hasPreviousPage" :link="`?page=${pageNumber - 1}`" classes="mt-2" :width="'width: 130px;'"
+            <Button
+                v-if="hasPreviousPage"
+                :link="`${basePath}/${pageNumber - 1}`"
+                classes="mt-2"
+                :width="'width: 130px;'"
                 >← Previous</Button
             >
             <div v-else></div>
-            <Button v-if="hasNextPage" :link="`?page=${pageNumber + 1}`" classes="mt-2" :width="'width: 130px;'"
+            <Button v-if="hasNextPage" :link="`${basePath}/${pageNumber + 1}`" classes="mt-2" :width="'width: 130px;'"
                 >Next →</Button
             >
             <div v-else></div>

@@ -12,7 +12,8 @@ keywords:
     - Include Modules
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 17th Sep 2021
 readTime: 8
 author: Aleksandar Trpkovski

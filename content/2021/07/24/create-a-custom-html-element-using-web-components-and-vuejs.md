@@ -12,7 +12,8 @@ keywords:
     - Frontend
     - Development
     - Web Development
-type: article
+type: page
+blog: post
 published: 27th Jul 2021
 readTime: 9
 author: Aleksandar Trpkovski
