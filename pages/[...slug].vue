@@ -41,7 +41,9 @@ definePageMeta({
 useSeoMeta({
     keywords: article.value?.keywords?.join(", ") ?? "",
     ogDescription: article.value?.description ?? "",
+    description: article.value?.description ?? "",
     ogTitle: article.value?.title ?? "",
+    title: article.value?.title ?? "",
     ogImage: article.value?.image ?? "",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: article.value?.title ?? "",

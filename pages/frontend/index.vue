@@ -9,13 +9,13 @@ definePageMeta({
 
 useSeoMeta({
     keywords:
-        "FrontEnd development, FrontEnd tutorials, web development tips, JavaScript frameworks, CSS techniques, UI/UX best practices, frontend tools, modern web design, frontend coding tips",
+        "JavaScript tutorials, JavaScript articles, JavaScript tips, frontend development, JavaScript techniques, JavaScript guides, modern JavaScript, web development, coding tips, frontend developer resources",
     description:
-        "Explore the latest FrontEnd development tutorials, tips, and tools. From modern frameworks to UI/UX best practices, dive into expert insights and practical guides.",
+        "Explore insightful JavaScript articles and tutorials designed for frontend developers. From core concepts to advanced techniques, stay updated with practical tips and examples.",
     ogDescription:
-        "Explore the latest FrontEnd development tutorials, tips, and tools. From modern frameworks to UI/UX best practices, dive into expert insights and practical guides.",
-    title: "Aleks Trpkovski — FrontEnd Articles | Web Development, JavaScript, CSS, and More",
-    ogTitle: "Aleks Trpkovski — FrontEnd Articles | Web Development, JavaScript, CSS, and More",
+        "Explore insightful JavaScript articles and tutorials designed for frontend developers. From core concepts to advanced techniques, stay updated with practical tips and examples.",
+    title: "Aleks Trpkovski — JavaScript Articles | Tutorials, Tips, and More",
+    ogTitle: "Aleks Trpkovski — JavaScript Articles | Tutorials, Tips, and More",
     ogImage:
         "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
