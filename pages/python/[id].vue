@@ -1,0 +1,37 @@
+<script setup lang="ts">
+const { isBlogArticle, isListingPage } = useHelpers();
+const route = useRoute();
+const { loadPrismScript, unloadPrismScript } = usePrism();
+
+definePageMeta({
+    scrollToTop: true,
+});
+
+useSeoMeta({
+    keywords:
+        "Python web development, Python projects, web development with Python, Python for web apps, Python web applications, web development projects, Python development tutorials, Python frameworks",
+    description:
+        "Explore a curated list of Python-based projects for web development. Find inspiration and insights for building powerful web applications using Python.",
+    ogDescription:
+        "Explore a curated list of Python-based projects for web development. Find inspiration and insights for building powerful web applications using Python.",
+    title: "Aleks Trpkovski — Python Projects | Web Development with Python",
+    ogTitle: "Aleks Trpkovski — Python Projects | Web Development with Python",
+    ogImage:
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+    ogUrl: `https://www.trpkovski.com/${route.path}`,
+    ogSiteName: "Articles by Aleks Trpkovski",
+    twitterCard: "summary",
+});
+
+onMounted(() => {
+    unloadPrismScript();
+    loadPrismScript();
+});
+</script>
+
+<template>
+    <HomeButton v-if="isBlogArticle || isListingPage" />
+    <div class="al-container">
+        <Posts :limit="10" :pagination="true" :search-tag="['Python']" />
+    </div>
+</template>
