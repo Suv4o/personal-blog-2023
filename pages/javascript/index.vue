@@ -9,13 +9,13 @@ definePageMeta({
 
 useSeoMeta({
     keywords:
-        "Artificial Intelligence articles, AI insights, machine learning trends, AI advancements, AI tutorials, AI blogs, artificial intelligence news, AI developments, AI technology updates",
+        "JavaScript tutorials, JavaScript articles, JavaScript tips, frontend development, JavaScript techniques, JavaScript guides, modern JavaScript, web development, coding tips, frontend developer resources",
     description:
-        "Dive into our curated collection of articles on Artificial Intelligence. Stay updated with the latest advancements, trends, and insights in AI, machine learning, and more.",
+        "Explore insightful JavaScript articles and tutorials designed for frontend developers. From core concepts to advanced techniques, stay updated with practical tips and examples.",
     ogDescription:
-        "Dive into our curated collection of articles on Artificial Intelligence. Stay updated with the latest advancements, trends, and insights in AI, machine learning, and more.",
-    title: "Aleks Trpkovski — AI Articles | Machine Learning, AI Trends, and More",
-    ogTitle: "Aleks Trpkovski — AI Articles | Machine Learning, AI Trends, and More",
+        "Explore insightful JavaScript articles and tutorials designed for frontend developers. From core concepts to advanced techniques, stay updated with practical tips and examples.",
+    title: "Aleks Trpkovski — JavaScript Articles | Tutorials, Tips, and More",
+    ogTitle: "Aleks Trpkovski — JavaScript Articles | Tutorials, Tips, and More",
     ogImage:
         "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
