@@ -28,6 +28,8 @@ const props = defineProps({
     },
 });
 
+const emit = defineEmits(["countLoadedArticles"]);
+
 const route = useRoute();
 const articles = ref<Article[]>([]);
 const articlesCount = ref();
@@ -93,16 +95,10 @@ async function getArticlesFromCurrentPage() {
     return data.value as Article[];
 }
 
-// let numberOfAllArticles: number;
-// let allArticles: Article[];
-
 async function getArticles() {
     try {
         const [number, posts] = await Promise.all([getTheNumberOfAllArticles(), getArticlesFromCurrentPage()]);
-        // numberOfAllArticles = number;
-        // allArticles = posts;
-        // articlesCount.value = numberOfAllArticles;
-        // articles.value = allArticles;
+        emit("countLoadedArticles", posts?.length);
         if (import.meta.prerender) {
             articlesCount.value = number;
             articles.value = posts;
@@ -124,9 +120,6 @@ onMounted(async () => {
     const [number, posts] = (await getArticles()) as [number, Article[]];
     articlesCount.value = number;
     articles.value = posts;
-
-    // articlesCount.value = numberOfAllArticles;
-    // articles.value = allArticles;
 });
 
 await getArticles();
@@ -134,8 +127,6 @@ await getArticles();
 
 <template>
     <div>
-        <HomeButton v-if="fetchCompleted && !articles?.length" />
-        <NotFound v-if="fetchCompleted && !articles?.length" />
         <template v-for="(article, index) in articles" :key="article.path">
             <SinglePost
                 :index="index"

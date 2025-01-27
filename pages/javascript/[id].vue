@@ -27,11 +27,25 @@ onMounted(() => {
     unloadPrismScript();
     loadPrismScript();
 });
+
+function countLoadedArticles(count: number) {
+    if (!count) {
+        throw createError({
+            statusCode: 404,
+            statusMessage: "Page Not Found",
+        });
+    }
+}
 </script>
 
 <template>
     <HomeButton v-if="isBlogArticle || isListingPage" />
     <div class="al-container">
-        <Posts :limit="10" :pagination="true" :search-tag="['JavaScript']" />
+        <Posts
+            :limit="10"
+            :pagination="true"
+            :search-tag="['JavaScript']"
+            @count-loaded-articles="countLoadedArticles"
+        />
     </div>
 </template>

@@ -12,6 +12,7 @@ async function getCurrentArticle() {
         const { data: page } = await useAsyncData(route.fullPath, () => {
             return queryCollection("content").path(route.path).first();
         });
+
         return page.value ?? {};
     } catch (error) {
         isError.value = true;
@@ -20,6 +21,14 @@ async function getCurrentArticle() {
 }
 
 article.value = await getCurrentArticle();
+
+if (article.value && !Object.keys(article.value).length) {
+    isError.value = true;
+    throw createError({
+        statusCode: 404,
+        statusMessage: "Page Not Found",
+    });
+}
 
 if (!article.value?.body?.value?.length) {
     isError.value = true;
