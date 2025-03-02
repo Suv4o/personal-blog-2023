@@ -117,6 +117,7 @@ watch(
 );
 
 onMounted(async () => {
+    await nextTick();
     const [number, posts] = (await getArticles()) as [number, Article[]];
     articlesCount.value = number;
     articles.value = posts;
@@ -127,7 +128,7 @@ await getArticles();
 
 <template>
     <div>
-        <template v-for="(article, index) in articles" :key="article.path">
+        <div v-show="fetchCompleted" v-for="(article, index) in articles" :key="article.path">
             <SinglePost
                 :index="index"
                 :length="articles.length"
@@ -145,6 +146,6 @@ await getArticles();
                 :hasPreviousPage="hasPreviousPage"
                 :pageNumber="pageNumber"
             />
-        </template>
+        </div>
     </div>
 </template>
