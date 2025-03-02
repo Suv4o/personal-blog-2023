@@ -179,6 +179,35 @@
         @apply text-primary;
     }
 
+    .blog-page table {
+        @apply w-full my-4 border-collapse overflow-x-auto;
+        display: block;
+        white-space: nowrap;
+    }
+
+    .blog-page th,
+    .blog-page td {
+        @apply border border-gray-secondary p-2 text-left;
+        white-space: normal;
+        min-width: 300px;
+    }
+
+    .blog-page th {
+        @apply bg-secondary text-white;
+    }
+
+    .blog-page tr:nth-child(even) {
+        @apply bg-beige-light;
+    }
+
+    .blog-page tr:nth-child(odd) {
+        @apply bg-beige;
+    }
+
+    .blog-page table code {
+        @apply text-code-inline-blue bg-gray-secondary bg-opacity-10 p-1 rounded-sm;
+    }
+
     ::selection {
         @apply bg-primary text-secondary;
     }
