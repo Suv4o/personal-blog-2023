@@ -30,7 +30,7 @@ if (article.value && !Object.keys(article.value).length) {
     });
 }
 
-if (!article.value?.body?.value?.length) {
+if (!article.value?.body?.value?.length || !article.value?.type) {
     isError.value = true;
 }
 
