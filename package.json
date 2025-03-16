@@ -17,6 +17,7 @@
         "@tailwindcss/forms": "^0.5.9",
         "autoprefixer": "^10.4.20",
         "nuxt": "^3.15.0",
+        "nuxt-workers": "0.1.0",
         "postcss": "^8.4.49",
         "prettier": "^3.0.3",
         "prettier-plugin-tailwindcss": "^0.6.9",
@@ -26,7 +27,9 @@
     "dependencies": {
         "@headlessui/vue": "^1.7.23",
         "@heroicons/vue": "^2.2.0",
+        "@huggingface/transformers": "^3.3.3",
         "@types/node": "^22.10.5",
         "vue-tsc": "^2.2.0"
-    }
+    },
+    "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }

@@ -6,6 +6,7 @@ const { loadPrismScript, unloadPrismScript } = usePrism();
 const { pagePaths, listingPaths } = useHelpers();
 const isError = ref(false);
 const article = ref<Partial<Article>>();
+const test = ref(false);
 
 async function getCurrentArticle() {
     try {
@@ -50,7 +51,7 @@ useSeoMeta({
     twitterCard: "summary",
 });
 
-onMounted(() => {
+onMounted(async () => {
     unloadPrismScript();
     loadPrismScript();
 });
@@ -62,9 +63,18 @@ const isBlogArticle = computed(() => {
 const isListingPage = computed(() => {
     return listingPaths.includes(route.path);
 });
+
+if (import.meta.prerender) {
+    const { data } = await useAsyncData("/", async () => {
+        const embeddings = await processEmbeddings("Aleks");
+        return embeddings;
+    });
+    test.value = true;
+}
 </script>
 
 <template>
+    <div v-if="test">Hello</div>
     <HomeButton v-if="isBlogArticle || isListingPage" />
     <ContentRenderer
         v-if="article"
