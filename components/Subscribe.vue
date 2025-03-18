@@ -179,20 +179,20 @@ export default {
 
 <style scoped>
 .gradiant-orange {
-    background: rgb(var(--colour-primary-light));
-    background: -moz-linear-gradient(90deg, rgb(var(--colour-primary-light)) 0%, rgb(var(--colour-primary)) 100%);
-    background: -webkit-linear-gradient(90deg, rgb(var(--colour-primary-light)) 0%, rgb(var(--colour-primary)) 100%);
-    background: linear-gradient(90deg, rgb(var(--colour-primary-light)) 0%, rgb(var(--colour-primary)) 100%);
+    background: rgb(var(--color-primary-light));
+    background: -moz-linear-gradient(90deg, rgb(var(--color-primary-light)) 0%, rgb(var(--color-primary)) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(var(--color-primary-light)) 0%, rgb(var(--color-primary)) 100%);
+    background: linear-gradient(90deg, rgb(var(--color-primary-light)) 0%, rgb(var(--color-primary)) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1918b",endColorstr="#ee5f53",GradientType=1);
 }
 
 .error-input {
     background: repeating-linear-gradient(
         45deg,
-        rgb(var(--colour-secondary-light)),
-        rgb(var(--colour-secondary-light)) 10px,
-        rgb(var(--colour-secondary)) 10px,
-        rgb(var(--colour-secondary)) 20px
+        rgb(var(--color-secondary-light)),
+        rgb(var(--color-secondary-light)) 10px,
+        rgb(var(--color-secondary)) 10px,
+        rgb(var(--color-secondary)) 20px
     );
 }
 </style>

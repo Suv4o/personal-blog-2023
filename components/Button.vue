@@ -33,7 +33,7 @@ export default {
         },
         classes: {
             type: String,
-            default: "justify-center mt-50 mb-50",
+            default: "justify-center",
         },
         subscribe: {
             type: Boolean,
@@ -56,9 +56,11 @@ export default {
 </script>
 
 <style scoped>
+@reference "../assets/css/main.css";
+
 .btn {
     @apply text-lg border-2 border-white shadow-[5px_5px] shadow-beige cursor-pointer text-white rounded-lg inline-block px-4 py-2 overflow-hidden bg-inherit text-center whitespace-nowrap appearance-none m-0;
-    background: linear-gradient(90deg, rgb(var(--colour-primary-light)), rgb(var(--colour-primary)));
+    background: linear-gradient(90deg, rgb(var(--color-primary-light)), rgb(var(--color-primary)));
 }
 
 .small-width-100 {
@@ -66,7 +68,7 @@ export default {
 }
 
 .blue .btn {
-    background: linear-gradient(90deg, rgb(var(--colour-secondary-light)), rgb(var(--colour-secondary)));
+    background: linear-gradient(90deg, rgb(var(--color-secondary-light)), rgb(var(--color-secondary)));
 }
 
 .small .btn {
@@ -80,7 +82,7 @@ export default {
 }
 
 .reverse .btn {
-    background: linear-gradient(90deg, rgb(var(--colour-primary)), rgb(var(--colour-primary-light)));
+    background: linear-gradient(90deg, rgb(var(--color-primary)), rgb(var(--color-primary-light)));
 }
 
 .btn:hover,

@@ -38,6 +38,8 @@ export default {};
 </script>
 
 <style scoped>
+@reference "../assets/css/main.css";
+
 .arrow__down {
     @apply flex justify-center;
 }

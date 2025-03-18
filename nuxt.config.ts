@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 import fs from "fs";
 import path from "path";
 
@@ -75,13 +76,6 @@ export default defineNuxtConfig({
     modules: ["@nuxt/content"],
     css: ["~/assets/css/main.css"],
 
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
-    },
-
     typescript: {
         typeCheck: true,
         strict: true,
@@ -94,6 +88,10 @@ export default defineNuxtConfig({
             UNSUBSCRIBE_TO_NEWSLETTERS_URL: process.env.UNSUBSCRIBE_TO_NEWSLETTERS_URL,
             RE_CAPTCHA_SITE_KEY: process.env.RE_CAPTCHA_SITE_KEY,
         },
+    },
+
+    vite: {
+        plugins: [tailwindcss()],
     },
 
     nitro: {
