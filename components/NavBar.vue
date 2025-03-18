@@ -156,6 +156,8 @@ async function navigateToArticle() {
 </template>
 
 <style scoped>
+@reference "../assets/css/main.css";
+
 .router-link-active {
     @apply before:absolute before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full;
 }

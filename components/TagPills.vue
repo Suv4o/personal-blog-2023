@@ -163,6 +163,8 @@ export default {
 </script>
 
 <style scoped>
+@reference "../assets/css/main.css";
+
 .tags div:hover {
     @apply opacity-80;
 }

@@ -357,6 +357,8 @@ export default {
 </script>
 
 <style scoped>
+@reference "../assets/css/main.css";
+
 .title {
     @apply text-4xl text-center text-secondary;
 }
@@ -401,10 +403,10 @@ export default {
     @apply text-white;
     background: repeating-linear-gradient(
         45deg,
-        rgb(var(--colour-secondary-light)),
-        rgb(var(--colour-secondary-light)) 10px,
-        rgb(var(--colour-secondary)) 10px,
-        rgb(var(--colour-secondary)) 20px
+        rgb(var(--color-secondary-light)),
+        rgb(var(--color-secondary-light)) 10px,
+        rgb(var(--color-secondary)) 10px,
+        rgb(var(--color-secondary)) 20px
     );
 }
 
