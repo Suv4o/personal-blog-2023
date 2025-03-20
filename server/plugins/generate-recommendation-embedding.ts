@@ -1,6 +1,4 @@
 import { promises as fs } from "fs";
-import { dirname, join, resolve } from "path";
-import { fileURLToPath } from "url";
 import { processEmbeddings } from "../utils/process-embeddings";
 import { isBlogPostUrl } from "../utils/url-helpers";
 import { getEmbeddingsFilePath } from "../utils/file-paths";
@@ -15,7 +13,28 @@ declare module "h3" {
 // Flag to track if embeddings are being processed
 let isProcessingEmbeddings = false;
 
-export default defineNitroPlugin((nitro) => {
+export default defineNitroPlugin(async (nitro) => {
+    // Check if prerendering is enabled
+    if (!import.meta.prerender) {
+        const { embeddingsFilePath } = getEmbeddingsFilePath(import.meta.url);
+
+        try {
+            // Check if file already exists
+            try {
+                await fs.access(embeddingsFilePath);
+            } catch {
+                // File doesn't exist, create an empty JSON file with an empty array
+                const jsonString = JSON.stringify([], null, 2);
+                await fs.writeFile(embeddingsFilePath, jsonString, "utf-8");
+            }
+        } catch (error) {
+            console.error(`Error handling embeddings file: ${error instanceof Error ? error.message : String(error)}`);
+        }
+
+        // Skip further processing
+        return;
+    }
+
     // Use the request hook which runs before route handling
     nitro.hooks.hook("request", async (event) => {
         // Skip if not a blog post URL
@@ -49,13 +68,12 @@ export default defineNitroPlugin((nitro) => {
                 try {
                     // Try to parse the JSON content
                     articlesEmbeddings = JSON.parse(fileContent);
-                    console.log(`Successfully read ${articlesEmbeddings.length} embeddings from JSON file`);
                 } catch (parseError) {
                     console.error(`Error parsing JSON: ${parseError}`);
                     articlesEmbeddings = [];
                 }
             } catch (error) {
-                console.log("Creating new embeddings JSON file - doesn't exist yet");
+                console.error("Creating new embeddings JSON file - doesn't exist yet");
             }
 
             // Validate articlesEmbeddings is an array
@@ -73,8 +91,6 @@ export default defineNitroPlugin((nitro) => {
                 // We'll need to get the content later during the render:html phase
                 // For now, just mark that this URL needs processing
                 event._needsEmbeddingProcessing = true;
-            } else {
-                console.log(`Embedding for ${url} already exists. Total: ${articlesEmbeddings.length}`);
             }
         } catch (error) {
             console.error(`Error checking embeddings: ${error instanceof Error ? error.message : String(error)}`);
@@ -117,7 +133,7 @@ export default defineNitroPlugin((nitro) => {
                 const fileContent = await fs.readFile(embeddingsFilePath, "utf-8");
                 articlesEmbeddings = JSON.parse(fileContent);
             } catch (error) {
-                console.log("Error reading embeddings file, starting with empty array");
+                console.error("Error reading embeddings file, starting with empty array");
             }
 
             if (!Array.isArray(articlesEmbeddings)) {
@@ -125,7 +141,6 @@ export default defineNitroPlugin((nitro) => {
             }
 
             // Process embeddings synchronously - this blocks further processing
-            console.log(`Processing embeddings for: ${url}`);
             const embeddings = await processEmbeddings(textContent);
 
             // Add the new entry
@@ -134,12 +149,9 @@ export default defineNitroPlugin((nitro) => {
                 embeddings: embeddings,
             });
 
-            console.log(`Added embedding for: ${url}. Total: ${articlesEmbeddings.length}`);
-
             // Save the updated array to the JSON file
             const jsonString = JSON.stringify(articlesEmbeddings, null, 2);
             await fs.writeFile(embeddingsFilePath, jsonString, "utf-8");
-            console.log("Successfully saved embeddings to JSON file");
         } catch (error) {
             console.error(`Error updating embeddings: ${error instanceof Error ? error.message : String(error)}`);
         } finally {
