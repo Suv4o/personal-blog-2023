@@ -97,6 +97,8 @@ export default defineNuxtConfig({
     nitro: {
         prerender: {
             crawlLinks: true,
+            concurrency: 1,
+            retry: 3,
             routes: getAllMarkdownFiles("content"),
         },
     },

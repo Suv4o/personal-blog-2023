@@ -150,7 +150,7 @@ export default defineNitroPlugin((nitro) => {
 
             // Add the new entry
             articlesEmbeddings.push({
-                id: url,
+                articlePath: url,
                 embeddings: embeddings,
             });
 
