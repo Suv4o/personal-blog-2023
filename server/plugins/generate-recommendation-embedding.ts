@@ -2,6 +2,8 @@ import { promises as fs } from "fs";
 import { dirname, join, resolve } from "path";
 import { fileURLToPath } from "url";
 import { processEmbeddings } from "../utils/process-embeddings";
+import { isBlogPostUrl } from "../utils/url-helpers";
+import { getEmbeddingsFilePath } from "../utils/file-paths";
 
 // Extend the H3Event type to include our custom property
 declare module "h3" {
@@ -16,15 +18,8 @@ let isProcessingEmbeddings = false;
 export default defineNitroPlugin((nitro) => {
     // Use the request hook which runs before route handling
     nitro.hooks.hook("request", async (event) => {
-        // Skip processing if there's no URL
-        if (!event.node.req.url) return;
-
-        // Only process blog post URLs (format: /YYYY/MM/DD/blog-slug)
-        const blogPostPattern = /^\/\d{4}\/\d{2}\/\d{2}\/[a-zA-Z0-9-]+/;
-        if (!blogPostPattern.test(event.node.req.url)) {
-            // Not a blog post URL, skip processing
-            return;
-        }
+        // Skip if not a blog post URL
+        if (!isBlogPostUrl(event.node.req.url)) return;
 
         // Set the processing flag to true
         isProcessingEmbeddings = true;
@@ -33,12 +28,8 @@ export default defineNitroPlugin((nitro) => {
             // Get the URL
             const url = event.node.req.url;
 
-            // Get absolute path to project root and the embeddings file
-            const __filename = fileURLToPath(import.meta.url);
-            const __dirname = dirname(__filename);
-            const projectRoot = resolve(__dirname, "../../");
-            const embeddingsDir = join(projectRoot, "server/utils");
-            const embeddingsFilePath = join(embeddingsDir, "articles-embeddings.json");
+            // Get embeddings file path
+            const { embeddingsDir, embeddingsFilePath } = getEmbeddingsFilePath(import.meta.url);
 
             // Make sure the directory exists
             try {
@@ -95,15 +86,8 @@ export default defineNitroPlugin((nitro) => {
 
     // Use render:html hook to get the content and process embeddings if needed
     nitro.hooks.hook("render:html", async (response, { event }) => {
-        // Skip processing if there's no URL
-        if (!event.node.req.url) return;
-
-        // Only process blog post URLs (format: /YYYY/MM/DD/blog-slug)
-        const blogPostPattern = /^\/\d{4}\/\d{2}\/\d{2}\/[a-zA-Z0-9-]+/;
-        if (!blogPostPattern.test(event.node.req.url)) {
-            // Not a blog post URL, skip processing
-            return;
-        }
+        // Skip if not a blog post URL
+        if (!isBlogPostUrl(event.node.req.url)) return;
 
         if (!response.body || !event._needsEmbeddingProcessing) return;
 
@@ -124,12 +108,8 @@ export default defineNitroPlugin((nitro) => {
             // Get the URL
             const url = event.node.req.url;
 
-            // Get absolute path to project root and the embeddings file
-            const __filename = fileURLToPath(import.meta.url);
-            const __dirname = dirname(__filename);
-            const projectRoot = resolve(__dirname, "../../");
-            const embeddingsDir = join(projectRoot, "server/utils");
-            const embeddingsFilePath = join(embeddingsDir, "articles-embeddings.json");
+            // Get embeddings file path
+            const { embeddingsFilePath } = getEmbeddingsFilePath(import.meta.url);
 
             // Read existing embeddings again (in case they changed)
             let articlesEmbeddings = [];
@@ -170,15 +150,8 @@ export default defineNitroPlugin((nitro) => {
 
     // Add a middleware to wait for embeddings processing
     nitro.hooks.hook("beforeResponse", async (event) => {
-        // Skip processing if there's no URL
-        if (!event.node.req.url) return;
-
-        // Only process blog post URLs (format: /YYYY/MM/DD/blog-slug)
-        const blogPostPattern = /^\/\d{4}\/\d{2}\/\d{2}\/[a-zA-Z0-9-]+/;
-        if (!blogPostPattern.test(event.node.req.url)) {
-            // Not a blog post URL, skip processing
-            return;
-        }
+        // Skip if not a blog post URL
+        if (!isBlogPostUrl(event.node.req.url)) return;
 
         // Wait until embedding processing is completed
         while (isProcessingEmbeddings) {
