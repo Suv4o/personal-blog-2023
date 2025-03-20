@@ -19,6 +19,13 @@ export default defineNitroPlugin((nitro) => {
         // Skip processing if there's no URL
         if (!event.node.req.url) return;
 
+        // Only process blog post URLs (format: /YYYY/MM/DD/blog-slug)
+        const blogPostPattern = /^\/\d{4}\/\d{2}\/\d{2}\/[a-zA-Z0-9-]+/;
+        if (!blogPostPattern.test(event.node.req.url)) {
+            // Not a blog post URL, skip processing
+            return;
+        }
+
         // Set the processing flag to true
         isProcessingEmbeddings = true;
 
@@ -88,7 +95,17 @@ export default defineNitroPlugin((nitro) => {
 
     // Use render:html hook to get the content and process embeddings if needed
     nitro.hooks.hook("render:html", async (response, { event }) => {
-        if (!event.node.req.url || !response.body || !event._needsEmbeddingProcessing) return;
+        // Skip processing if there's no URL
+        if (!event.node.req.url) return;
+
+        // Only process blog post URLs (format: /YYYY/MM/DD/blog-slug)
+        const blogPostPattern = /^\/\d{4}\/\d{2}\/\d{2}\/[a-zA-Z0-9-]+/;
+        if (!blogPostPattern.test(event.node.req.url)) {
+            // Not a blog post URL, skip processing
+            return;
+        }
+
+        if (!response.body || !event._needsEmbeddingProcessing) return;
 
         // Set the processing flag to true
         isProcessingEmbeddings = true;
@@ -153,6 +170,16 @@ export default defineNitroPlugin((nitro) => {
 
     // Add a middleware to wait for embeddings processing
     nitro.hooks.hook("beforeResponse", async (event) => {
+        // Skip processing if there's no URL
+        if (!event.node.req.url) return;
+
+        // Only process blog post URLs (format: /YYYY/MM/DD/blog-slug)
+        const blogPostPattern = /^\/\d{4}\/\d{2}\/\d{2}\/[a-zA-Z0-9-]+/;
+        if (!blogPostPattern.test(event.node.req.url)) {
+            // Not a blog post URL, skip processing
+            return;
+        }
+
         // Wait until embedding processing is completed
         while (isProcessingEmbeddings) {
             // Use a small delay to avoid CPU spinning
