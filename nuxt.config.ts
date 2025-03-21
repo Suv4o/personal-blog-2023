@@ -99,7 +99,7 @@ export default defineNuxtConfig({
             crawlLinks: true,
             concurrency: 1,
             retry: 3,
-            routes: getAllMarkdownFiles("content"),
+            routes: [...getAllMarkdownFiles("content"), "/api/similar-articles"],
         },
     },
 
