@@ -21,7 +21,24 @@ function getAllMarkdownFiles(dirPath: string): string[] {
 
     traverseDirectory(dirPath);
 
-    return files.map((file) => {
+    const apiRoutes = files
+        .map((file) => {
+            let filePath = file.replace("content/", "/").replace(".md", "").replace("index", "");
+
+            if (filePath.endsWith("/") && filePath !== "/") {
+                filePath = filePath.slice(0, -1);
+            }
+
+            return filePath;
+        })
+        .filter((filePath) => {
+            // Match paths with format: /yyyy/mm/dd/article-slug
+            const pathRegex = /\/\d{4}\/\d{2}\/\d{2}\/[\w-]+$/;
+            return pathRegex.test(filePath);
+        })
+        .map((filePath) => `/api/similar-articles${filePath}`);
+
+    const routes = files.map((file) => {
         let filePath = file.replace("content/", "/").replace(".md", "").replace("index", "");
 
         if (filePath.endsWith("/") && filePath !== "/") {
@@ -30,6 +47,8 @@ function getAllMarkdownFiles(dirPath: string): string[] {
 
         return filePath;
     });
+
+    return [...routes, ...apiRoutes];
 }
 
 export default defineNuxtConfig({
@@ -99,7 +118,7 @@ export default defineNuxtConfig({
             crawlLinks: true,
             concurrency: 1,
             retry: 3,
-            routes: [...getAllMarkdownFiles("content"), "/api/similar-articles"],
+            routes: [...getAllMarkdownFiles("content")],
         },
     },
 
