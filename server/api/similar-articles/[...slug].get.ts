@@ -3,16 +3,7 @@ import { getEmbeddingsFilePath } from "../../utils/file-paths";
 
 export default defineEventHandler(async (event) => {
     try {
-        // Get the slug parameter from the URL
         const { slug } = getRouterParams(event);
-
-        // throw createError({
-        //     statusCode: 400,
-        //     statusMessage: "ID should be an integer",
-        // });
-
-        // Convert the slug array to a path string
-        const fullPath = Array.isArray(slug) ? slug.join("/") : slug;
 
         // Get the path to the embeddings file
         const { embeddingsFilePath } = getEmbeddingsFilePath(import.meta.url);
@@ -24,7 +15,7 @@ export default defineEventHandler(async (event) => {
             return {
                 success: false,
                 error: "Embeddings file does not exist",
-                requestedPath: fullPath,
+                requestedPath: slug,
             };
         }
 
@@ -34,8 +25,10 @@ export default defineEventHandler(async (event) => {
 
         return {
             success: true,
-            data: articlesEmbeddings,
-            requestedPath: fullPath,
+            data: articlesEmbeddings.find(
+                (article: { articlePath: string; embeddings: number[] }) => article.articlePath === "/" + slug
+            ),
+            requestedPath: slug,
         };
     } catch (error) {
         console.error(`Error reading embeddings file: ${error instanceof Error ? error.message : String(error)}`);
