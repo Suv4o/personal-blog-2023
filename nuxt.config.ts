@@ -1,8 +1,12 @@
 import tailwindcss from "@tailwindcss/vite";
 import fs from "fs";
 import path from "path";
+import { isBlogPostUrl } from "./utils/url-helpers";
+import { processEmbeddings } from "./utils/process-embeddings";
+import { getEmbeddingsFilePath } from "./utils/file-paths";
+import { pipeline } from "@huggingface/transformers";
 
-function getAllMarkdownFiles(dirPath: string): string[] {
+async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
     const files: string[] = [];
 
     function traverseDirectory(currentPath: string) {
@@ -21,7 +25,24 @@ function getAllMarkdownFiles(dirPath: string): string[] {
 
     traverseDirectory(dirPath);
 
-    return files.map((file) => {
+    const apiRoutes = files
+        .map((file) => {
+            let filePath = file.replace("content/", "/").replace(".md", "").replace("index", "");
+
+            if (filePath.endsWith("/") && filePath !== "/") {
+                filePath = filePath.slice(0, -1);
+            }
+
+            return filePath;
+        })
+        .filter((filePath) => {
+            // Match paths with format: /yyyy/mm/dd/article-slug
+            const pathRegex = /\/\d{4}\/\d{2}\/\d{2}\/[\w-]+$/;
+            return pathRegex.test(filePath);
+        })
+        .map((filePath) => `/api/similar-articles${filePath}`);
+
+    const routes = files.map((file) => {
         let filePath = file.replace("content/", "/").replace(".md", "").replace("index", "");
 
         if (filePath.endsWith("/") && filePath !== "/") {
@@ -30,6 +51,46 @@ function getAllMarkdownFiles(dirPath: string): string[] {
 
         return filePath;
     });
+
+    // Read the content of the blog posts
+    const urlToRead = routes.filter((url) => isBlogPostUrl(url));
+
+    const markdownFiles = urlToRead.map((url) => {
+        return {
+            url,
+            content: fs.readFileSync(`content${url}.md`, "utf-8"),
+        };
+    });
+
+    const articlesEmbeddings = [];
+    const extractor = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2");
+
+    for (const markdown of markdownFiles) {
+        const embeddings = await processEmbeddings(markdown.content, extractor);
+        const url = markdown.url;
+        articlesEmbeddings.push({
+            articlePath: url,
+            embeddings,
+        });
+    }
+
+    // Save the updated array to the JSON file
+    const jsonString = JSON.stringify(articlesEmbeddings, null, 2);
+
+    // Get the path to the embeddings file
+    const { embeddingsDir, embeddingsFilePath } = getEmbeddingsFilePath(import.meta.url);
+
+    // Make sure the directory exists
+    if (!fs.existsSync(embeddingsDir)) {
+        fs.mkdirSync(embeddingsDir, { recursive: true });
+    }
+
+    // Write the JSON string to the file
+    fs.writeFileSync(embeddingsFilePath, jsonString);
+
+    console.log(`Embeddings saved to: ${embeddingsFilePath}`);
+
+    return [...routes, ...apiRoutes];
 }
 
 export default defineNuxtConfig({
@@ -97,7 +158,9 @@ export default defineNuxtConfig({
     nitro: {
         prerender: {
             crawlLinks: true,
-            routes: getAllMarkdownFiles("content"),
+            concurrency: 1,
+            retry: 3,
+            routes: [...(await getAllMarkdownFiles("content"))],
         },
     },
 

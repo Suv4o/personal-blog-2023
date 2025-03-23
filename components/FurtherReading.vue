@@ -2,26 +2,41 @@
 import type { Article } from "~/types";
 
 const route = useRoute();
+const relatedArticles = ref<Article[]>([]);
 
-async function getThePreviousAndNextArticle() {
-    const { data: articles } = await useAsyncData(route.fullPath + "-further-reading", () => {
-        return queryCollection("content").where("blog", "=", "post").all() as Promise<Article[]>;
-    });
+// Fetch data during component initialization
+const { data: allArticles } = useAsyncData(route.fullPath + "-further-reading", () => {
+    return queryCollection("content").where("blog", "=", "post").all() as Promise<Article[]>;
+});
 
-    if (!articles.value?.length) {
-        return [];
+const currentArticlePath = route.path;
+
+const { data: similarArticlesData } = useAsyncData(route.fullPath + "-similar-articles", async () => {
+    return await $fetch(`/api/similar-articles${currentArticlePath}`);
+});
+
+// This function is now synchronous and works with already fetched data
+function processRelatedArticles() {
+    if (!allArticles.value?.length) {
+        return [] as Article[];
     }
 
-    // Create a copy of articles without the current one
-    const currentArticlePath = route.path;
-    const filteredArticles = articles.value.filter((article: Article) => article.path !== currentArticlePath);
+    const filteredArticles = allArticles.value.filter((article: Article) => article.path !== currentArticlePath);
 
     if (filteredArticles.length === 0) {
-        return [];
+        return [] as Article[];
+    }
+
+    if (similarArticlesData.value && similarArticlesData.value.data.length) {
+        return similarArticlesData.value.data
+            .map((item) => {
+                return filteredArticles.find((article: Article) => article.path === item.articlePath);
+            })
+            .filter(Boolean) as Article[];
     }
 
     // Find the index of the current article
-    const currentIndex = articles.value.findIndex((article: Article) => article.path === currentArticlePath);
+    const currentIndex = allArticles.value.findIndex((article: Article) => article.path === currentArticlePath);
 
     // If somehow the current article isn't found (shouldn't happen), return the first 3 articles
     if (currentIndex === -1) {
@@ -32,13 +47,13 @@ async function getThePreviousAndNextArticle() {
     const result = [] as Article[];
 
     // First, try to add articles that come after the current one
-    for (let i = currentIndex + 1; i < articles.value.length && result.length < 3; i++) {
-        result.push(articles.value[i]);
+    for (let i = currentIndex + 1; i < allArticles.value.length && result.length < 3; i++) {
+        result.push(allArticles.value[i]);
     }
 
     // Then, try to add articles that come before the current one
     for (let i = currentIndex - 1; i >= 0 && result.length < 3; i--) {
-        result.push(articles.value[i]);
+        result.push(allArticles.value[i]);
     }
 
     // If we still don't have 3 articles, add more from either end
@@ -53,10 +68,17 @@ async function getThePreviousAndNextArticle() {
     return result.slice(0, 3);
 }
 
-const relatedArticles = (await getThePreviousAndNextArticle()) as Article[];
+// Use watch to update relatedArticles whenever the async data is available
+watch(
+    [allArticles, similarArticlesData],
+    () => {
+        relatedArticles.value = processRelatedArticles();
+    },
+    { immediate: true }
+);
 
 const posts = computed(() => {
-    return relatedArticles.map((article) => ({
+    return relatedArticles.value.map((article) => ({
         id: article.id,
         title: article.title,
         path: article.path,

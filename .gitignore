@@ -25,3 +25,5 @@ logs
 
 # Local Netlify folder
 .netlify
+
+server/utils/articles-embeddings.json
