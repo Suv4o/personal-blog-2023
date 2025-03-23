@@ -1,8 +1,12 @@
 import tailwindcss from "@tailwindcss/vite";
 import fs from "fs";
 import path from "path";
+import { isBlogPostUrl } from "./utils/url-helpers";
+import { processEmbeddings } from "./utils/process-embeddings";
+import { getEmbeddingsFilePath } from "./utils/file-paths";
+import { pipeline } from "@huggingface/transformers";
 
-function getAllMarkdownFiles(dirPath: string): string[] {
+async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
     const files: string[] = [];
 
     function traverseDirectory(currentPath: string) {
@@ -47,6 +51,44 @@ function getAllMarkdownFiles(dirPath: string): string[] {
 
         return filePath;
     });
+
+    // Read the content of the blog posts
+    const urlToRead = routes.filter((url) => isBlogPostUrl(url));
+
+    const markdownFiles = urlToRead.map((url) => {
+        return {
+            url,
+            content: fs.readFileSync(`content${url}.md`, "utf-8"),
+        };
+    });
+
+    const articlesEmbeddings = [];
+    const extractor = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2");
+
+    for (const markdown of markdownFiles) {
+        const embeddings = await processEmbeddings(markdown.content, extractor);
+        const url = markdown.url;
+        articlesEmbeddings.push({
+            articlePath: url,
+            embeddings,
+        });
+    }
+
+    // Save the updated array to the JSON file
+    const jsonString = JSON.stringify(articlesEmbeddings, null, 2);
+
+    // Get the path to the embeddings file
+    const { embeddingsDir, embeddingsFilePath } = getEmbeddingsFilePath(import.meta.url);
+
+    // Make sure the directory exists
+    if (!fs.existsSync(embeddingsDir)) {
+        fs.mkdirSync(embeddingsDir, { recursive: true });
+    }
+
+    // Write the JSON string to the file
+    fs.writeFileSync(embeddingsFilePath, jsonString);
+
+    console.log(`Embeddings saved to: ${embeddingsFilePath}`);
 
     return [...routes, ...apiRoutes];
 }
@@ -118,7 +160,7 @@ export default defineNuxtConfig({
             crawlLinks: true,
             concurrency: 1,
             retry: 3,
-            routes: [...getAllMarkdownFiles("content")],
+            routes: [...(await getAllMarkdownFiles("content"))],
         },
     },
 
