@@ -47,7 +47,19 @@ useSeoMeta({
     ogImage: article.value?.image ?? "",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: article.value?.title ?? "",
+    twitterTitle: article.value?.title ?? "",
+    twitterDescription: article.value?.description ?? "",
+    twitterImage: article.value?.image ?? "",
     twitterCard: "summary",
+});
+
+useHead({
+    meta: [
+        {
+            name: "twitter:url",
+            content: `https://www.trpkovski.com/${route.path}`,
+        },
+    ],
 });
 
 onMounted(() => {

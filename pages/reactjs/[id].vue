@@ -20,7 +20,21 @@ useSeoMeta({
         "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
+    twitterTitle: "Aleks Trpkovski — React.js Projects | Web Development with React",
+    twitterDescription:
+        "Explore a curated collection of React.js projects in web development. Find tutorials, code examples, and best practices to level up your React skills.",
+    twitterImage:
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     twitterCard: "summary",
+});
+
+useHead({
+    meta: [
+        {
+            name: "twitter:url",
+            content: `https://www.trpkovski.com/${route.path}`,
+        },
+    ],
 });
 
 onMounted(() => {

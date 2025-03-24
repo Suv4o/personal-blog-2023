@@ -20,7 +20,21 @@ useSeoMeta({
         "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
+    twitterTitle: "Aleks Trpkovski — Nitro Development Blog | Web Development Projects, Tutorials, and Tips",
+    twitterDescription:
+        "Explore my personal blog showcasing cutting-edge Nitro development projects, including tutorials, tips, and best practices to help you stay ahead in the world of modern web development.",
+    twitterImage:
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     twitterCard: "summary",
+});
+
+useHead({
+    meta: [
+        {
+            name: "twitter:url",
+            content: `https://www.trpkovski.com/${route.path}`,
+        },
+    ],
 });
 
 onMounted(() => {

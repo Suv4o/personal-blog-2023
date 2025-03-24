@@ -20,7 +20,21 @@ useSeoMeta({
         "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
+    twitterTitle: "Aleks Trpkovski — Vue.js Projects | Web Development, Front-End Solutions, and More",
+    twitterDescription:
+        "Explore a curated list of Vue.js projects in web development. Discover innovative solutions, tutorials, and resources for mastering Vue.js. Perfect for developers looking to expand their skills with practical examples and code snippets.",
+    twitterImage:
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     twitterCard: "summary",
+});
+
+useHead({
+    meta: [
+        {
+            name: "twitter:url",
+            content: `https://www.trpkovski.com/${route.path}`,
+        },
+    ],
 });
 
 onMounted(() => {

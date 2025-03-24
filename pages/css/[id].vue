@@ -20,7 +20,21 @@ useSeoMeta({
         "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
+    twitterTitle: "Aleks Trpkovski — CSS Articles | Web Development Tips, CSS Tutorials, and More",
+    twitterDescription:
+        "Explore the latest CSS development tutorials, tips, and resources to enhance your web development skills. Stay updated with modern CSS techniques and trends!",
+    twitterImage:
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
     twitterCard: "summary",
+});
+
+useHead({
+    meta: [
+        {
+            name: "twitter:url",
+            content: `https://www.trpkovski.com/${route.path}`,
+        },
+    ],
 });
 
 onMounted(() => {
