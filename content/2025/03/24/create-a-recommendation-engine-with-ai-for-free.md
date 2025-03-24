@@ -253,4 +253,4 @@ For example, when a user reads an article about **Nest.js Authorisation with Fir
 
 For those interested in seeing the implementation details, the complete source code of my blog is available on GitHub [here](https://github.com/Suv4o/personal-blog-2023).
 
-The example above is available on this repository here. |
+The example above is available on this repository [here](https://github.com/Suv4o/create-a-recommendation-engine-with-ai-for-free).
