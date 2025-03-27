@@ -950,4 +950,4 @@ This guide only scratches the surface. More advanced features like Vue Router an
 
 Happy coding!
 
-The code for this is available in the following GitHub repository [here](https://github.com/Suv4o/a-beginners-guide-to-vue-for-react-developers).
+The code for this is available in the following GitHub repository <a href="https://github.com/Suv4o/a-beginners-guide-to-vue-for-react-developers" target="_blank" rel="noopener noreferrer">here</a>.

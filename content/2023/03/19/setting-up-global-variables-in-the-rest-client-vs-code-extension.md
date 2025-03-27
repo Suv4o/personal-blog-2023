@@ -29,9 +29,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1679178671/blog/setting-up-global-variables-in-the-rest-client-vs-code-extension/hero-image_wywhks)
 
-REST Client is a Visual Studio Code (VS Code) extension ([link](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)) that allows you to send HTTP requests and view the responses directly in VS Code.
+REST Client is a Visual Studio Code (VS Code) extension (<a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client" target="_blank" rel="noopener noreferrer">link</a>) that allows you to send HTTP requests and view the responses directly in VS Code.
 
-In the past, my go-to application for testing my REST API endpoints was Postman ([link](https://www.postman.com/)). Postman has many advanced features that cannot be completely replaced with the REST Client extension. However, since you need to switch between two different apps (VS Code and Postman), I find REST Client to be more convenient 90% of the time I test my endpoints.
+In the past, my go-to application for testing my REST API endpoints was Postman (<a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">link</a>). Postman has many advanced features that cannot be completely replaced with the REST Client extension. However, since you need to switch between two different apps (VS Code and Postman), I find REST Client to be more convenient 90% of the time I test my endpoints.
 
 In this brief blog article, I will explain how to set up global variables that can be reused in different environments within the REST Client extension.
 

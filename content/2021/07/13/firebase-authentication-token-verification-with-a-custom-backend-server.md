@@ -39,7 +39,7 @@ In this article we will have a look at few examples on how we can use token ID p
 
 ## Connect your app to Firebase
 
-Before we start working with Firebase we need to create a Firebase project in the [Firebase console](https://console.firebase.google.com/?authuser=0). We will then add and initialise the Firebase SDK to our web app. For a detailed explanation on how to set up Firebase to your JavaScript project, follow the instructions on this [link](https://firebase.google.com/docs/web/setup).
+Before we start working with Firebase we need to create a Firebase project in the <a href="https://console.firebase.google.com/?authuser=0" target="_blank" rel="noopener noreferrer">Firebase console</a>. We will then add and initialise the Firebase SDK to our web app. For a detailed explanation on how to set up Firebase to your JavaScript project, follow the instructions on this <a href="https://firebase.google.com/docs/web/setup" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## User authenticate from the client side
 
@@ -61,7 +61,7 @@ What happens if we would like to add on verifications for our signed in user on 
 
 ## Verify user on the backend server
 
-To be able to interact with Firebase from a backend server we need to use the Firebase Admin SDK. For a detailed explanation on how to set up Firebase on the backend server, follow the instructions on this [link](https://firebase.google.com/docs/admin/setup).
+To be able to interact with Firebase from a backend server we need to use the Firebase Admin SDK. For a detailed explanation on how to set up Firebase on the backend server, follow the instructions on this <a href="https://firebase.google.com/docs/admin/setup" target="_blank" rel="noopener noreferrer">link</a>.
 
 ### Verify ID Tokens
 
@@ -127,7 +127,7 @@ firebase
     });
 ```
 
-> **Note:** We first need to create the collection "tokens" with the document named with the user "uid" before hand. Ideally, that would be when a user has been created. We can trigger Cloud Functions on user creation and deletion. Please refer to the following link for more details on how we can trigger Cloud Functions when user has been created [link](https://firebase.google.com/docs/functions/auth-events).
+> **Note:** We first need to create the collection "tokens" with the document named with the user "uid" before hand. Ideally, that would be when a user has been created. We can trigger Cloud Functions on user creation and deletion. Please refer to the following link for more details on how we can trigger Cloud Functions when user has been created <a href="https://firebase.google.com/docs/functions/auth-events" target="_blank" rel="noopener noreferrer">link</a>.
 
 Now we need to add security rules to our Firestore where only the signed-in user can update its token based on its own uid. The Firestore rules are located in the Firebase console, under the Rules tab in the Firestore Database tab. Here is an example on how to add security rules.
 

@@ -33,21 +33,21 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ## What is Nest (NestJS)?
 
-[Nest](https://nestjs.com/) is a progressive Node.js framework for building efficient, reliable and scalable server-side applications with TypeScript.
+<a href="https://nestjs.com/" target="_blank" rel="noopener noreferrer">Nest</a> is a progressive Node.js framework for building efficient, reliable and scalable server-side applications with TypeScript.
 
-Under the hood, Nest makes use of two javascript backend frameworks [Express](https://expressjs.com/) (the default) and can also be configured to use with [Fastify](https://www.fastify.io/) as well!
+Under the hood, Nest makes use of two javascript backend frameworks <a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">Express</a> (the default) and can also be configured to use with <a href="https://www.fastify.io/" target="_blank" rel="noopener noreferrer">Fastify</a> as well!
 
 The examples in this blog article leverages on the default Express framework.
 
 ## What is Okta?
 
-[Okta](https://www.okta.com/) is an Identity as a Service (IDaaS). This is a cloud-based authentication or identity management subscription service. Okta can be used for a number of different applications such as [Adaptive multi-factor authentication](https://www.okta.com/au/blog/2016/12/two-factor-authentication-vs-multi-factor-authentication-what-are-the-risks/), [single sign-on](https://www.okta.com/au/products/single-sign-on/), [Universal Directory](https://www.okta.com/au/products/universal-directory/) etc.
+<a href="https://www.okta.com/" target="_blank" rel="noopener noreferrer">Okta</a> is an Identity as a Service (IDaaS). This is a cloud-based authentication or identity management subscription service. Okta can be used for a number of different applications such as <a href="https://www.okta.com/au/blog/2016/12/two-factor-authentication-vs-multi-factor-authentication-what-are-the-risks/" target="_blank" rel="noopener noreferrer">Adaptive multi-factor authentication</a>, <a href="https://www.okta.com/au/products/single-sign-on/" target="_blank" rel="noopener noreferrer">single sign-on</a>, <a href="https://www.okta.com/au/products/universal-directory/" target="_blank" rel="noopener noreferrer">Universal Directory</a> etc.
 
 In this blog article we will be creating a Nest application where users (with different roles) can sign-up and sign-in to the application. Specific permissions can be configured for each user access to specific endpoints, based on the user role. We are going to use Okta to help us with user Authentication and Authorisation.
 
 ## Create a Nest Project
 
-Before we continue let’s first install [Nest CLI](https://docs.nestjs.com/cli/overview). That will enable us to efficiently create this project. To install Nest CLI globally, use the following command in your terminal:
+Before we continue let's first install <a href="https://docs.nestjs.com/cli/overview" target="_blank" rel="noopener noreferrer">Nest CLI</a>. That will enable us to efficiently create this project. To install Nest CLI globally, use the following command in your terminal:
 
 ```bash
 npm install -g @nestjs/cli
@@ -82,7 +82,7 @@ $ npm run start
 
 If we navigate to the [**http://localhost:3000**](http://localhost:3000) in the browser, we will be able to see **Hello World!**
 
-Now, let’s have a look at the folder structure in our Nest project. Inside the `nest-auth-with-okta` directory we have `node_modules`, a few other boilerplate files and a `src/` directory populated with several core files.
+Now, let's have a look at the folder structure in our Nest project. Inside the `nest-auth-with-okta` directory we have `node_modules`, a few other boilerplate files and a `src/` directory populated with several core files.
 
 `app.controller.spec.ts`
 
@@ -100,7 +100,7 @@ Cool, this means that we have successfully created our Nest project.
 
 We will now create our developer account with Okta.
 
-Okta’s Developer Edition provides a free, no time limit access to the most key developer features. You can sign-up [here](https://developer.okta.com/signup/).
+Okta's Developer Edition provides a free, no time limit access to the most key developer features. You can sign-up <a href="https://developer.okta.com/signup/" target="_blank" rel="noopener noreferrer">here</a>.
 
 Next, we will create an app integration. We can do so by signing in to the Okta dashboard and navigating to Applications → Applications → Create App Integration.
 
@@ -112,7 +112,7 @@ From the prompt, we choose API Services and click Next.
 
 Lastly, we enter the name of the our App integration and click Save.
 
-That’s all we need for now. Later in the blog article, we will come back to setup some more things. Until then, let’s move to the next section where we start implementing our Authentication in Nest.
+That's all we need for now. Later in the blog article, we will come back to setup some more things. Until then, let's move to the next section where we start implementing our Authentication in Nest.
 
 ## Create a user module
 
@@ -144,13 +144,13 @@ nest g service user --no-spec
 
 Applications often run in different environments. Depending on the environment, different configuration settings should be used.
 
-Nest provides a `@nestjs/config` package out-of-the box. In order to setup our configuration, we need to install it first.
+Nest provides a `@nestjs/config` package out-of-the box. In order to setup our configuration, we need to install it first.
 
 ```bash
 npm i --save @nestjs/config
 ```
 
-Once the installation process is complete, we import the `ConfigModule`. We need to import the module into the root `app.module.ts` file. Next, add the config module into the imports array. The code inside `app.module.ts` now will look like this:
+Once the installation process is complete, we import the `ConfigModule`. We need to import the module into the root `app.module.ts` file. Next, add the config module into the imports array. The code inside `app.module.ts` now will look like this:
 
 ```ts
 import { Module } from "@nestjs/common";
@@ -173,11 +173,11 @@ import { ConfigModule } from "@nestjs/config";
 export class AppModule {}
 ```
 
-Inside `ConfigModule.forRoot` we pass an object to further configure the `ConfigModule`. First, set the property `isGlobal` to be `true`. This will help us to use `ConfigModule` in other modules so we don’t need to import our module into each module we use. Secondly, set `envFilePath` to be `.env`. This will load and parse a `.env` so that we can access the environmental variable throughout the app using `process.env`.
+Inside `ConfigModule.forRoot` we pass an object to further configure the `ConfigModule`. First, set the property `isGlobal` to be `true`. This will help us to use `ConfigModule` in other modules so we don't need to import our module into each module we use. Secondly, set `envFilePath` to be `.env`. This will load and parse a `.env` so that we can access the environmental variable throughout the app using `process.env`.
 
 Lastly, create a `.env` file at the root of this project.
 
-We are now all set with the `ConfigModule` . Let’s move on to setting up Okta in our Nest app.
+We are now all set with the `ConfigModule` . Let's move on to setting up Okta in our Nest app.
 
 ## Okta Setup
 
@@ -231,11 +231,11 @@ In order to use these files across our Nest application, we will first need to i
 
 The purpose of implementing an authentication and authorisation is to be able to protect certain parts of the application to only authenticated users with a specific permissions. This might sound complicated, but with Nest and Okta this implementation is made straightforward.
 
-Nest has Guards to handle all of this out of the box. Guards have a single responsibility. They determine whether a given request should be handled by the route handler or not, depending on certain conditions like permissions or roles. For more details on how Guards work inside Nest, please refer to this [link](https://docs.nestjs.com/guards).
+Nest has Guards to handle all of this out of the box. Guards have a single responsibility. They determine whether a given request should be handled by the route handler or not, depending on certain conditions like permissions or roles. For more details on how Guards work inside Nest, please refer to this <a href="https://docs.nestjs.com/guards" target="_blank" rel="noopener noreferrer">link</a>.
 
-Let’s define our Guard. Create a new directory inside the `src/` called `guards/`. Within the directory, create a file `auth.guard.ts` where we will place the logic for our Okta authentication Guard.
+Let's define our Guard. Create a new directory inside the `src/` called `guards/`. Within the directory, create a file `auth.guard.ts` where we will place the logic for our Okta authentication Guard.
 
-Before proceeding with the Guard implementation, install and setup the Okta JWT Verifier for Node.js. Install the [Okta JWT Verifier](https://www.npmjs.com/package/@okta/jwt-verifier) with the following command:
+Before proceeding with the Guard implementation, install and setup the Okta JWT Verifier for Node.js. Install the <a href="https://www.npmjs.com/package/@okta/jwt-verifier" target="_blank" rel="noopener noreferrer">Okta JWT Verifier</a> with the following command:
 
 ```bash
 npm install --save @okta/jwt-verifier
@@ -300,13 +300,13 @@ export function Auth(...permissions: string[]) {
 }
 ```
 
-And that’s it. I will demonstrate how we can use this custom decorator to protect our endpoints later in this article.
+And that's it. I will demonstrate how we can use this custom decorator to protect our endpoints later in this article.
 
 We will now implement the user creation using the Okta Node.js SDK.
 
 ## User Creation with Okta Node.js SDK
 
-We will first create users with specific permissions. The user creation will be handled by the Okta Node.js SDK. Let’s first install the [Okta Node.js SDK](https://www.npmjs.com/package/@okta/okta-sdk-nodejs) with the following command.
+We will first create users with specific permissions. The user creation will be handled by the Okta Node.js SDK. Let's first install the <a href="https://www.npmjs.com/package/@okta/okta-sdk-nodejs" target="_blank" rel="noopener noreferrer">Okta Node.js SDK</a> with the following command.
 
 ```bash
 npm install @okta/okta-sdk-nodejs
@@ -378,7 +378,7 @@ export class UserDto {
 }
 ```
 
-We should expect five properties to be sent with the request: an email address, a strong password, users first and last name and user’s permissions (roles) which will accept three possible values, `ADMIN`, `USER` and `DEVELOPER`.
+We should expect five properties to be sent with the request: an email address, a strong password, users first and last name and user's permissions (roles) which will accept three possible values, `ADMIN`, `USER` and `DEVELOPER`.
 
 One more thing needs to be done to make the DTO work. We need to import and set the `ValidationPipe` in the `main.ts` file. Our `main.ts` file should look like this:
 
@@ -397,13 +397,13 @@ bootstrap();
 
 ### User Creation
 
-Before jumping on the user’s sign up implementation, we need to setup the [Okta Node.js SDK](https://www.npmjs.com/package/@okta/okta-sdk-nodejs). The Okta Node.js SDK can be installed with the following command:
+Before jumping on the user's sign up implementation, we need to setup the <a href="https://www.npmjs.com/package/@okta/okta-sdk-nodejs" target="_blank" rel="noopener noreferrer">Okta Node.js SDK</a>. The Okta Node.js SDK can be installed with the following command:
 
 ```bash
 npm install @okta/okta-sdk-nodejs
 ```
 
-Next, create a file called `okta.setup.ts` inside the user’s module `src/user/`. Define the Okta Node.js SDK inside that file as follows:
+Next, create a file called `okta.setup.ts` inside the user's module `src/user/`. Define the Okta Node.js SDK inside that file as follows:
 
 ```ts
 import { Injectable } from "@nestjs/common";
@@ -442,7 +442,7 @@ import { Okta } from "./okta.setup";
 export class UserModule {}
 ```
 
-We can now use Okta setup in the user’s service. Head over to the user’s service file and create a method called `createUser` inside the `UserService` class. The `user.service.ts` file should appear as follows:
+We can now use Okta setup in the user's service. Head over to the user's service file and create a method called `createUser` inside the `UserService` class. The `user.service.ts` file should appear as follows:
 
 ```ts
 import { BadRequestException, Injectable } from "@nestjs/common";
@@ -482,7 +482,7 @@ export class UserService {
 }
 ```
 
-We can make a use of this module inside user’s controller where we will now declare our endpoint. Our `user.controller.ts` file should look like this:
+We can make a use of this module inside user's controller where we will now declare our endpoint. Our `user.controller.ts` file should look like this:
 
 ```ts
 import { Controller, Post, Body } from "@nestjs/common";
@@ -500,11 +500,11 @@ export class UserController {
 }
 ```
 
-And that’s it. We will next create our first user.
+And that's it. We will next create our first user.
 
 ## Sign up Users with different permissions
 
-To test the creation of new users, we will need a tool that will help us with the API server requests. The most popular tool for this purpose is an application called [Postman](https://www.postman.com/), it is free and easy to use. If you are a VSCode user, you can use an extension called [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client). REST Client allows you to send HTTP request and view the response in Visual Studio Code directly. All endpoints that we are going to test here in this article will be included in the `api.request.http` file in the root of the project so you can test this with the REST Client extension.
+To test the creation of new users, we will need a tool that will help us with the API server requests. The most popular tool for this purpose is an application called <a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">Postman</a>, it is free and easy to use. If you are a VSCode user, you can use an extension called <a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client" target="_blank" rel="noopener noreferrer">REST Client</a>. REST Client allows you to send HTTP request and view the response in Visual Studio Code directly. All endpoints that we are going to test here in this article will be included in the `api.request.http` file in the root of the project so you can test this with the REST Client extension.
 
 To signup a new user, we will create the following request in our local server:
 
@@ -523,7 +523,7 @@ Content-Type: application/json
 
 With the above request, we have created a User with two permissions: `ADMIN` and `USER`. We can combine all three permissions.
 
-Let’s now proceed to create two more users, but with different single permissions: `USER` and `DEVELOPER`. If we try to create a user with permissions that we have’t defined in our DTO enum Permissions, we will get an error:
+Let's now proceed to create two more users, but with different single permissions: `USER` and `DEVELOPER`. If we try to create a user with permissions that we have't defined in our DTO enum Permissions, we will get an error:
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -597,11 +597,11 @@ export class AppController {
 
 To test our newly created endpoints, we need to have an access token and have that included in the Authorisation header with each request we make to the guarded endpoints.
 
-In order to get the access token we will need to setup the Okta client SDK. We will not go into the details of how to setup the client SDK at the moment. This will be a topic for a separate blog article. Okta has great examples of that topic with all major frontend frameworks. You can find the examples in the following [link](https://developer.okta.com/).
+In order to get the access token we will need to setup the Okta client SDK. We will not go into the details of how to setup the client SDK at the moment. This will be a topic for a separate blog article. Okta has great examples of that topic with all major frontend frameworks. You can find the examples in the following <a href="https://developer.okta.com/" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## Testing guarded endpoints
 
-Let’s test out the protected endpoints with the access token obtained from the client app. We need to include the following in each request we make in the Authorisation header:
+Let's test out the protected endpoints with the access token obtained from the client app. We need to include the following in each request we make in the Authorisation header:
 
 ```http
 GET http://localhost:3000/morning HTTP/1.1
@@ -628,16 +628,16 @@ HTTP/1.1 401 Unauthorized
 }
 ```
 
-And that’s all!
+And that's all!
 
-All examples above can be found in the following Github repository [link](https://github.com/Suv4o/nest-auth-with-okta).
+All examples above can be found in the following Github repository <a href="https://github.com/Suv4o/nest-auth-with-okta" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## Conclusion
 
 1. This blog article shows how to sign up and sign in users with specific roles. Then giving those users access to only specific endpoints based on their roles. To accomplish that, we used Okta to help us with the users Authentication and Authorisation.
-2. Okta’s Developer Edition provides a free with no time limit access to a variety of key developer features.
+2. Okta's Developer Edition provides a free with no time limit access to a variety of key developer features.
 3. To create and validate users in our app we used two packages provided by Okta:
-    - Okta JWT Verifier for Node.js [link](https://www.npmjs.com/package/@okta/jwt-verifier).
-    - Okta Node.js Management SDK [link](https://www.npmjs.com/package/@okta/okta-sdk-nodejs).
-4. Nest has built in Guards mechanisms to handle the protected endpoints. The official documentation has great examples on how to use [guards](https://docs.nestjs.com/guards).
-5. To be able to get the access token, we will need to setup the Okta client SDK. Okta has great documentation and examples on that topic with all the major frontend frameworks. You can find these examples in the following [link](https://developer.okta.com/).
+    - Okta JWT Verifier for Node.js <a href="https://www.npmjs.com/package/@okta/jwt-verifier" target="_blank" rel="noopener noreferrer">link</a>.
+    - Okta Node.js Management SDK <a href="https://www.npmjs.com/package/@okta/okta-sdk-nodejs" target="_blank" rel="noopener noreferrer">link</a>.
+4. Nest has built in Guards mechanisms to handle the protected endpoints. The official documentation has great examples on how to use <a href="https://docs.nestjs.com/guards" target="_blank" rel="noopener noreferrer">guards</a>.
+5. To be able to get the access token, we will need to setup the Okta client SDK. Okta has great documentation and examples on that topic with all the major frontend frameworks. You can find these examples in the following <a href="https://developer.okta.com/" target="_blank" rel="noopener noreferrer">link</a>.

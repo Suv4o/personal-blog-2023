@@ -33,21 +33,21 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ## What is Nest (NestJS)?
 
-[Nest](https://nestjs.com/) is a progressive Node.js framework for building efficient, reliable and scalable server-side applications with TypeScript.
+<a href="https://nestjs.com/" target="_blank" rel="noopener noreferrer">Nest</a> is a progressive Node.js framework for building efficient, reliable and scalable server-side applications with TypeScript.
 
-Under the hood, Nest makes use of two javascript backend frameworks [Express](https://expressjs.com/) (the default) and can also be configured to use with [Fastify](https://www.fastify.io/) as well!
+Under the hood, Nest makes use of two javascript backend frameworks <a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">Express</a> (the default) and can also be configured to use with <a href="https://www.fastify.io/" target="_blank" rel="noopener noreferrer">Fastify</a> as well!
 
 The examples in this blog article leverages on the default Express framework.
 
 ## What is Firebase?
 
-[Firebase](https://firebase.google.com/) as a platform that offers a wide range of services to developers to build, improve, and grow their apps with little or almost no effort. This includes services like authentication, databases, analytics, file storage, push messaging and more. When it comes to user authentication, Firebase provides an [Authentication](https://firebase.google.com/docs/auth) service that allows for codes to be written in order for users to be logged into an app from the client side. Firebase also provides an Admin SDK that allows developers to integrate their applications with custom backend, if required.
+<a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase</a> as a platform that offers a wide range of services to developers to build, improve, and grow their apps with little or almost no effort. This includes services like authentication, databases, analytics, file storage, push messaging and more. When it comes to user authentication, Firebase provides an <a href="https://firebase.google.com/docs/auth" target="_blank" rel="noopener noreferrer">Authentication</a> service that allows for codes to be written in order for users to be logged into an app from the client side. Firebase also provides an Admin SDK that allows developers to integrate their applications with custom backend, if required.
 
 In this blog article we will be creating a Nest application where users (with different roles) can sign-up and sign-in to the application. Specific permissions can be configured for each user access to specific endpoints, based on the user role. We are going to use Firebase Auth to help us with user Authentication and Authorisation.
 
 ## Create a Nest Project
 
-Before we continue let’s first install [Nest CLI](https://docs.nestjs.com/cli/overview). That will enable us to efficiently create this project. To install Nest CLI globally, use the following command in your terminal:
+Before we continue let’s first install <a href="https://docs.nestjs.com/cli/overview" target="_blank" rel="noopener noreferrer">Nest CLI</a>. That will enable us to efficiently create this project. To install Nest CLI globally, use the following command in your terminal:
 
 ```bash
 npm install -g @nestjs/cli
@@ -80,7 +80,7 @@ $ cd nest-auth-with-firebase-auth
 $ npm run start
 ```
 
-If we navigate to the [**http://localhost:3000**](http://localhost:3000) in the browser, we will be able to see **Hello World!**
+If we navigate to the <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">**http://localhost:3000**</a> in the browser, we will be able to see **Hello World!**
 
 Now, let’s have a look at the folder structure in our Nest project. Inside the `nest-auth-with-firebase-auth` directory we have `node_modules`, a few other boilerplate files and a `src/` directory populated with several core files.
 
@@ -98,7 +98,7 @@ Cool, this means that we have successfully created our Nest project.
 
 ## Getting started with Firebase Auth
 
-Before we start working with Firebase, create a Firebase project in the **[Firebase console](https://console.firebase.google.com/?authuser=0)**.
+Before we start working with Firebase, create a Firebase project in the <a href="https://console.firebase.google.com/?authuser=0" target="_blank" rel="noopener noreferrer">**Firebase console**</a>.
 
 We can do so by clicking Add Project from the Firebase Console:
 
@@ -194,7 +194,7 @@ In this example, we are going to use the second option. Feel free to try the fir
 
 We will next create a `config/` directory at the root of the Nest project. Inside the directory, copy this file `serviceAccountKey.json` and rename it to: `firebaseServiceAccountKey.json`.
 
-To proceed with the [Firebase Node.js Admin SDK](https://www.npmjs.com/package/firebase-admin) first we need to install it:
+To proceed with the <a href="https://www.npmjs.com/package/firebase-admin" target="_blank" rel="noopener noreferrer">Firebase Node.js Admin SDK</a> first we need to install it:
 
 ```bash
 yarn add firebase-admin
@@ -230,7 +230,7 @@ In order to use these files across our Nest application, we will first need to i
 
 The purpose of implementing an authentication and authorisation is to be able to protect certain parts of the application to only authenticated users with a specific permissions. This might sound complicated, but with Nest and Firebase this implementation is made straightforward.
 
-Nest has Guards to handle all of this out of the box. Guards have a single responsibility. They determine whether a given request should be handled by the route handler or not, depending on certain conditions like permissions or roles. For more details on how Guards work inside Nest, please refer to this [link](https://docs.nestjs.com/guards).
+Nest has Guards to handle all of this out of the box. Guards have a single responsibility. They determine whether a given request should be handled by the route handler or not, depending on certain conditions like permissions or roles. For more details on how Guards work inside Nest, please refer to this <a href="https://docs.nestjs.com/guards" target="_blank" rel="noopener noreferrer">link</a>.
 
 Let’s define our Guard. Create a new directory inside the `src/` called `guards/`. Within the directory, create a file `auth.guard.ts` where we will place the logic for our Firebase authentication Guard.
 
@@ -433,7 +433,7 @@ And that’s it. We will next create our first user.
 
 ## Sign up Users with different permissions
 
-To test the creation of new users, we will need a tool that will help us with the API server requests. The most popular tool for this purpose is an application called [Postman](https://www.postman.com/), it is free and easy to use. If you are a VSCode user, you can use an extension called [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client). REST Client allows you to send HTTP request and view the response in Visual Studio Code directly. All endpoints that we are going to test here in this article will be included in the `api.request.http` file in the root of the project so you can test this with the REST Client extension.
+To test the creation of new users, we will need a tool that will help us with the API server requests. The most popular tool for this purpose is an application called <a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">Postman</a>, it is free and easy to use. If you are a VSCode user, you can use an extension called <a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client" target="_blank" rel="noopener noreferrer">REST Client</a>. REST Client allows you to send HTTP request and view the response in Visual Studio Code directly. All endpoints that we are going to test here in this article will be included in the `api.request.http` file in the root of the project so you can test this with the REST Client extension.
 
 To signup a new user, we will create the following request in our local server:
 
@@ -527,7 +527,7 @@ export class AppController {
 
 To test our newly created endpoints, we need to have an access token and have that included in the Authorisation header with each request we make to the guarded endpoints.
 
-In order to get the access token we will need to setup the Firebase client SDK. We will not go into the details of how to setup the client SDK at the moment. This will be a topic for a separate blog article. Firebase has great examples of that topic with all major frontend frameworks. You can find the documentation with examples in the following [link](https://firebase.google.com/docs/build).
+In order to get the access token we will need to setup the Firebase client SDK. We will not go into the details of how to setup the client SDK at the moment. This will be a topic for a separate blog article. Firebase has great examples of that topic with all major frontend frameworks. You can find the documentation with examples in the following <a href="https://firebase.google.com/docs/build" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## Testing guarded endpoints
 
@@ -560,11 +560,11 @@ HTTP/1.1 401 Unauthorized
 
 And that’s all!
 
-All examples above can be found in the following Github repository [link](https://github.com/Suv4o/nest-firebase-auth).
+All examples above can be found in the following Github repository <a href="https://github.com/Suv4o/nest-firebase-auth" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## Conclusion
 
 1. This blog article shows how to sign up and sign in users with specific roles. Then giving those users access to only specific endpoints based on their roles. To accomplish that, we used Firebase auth to help us with the users Authentication and Authorisation.
-2. To create and validate users in our app we used the Firebase Admin package for Node.js SDK link [link](https://www.npmjs.com/package/firebase-admin).
-3. Nest has built in Guards mechanisms to handle the protected endpoints. The official documentation has great examples on how to use [guards](https://docs.nestjs.com/guards).
-4. To be able to get the access token, we will need to setup the Firebase client SDK. Firebase has great documentation and examples on that topic with all the major frontend frameworks. You can find these examples in the following [link](https://firebase.google.com/docs/build).
+2. To create and validate users in our app we used the Firebase Admin package for Node.js SDK link <a href="https://www.npmjs.com/package/firebase-admin" target="_blank" rel="noopener noreferrer">link</a>.
+3. Nest has built in Guards mechanisms to handle the protected endpoints. The official documentation has great examples on how to use <a href="https://docs.nestjs.com/guards" target="_blank" rel="noopener noreferrer">guards</a>.
+4. To be able to get the access token, we will need to setup the Firebase client SDK. Firebase has great documentation and examples on that topic with all the major frontend frameworks. You can find these examples in the following <a href="https://firebase.google.com/docs/build" target="_blank" rel="noopener noreferrer">link</a>.

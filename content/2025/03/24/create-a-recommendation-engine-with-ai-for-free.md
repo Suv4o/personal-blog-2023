@@ -76,7 +76,7 @@ Since these models charge API usage fees, they aren't ideal for small projects o
 
 ### **Free Embedding Models (e.g., Hugging Face)**
 
-Fortunately, there are open-source alternatives that are completely free! [Hugging Face](https://huggingface.co/) is a popular platform that hosts a wide range of pre-trained AI models, including embedding models. Many of these models can be used without any cost, making them perfect for personal projects like ours.
+Fortunately, there are open-source alternatives that are completely free! <a href="https://huggingface.co/" target="_blank" rel="noopener noreferrer">Hugging Face</a> is a popular platform that hosts a wide range of pre-trained AI models, including embedding models. Many of these models can be used without any cost, making them perfect for personal projects like ours.
 
 For this tutorial, we will use a free embedding model from Hugging Face. This allows us to build a zero-cost recommendation system while still leveraging the power of AI.
 
@@ -96,7 +96,7 @@ For my blog article, I decided to use a free recommendation engine by leveraging
 
 ### What is Transformer.js?
 
-[Transformer.js](https://huggingface.co/docs/transformers.js/en/index) is a JavaScript library that lets you run AI models directly in your web browser or Node.js application. It downloads models locally, allowing them to run entirely on your device.
+<a href="https://huggingface.co/docs/transformers.js/en/index" target="_blank" rel="noopener noreferrer">Transformer.js</a> is a JavaScript library that lets you run AI models directly in your web browser or Node.js application. It downloads models locally, allowing them to run entirely on your device.
 
 It supports various models including text generation, translation, image recognition, and embedding generation—all without relying on external APIs. This means zero usage fees, making it ideal for my personal blog project.
 
@@ -106,7 +106,7 @@ Since the models in Transformer.js run locally, we need to be mindful not to cho
 
 This model converts sentences and paragraphs into **384**-dimensional dense vector embeddings, providing an excellent balance of performance and efficiency.
 
-For compatibility with Transformers.js, I use the [`Xenova/all-MiniLM-L6-v2`](https://huggingface.co/Xenova/all-MiniLM-L6-v2) model from Hugging Face.
+For compatibility with Transformers.js, I use the <a href="https://huggingface.co/Xenova/all-MiniLM-L6-v2" target="_blank" rel="noopener noreferrer">`Xenova/all-MiniLM-L6-v2`</a> model from Hugging Face.
 
 ### Implementing the Embedding Extraction
 
@@ -251,6 +251,6 @@ For example, when a user reads an article about **Nest.js Authorisation with Fir
 
 ![Image Three](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1742804587/blog/create-a-recommendation-engine-with-ai-for-free/image-3_effv29)
 
-For those interested in seeing the implementation details, the complete source code of my blog is available on GitHub [here](https://github.com/Suv4o/personal-blog-2023).
+For those interested in seeing the implementation details, the complete source code of my blog is available on GitHub <a href="https://github.com/Suv4o/personal-blog-2023" target="_blank" rel="noopener noreferrer">here</a>.
 
-The example above is available on this repository [here](https://github.com/Suv4o/create-a-recommendation-engine-with-ai-for-free).
+The example above is available on this repository <a href="https://github.com/Suv4o/create-a-recommendation-engine-with-ai-for-free" target="_blank" rel="noopener noreferrer">here</a>.

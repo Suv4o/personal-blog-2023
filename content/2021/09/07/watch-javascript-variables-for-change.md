@@ -30,9 +30,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1630971440/blog/watch-javascript-variables-for-change)
 
-We all know that in JavaScript there is no event that fires when a value of a variable changes. But by defining [getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) and [setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) in the object this is now possible.
+We all know that in JavaScript there is no event that fires when a value of a variable changes. But by defining <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters" target="_blank" rel="noopener noreferrer">getters</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters" target="_blank" rel="noopener noreferrer">setters</a> in the object this is now possible.
 
-First, define a new property on an object with `Object.defineProperty` [method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). As a first argument, we pass the object on which to define the property. If the object is defined in the global scope, `this` will refer to the window object. In the second argument, we will define the name of the property. In our case, we define a property with name `name`. The third argument is the descriptor for the property being defined.
+First, define a new property on an object with `Object.defineProperty` <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener noreferrer">method</a>. As a first argument, we pass the object on which to define the property. If the object is defined in the global scope, `this` will refer to the window object. In the second argument, we will define the name of the property. In our case, we define a property with name `name`. The third argument is the descriptor for the property being defined.
 
 ```js
 Object.defineProperty(this, "name", {
@@ -296,4 +296,4 @@ New:  Chris Old:  April
 3.  It is a good practice to create a reusable function for creating a watched property, where we can pass an object argument in order for the variable to be defined in that particular object.
 4.  Creating **subscribe** and **unsubscribe** functions allow us to add and remove a watcher to the variable. That way, we can stop watching a variable change when we need to. Remember to add set `configurable: true` in the descriptor. This will allow us to redefined the property when we unsubscribe.
 
-All examples above can be found in the following github repository [link](https://github.com/Suv4o/watch-javascript-variables).
+All examples above can be found in the following github repository <a href="https://github.com/Suv4o/watch-javascript-variables" target="_blank" rel="noopener noreferrer">link</a>.

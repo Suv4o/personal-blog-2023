@@ -34,7 +34,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1708844513/blog/create-a-web-server-using-nitro-sqlite-and-typeorm/create-a-web-server-using-nitro-sqlite-and-typeorm_ozdamt)
 
-If you're familiar with [Nuxt.js](https://nuxt.com/), you might know that the latest version, Nuxt version 3, runs on a new server engine called Nitro. Nitro isn't just used in Nuxt, it's also an independent open-source framework for developing web server applications. It provides several built-in features that make it a modern, user-friendly backend framework. Nitro is open-source and maintained by the same core team as Nuxt.js.
+If you're familiar with <a href="https://nuxt.com/" target="_blank" rel="noopener noreferrer">Nuxt.js</a>, you might know that the latest version, Nuxt version 3, runs on a new server engine called Nitro. Nitro isn't just used in Nuxt, it's also an independent open-source framework for developing web server applications. It provides several built-in features that make it a modern, user-friendly backend framework. Nitro is open-source and maintained by the same core team as Nuxt.js.
 
 In this blog post, we'll show you how to build a simple web server using Nitro and connect it to an SQLite database. We'll also explain the process of database migration with TypeORM, a popular typescript library, introduce the widely-used pattern for validating request data, the Data Transfer Object (DTO), and utilise some of Nitro's built-in features to cache results.
 
@@ -68,7 +68,7 @@ Great, we've successfully set up our Nitro web server.
 
 ## Database Setup
 
-In this project, we'll be using SQLite, but the same setup can be applied to any database. We'll establish the database using a popular Object-Relational Mapping (ORM) library in TypeScript, [TypeORM](https://typeorm.io/). TypeORM simplifies the creation and querying of data from a relational database using an object-oriented approach, assists in defining the database schema, and manages migrations. We'll explore these features later. For now, let's install the required libraries:
+In this project, we'll be using SQLite, but the same setup can be applied to any database. We'll establish the database using a popular Object-Relational Mapping (ORM) library in TypeScript, <a href="https://typeorm.io/" target="_blank" rel="noopener noreferrer">TypeORM</a>. TypeORM simplifies the creation and querying of data from a relational database using an object-oriented approach, assists in defining the database schema, and manages migrations. We'll explore these features later. For now, let's install the required libraries:
 
 ```bash
 yarn add reflect-metadata sqlite3 typeorm
@@ -139,7 +139,7 @@ Next, we will create the following directories at the root of the project: `/ent
 
 TypeORM utilises TypeScript decorators to define entities and relationships directly within your TypeScript classes. Models can be defined using classes with TypeScript decorators for properties and relationships such as `@Entity`, `@Column` etc.
 
-For a comprehensive understanding of all decorators, refer to the TypeORM official [documentation](https://typeorm.io/). In this blog, we will only demonstrate how to model a simple `User` table.
+For a comprehensive understanding of all decorators, refer to the TypeORM official <a href="https://typeorm.io/" target="_blank" rel="noopener noreferrer">documentation</a>. In this blog, we will only demonstrate how to model a simple `User` table.
 
 Let's create our User entity within the `/entity` directory. In the `/entity` directory, we will define a file named `User.ts` with the following content:
 
@@ -222,7 +222,7 @@ This will be very similar to the `ormconfig.ts` file, except it imports the User
 
 ### Initialising the database with Nitro Plugins
 
-Nitro uses a plugin system to extend its runtime behaviour. This is quite useful if you want to add custom behaviour to the web server. Nitro provides several hooks such as on `request`, `beforeResponse`, on application `close`, etc. For more details, refer to the Nitro documentation [here](https://nitro.unjs.io/guide/plugins#available-hooks).
+Nitro uses a plugin system to extend its runtime behaviour. This is quite useful if you want to add custom behaviour to the web server. Nitro provides several hooks such as on `request`, `beforeResponse`, on application `close`, etc. For more details, refer to the Nitro documentation <a href="https://nitro.unjs.io/guide/plugins#available-hooks" target="_blank" rel="noopener noreferrer">here</a>.
 
 In our case, we will utilise on `request` and `beforeResponse` hooks to initialise and destroy the database respectively.
 
@@ -421,7 +421,7 @@ const createUserDto = defineEventHandler(async (event) => {
 export default createUserDto;
 ```
 
-Firstly, we will define the validation schema class `CreateUserDto`. We use decorators to define validation rules for each field. For more details on available decorators, refer to the `class-validator` package documentation [here](https://www.npmjs.com/package/class-validator).
+Firstly, we will define the validation schema class `CreateUserDto`. We use decorators to define validation rules for each field. For more details on available decorators, refer to the `class-validator` package documentation <a href="https://www.npmjs.com/package/class-validator" target="_blank" rel="noopener noreferrer">here</a>.
 
 You might notice that this function looks very similar to the routes functions. We use the `defineEventHandler` handler and read the event body same as we do in the `create-user.post.ts` route. To give you context, this is a middleware that we will add to the existing `create-user.post.ts` function to handle validation for each request. If the body data does not follow the rule, it will return a 400 error with an explanation of the error.
 
@@ -482,7 +482,7 @@ Or if we add an age of 101, this will result in an error because we have set rul
 
 ## Cacheing
 
-Nitro provides a caching system where we can easily cache certain routes. For more details on how caching works and what options are available, refer to the Nitro documentation [here](https://nitro.unjs.io/guide/cache).
+Nitro provides a caching system where we can easily cache certain routes. For more details on how caching works and what options are available, refer to the Nitro documentation <a href="https://nitro.unjs.io/guide/cache" target="_blank" rel="noopener noreferrer">here</a>.
 
 For now, we will demonstrate how to modify the `get-users.get.ts` type to handle caching for 10 seconds. We can modify the endpoint as follows:
 
@@ -503,4 +503,4 @@ Nitro is an open-source, user-friendly backend framework for Node.js. It's maint
 
 Aside from the built-in features in Nitro, we also demonstrate how to start and create a database using SQLite and TypeORM. This includes adding migrations and integrating well-known patterns such as DTOs for validating request.
 
-The blog post above provides a basic app to help you get started. It can serve as your starting point. Feel free to check out the GitHub repository containing the code for this project [here](https://github.com/Suv4o/nitro-sqlite).
+The blog post above provides a basic app to help you get started. It can serve as your starting point. Feel free to check out the GitHub repository containing the code for this project <a href="https://github.com/Suv4o/nitro-sqlite" target="_blank" rel="noopener noreferrer">here</a>.

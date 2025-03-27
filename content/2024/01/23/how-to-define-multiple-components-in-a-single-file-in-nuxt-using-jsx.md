@@ -284,7 +284,7 @@ Lastly, we can use the `<Card />` component together with all the components men
 
 And that is it. We now have a fully functional `<Card />` using multiple components declared in the same `.vue` file, as well as mixing components between Vue and JSX together while maintaining the same reactivity system.
 
-You can find this example in my GitHub repository at the following [link](https://github.com/Suv4o/Defining-Multiple-Components-in-a-Single-File-in-Nuxt).
+You can find this example in my GitHub repository at the following <a href="https://github.com/Suv4o/Defining-Multiple-Components-in-a-Single-File-in-Nuxt" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## Conclusion
 

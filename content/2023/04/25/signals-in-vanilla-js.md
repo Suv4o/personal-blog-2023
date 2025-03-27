@@ -32,7 +32,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1682415127/blog/signals-in-vanilla-js/signals-in-vanilla-js-hero_lsdah8)
 
-If you're a JavaScript developer, you may have heard about the buzz around signals lately. Several popular JavaScript frameworks, such as [Vue](https://vuejs.org/guide/extras/reactivity-in-depth.html#connection-to-signals), [Preact](https://preactjs.com/guide/v10/signals/), [Solid](https://www.solidjs.com/docs/latest/api#createsignal), [Angular](https://github.com/angular/angular/discussions/49090), and [Quick](https://qwik.builder.io/docs/components/state/#usesignal), have recently implemented and supported the use of signals. But what exactly are signals?
+If you're a JavaScript developer, you may have heard about the buzz around signals lately. Several popular JavaScript frameworks, such as <a href="https://vuejs.org/guide/extras/reactivity-in-depth.html#connection-to-signals" target="_blank" rel="noopener noreferrer">Vue</a>, <a href="https://preactjs.com/guide/v10/signals/" target="_blank" rel="noopener noreferrer">Preact</a>, <a href="https://www.solidjs.com/docs/latest/api#createsignal" target="_blank" rel="noopener noreferrer">Solid</a>, <a href="https://github.com/angular/angular/discussions/49090" target="_blank" rel="noopener noreferrer">Angular</a>, and <a href="https://qwik.builder.io/docs/components/state/#usesignal" target="_blank" rel="noopener noreferrer">Quick</a>, have recently implemented and supported the use of signals. But what exactly are signals?
 
 As web applications become more complex, managing the state of JavaScript applications becomes a challenge. This is where signals can be a valuable tool, allowing the application to respond to changes in the state, such as a variable change.
 
@@ -237,4 +237,4 @@ Here are the differences: in Vue, we use `ref` instead of `signal` to define a r
 
 ![demo in animated video gif](https://res.cloudinary.com/suv4o/image/upload/w_750/v1682415127/blog/signals-in-vanilla-js/signals-in-vanilla-js_uecikt)
 
-I hope you find this article helpful. You can find code examples in the following GitHub repository [here](https://github.com/Suv4o/signals-in-vanilla-js).
+I hope you find this article helpful. You can find code examples in the following GitHub repository <a href="https://github.com/Suv4o/signals-in-vanilla-js" target="_blank" rel="noopener noreferrer">here</a>.

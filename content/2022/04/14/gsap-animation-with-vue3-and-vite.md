@@ -34,7 +34,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 GreenSock Animation Platform (GSAP) is the most robust JavaScript animation library to date that allows developers to animate literally any DOM element with a breeze. GSAP provides an API that can be used for complex animation to be created. Hence, is still supported by all major browsers. In comparison to CSS animation, sequencing in GSAP is very easy. So let's have a look at GSAP. We are going to use GSAP in a Vue 3 project. We will use Vite as a build tool.
 
-> Note: You need to have Node.js installed on your machine before following the example below. Please refer to the Node.js [website](https://nodejs.org/en/) for more information on how you can install Node.js on your machine.
+> Note: You need to have Node.js installed on your machine before following the example below. Please refer to the Node.js <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer">website</a> for more information on how you can install Node.js on your machine.
 
 ## Create a Vue 3 app using Vite
 
@@ -71,7 +71,7 @@ That's it! We can now use GSAP in our Vue app.
 
 ## Getting Started with GSAP in Vue
 
-In this blog article, we are going to animate DOM elements. GSAP is also capable of animating SVG, Canvas, WebGL, JS object etc. The full documentation of GSAP can be found at this [link](https://greensock.com/docs/v3/GSAP).
+In this blog article, we are going to animate DOM elements. GSAP is also capable of animating SVG, Canvas, WebGL, JS object etc. The full documentation of GSAP can be found at this <a href="https://greensock.com/docs/v3/GSAP" target="_blank" rel="noopener noreferrer">link</a>.
 
 Let's start by animating a DOM element from one state to another. We can do that with the to method in GSAP. For example that would be:
 
@@ -79,7 +79,7 @@ Let's start by animating a DOM element from one state to another. We can do that
 gsap.to(".box", { x: 300, duration: 2 });
 ```
 
-The first parameter is a target object. The target can be Selector text, Variable, Object or even an Array. We can technically pass a CSS class or an ID as a string and GSAP can magically find that DOM element. But since we use Vue, it is best practice to use template `refs` for that purpose. For more about how template `refs` in Vue work please refer to this [link](https://vuejs.org/guide/essentials/template-refs.html).
+The first parameter is a target object. The target can be Selector text, Variable, Object or even an Array. We can technically pass a CSS class or an ID as a string and GSAP can magically find that DOM element. But since we use Vue, it is best practice to use template `refs` for that purpose. For more about how template `refs` in Vue work please refer to this <a href="https://vuejs.org/guide/essentials/template-refs.html" target="_blank" rel="noopener noreferrer">link</a>.
 
 The second parameter is configuring objects with destination properties that we want to animate along with some special properties such as `duration` or `delay`.
 
@@ -126,7 +126,7 @@ If we run our app, we should now observe GSAP animating all values at the same t
 
 As we mentioned earlier, configuration objects have special properties such as `duration` or `delay`. Another useful special property is the `ease`property. In GSAP there are many built-in easing options to choose from such as: `back`, `elastic`, `bounce` etc.
 
-For a full list of easing options in GSAP please refer to the documentation [here](https://greensock.com/docs/v3/Eases). GSAP also has a handy Visualiser to explore all the easing options available.
+For a full list of easing options in GSAP please refer to the documentation <a href="https://greensock.com/docs/v3/Eases" target="_blank" rel="noopener noreferrer">here</a>. GSAP also has a handy Visualiser to explore all the easing options available.
 
 Here is the code to apply easing to our animation:
 
@@ -235,7 +235,7 @@ Let's have a look at how the animation would now look like:
 
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848645/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-bo1gml)
 
-For more utility functions like the one above, please check out the GSAP full documentation in the following [link](https://greensock.com/docs/v3/GSAP/UtilityMethods).
+For more utility functions like the one above, please check out the GSAP full documentation in the following <a href="https://greensock.com/docs/v3/GSAP/UtilityMethods" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## `delay` special property
 
@@ -335,7 +335,7 @@ onMounted(() => {
 
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1649848849/blog/gsap-animation-with-vue3-and-vite/getting-started-with-gsap-in-vue-iyigej)
 
-We can also use `-=1`. In this case, the animation will start 1 second before the end of the timeline. Hence, creates overlaps. The full documentation of the timeline position parameters can be found at this [link](https://greensock.com/docs/v3/GSAP/Timeline).
+We can also use `-=1`. In this case, the animation will start 1 second before the end of the timeline. Hence, creates overlaps. The full documentation of the timeline position parameters can be found at this <a href="https://greensock.com/docs/v3/GSAP/Timeline" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## Controls in timeline
 
@@ -372,7 +372,7 @@ tl.reverse();
 tl.restart();
 ```
 
-If you are curious to see all the above methods in action please view my app on Github [here](https://github.com/Suv4o/gsap-animation-with-vue3-and-vite). I have developed a small Vue 3 app with GSAP timeline animation where all the above methods are demonstrated. I hope you will find it useful.
+If you are curious to see all the above methods in action please view my app on Github <a href="https://github.com/Suv4o/gsap-animation-with-vue3-and-vite" target="_blank" rel="noopener noreferrer">here</a>. I have developed a small Vue 3 app with GSAP timeline animation where all the above methods are demonstrated. I hope you will find it useful.
 
 ## Conclusion
 

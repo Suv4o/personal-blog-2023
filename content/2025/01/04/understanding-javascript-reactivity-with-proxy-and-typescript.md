@@ -242,8 +242,8 @@ Finally, let’s create a system where changes to a `ref` update the DOM reactiv
 
 ## Conclusion
 
-Using JavaScript's `Proxy`, we’ve built a simple yet powerful reactivity system. We started with basic change tracking, moved to a reusable `watch` function, simplified it with `ref`, added type safety with TypeScript, and finally created a reactive HTML system.
+Using JavaScript's `Proxy`, we've built a simple yet powerful reactivity system. We started with basic change tracking, moved to a reusable `watch` function, simplified it with `ref`, added type safety with TypeScript, and finally created a reactive HTML system.
 
 This demonstrates how modern frameworks implement reactivity under the hood, and you can now experiment with your own lightweight reactive systems.
 
-The code for this is available in the following GitHub repository [here](https://github.com/Suv4o/understanding-javascript-reactivity-with-proxy-and-typescript?tab=readme-ov-file).
+The code for this is available in the following GitHub repository <a href="https://github.com/Suv4o/understanding-javascript-reactivity-with-proxy-and-typescript?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">here</a>.

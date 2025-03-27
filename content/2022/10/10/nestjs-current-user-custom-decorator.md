@@ -31,7 +31,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1665138447/blog/nestjs-current-user-custom-decorator/nestjs-current-user-custom-decorator)
 
-> This blog article is a continuation from the previous blog article about Nest.js Authorisation with Firebase Auth. If you have’t read that article you will not be able to follow along. The previous article can be found at the following [link](https://www.trpkovski.com/2022/10/07/nestjs-authorisation-with-firebase-auth/).
+> This blog article is a continuation from the previous blog article about Nest.js Authorisation with Firebase Auth. If you have’t read that article you will not be able to follow along. The previous article can be found at the following <a href="https://www.trpkovski.com/2022/10/07/nestjs-authorisation-with-firebase-auth/" target="_blank" rel="noopener noreferrer">link</a>.
 
 In this article we will be using custom route decorators in Nest. We will be creating our own `@CurrentUser` decorator and use it in the module controllers anytime we want to get the current logged user. Let’s have a look at how we can achieve this.
 
@@ -178,11 +178,11 @@ In the example above, our `@CurrentUser` decorator will return the user’s `ema
 
 And that’s all!
 
-All examples above can be found in the following Github repository [link](https://github.com/Suv4o/nest-current-user-custom-decorator).
+All examples above can be found in the following Github repository <a href="https://github.com/Suv4o/nest-current-user-custom-decorator" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## Conclusion
 
 1. In this article, we created a custom decorator called `@CurrentUser` that will help us to get the user in the module controller.
 2. To be able to get the current user, we made use of a custom interceptor in Nest.
 3. In our custom decorator we can also pass data. To be able to verify the data that is passed, we created a `type` called `UserRecord` from the `auth.UserRecord` interface. With the TypeScript built in method called `keyof`, we were able to extract all the properties from the `auth.UserRecord`.
-4. This article was continuation from the previous article about Nest.js Authorisation with Firebase Auth. If you have’t read that article, you can find the article in the following [link](https://www.trpkovski.com/2022/10/07/nestjs-authorisation-with-firebase-auth/).
+4. This article was continuation from the previous article about Nest.js Authorisation with Firebase Auth. If you have’t read that article, you can find the article in the following <a href="https://www.trpkovski.com/2022/10/07/nestjs-authorisation-with-firebase-auth/" target="_blank" rel="noopener noreferrer">link</a>.

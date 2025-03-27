@@ -30,9 +30,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1666399302/blog/nuxt-extends/nuxt-extends)
 
-Nuxt 3 and its new foundation come with many powerful new features, such as the new server engine [Nitro](https://v3.nuxtjs.org/guide/concepts/server-engine/) that made the framework lighter and faster and supported by Vue's 3 Composition API and Vite.
+Nuxt 3 and its new foundation come with many powerful new features, such as the new server engine <a href="https://v3.nuxtjs.org/guide/concepts/server-engine/" target="_blank" rel="noopener noreferrer">Nitro</a> that made the framework lighter and faster and supported by Vue's 3 Composition API and Vite.
 
-But one of Nuxt's features that not many people talk about is the ability to merge two or more applications and share functionalities between them. The [extends](https://v3.nuxtjs.org/api/configuration/nuxt-config/#extends) feature in Nuxt 3 allows us to set a relative config path or remote git repositories such as GitHub, GitLab, Bitbucket or https:// pointing to the source directories of a project.
+But one of Nuxt's features that not many people talk about is the ability to merge two or more applications and share functionalities between them. The <a href="https://v3.nuxtjs.org/api/configuration/nuxt-config/#extends" target="_blank" rel="noopener noreferrer">extends</a> feature in Nuxt 3 allows us to set a relative config path or remote git repositories such as GitHub, GitLab, Bitbucket or https:// pointing to the source directories of a project.
 
 This feature is a perfect use case for complex projects such us developing applications with a few different pieces, for example, an Admin and a User area that are designed separately but share the same components.
 
@@ -220,12 +220,12 @@ export default defineConfig({
 
 That's it. Now we can generate our `nuxt-base` app without any problems.
 
-All examples above can be found in the following Github repositories: [`nuxt-base`](https://github.com/Suv4o/nuxt-extends-example), [`nuxt-components`](https://github.com/Suv4o/nuxt-component-generate-message).
+All examples above can be found in the following Github repositories: <a href="https://github.com/Suv4o/nuxt-extends-example" target="_blank" rel="noopener noreferrer">`nuxt-base`</a>, <a href="https://github.com/Suv4o/nuxt-component-generate-message" target="_blank" rel="noopener noreferrer">`nuxt-components`</a>.
 
 ## Conclusion
 
 1. One of Nuxt's features that not many people talk about is the ability to merge two or more applications and share functionalities between them. A perfect use case will be designing an Admin and a User area that are developed separately but share the same components.
-2. We can merge multiple projects by using the [extends](https://v3.nuxtjs.org/api/configuration/nuxt-config/#extends) feature in Nuxt 3.
+2. We can merge multiple projects by using the <a href="https://v3.nuxtjs.org/api/configuration/nuxt-config/#extends" target="_blank" rel="noopener noreferrer">extends</a> feature in Nuxt 3.
 3. The extends feature allows us to set a relative config path or remote git repositories such as GitHub, GitLab, Bitbucket or https:// pointing to the source directories of a project.
-4. To use another project inside our Nuxt app, we need to include the project’s path in the `nuxt.config.ts` file.
+4. To use another project inside our Nuxt app, we need to include the project's path in the `nuxt.config.ts` file.
 5. To generate our project statically, we need to add `"vue/server-renderer"` to our `vite.config.ts` file.

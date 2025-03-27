@@ -1,6 +1,6 @@
 ---
 title: Reload Child component in Vue 3
-description: Components in Vue are reusable custom elements that can be reused in Vue templates throughout the app. In a large scale application, we will come across a situation where we have nested components such as parents and children. In recent work, I faced the challenge of having to reload the child component only. This article will explain the intricacies to the challenge. Looking back, it took me unbelievably long to figure out a solution. Nevertheless, my blog post will provide quick and easy, short, sharp steps to any developer who might be faced with the same challenge. Let’s get started. We can easily scaffold our Vue 3 project using Vite with the following command
+description: Components in Vue are reusable custom elements that can be reused in Vue templates throughout the app. In a large scale application, we will come across a situation where we have nested components such as parents and children. In recent work, I faced the challenge of having to reload the child component only. This article will explain the intricacies to the challenge. Looking back, it took me unbelievably long to figure out a solution. Nevertheless, my blog post will provide quick and easy, short, sharp steps to any developer who might be faced with the same challenge. Let's get started. We can easily scaffold our Vue 3 project using Vite with the following command
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1650277793/blog/reload-child-component-in-vue-3/reload-child-component-in-vue-3-1_ccze7d
 keywords:
     - Reload Child component in Vue 3
@@ -33,7 +33,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 Components in Vue are reusable custom elements (for example `<card>` ) that can be reused in Vue templates throughout the app. In a large scale application, we will come across a situation where we have nested components such as parents and children.
 
-In recent work, I faced the challenge of having to reload the child component only. This article will explain the intricacies to the challenge. Looking back, it took me unbelievably long to figure out a solution. Nevertheless, my blog post will provide quick and easy, short, sharp steps to any developer who might be faced with the same challenge. Let’s get started.
+In recent work, I faced the challenge of having to reload the child component only. This article will explain the intricacies to the challenge. Looking back, it took me unbelievably long to figure out a solution. Nevertheless, my blog post will provide quick and easy, short, sharp steps to any developer who might be faced with the same challenge. Let's get started.
 
 ## Create a Vue 3 app using Vite
 
@@ -54,7 +54,7 @@ npm run dev
 
 ## Make a component that displays a random number
 
-Use the new **[Composition API](https://vuejs.org/guide/extras/composition-api-faq.html)** syntax with `<script setup>` . The `<script setup>` feature was released in Vue 3.2.
+Use the new <a href="https://vuejs.org/guide/extras/composition-api-faq.html" target="_blank" rel="noopener noreferrer">Composition API</a> syntax with `<script setup>` . The `<script setup>` feature was released in Vue 3.2.
 
 First, create a new component called **_RandomNumber.vue_** in **_src/components/RandomNumber.vue_** directory. Next, create a reactive variable and assign a random number when the component mounts. Let's look at the following code in the **_RandomNumber.vue_** component:
 
@@ -74,7 +74,7 @@ onMounted(() => {
 
 ## Use **_`<RandomNumber>` component in our App.vue_**
 
-In the **_App.vue_** file, we will import our **_RandomNumber.vue_** component and then use it in our template.
+In the **_App.vue_** file, we will import our **_RandomNumber.vue_** component and then use it in our template.
 
 ```js
 <script setup>
@@ -110,13 +110,13 @@ function changeKey() {
 </template>
 ```
 
-In the code above, we’ve create a button whereby upon each click of the button, the function `changeKey` is activated. The `changeKey` increases the number of the reactive variable, `keyIndex`, upon each click. We bind the `key` of the `RandomNumber` with the `keyIndex` variable.
+In the code above, we've create a button whereby upon each click of the button, the function `changeKey` is activated. The `changeKey` increases the number of the reactive variable, `keyIndex`, upon each click. We bind the `key` of the `RandomNumber` with the `keyIndex` variable.
 
 Now, with each click of the button, only the `<RandomNumber>` component reloads. Hence, a different number is displayed.
 
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/c_scale,f_auto,w_750/v1650277793/blog/reload-child-component-in-vue-3/reload-child-component-in-vue-3-2_gnt1zf)
 
-All examples above can be found in the following Github repository [link](https://github.com/Suv4o/reload-child-component-in-vue3).
+All examples above can be found in the following Github repository <a href="https://github.com/Suv4o/reload-child-component-in-vue3" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## Conclusion
 

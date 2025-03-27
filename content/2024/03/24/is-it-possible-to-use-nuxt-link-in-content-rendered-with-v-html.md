@@ -203,4 +203,4 @@ Alright, let's break down the code above piece by piece, so we can get a good gr
 
 ## Conclusion
 
-Using the `v-html` directive in a Nuxt application has a limitation - it doesn't render `<nuxt-link>`. You can overcome this by creating a custom Vue directive named `v-nuxt-html`. This directive helps convert all `<a>` HTML tags into `<nuxt-link>` behaviour, enabling dynamic, interactive HTML content in a Nuxt application. The code for this is available in the following GitHub repository [here](https://github.com/Suv4o/nuxt-link-with-v-html).
+Using the `v-html` directive in a Nuxt application has a limitation - it doesn't render `<nuxt-link>`. You can overcome this by creating a custom Vue directive named `v-nuxt-html`. This directive helps convert all `<a>` HTML tags into `<nuxt-link>` behaviour, enabling dynamic, interactive HTML content in a Nuxt application. The code for this is available in the following GitHub repository <a href="https://github.com/Suv4o/nuxt-link-with-v-html" target="_blank" rel="noopener noreferrer">here</a>.

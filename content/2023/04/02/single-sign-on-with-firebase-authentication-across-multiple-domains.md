@@ -32,11 +32,11 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1680413367/blog/single-sign-on-with-firebase-authentication-across-multiple-domains/SSO-with-firebase-authentication-across-multiple-domains_nil2ba)
 
-[Firebase](https://firebase.google.com/) is a great platform that offers a wide range of services to developers, making it easy to build, improve, and grow their apps. One of these services is Firebase Auth, which allows for easy user authentication using its JavaScript SDK.
+<a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase</a> is a great platform that offers a wide range of services to developers, making it easy to build, improve, and grow their apps. One of these services is Firebase Auth, which allows for easy user authentication using its JavaScript SDK.
 
 Despite Firebase Auth being an awesome service and abstracting a lot of the complex code needed to build user authentication, I recently found one limitation: Firebase Auth doesn't persist the session across multiple domains. This means that if we use the same Firebase Auth for two different domains, such as `https://example1.com` and `https://example2.com`, we have to sign in to both applications on both domains independently. Currently, Firebase doesn't have a built-in feature to handle this situation out of the box.
 
-In the following blog article, we will show a simple workaround to overcome this limitation using an `<iframe>`. We will demonstrate this example by creating three different applications: the first application will be called "authentication", where we will create the sign in logic to handle authentication. Then, we will embed the the "authentication" app using an iframe within our other two applications. We will use [Vite](https://vitejs.dev/) and [Tailwind CSS](https://tailwindcss.com/) to help us create the apps more quickly. You don't need to be an expert in these two technologies, but some knowledge of JavaScript, TypeScript, and basic Firebase Auth is recommended in order to follow along. Without wasting too much time, let's get started!
+In the following blog article, we will show a simple workaround to overcome this limitation using an `<iframe>`. We will demonstrate this example by creating three different applications: the first application will be called "authentication", where we will create the sign in logic to handle authentication. Then, we will embed the the "authentication" app using an iframe within our other two applications. We will use <a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer">Vite</a> and <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> to help us create the apps more quickly. You don't need to be an expert in these two technologies, but some knowledge of JavaScript, TypeScript, and basic Firebase Auth is recommended in order to follow along. Without wasting too much time, let's get started!
 
 ## Create Vite app
 
@@ -149,7 +149,7 @@ npx tailwindcss -i ./assets/tailwind/input.css -o ./assets/tailwind/output.css -
 
 ## Add Firebase Auth
 
-Next, we will set up Firebase Auth within our project. Before proceeding, make sure that you have a Firebase account and have created a project in the [Firebase console](https://console.firebase.google.com/).
+Next, we will set up Firebase Auth within our project. Before proceeding, make sure that you have a Firebase account and have created a project in the <a href="https://console.firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase console</a>.
 
 ```bash
 yarn add firebase
@@ -282,7 +282,7 @@ export default function componentSignedIn() { return /*html*/ `
 `; }
 ```
 
-> To properly highlight HTML in template literals in JavaScript, you can use the `es6-string-html` VSCode extension ([link](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html)).
+> To properly highlight HTML in template literals in JavaScript, you can use the `es6-string-html` VSCode extension (<a href="https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html" target="_blank" rel="noopener noreferrer">link</a>).
 
 In addition, we need to define two utility classes that will be inside the `/src/utils/index.ts` file. The first utility function will be a type predicate that determines if an error is a Firebase Error. The second utility function will parse the Firebase error into a human-readable string. You can find the implementation of these utility functions in the GitHub repo, which we will link below.
 
@@ -537,12 +537,12 @@ function signOut() {
 
 We have now completed the implementation inside the iFrame. The next step is to implement another identical iFrame Vite project that will run on `https://localhost:3002`. Since we have already covered this step, we will not repeat it in this section. Please create the project yourself.
 
-Now, if you run all three projects at the same time (Authentication, iFrame 1, and iFrame 2), you will see that authentication works seamlessly between all the projects. This marks the end of this blog article. We hope you found it useful. You can find the GitHub repository of the project at the following [link](https://github.com/Suv4o/single-sign-on-with-firebase).
+Now, if you run all three projects at the same time (Authentication, iFrame 1, and iFrame 2), you will see that authentication works seamlessly between all the projects. This marks the end of this blog article. We hope you found it useful. You can find the GitHub repository of the project at the following <a href="https://github.com/Suv4o/single-sign-on-with-firebase" target="_blank" rel="noopener noreferrer">link</a>.
 
 ## Conclusion
 
 Firebase Authentication is a widely used authentication service for web applications. However, Firebase has a limitation that prevents users from remaining signed in once they have signed in across multiple domains. In this blog article, we will discuss how to work around this limitation and enable Single Sign-On (SSO) with Firebase Authentication across multiple domains.
 
-To enable SSO with Firebase Authentication across multiple domains, we created an authentication project where we implemented all the logic to handle authentication. We then embedded the authentication project in two other applications hosted on different domains using an iframe. To communicate between the authentication project and the other two projects, we used the `postMessage` [API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
+To enable SSO with Firebase Authentication across multiple domains, we created an authentication project where we implemented all the logic to handle authentication. We then embedded the authentication project in two other applications hosted on different domains using an iframe. To communicate between the authentication project and the other two projects, we used the `postMessage` <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" target="_blank" rel="noopener noreferrer">API</a>.
 
 By the end of the blog article, we were able to seamlessly authenticate users across all domains, enabling them to sign in once and remain signed in across all applications.

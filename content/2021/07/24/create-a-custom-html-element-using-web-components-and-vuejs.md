@@ -93,7 +93,7 @@ The actual updates are all handled by the life cycle callbacks, which are placed
 
 Finally, we will register our custom element using the `define()` method. In the parameters, we specify the element name, followed by the class name that defines its functionality.
 
-> **Note:** We can define a few different callbacks inside a custom element's class definition, which fire at different points in the element's lifecycle: `connectedCallback()`, `disconnectedCallback()`, `adoptedCallback()` , `attributeChangedCallback()`. For more details on using the lifecycle callbacks refer to this [link](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
+> **Note:** We can define a few different callbacks inside a custom element's class definition, which fire at different points in the element's lifecycle: `connectedCallback()`, `disconnectedCallback()`, `adoptedCallback()` , `attributeChangedCallback()`. For more details on using the lifecycle callbacks refer to this <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements" target="_blank" rel="noopener noreferrer">link</a>.
 
 Our custom HTML element is now available to use on our page. We can use the custom element in our HTML like the example below:
 
@@ -109,11 +109,11 @@ This will be reflected in the browser:
 
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1627387526/blog/this-is-a-paragraph)
 
-A full documentation on Web Components can be found on [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
+A full documentation on Web Components can be found on <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.
 
 ## Create a Web Components with Vue.js
 
-The idea of using Vue.js to build a web component came whilst experimenting with some examples, as I reflected on how could I take advantage of Vue’s power to create an efficient web component. It's not to say that we should include Vue.js in every web component we create, but it could be useful in certain cases. It is important to note that Vue.js adds some weight to your component, which might in turn affect your loading speed.
+The idea of using Vue.js to build a web component came whilst experimenting with some examples, as I reflected on how could I take advantage of Vue's power to create an efficient web component. It's not to say that we should include Vue.js in every web component we create, but it could be useful in certain cases. It is important to note that Vue.js adds some weight to your component, which might in turn affect your loading speed.
 
 We are going to start by defining a class called `UserRegister`, which extends the generic HTMLElement class.
 
@@ -195,7 +195,7 @@ createVue(shadow) {
 
 The `createVue()` method is where we define the Vue logic. First, we select the `<script>` element that we have created in the `constructor()` method, and then wait the Vue.js script to be loaded. Once the script is loaded we continue with our Vue initialisation.
 
-Here we write our template as we normally do in Vue. We then need to tell Vue to render our templet in the `<div>` element with an id of "**app**" that we created earlier in the `constructor()` method. We do that with `el: shadow.querySelector("#app")`. We also add three reactive properties in the data object: `firstName`, `lastName` and `message`, a `submit()` method as well as computed function `fullName()`. For more information on how Vue.js works please refer to the Vue.js documentation in the following [link](https://vuejs.org/v2/guide/).
+Here we write our template as we normally do in Vue. We then need to tell Vue to render our templet in the `<div>` element with an id of "**app**" that we created earlier in the `constructor()` method. We do that with `el: shadow.querySelector("#app")`. We also add three reactive properties in the data object: `firstName`, `lastName` and `message`, a `submit()` method as well as computed function `fullName()`. For more information on how Vue.js works please refer to the Vue.js documentation in the following <a href="https://vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer">link</a>.
 
 Next, we add some styles in our component. In the `updateStyle()` method, we should first select the `<style>` element that we created in the `constructor()` , and then set textContent by adding some CSS style.
 
@@ -264,7 +264,7 @@ That's it! Our custom `<user-register>` element is now ready to be used on our p
 
 ## Create Web Component with Vue-CLI
 
-Vue-CLI version 3 and above allow for us to export our Vue.js components into Web Components. All we're required to do is to add a build target in **`package.json`** file. More details on building targets can be found in the following [link](https://cli.vuejs.org/guide/build-targets.html#library).
+Vue-CLI version 3 and above allow for us to export our Vue.js components into Web Components. All we're required to do is to add a build target in **`package.json`** file. More details on building targets can be found in the following <a href="https://cli.vuejs.org/guide/build-targets.html#library" target="_blank" rel="noopener noreferrer">link</a>.
 
 In the **`package.json`** we add the following line of code:
 
@@ -295,7 +295,7 @@ The heavy work is already done by Vue-CLI. We now can use our custom component i
 1. Web components are a set of web platform APIs that allow us to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps.
 2. Web Components are native HTML elements such as `<div>` `<section>` `<button>`, but something that we can create ourselves with encapsulated functionality that can be reused across modern web browsers.
 3. An important aspect of web components is encapsulation. The Shadow DOM API is a key part of this, providing a way to attach a hidden separated DOM to an element.
-4. We can take advantage of Vue’s power to create efficient web components. However, we should be aware of it's size, as it affects the loading speed of the component.
+4. We can take advantage of Vue's power to create efficient web components. However, we should be aware of it's size, as it affects the loading speed of the component.
 5. The Vue-CLI version 3 and above allow us to export our Vue.js components into Web Components. The heavy lifting would be carried out by Vue-CLI.
 
-All examples above can be found in the following github repository [link](https://github.com/Suv4o/Web-Components-and-Vue.js).
+All examples above can be found in the following github repository <a href="https://github.com/Suv4o/Web-Components-and-Vue.js" target="_blank" rel="noopener noreferrer">link</a>.

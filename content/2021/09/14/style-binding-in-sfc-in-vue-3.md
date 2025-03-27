@@ -23,7 +23,7 @@ articleTags:
 
 # Style Binding in SFC in Vue 3
 
-_{{$document.published}} • {{$document.readTime}} min read — by **[{{$document.author}}](/)**_
+_{{$document.published}} • {{$document.readTime}} min read — by **<a href="/" target="_blank" rel="noopener noreferrer">{{$document.author}}</a>**_
 
 ::tag-pills{:tags="articleTags"}
 ::
@@ -158,4 +158,4 @@ With the two examples above, we saw how easy it was to implement a style binding
 
 So what Vue has done is to assign native CSS variables to each the elements in their inline styles so that Vue can update the values of the variables when needed.
 
-All examples above can be found in the following github repository [link](https://github.com/Suv4o/style-binding-in-single-file-component-in-vue-3).
+All examples above can be found in the following github repository <a href="https://github.com/Suv4o/style-binding-in-single-file-component-in-vue-3" target="_blank" rel="noopener noreferrer">link</a>.

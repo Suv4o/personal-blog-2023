@@ -390,4 +390,4 @@ The **Container/Presentational Pattern** remains a powerful approach for separat
 
 For modern frontend projects, embracing **React** **Hooks** or **Vue** **3 Composables** can significantly enhance your development workflow and align with contemporary component design principles.
 
-The code for this is available in the following GitHub repository [here](https://github.com/Suv4o/the-container-presentational-pattern-with-react-and-vue).
+The code for this is available in the following GitHub repository <a href="https://github.com/Suv4o/the-container-presentational-pattern-with-react-and-vue" target="_blank" rel="noopener noreferrer">here</a>.

@@ -84,7 +84,7 @@ module.exports.capitalise = function (input) {
 };
 ```
 
-And then in `index.js` we include the capitalise module and call that function. We use the [CommonJS](https://requirejs.org/docs/commonjs.html) syntax to export and import modules in our Node.js app. In CommonJS `module.exports` method is used for exporting modules, and `require()` method for importing.
+And then in `index.js` we include the capitalise module and call that function. We use the <a href="https://requirejs.org/docs/commonjs.html" target="_blank" rel="noopener noreferrer">CommonJS</a> syntax to export and import modules in our Node.js app. In CommonJS `module.exports` method is used for exporting modules, and `require()` method for importing.
 
 > Please note that with the release of Node version 15.3.0 ES modules can also be used.
 
@@ -98,7 +98,7 @@ We've achieved the exact same outcome now by using modules. As we can see, modul
 
 ## Create the same app in Firebase Cloud Functions
 
-Before we start working with Firebase, we need to create a Firebase project in the [Firebase console](https://console.firebase.google.com/?authuser=0). In order to be able to use Firebase Cloud Functions, we need to upgrade to the Blaze plan (pay as you go). Firebase has a moderate free tier for hobby users. If you'ld like to check the prices for their services visit the following [link](https://firebase.google.com/pricing).
+Before we start working with Firebase, we need to create a Firebase project in the <a href="https://console.firebase.google.com/?authuser=0" target="_blank" rel="noopener noreferrer">Firebase console</a>. In order to be able to use Firebase Cloud Functions, we need to upgrade to the Blaze plan (pay as you go). Firebase has a moderate free tier for hobby users. If you'ld like to check the prices for their services visit the following <a href="https://firebase.google.com/pricing" target="_blank" rel="noopener noreferrer">link</a>.
 
 The next step is to install Firebase command line tools using npm. We can install the firebase tools with the following command `npm install -g firebase-tools`.
 
@@ -181,4 +181,4 @@ To deploy our cloud functions, we use the following command in our terminal `fir
 3. There are differences on how we include local modules in Node.js app versus Firebase Cloud functions.
 4. In order to use local modules in Firebase Cloud Functions, we need to declare our module in **functions/package.json** using the file: prefix.
 
-All examples above can be found in the following github repository [link](https://github.com/Suv4o/local-nodejs-modules-in-firebase-cloud-functions).
+All examples above can be found in the following github repository <a href="https://github.com/Suv4o/local-nodejs-modules-in-firebase-cloud-functions" target="_blank" rel="noopener noreferrer">link</a>.

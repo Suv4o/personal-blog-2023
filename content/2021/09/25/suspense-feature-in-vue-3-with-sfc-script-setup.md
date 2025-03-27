@@ -56,9 +56,9 @@ npm run dev
 
 ## Make an asynchronous API call
 
-We are going to use the new `<script setup>` syntax using [Composition API](https://v3.vuejs.org/api/composition-api.html). This feature was released with Vue 3.2.
+We are going to use the new `<script setup>` syntax using <a href="https://v3.vuejs.org/api/composition-api.html" target="_blank" rel="noopener noreferrer">Composition API</a>. This feature was released with Vue 3.2.
 
-First, create a new component called **_Result.vue_** in **_src/components/Result.vue_** directory. Next, use the [OpenLibrary](https://openlibrary.org/developers/api) API to fetch all **The Lord Of The Rings** books. Let's look at the following code in **_Result.vue_** component:
+First, create a new component called **_Result.vue_** in **_src/components/Result.vue_** directory. Next, use the <a href="https://openlibrary.org/developers/api" target="_blank" rel="noopener noreferrer">OpenLibrary</a> API to fetch all **The Lord Of The Rings** books. Let's look at the following code in **_Result.vue_** component:
 
 ```js
 <script setup>
@@ -146,4 +146,4 @@ In the above, we created `onErrorCaptured` hook and a reactive variable called `
 3. The `<Suspense>` component has two slots, `default` and `fallback`. When the content isn't ready, the `fallback` component is rendered. When data is successfully loaded, the `default` component is displayed.
 4. Dealing with errors in Vue is simple. Vue 3 provides `onErrorCaptured` lifecycle hook that can listen to errors.
 
-All examples above can be found in the following Github repository [link](https://github.com/Suv4o/suspense-feature-in-vue-3).
+All examples above can be found in the following Github repository <a href="https://github.com/Suv4o/suspense-feature-in-vue-3" target="_blank" rel="noopener noreferrer">link</a>.

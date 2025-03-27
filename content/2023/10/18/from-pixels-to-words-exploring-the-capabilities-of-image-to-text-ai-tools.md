@@ -62,13 +62,13 @@ Here is a diagram that visually represents the web app described above.
 
 ![Diagram Chart](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1697368216/blog/from-pixels-to-words/diagram-chart)
 
-The diagram above provides a high-level overview of the app's functionality. The user submits a question about an attached image, and the web application responds with an answer. To achieve this, our app utilises [LangChain](https://js.langchain.com/docs/), a powerful framework for working with Large Language Models (LLMs). LangChain supports both TypeScript and Python programming languages, and in our case, we are using TypeScript. We will become more familiar with LangChain and why we have chosen to work with it in the upcoming sections.
+The diagram above provides a high-level overview of the app's functionality. The user submits a question about an attached image, and the web application responds with an answer. To achieve this, our app utilises <a href="https://js.langchain.com/docs/" target="_blank" rel="noopener noreferrer">LangChain</a>, a powerful framework for working with Large Language Models (LLMs). LangChain supports both TypeScript and Python programming languages, and in our case, we are using TypeScript. We will become more familiar with LangChain and why we have chosen to work with it in the upcoming sections.
 
 In addition, our app also uses additional tools to help us analyse the content of the image, giving us possible labels of classes or objects that might be included in the image.
 
 ## Image Recognition Models for Text Generation and Object Detection
 
-First, we will discuss the additional tools used to help us identify the content of the image. The LLM does not have any knowledge about the content of the image, so to write an effective description, we need to provide relevant information. We used two libraries to accomplish that: [TensorFlow](https://www.tensorflow.org/) and [Transformers.js](https://huggingface.co/docs/transformers.js/index) from [Hugging Face](https://huggingface.co/).
+First, we will discuss the additional tools used to help us identify the content of the image. The LLM does not have any knowledge about the content of the image, so to write an effective description, we need to provide relevant information. We used two libraries to accomplish that: <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer">TensorFlow</a> and <a href="https://huggingface.co/docs/transformers.js/index" target="_blank" rel="noopener noreferrer">Transformers.js</a> from <a href="https://huggingface.co/" target="_blank" rel="noopener noreferrer">Hugging Face</a>.
 
 ### TensorFlow
 
@@ -84,7 +84,7 @@ To demonstrate the models, we will use the same image as in our first chat, a ph
 
 ### Image Classification with TensorFlow
 
-Once the image has been uploaded the first model we are passing through is the [Image Classification](https://github.com/tensorflow/tfjs-models/tree/master/mobilenet) model from TensorFlow. This TensorFlow.js model does not require knowledge of machine learning. It can take any browser-based image elements (`<img>`, `<video>`, `<canvas>`, for example) as input and return an array of the most likely predictions and their confidences.
+Once the image has been uploaded the first model we are passing through is the <a href="https://github.com/tensorflow/tfjs-models/tree/master/mobilenet" target="_blank" rel="noopener noreferrer">Image Classification</a> model from TensorFlow. This TensorFlow.js model does not require knowledge of machine learning. It can take any browser-based image elements (`<img>`, `<video>`, `<canvas>`, for example) as input and return an array of the most likely predictions and their confidences.
 
 The array of classes and probabilities for our image can be seen below:
 
@@ -111,7 +111,7 @@ Therefore, the only useful label from the predictions above is suspension bridge
 
 ### **Object Detection** with TensorFlow
 
-We pass the image through the [Object Detection](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd) model from TensorFlow as a second step. This model aims to identify multiple objects in a single image and is capable of detecting 80 different classes of objects. Unfortunately, in the case of the image of the city of Melbourne, the model was not able to detect any objects, resulting in an empty array. For demonstration purposes, the following example shows how the output would appear if we used an image in which objects could be detected:
+We pass the image through the <a href="https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd" target="_blank" rel="noopener noreferrer">Object Detection</a> model from TensorFlow as a second step. This model aims to identify multiple objects in a single image and is capable of detecting 80 different classes of objects. Unfortunately, in the case of the image of the city of Melbourne, the model was not able to detect any objects, resulting in an empty array. For demonstration purposes, the following example shows how the output would appear if we used an image in which objects could be detected:
 
 ```js
 [
@@ -134,7 +134,7 @@ Let's move on to the next models from Transformers.js.
 
 ### Image captioning with Transformers.js
 
-Image captioning is the process of generating a description or caption from an input image. This requires both natural language processing and computer vision to generate the caption. To accomplish this, we use a model called [vit-gpt2-image-captioning](https://huggingface.co/nlpconnect/vit-gpt2-image-captioning) from Transformers.js. Using this model, giving us the following output for the image above:
+Image captioning is the process of generating a description or caption from an input image. This requires both natural language processing and computer vision to generate the caption. To accomplish this, we use a model called <a href="https://huggingface.co/nlpconnect/vit-gpt2-image-captioning" target="_blank" rel="noopener noreferrer">vit-gpt2-image-captioning</a> from Transformers.js. Using this model, giving us the following output for the image above:
 
 ```js
 [
@@ -162,7 +162,7 @@ Zero Shot Classification is the task of predicting a class that wasn't seen by t
 
 This is the opposite of what we've done before. In previous models, we give them an image, and they give us predictions on what can be included in the image. In zero-shot image classification, we provide both text predictions and an image, and the model can tell us which texts are highly likely to be included in the image.
 
-In our case, we will be using [clip-vit-base-patch32](https://huggingface.co/openai/clip-vit-base-patch32) from Transformers.js, which utilises the CLIP model developed by researchers at OpenAI.
+In our case, we will be using <a href="https://huggingface.co/openai/clip-vit-base-patch32" target="_blank" rel="noopener noreferrer">clip-vit-base-patch32</a> from Transformers.js, which utilises the CLIP model developed by researchers at OpenAI.
 
 All predicted labels previously assigned to the image are passed to this model. As a result, we receive the following output:
 
@@ -205,7 +205,7 @@ As seen from the results above, this model is capable of giving pretty accurate 
 
 Working with LLMs can be challenging, especially when working on a complex web application. I find managing memory and writing clear instructions (prompts) to be the two most challenging aspects. Fortunately, LangChain provides a solution to both of these issues and more.
 
-LangChain is an open-source framework that supports both Python and TypeScript. It allows you to build applications that use LLMs. LangChain provides a simple interface that makes it easy to connect LLMs to our application. One of the key features that LangChain provides to help manage different prompts is chains. LangChain has different types of chains, and the one we use in our application is called the [Multi-Prompt Chain](https://js.langchain.com/docs/modules/chains/other_chains/multi_prompt_chain). This allows us to use more than one prompt template and pick an appropriate prompt based on the user's question.
+LangChain is an open-source framework that supports both Python and TypeScript. It allows you to build applications that use LLMs. LangChain provides a simple interface that makes it easy to connect LLMs to our application. One of the key features that LangChain provides to help manage different prompts is chains. LangChain has different types of chains, and the one we use in our application is called the <a href="https://js.langchain.com/docs/modules/chains/other_chains/multi_prompt_chain" target="_blank" rel="noopener noreferrer">Multi-Prompt Chain</a>. This allows us to use more than one prompt template and pick an appropriate prompt based on the user's question.
 
 To make this clearer, let me give an example of how this applies to our application. We use different prompt templates in our application for different purposes. For example, we use one prompt to give instructions to the model on how to write a description, another prompt to handle Instagram descriptions, and a third prompt for writing an alt text. Each of these prompt templates has different instructions. For instance, when we want the model to assist the user in writing an Instagram caption, we provide instructions to add some emojis and hashtags. So, when someone asks for writing a description or an alt text, different instructions are given. We can fine-tune the output based on specific prompt templates for specific scenarios. In my experience, writing multiple short prompts instead of one large single prompt drastically improves the quality of the model's output.
 
@@ -217,6 +217,6 @@ These are only a small number of the features that LangChain can offer. I highly
 
 I enjoyed developing this chatbot that helps humans write their descriptions base on an image. This is a beta version, and I have plans to improve it in the future, but it's a good starting point. It's still not perfect and can sometimes get confused, but as technology progresses and new models become available, I'm confident we'll be able to get much better results.
 
-If you want to try it, follow this link: https://image-to-text-ai-chat.vercel.app/. All you need to do is provide your OpenAI API key at the bottom of the page.
+If you want to try it, follow this link: <a href="https://image-to-text-ai-chat.vercel.app/" target="_blank" rel="noopener noreferrer">here</a>. All you need to do is provide your OpenAI API key at the bottom of the page.
 
-For those who want to see the source code, it's available on GitHub at this link: https://github.com/Suv4o/Image-to-Text-AI-Chat. Please keep in mind that this only works on Chrome and Mozilla for now. Safari is not currently supported. I hope you enjoy it!
+For those who want to see the source code, it's available on GitHub at this link: <a href="https://github.com/Suv4o/Image-to-Text-AI-Chat" target="_blank" rel="noopener noreferrer">here</a>. Please keep in mind that this only works on Chrome and Mozilla for now. Safari is not currently supported. I hope you enjoy it!

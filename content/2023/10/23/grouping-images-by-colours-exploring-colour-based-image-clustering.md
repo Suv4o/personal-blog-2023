@@ -57,10 +57,10 @@ While it is not a big deal when we have just 10 images, as we can easily group t
 
 For my solution to automatically sort images based on hues, I utilised several technologies. In the following sections, I will provide a detailed explanation of how each technology was implemented. Here is a brief overview of the technologies used:
 
-- [Python](https://www.python.org/) (programming language)
-- [LangChain](https://www.langchain.com/) (framework for working with LLMs)
-- [ChatGPT](https://chat.openai.com/) 3.5 turbo (LLM)
-- [SentenceTransformer](https://www.sbert.net/) with the `all-MiniLM-L6-v2` open source model (used for generating embeddings to calculate similarities)
+- <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a> (programming language)
+- <a href="https://www.langchain.com/" target="_blank" rel="noopener noreferrer">LangChain</a> (framework for working with LLMs)
+- <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> 3.5 turbo (LLM)
+- <a href="https://www.sbert.net/" target="_blank" rel="noopener noreferrer">SentenceTransformer</a> with the `all-MiniLM-L6-v2` open source model (used for generating embeddings to calculate similarities)
 
 The diagram below provides an overview of the implementation. Lets analyse each step of the diagram in more detail below.
 
@@ -74,7 +74,7 @@ The image below shows how the hues of a photo are grouped into 5 clusters with d
 
 ![Clusters](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1697966134/blog/grouping-images-by-colours/mkubxeofuui2juhl3k0y)
 
-This implementation that I used here is part of an open source project I found on Hugging Face [here](https://huggingface.co/spaces/Shamima/extract-color-from-image). The author of the project, Shamima Hossain, has done an amazing job implementing this. She has also contributed to a lot of open source projects regarding AI and ML work. If you are interested, you can find her work on GitHub [here](https://github.com/silvererudite) or follow her on [Twitter](https://twitter.com/ShamimaHossai13).
+This implementation that I used here is part of an open source project I found on Hugging Face <a href="https://huggingface.co/spaces/Shamima/extract-color-from-image" target="_blank" rel="noopener noreferrer">here</a>. The author of the project, Shamima Hossain, has done an amazing job implementing this. She has also contributed to a lot of open source projects regarding AI and ML work. If you are interested, you can find her work on GitHub <a href="https://github.com/silvererudite" target="_blank" rel="noopener noreferrer">here</a> or follow her on <a href="https://twitter.com/ShamimaHossai13" target="_blank" rel="noopener noreferrer">Twitter</a>.
 
 ## Colour classification
 
@@ -82,7 +82,7 @@ To group the photos based on their most used hex colours, we need to consider th
 
 To accomplish this task, we need a comprehensive list of colours that covers the entire spectrum. To obtain the list, I asked chat GPT to provide it for me. My exact question was as follows:
 
-“**_Give me a list of colours different variations from all spectrum. I am going to use this colour labels to classify hex colours. Give me as many colour labels as possible. Including white and black variations.”_**
+"**_Give me a list of colours different variations from all spectrum. I am going to use this colour labels to classify hex colours. Give me as many colour labels as possible. Including white and black variations."_**
 
 The response was the following list of colours that are shown in the image below:
 
@@ -137,6 +137,6 @@ I used my personal machine, which has an Apple M1 Max with 64GB of memory. As ex
 
 # Resources
 
-- Project GitHub repository: https://github.com/Suv4o/image_classification_based_on_colours
-- Shamima Hossain - Extract colours from an image using KMeans clustering: https://huggingface.co/spaces/Shamima/extract-color-from-image
-- Hugging Face - `all-MiniLM-L6-v2` model: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+- Project GitHub repository: <a href="https://github.com/Suv4o/image_classification_based_on_colours" target="_blank" rel="noopener noreferrer">here</a>
+- Shamima Hossain - Extract colours from an image using KMeans clustering: <a href="https://huggingface.co/spaces/Shamima/extract-color-from-image" target="_blank" rel="noopener noreferrer">here</a>
+- Hugging Face - `all-MiniLM-L6-v2` model: <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" target="_blank" rel="noopener noreferrer">here</a>
