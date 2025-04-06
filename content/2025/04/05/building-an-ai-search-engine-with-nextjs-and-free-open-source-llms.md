@@ -368,10 +368,10 @@ We prepare a prompt that guides the text generation model. The system message in
 
 1. **Context**: The AI's role and knowledge base
 2. **Relevant Articles**: Top three search results with sources
-3. **Instructions**: Guidelines for generating responses, including:
-    - Using only retrieved content
-    - Avoiding unsupported claims
-    - Following formatting requirements
+3. **Instructions**: Guidelines for generating responses, including:<br/>
+   a. Using only retrieved content <br/>
+   b. Avoiding unsupported claims <br/>
+   c. Following formatting requirements
 
 The model receives this prompt through a messages array containing the system message and user query, generating an appropriate response with controlled length and creativity parameters.
 
@@ -538,7 +538,7 @@ In this code, we establish a real-time connection to the `/api/search` endpoint 
 
 We need a polished UI to display results. We've chosen Tailwind CSS and Markdown rendering for this purpose. The complete project is available on <a href="https://github.com/Suv4o/building-an-ai-search-engine-with-nextjs-and-free-open-source-llms" target="_blank" rel="noopener noreferrer"><strong>GitHub</strong></a>. Since we've covered the core AI search functionality in detail, here's a streamlined list of our UI components:
 
-- **Search Input**: A text input field for user queries.
+1. **Search Input**: A text input field for user queries.
 
 ```tsx
 <input
@@ -551,7 +551,7 @@ We need a polished UI to display results. We've chosen Tailwind CSS and Markdown
 />
 ```
 
-- **Search Button**: A button with loading indicator for the search process.
+2. **Search Button**: A button with loading indicator for the search process.
 
 ```tsx
 <button
@@ -586,7 +586,7 @@ We need a polished UI to display results. We've chosen Tailwind CSS and Markdown
 </button>
 ```
 
-- **Error Handling**: A component for displaying search error messages.
+3. **Error Handling**: A component for displaying search error messages.
 
 ```tsx
 {
@@ -594,8 +594,9 @@ We need a polished UI to display results. We've chosen Tailwind CSS and Markdown
 }
 ```
 
-- **Search Results**: Displays the AI-generated response and retrieved source articles.
-- **Markdown Rendering**: Uses `ReactMarkdown` for rich text formatting of AI responses.
+4. **Search Results**: Displays the AI-generated response and retrieved source articles.
+
+5. **Markdown Rendering**: Uses `ReactMarkdown` for rich text formatting of AI responses.
 
 ```tsx
 <ReactMarkdown
