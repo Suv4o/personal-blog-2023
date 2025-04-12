@@ -40,7 +40,7 @@ html {
 }
 
 .blog-page {
-    @apply al-container text-secondary text-lg break-words;
+    @apply al-container text-gray text-lg break-words;
 }
 
 .blog-page h1,
@@ -170,7 +170,7 @@ html {
 }
 
 .blog-page blockquote {
-    @apply antialiased my-4 px-4 py-1 bg-green-blue text-secondary border-l-4 border-secondary rounded-md;
+    @apply antialiased my-4 px-4 py-1 bg-green-blue text-gray border-l-4 border-secondary rounded-md;
 }
 
 .blog-page :not(h1, h2, h3, h4, h5, h6) a {
