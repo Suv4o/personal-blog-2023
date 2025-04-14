@@ -17,14 +17,14 @@ useSeoMeta({
     title: "Aleks Trpkovski — Web Development Projects | Frontend, Backend, Full-Stack",
     ogTitle: "Aleks Trpkovski — Web Development Projects | Frontend, Backend, Full-Stack",
     ogImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
     twitterTitle: "Aleks Trpkovski — Web Development Projects | Frontend, Backend, Full-Stack",
     twitterDescription:
         "Explore a collection of web development projects on my personal blog, showcasing the latest in frontend, backend, and full-stack development. Get inspired, learn, and stay updated with my hands-on experience in modern web technologies.",
     twitterImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     twitterCard: "summary",
 });
 

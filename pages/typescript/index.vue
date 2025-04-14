@@ -17,14 +17,14 @@ useSeoMeta({
     title: "Aleks Trpkovski — TypeScript Projects | Web Development with TypeScript",
     ogTitle: "Aleks Trpkovski — TypeScript Projects | Web Development with TypeScript",
     ogImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
     twitterTitle: "Aleks Trpkovski — TypeScript Projects | Web Development with TypeScript",
     twitterDescription:
         "Browse a curated list of TypeScript-based web development projects on [Your Blog Name]. Discover tutorials, code samples, and insights to level up your skills with TypeScript in web development.",
     twitterImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     twitterCard: "summary",
 });
 

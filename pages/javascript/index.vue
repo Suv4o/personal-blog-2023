@@ -17,14 +17,14 @@ useSeoMeta({
     title: "Aleks Trpkovski — JavaScript Articles | Tutorials, Tips, and More",
     ogTitle: "Aleks Trpkovski — JavaScript Articles | Tutorials, Tips, and More",
     ogImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
     twitterTitle: "Aleks Trpkovski — JavaScript Articles | Tutorials, Tips, and More",
     twitterDescription:
         "Explore insightful JavaScript articles and tutorials designed for frontend developers. From core concepts to advanced techniques, stay updated with practical tips and examples.",
     twitterImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     twitterCard: "summary",
 });
 

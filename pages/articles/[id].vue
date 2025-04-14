@@ -17,14 +17,14 @@ useSeoMeta({
     title: "Aleks Trpkovski — Articles",
     ogTitle: "Aleks Trpkovski — Articles",
     ogImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
     twitterTitle: "Aleks Trpkovski — Articles",
     twitterDescription:
         "Explore insightful articles and tutorials by Aleks Trpkovski on web development, JavaScript frameworks, AI, and more.",
     twitterImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     twitterCard: "summary",
 });
 

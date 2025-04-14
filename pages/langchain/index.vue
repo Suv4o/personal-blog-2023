@@ -17,14 +17,14 @@ useSeoMeta({
     title: "Aleks Trpkovski — LangChain Development | Tutorials, Projects, and More",
     ogTitle: "Aleks Trpkovski — LangChain Development | Tutorials, Projects, and More",
     ogImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
     twitterTitle: "Aleks Trpkovski — LangChain Development | Tutorials, Projects, and More",
     twitterDescription:
         "Explore a curated list of LangChain development projects and resources. Stay updated with the latest tutorials, tools, and examples to leverage LangChain for building powerful language models and applications.",
     twitterImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     twitterCard: "summary",
 });
 

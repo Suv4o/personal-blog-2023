@@ -17,14 +17,14 @@ useSeoMeta({
     title: "Aleks Trpkovski — Nuxt.js Development Articles | Tutorials, Guides, and More",
     ogTitle: "Aleks Trpkovski — Nuxt.js Development Articles | Tutorials, Guides, and More",
     ogImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
     twitterTitle: "Aleks Trpkovski — Nuxt.js Development Articles | Tutorials, Guides, and More",
     twitterDescription:
         "Explore a collection of detailed tutorials, guides, and tips focused on Nuxt.js development. Perfect for developers looking to enhance their skills in building modern web applications.",
     twitterImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     twitterCard: "summary",
 });
 

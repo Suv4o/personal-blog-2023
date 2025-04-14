@@ -17,14 +17,14 @@ useSeoMeta({
     title: "Aleks Trpkovski — Vite Projects | Web Development, Modern Web Apps, and More",
     ogTitle: "Aleks Trpkovski — Vite Projects | Web Development, Modern Web Apps, and More",
     ogImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
     twitterTitle: "Aleks Trpkovski — Vite Projects | Web Development, Modern Web Apps, and More",
     twitterDescription:
         "Discover a curated list of Vite projects in web development. Explore innovative solutions, best practices, and hands-on examples for building fast and modern web applications with Vite.",
     twitterImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     twitterCard: "summary",
 });
 

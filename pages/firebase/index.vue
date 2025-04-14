@@ -17,14 +17,14 @@ useSeoMeta({
     title: "Aleks Trpkovski — Firebase Development | Tutorials, Tips, and Resources",
     ogTitle: "Aleks Trpkovski — Firebase Development | Tutorials, Tips, and Resources",
     ogImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
     twitterTitle: "Aleks Trpkovski — Firebase Development | Tutorials, Tips, and Resources",
     twitterDescription:
         "Explore comprehensive Firebase development tutorials, tips, and resources. Learn how to build robust web and mobile applications with Firebase's powerful features.",
     twitterImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     twitterCard: "summary",
 });
 

@@ -17,14 +17,14 @@ useSeoMeta({
     title: "Aleks Trpkovski — VSCode Projects | Web Development, Coding Workflow, and More",
     ogTitle: "Aleks Trpkovski — VSCode Projects | Web Development, Coding Workflow, and More",
     ogImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     ogUrl: `https://www.trpkovski.com/${route.path}`,
     ogSiteName: "Articles by Aleks Trpkovski",
     twitterTitle: "Aleks Trpkovski — VSCode Projects | Web Development, Coding Workflow, and More",
     twitterDescription:
         "Explore a curated list of VSCode projects for web development. Discover powerful tools, tips, and resources for building efficient web apps and improving your coding workflow.",
     twitterImage:
-        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1618489761/blog/portrait",
+        "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1744618697/blog/emoji-hi-aleks_vvzmnd",
     twitterCard: "summary",
 });
 
