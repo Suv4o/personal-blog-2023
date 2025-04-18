@@ -141,7 +141,7 @@ html {
 }
 
 .blog-page ul li {
-    @apply my-2 list-decimal list-outside relative left-6 pr-6;
+    @apply my-2 list-disc list-outside relative left-6 pr-6;
 }
 
 .blog-page li code {
