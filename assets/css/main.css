@@ -32,6 +32,9 @@
     --color-python: 53 107 153; /*  #356B99 */
     --color-nitro: 247 119 176; /*  #f777b0 */
     --color-reactjs: 97 218 251; /*  #61dafb */
+    --color-hobby: 212 112 62; /*  #d4703e */
+    --color-tech: 131 161 152; /*  #83a198 */
+    --color-entertainment: 219 168 90; /*  #dba85a */
     --color-other: 238 95 83; /*  #ee5f53 */
 }
 
@@ -170,7 +173,7 @@ html {
 }
 
 .blog-page blockquote {
-    @apply antialiased my-4 px-4 py-1 bg-green-blue text-gray border-l-4 border-secondary rounded-md;
+    @apply antialiased my-4 px-4 py-1 bg-green-blue text-secondary border-l-4 border-secondary rounded-md;
 }
 
 .blog-page :not(h1, h2, h3, h4, h5, h6) a {

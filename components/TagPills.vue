@@ -39,7 +39,13 @@
                                                   ? tagDetails[15].link
                                                   : tag == 'React.js'
                                                     ? tagDetails[16].link
-                                                    : tagDetails[17].link
+                                                    : tag == 'Hobby'
+                                                      ? tagDetails[17].link
+                                                      : tag == 'Tech'
+                                                        ? tagDetails[18].link
+                                                        : tag == 'Entertainment'
+                                                          ? tagDetails[19].link
+                                                          : tagDetails[20].link
             }`"
         >
             <div
@@ -78,7 +84,13 @@
                                                       ? 'bg-nitro'
                                                       : tag == 'React.js'
                                                         ? 'bg-reactjs'
-                                                        : 'bg-other',
+                                                        : tag == 'Hobby'
+                                                          ? 'bg-hobby'
+                                                          : tag == 'Tech'
+                                                            ? 'bg-tech'
+                                                            : tag == 'Entertainment'
+                                                              ? 'bg-entertainment'
+                                                              : 'bg-other',
                     small ? 'text-xs' : 'text-sm',
                     tag == 'Vue.js'
                         ? '!text-white'
@@ -114,7 +126,13 @@
                                                       ? 'text-black'
                                                       : tag == 'React.js'
                                                         ? 'text-black'
-                                                        : 'text-white',
+                                                        : tag == 'Hobby'
+                                                          ? 'text-white'
+                                                          : tag == 'Tech'
+                                                            ? 'text-white'
+                                                            : tag == 'Entertainment'
+                                                              ? 'text-black'
+                                                              : 'text-white',
                 ]"
             >
                 {{ tag }}
@@ -155,6 +173,9 @@ export default {
                 { bg: "#356B99", txt: "#ffffff", link: "/python" },
                 { bg: "#f777b0", txt: "#191919", link: "/nitro" },
                 { bg: "#61dafb", txt: "#3d3d3d", link: "/reactjs" },
+                { bg: "#d4703e", txt: "#3d3d3d", link: "/hobby" },
+                { bg: "#83a198", txt: "#3d3d3d", link: "/tech" },
+                { bg: "#dba85a", txt: "#3d3d3d", link: "/entertainment" },
                 { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
             ],
         };

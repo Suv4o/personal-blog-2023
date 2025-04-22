@@ -37,6 +37,9 @@ export default {
                 python: "rgb(var(--color-python) / <alpha-value>)", // #356B99
                 nitro: "rgb(var(--color-nitro) / <alpha-value>)", // #f777b0
                 reactjs: "rgb(var(--color-reactjs) / <alpha-value>)", // #61dafb
+                hobby: "rgb(var(--color-hobby) / <alpha-value>)", // #d4703e
+                tech: "rgb(var(--color-tech) / <alpha-value>)", // #83a198
+                entertainment: "rgb(var(--color-entertainment) / <alpha-value>)", // #dba85a
                 other: "rgb(var(--color-other) / <alpha-value>)", // #ee5f53
             },
             fontFamily: {
