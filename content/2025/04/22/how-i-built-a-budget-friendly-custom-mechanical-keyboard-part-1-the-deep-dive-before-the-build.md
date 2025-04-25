@@ -44,7 +44,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1745223262/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build_lc4bhn)
+![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1745223262/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build_lc4bhn)
 
 I’ve been meaning to write this blog post for a few years now — I just never got around to it. But here we are. This is the story of how I got into custom mechanical keyboards and how that small curiosity turned into a full-blown obsession.
 
@@ -62,7 +62,7 @@ Before you start shopping for parts, it's good to understand the different keybo
 
 Here are the most common options:
 
-![Image of different keyboard sizes](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1745222456/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/choosing-the-right-size-what-feels-right_gdemas)
+![Image of different keyboard sizes](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1745222456/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/choosing-the-right-size-what-feels-right_gdemas)
 
 - **Full-size (100%)**: Includes everything — letters, numbers, function row, arrow keys, and a number pad. Classic.
 - **Tenkeyless (TKL)**: Drops the number pad, which saves space but keeps the arrows and navigation keys.
@@ -77,7 +77,7 @@ If you’re just getting started, I’d suggest trying a **75% or TKL** layout. 
 
 A mechanical keyboard isn’t just about cool keycaps (though they _do_ look awesome). Under the hood, there are a few main components:
 
-![Image of all main components of the keyboard](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1745222720/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/what-actually-makes-a-mechanical-keyboard_ewxomd)
+![Image of all main components of the keyboard](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1745222720/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/what-actually-makes-a-mechanical-keyboard_ewxomd)
 
 - **Keycaps** – What your fingers press. They come in different shapes and materials.
 - **Switches** – These sit under the keycaps and decide how your board _feels_ and _sounds_.
@@ -98,7 +98,7 @@ Keycaps might seem like just a cosmetic choice, but they have a big impact on th
 
 This is all about how each row is sculpted:
 
-![Image of keycaps profiles](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1745222454/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/profile-aka-shape-and-height_pssrng)
+![Image of keycaps profiles](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1745222454/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/profile-aka-shape-and-height_pssrng)
 
 - **SA** – Tall, retro-style, and heavily sculpted. They look cool but can take some getting used to.
     - Height: ~16.3 mm
@@ -122,7 +122,7 @@ Two main types here:
 
 A switch might be small, but it’s doing a lot. Here’s what’s inside:
 
-![Image of all main components of the switch](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1745222454/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/inside-the-switch-whats-going-on-under-there_rsmrpi)
+![Image of all main components of the switch](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1745222454/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/inside-the-switch-whats-going-on-under-there_rsmrpi)
 
 - **Top Housing** – The outer shell that holds it all together.
 - **Stem** – The coloured bit that moves up and down when you type.
