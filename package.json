@@ -12,11 +12,11 @@
         "postinstall": "nuxt prepare"
     },
     "devDependencies": {
-        "@nuxt/content": "^3.4.0",
+        "@nuxt/content": "^3.6.3",
         "@nuxt/devtools": "latest",
         "@tailwindcss/forms": "^0.5.9",
         "autoprefixer": "^10.4.20",
-        "nuxt": "^3.16.0",
+        "nuxt": "3.16.0",
         "prettier": "^3.0.3",
         "prettier-plugin-tailwindcss": "^0.6.9",
         "typescript": "^5.7.2"
