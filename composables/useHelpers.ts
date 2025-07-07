@@ -34,6 +34,10 @@ export function useHelpers() {
         "/ai",
         "/other",
         "/reactjs",
+        "/the-keyboard-lab",
+        "/the-keyboard-lab/lemon-milk",
+        "/the-keyboard-lab/pastel-paws",
+        "/the-keyboard-lab/retrograde",
         "/get-in-touch",
         "/unsubscribe",
     ];
