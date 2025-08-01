@@ -12,7 +12,10 @@ const articles = ref();
 const query = ref("");
 const selectedArticle = ref<Article>();
 
-const hasArticlesPath = computed(() => route.path.includes("/articles/"));
+const hasArticlesPath = computed(() => {
+    return route.path.includes("/articles/") || /\/\d{4}\/\d{2}\/\d{2}\//.test(route.path);
+});
+const hasKeyboardLabPath = computed(() => route.path.includes("/the-keyboard-lab"));
 
 watch(
     () => selectedArticle.value,
@@ -73,7 +76,7 @@ async function navigateToArticle() {
                             <NuxtLink
                                 to="/the-keyboard-lab"
                                 class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
-                                :class="{ 'router-link-active': hasArticlesPath }"
+                                :class="{ 'router-link-active': hasKeyboardLabPath }"
                                 >The Keyboard Lab</NuxtLink
                             >
                             <NuxtLink
