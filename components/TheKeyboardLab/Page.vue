@@ -10,33 +10,65 @@ const parentPath = computed(() => {
     return "/";
 });
 
-const jobOpenings = [
+const keyboardSpecs = [
     {
         id: 1,
-        role: "Full-time designer",
-        href: "#",
-        description:
-            "Quos sunt ad dolore ullam qui. Enim et quisquam dicta molestias. Corrupti quo voluptatum eligendi autem labore.",
-        salary: "$75,000 USD",
-        location: "San Francisco, CA",
+        title: "Type of Keyboard",
+        description: `
+                    <ul class="list-disc pl-5">
+                        <li>GMK87 Tenkeyless</li>
+                        <li>Hot-swappable</li>
+                        <li>Gasket-mounted</li>
+                        <li>Plastic case</li>
+                        <li>LCD screen + knob</li>
+                        <li>Wireless + USB-C</li>
+                    </ul>
+                `,
     },
     {
         id: 2,
-        role: "Laravel developer",
-        href: "#",
-        description:
-            "Et veniam et officia dolorum rerum. Et voluptas consequatur magni sapiente amet voluptates dolorum. Ut porro aut eveniet.",
-        salary: "$125,000 USD",
-        location: "San Francisco, CA",
+        title: "Type of Switches",
+        description: `
+                <ul class="list-disc pl-5">
+                <li>Akko Cream Yellow Pro (Linear, 50g)</li>
+                <li>Factory-lubed, re-lubed with Krytox 205g0</li>
+                <li>Switch films added for improved sound and stability</li>
+                </ul>
+            `,
     },
     {
         id: 3,
-        role: "React Native developer",
-        href: "#",
-        description:
-            "Veniam ipsam nisi quas architecto eos non voluptatem in nemo. Est occaecati nihil omnis delectus illum est.",
-        salary: "$105,000 USD",
-        location: "San Francisco, CA",
+        title: "Type of Keycaps",
+        description: `
+            <ul class="list-disc pl-5">
+                <li>XDA Profile</li>
+                <li>PBT plastic</li>
+                <li>95-key set</li>
+                <li>Blue & white colourway with cat illustrations</li>
+            </ul>
+        `,
+    },
+    {
+        id: 4,
+        title: "Type of Cable",
+        description: `
+            <ul class="list-disc pl-5">
+                <li>Light blue coiled USB-C cable</li>
+                <li>Aviator connector for modular look and tidier cable routing</li>
+            </ul>
+        `,
+    },
+    {
+        id: 5,
+        title: "Mods",
+        description: `
+            <ul class="list-disc pl-5">
+                <li>Stabilisers removed and lubed with dielectric grease</li>
+                <li>Switches lubed and filmed for smoother action and tighter sound</li>
+                <li>Tape mod applied to back of PCB (3 layers of masking tape)</li>
+                <li>Case stuffed with Poly-Fil to eliminate hollowness and deepen sound</li>
+            </ul>
+        `,
     },
 ];
 </script>
@@ -44,57 +76,46 @@ const jobOpenings = [
 <template>
     <div class="text-gray text-lg break-words">
         <Button classes="my-8" :link="parentPath">← Back</Button>
-        <div class="flex flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
-            <div>
-                <h2 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
-                    We’re always looking for awesome people to join us
-                </h2>
+        <div class="flex flex-col gap-4 lg:mx-0 lg:max-w-none lg:flex-row lg:gap-16">
+            <div class="lg:flex-1 lg:max-w-2xl">
+                <h1 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
+                    🐾 Pastel Paws
+                </h1>
+                <TheKeyboardLabTags description="cute, dreamy, pastel, cat-inspired" />
                 <p class="mt-6 text-xl/8 text-gray-600">
-                    Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est euismod lacus. Est non placerat nam
-                    arcu. Cras purus nibh cursus sit eu in id.
+                    Built for budget-conscious thock lovers, <strong>Pastel Paws</strong> is a custom TKL mechanical
+                    keyboard that delivers premium feel, sound, and style without breaking the bank. Designed with
+                    beginners in mind, this build features smooth typing, crisp acoustics, and playful visual flair with
+                    animal-themed XDA keycaps and a coiled cable. It's
+                    <strong>customised from the inside out</strong> with hand-lubed switches and stabilisers, a
+                    gasket-mounted structure, and mods like tape and case stuffing for that satisfying "thock" sound.
+                    Whether you're coding, writing, or just vibing to music, <strong>Pastel Paws</strong> makes every
+                    keystroke feel personal.
                 </p>
                 <img
                     src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80"
                     alt=""
-                    class="mt-16 aspect-6/5 w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-138"
+                    class="mt-8 aspect-6/5 w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-138"
                 />
             </div>
-            <div class="w-full lg:max-w-xl lg:flex-auto">
-                <h3 class="sr-only">Job openings</h3>
-                <ul class="-my-8 divide-y divide-gray-100">
-                    <li v-for="opening in jobOpenings" :key="opening.id" class="py-8">
+            <div class="w-full lg:w-64 lg:flex-none mb-6">
+                <h2>Keyboard Specs</h2>
+                <ul class="-my-4 divide-y divide-green">
+                    <li v-for="specs in keyboardSpecs" :key="specs.id" class="py-4">
                         <dl class="relative flex flex-wrap gap-x-3">
                             <dt class="sr-only">Role</dt>
                             <dd class="w-full flex-none text-lg font-semibold tracking-tight text-gray-900">
-                                <a :href="opening.href">
-                                    {{ opening.role }}
-                                    <span class="absolute inset-0" aria-hidden="true" />
-                                </a>
+                                {{ specs.title }}
                             </dd>
                             <dt class="sr-only">Description</dt>
-                            <dd class="mt-2 w-full flex-none text-base/7 text-gray-600">
-                                {{ opening.description }}
-                            </dd>
-                            <dt class="sr-only">Salary</dt>
-                            <dd class="mt-4 text-base/7 font-semibold text-gray-900">{{ opening.salary }}</dd>
-                            <dt class="sr-only">Location</dt>
-                            <dd class="mt-4 flex items-center gap-x-3 text-base/7 text-gray-500">
-                                <svg viewBox="0 0 2 2" class="size-0.5 flex-none fill-gray-300" aria-hidden="true">
-                                    <circle cx="1" cy="1" r="1" />
-                                </svg>
-                                {{ opening.location }}
-                            </dd>
+                            <dd v-html="specs.description" class="mt-1 w-full flex-none text-base/7 text-gray-600"></dd>
                         </dl>
                     </li>
                 </ul>
-                <div class="mt-8 flex border-t border-gray-100 pt-8">
-                    <a href="#" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-500"
-                        >View all openings <span aria-hidden="true">&rarr;</span></a
-                    >
-                </div>
             </div>
         </div>
     </div>
+    <hr />
 </template>
 
 <style scoped>
@@ -162,19 +183,15 @@ p {
 }
 
 img {
-    @apply w-full h-full rounded-md mb-6;
+    @apply w-full rounded-md mb-6;
 }
 
 ol li {
     @apply my-2 list-decimal list-outside relative left-6 pr-6;
 }
 
-ul li {
-    @apply my-2 list-disc list-outside relative left-6 pr-6;
-}
-
 hr {
-    @apply border-t border-green mt-4;
+    @apply border-t border-green;
 }
 
 blockquote {
