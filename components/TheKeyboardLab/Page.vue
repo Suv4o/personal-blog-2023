@@ -1,5 +1,65 @@
 <script setup lang="ts">
+interface KeyboardSpec {
+    id: number;
+    title: string;
+    description: string;
+}
+
+interface Props {
+    keyboardSpecs?: KeyboardSpec[];
+    h1Title?: string;
+    description?: string;
+    tags?: string;
+    image?: string;
+}
+
 const route = useRoute();
+
+const { data: page } = await useAsyncData(route.fullPath + "-keyboard-data", () => {
+    return queryCollection("content").path(route.path).first();
+});
+
+const pageSlug = computed(() => {
+    const segments = route.path.split("/");
+    return segments[segments.length - 1];
+});
+
+const camelCaseSlug = computed(() => {
+    return pageSlug.value.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
+});
+
+const computedKeyboardSpecs = computed(() => {
+    const specsKey = `${camelCaseSlug.value}Specs`;
+    return (page.value as any)?.meta?.[specsKey] || [];
+});
+
+const computedH1Title = computed(() => {
+    const titleKey = `${camelCaseSlug.value}Title`;
+    return (page.value as any)?.meta?.[titleKey] || "";
+});
+
+const computedDescription = computed(() => {
+    const descriptionKey = `${camelCaseSlug.value}Description`;
+    return (page.value as any)?.meta?.[descriptionKey] || "";
+});
+
+const computedTags = computed(() => {
+    const tagsKey = `${camelCaseSlug.value}Tags`;
+    return (page.value as any)?.meta?.[tagsKey] || "";
+});
+
+const computedImage = computed(() => {
+    const imageKey = `${camelCaseSlug.value}Image`;
+    return (page.value as any)?.meta?.[imageKey] || "";
+});
+
+const props = withDefaults(defineProps<Props>(), {
+    keyboardSpecs: () => [],
+    h1Title: "",
+    description: "",
+    tags: "",
+    image: "",
+});
 
 const parentPath = computed(() => {
     const pathSegments = route.path.split("/").filter((segment) => segment !== "");
@@ -9,68 +69,6 @@ const parentPath = computed(() => {
     }
     return "/";
 });
-
-const keyboardSpecs = [
-    {
-        id: 1,
-        title: "Type of Keyboard",
-        description: `
-                    <ul class="list-disc pl-5">
-                        <li>GMK87 Tenkeyless</li>
-                        <li>Hot-swappable</li>
-                        <li>Gasket-mounted</li>
-                        <li>Plastic case</li>
-                        <li>LCD screen + knob</li>
-                        <li>Wireless + USB-C</li>
-                    </ul>
-                `,
-    },
-    {
-        id: 2,
-        title: "Type of Switches",
-        description: `
-                <ul class="list-disc pl-5">
-                <li>Akko Cream Yellow Pro (Linear, 50g)</li>
-                <li>Factory-lubed, re-lubed with Krytox 205g0</li>
-                <li>Switch films added for improved sound and stability</li>
-                </ul>
-            `,
-    },
-    {
-        id: 3,
-        title: "Type of Keycaps",
-        description: `
-            <ul class="list-disc pl-5">
-                <li>XDA Profile</li>
-                <li>PBT plastic</li>
-                <li>95-key set</li>
-                <li>Blue & white colourway with cat illustrations</li>
-            </ul>
-        `,
-    },
-    {
-        id: 4,
-        title: "Type of Cable",
-        description: `
-            <ul class="list-disc pl-5">
-                <li>Light blue coiled USB-C cable</li>
-                <li>Aviator connector for modular look and tidier cable routing</li>
-            </ul>
-        `,
-    },
-    {
-        id: 5,
-        title: "Mods",
-        description: `
-            <ul class="list-disc pl-5">
-                <li>Stabilisers removed and lubed with dielectric grease</li>
-                <li>Switches lubed and filmed for smoother action and tighter sound</li>
-                <li>Tape mod applied to back of PCB (3 layers of masking tape)</li>
-                <li>Case stuffed with Poly-Fil to eliminate hollowness and deepen sound</li>
-            </ul>
-        `,
-    },
-];
 </script>
 
 <template>
@@ -79,21 +77,12 @@ const keyboardSpecs = [
         <div class="flex flex-col gap-4 lg:mx-0 lg:max-w-none lg:flex-row lg:gap-16">
             <div class="lg:flex-1 lg:max-w-2xl">
                 <h1 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
-                    🐾 Pastel Paws
+                    {{ computedH1Title }}
                 </h1>
-                <TheKeyboardLabTags description="cute, dreamy, pastel, cat-inspired" />
-                <p class="mt-6 text-xl/8 text-gray-600">
-                    Built for budget-conscious thock lovers, <strong>Pastel Paws</strong> is a custom TKL mechanical
-                    keyboard that delivers premium feel, sound, and style without breaking the bank. Designed with
-                    beginners in mind, this build features smooth typing, crisp acoustics, and playful visual flair with
-                    animal-themed XDA keycaps and a coiled cable. It's
-                    <strong>customised from the inside out</strong> with hand-lubed switches and stabilisers, a
-                    gasket-mounted structure, and mods like tape and case stuffing for that satisfying "thock" sound.
-                    Whether you're coding, writing, or just vibing to music, <strong>Pastel Paws</strong> makes every
-                    keystroke feel personal.
-                </p>
+                <TheKeyboardLabTags :description="computedTags" />
+                <p class="mt-6 text-xl/8 text-gray-600" v-html="computedDescription"></p>
                 <img
-                    src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80"
+                    :src="computedImage"
                     alt=""
                     class="mt-8 aspect-6/5 w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-138"
                 />
@@ -101,7 +90,7 @@ const keyboardSpecs = [
             <div class="w-full lg:w-64 lg:flex-none mb-6">
                 <h2>Keyboard Specs</h2>
                 <ul class="-my-4 divide-y divide-green">
-                    <li v-for="specs in keyboardSpecs" :key="specs.id" class="py-4">
+                    <li v-for="specs in computedKeyboardSpecs" :key="specs.id" class="py-4">
                         <dl class="relative flex flex-wrap gap-x-3">
                             <dt class="sr-only">Role</dt>
                             <dd class="w-full flex-none text-lg font-semibold tracking-tight text-gray-900">
