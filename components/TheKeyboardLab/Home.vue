@@ -24,6 +24,5 @@
         </div>
         <arrow-down class="my-12"></arrow-down>
         <TheKeyboardLabListing />
-        <HorizontalRule />
     </div>
 </template>
