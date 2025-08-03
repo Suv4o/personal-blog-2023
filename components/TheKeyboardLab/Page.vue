@@ -53,14 +53,6 @@ const computedImage = computed(() => {
     return (page.value as any)?.meta?.[imageKey] || "";
 });
 
-const props = withDefaults(defineProps<Props>(), {
-    keyboardSpecs: () => [],
-    h1Title: "",
-    description: "",
-    tags: "",
-    image: "",
-});
-
 const parentPath = computed(() => {
     const pathSegments = route.path.split("/").filter((segment) => segment !== "");
     if (pathSegments.length > 1) {
