@@ -1,6 +1,6 @@
 ---
-title: Aleks Trpkovski — The Keyboard Lab — Custom Mechanical Keyboards
-description: Welcome to The Keyboard Lab! This is where I share all of my custom mechanical keyboard builds — from budget-friendly setups to detailed build logs and photos. If you're into switches, keycaps, and more, you're in the right place. Dive into my passion project and get inspired to build your own.
+title: Aleks Trpkovski — Retrograde - 65% Retro-Themed Mechanical Keyboard
+description: Meet Retrograde, a stylish 65% mechanical keyboard built on the Gamakay LK67. Featuring Gateron Yellow Milky Pro switches, retro DSA keycaps, triple-mode connectivity, RGB lighting, and deep-sounding mods — it's where vintage flair meets modern performance.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1751774465/blog/Emoji_-_Aleks_with_Keyboard_xo5zyy
 keywords:
     - Mechanical Keyboards
@@ -15,10 +15,21 @@ keywords:
     - Desk Setup
     - Frontend
     - Developer Gear
-    - Blog
-    - Tech Projects
-    - Web Developer
-    - Aleks Trpkovski
+    - retrograde keyboard
+    - Gamakay LK67
+    - retro mechanical keyboard
+    - wireless mechanical keyboard
+    - Gateron Yellow Milky Pro
+    - DSA profile keycaps
+    - RGB backlit keyboard
+    - thock keyboard
+    - triple-mode keyboard
+    - custom 65% keyboard
+    - keyboard with knob
+    - retro-themed keycaps
+    - keyboard mods
+    - tape mod
+    - silicone mod
 type: page
 retrogradeSpecs:
     - id: 1

@@ -1,6 +1,6 @@
 ---
-title: Aleks Trpkovski — The Keyboard Lab — Custom Mechanical Keyboards
-description: Welcome to The Keyboard Lab! This is where I share all of my custom mechanical keyboard builds — from budget-friendly setups to detailed build logs and photos. If you're into switches, keycaps, and more, you're in the right place. Dive into my passion project and get inspired to build your own.
+title: Aleks Trpkovski — Lemon Milk - Premium 75% Custom Keyboard with Tealios Switches
+description: Explore Lemon Milk, a vibrant 75% custom mechanical keyboard built on the Keychron Q1. Featuring buttery-smooth Tealios V2 switches, yellow XDA keycaps, a coiled aviator cable, and acoustic mods for a thocky, refined sound.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1751774465/blog/Emoji_-_Aleks_with_Keyboard_xo5zyy
 keywords:
     - Mechanical Keyboards
@@ -15,10 +15,19 @@ keywords:
     - Desk Setup
     - Frontend
     - Developer Gear
-    - Blog
-    - Tech Projects
-    - Web Developer
-    - Aleks Trpkovski
+    - lemon milk keyboard
+    - custom mechanical keyboard
+    - Keychron Q1 build
+    - Tealios V2 switches
+    - XDA keycaps
+    - thock keyboard
+    - 75% keyboard
+    - lubed switches
+    - tape mod keyboard
+    - coiled aviator cable
+    - minimalist keyboard
+    - yellow and white keyboard
+    - CNC aluminum keyboard
 type: page
 lemonMilkSpecs:
     - id: 1
