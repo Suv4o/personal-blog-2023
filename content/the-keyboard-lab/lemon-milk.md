@@ -1,7 +1,7 @@
 ---
 title: Aleks Trpkovski — Lemon Milk - Premium 75% Custom Keyboard with Tealios Switches
 description: Explore Lemon Milk, a vibrant 75% custom mechanical keyboard built on the Keychron Q1. Featuring buttery-smooth Tealios V2 switches, yellow XDA keycaps, a coiled aviator cable, and acoustic mods for a thocky, refined sound.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1751774465/blog/Emoji_-_Aleks_with_Keyboard_xo5zyy
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1754209966/blog/the-keyboard-lab/keyboard-2_r8ujln
 keywords:
     - Mechanical Keyboards
     - Custom Keyboards

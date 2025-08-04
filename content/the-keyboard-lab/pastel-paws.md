@@ -1,7 +1,7 @@
 ---
 title: Aleks Trpkovski — Pastel Paws - Custom TKL Mechanical Keyboard for Thock Lovers
 description: Discover Pastel Paws, a cute and budget-friendly custom TKL mechanical keyboard featuring hand-lubed Akko switches, animal-themed XDA keycaps, coiled aviator cable, and gasket mounting for a smooth, thocky typing experience.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1751774465/blog/Emoji_-_Aleks_with_Keyboard_xo5zyy
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1754297235/blog/the-keyboard-lab/Pastel_Paws_yuyysg
 keywords:
     - Mechanical Keyboards
     - Custom Keyboards
@@ -80,7 +80,7 @@ pastelPawsSpecs:
 pastelPawsTitle: "🐾 Pastel Paws"
 pastelPawsDescription: 'Built for budget-conscious thock lovers, <strong>Pastel Paws</strong> is a custom TKL mechanical keyboard that delivers premium feel, sound, and style without breaking the bank. Designed with beginners in mind, this build features smooth typing, crisp acoustics, and playful visual flair with animal-themed XDA keycaps and a coiled cable. It''s <strong>customised from the inside out</strong> with hand-lubed switches and stabilisers, a gasket-mounted structure, and mods like tape and case stuffing for that satisfying "thock" sound. Whether you''re coding, writing, or just vibing to music, <strong>Pastel Paws</strong> makes every keystroke feel personal.'
 pastelPawsTags: "cute, dreamy, pastel, cat-inspired"
-pastelPawsImage: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80"
+pastelPawsImage: "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_900,e_sharpen:100/v1754297235/blog/the-keyboard-lab/Pastel_Paws_yuyysg"
 ---
 
 ::TheKeyboardLabPage
