@@ -48,12 +48,18 @@ function processRelatedArticles() {
 
     // First, try to add articles that come after the current one
     for (let i = currentIndex + 1; i < allArticles.value.length && result.length < 3; i++) {
-        result.push(allArticles.value[i]);
+        const article = allArticles.value[i];
+        if (article) {
+            result.push(article);
+        }
     }
 
     // Then, try to add articles that come before the current one
     for (let i = currentIndex - 1; i >= 0 && result.length < 3; i--) {
-        result.push(allArticles.value[i]);
+        const article = allArticles.value[i];
+        if (article) {
+            result.push(article);
+        }
     }
 
     // If we still don't have 3 articles, add more from either end

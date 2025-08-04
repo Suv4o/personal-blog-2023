@@ -25,7 +25,7 @@ const pageSlug = computed(() => {
 });
 
 const camelCaseSlug = computed(() => {
-    return pageSlug.value.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
+    return pageSlug.value?.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase()) || "";
 });
 
 const computedKeyboardSpecs = computed(() => {

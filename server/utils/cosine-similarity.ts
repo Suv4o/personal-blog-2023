@@ -11,9 +11,14 @@ export function cosineSimilarity(vecA: number[], vecB: number[]): number {
     let magnitudeB = 0;
 
     for (let i = 0; i < vecA.length; i++) {
-        dotProduct += vecA[i] * vecB[i];
-        magnitudeA += vecA[i] * vecA[i];
-        magnitudeB += vecB[i] * vecB[i];
+        const valueA = vecA[i];
+        const valueB = vecB[i];
+
+        if (valueA !== undefined && valueB !== undefined) {
+            dotProduct += valueA * valueB;
+            magnitudeA += valueA * valueA;
+            magnitudeB += valueB * valueB;
+        }
     }
 
     // Calculate magnitudes
