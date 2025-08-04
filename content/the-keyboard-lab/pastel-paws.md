@@ -16,7 +16,6 @@ keywords:
     - Frontend
     - Developer Gear
     - pastel paws
-    - keyboard
     - custom mechanical
     - keyboard
     - TKL keyboard
