@@ -49,7 +49,8 @@ const getTagColor = (tag: string): string => {
     // Fallback to cycling through default colors based on tag length
     const defaultColors = ["default-1", "default-2", "default-3", "default-4"];
     const colorIndex = tag.length % defaultColors.length;
-    return colorMap[defaultColors[colorIndex]];
+    const selectedColor = defaultColors[colorIndex]!;
+    return colorMap[selectedColor] ?? "bg-green-light text-secondary";
 };
 </script>
 

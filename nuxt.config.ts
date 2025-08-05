@@ -1,9 +1,9 @@
 import tailwindcss from "@tailwindcss/vite";
 import fs from "fs";
 import path from "path";
-import { isBlogPostUrl } from "./utils/url-helpers";
-import { processEmbeddings } from "./utils/process-embeddings";
-import { getEmbeddingsFilePath } from "./utils/file-paths";
+import { isBlogPostUrl } from "./app/utils/url-helpers";
+import { processEmbeddings } from "./app/utils/process-embeddings";
+import { getEmbeddingsFilePath } from "./app/utils/file-paths";
 import { pipeline } from "@huggingface/transformers";
 
 async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
