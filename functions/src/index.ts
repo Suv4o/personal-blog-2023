@@ -181,7 +181,6 @@ export const contact_form = onRequest(
             logger.error("Failed to send email notification:", {
                 error: emailError instanceof Error ? emailError.message : String(emailError),
             });
-            // Continue execution - we don't want to fail the contact form submission if email fails
         }
 
         response.send({
