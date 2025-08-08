@@ -1,4 +1,5 @@
-import * as sgMail from "@sendgrid/mail";
+import Mailgun from "mailgun.js";
+import * as FormData from "form-data";
 import { setGlobalOptions } from "firebase-functions/v2";
 import { onRequest } from "firebase-functions/v2/https";
 import { Validator } from "node-input-validator";
@@ -28,14 +29,21 @@ setGlobalOptions({ maxInstances: 10 });
 let initialised = false;
 
 async function sendEmail(message: EmailMessage) {
-    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY as string;
-
-    sgMail.setApiKey(SENDGRID_API_KEY);
+    const MAILGUN_API_KEY = process.env.MAILGUN_API_KEY as string;
+    const mailgun = new Mailgun(FormData);
+    const mg = mailgun.client({ username: "api", key: MAILGUN_API_KEY });
 
     try {
-        await sgMail.send(message);
+        await mg.messages.create("trpkovski.com", {
+            to: message.to,
+            from: message.from,
+            subject: message.subject,
+            text: message.text,
+            html: message.html,
+        });
     } catch (error) {
-        logger.error(error);
+        logger.error("Error sending email:", { error: error instanceof Error ? error.message : String(error) });
+        throw error;
     }
 }
 
@@ -165,7 +173,15 @@ export const contact_form = onRequest(
 
         const contactUsRef = db.collection("contact-form");
         await contactUsRef.add({ name, email, mobile, subject, message });
-        await sendEmail(buildEmailMessageForContactForm(name, email, mobile, subject, message));
+
+        try {
+            await sendEmail(buildEmailMessageForContactForm(name, email, mobile, subject, message));
+        } catch (emailError) {
+            console.error("Failed to send email notification:", emailError);
+            logger.error("Failed to send email notification:", {
+                error: emailError instanceof Error ? emailError.message : String(emailError),
+            });
+        }
 
         response.send({
             success: true,
@@ -240,7 +256,15 @@ export const subscribe_to_newsletters = onRequest(
         if (subscribers.size > 0 && !hasBeenSubscribed) {
             const [subscriber] = subscribers.docs;
             await subscriber.ref.update({ name, subscribed: true });
-            await sendEmail(buildEmailMessageForSubscriberAgain(name, email?.toLowerCase()));
+
+            try {
+                await sendEmail(buildEmailMessageForSubscriberAgain(name, email?.toLowerCase()));
+            } catch (emailError) {
+                console.error("Failed to send email notification:", emailError);
+                logger.error("Failed to send email notification:", {
+                    error: emailError instanceof Error ? emailError.message : String(emailError),
+                });
+            }
 
             response.send({
                 success: true,
@@ -250,7 +274,15 @@ export const subscribe_to_newsletters = onRequest(
         }
 
         await subscribersRef.add({ name, email: email?.toLowerCase(), subscribed: true });
-        await sendEmail(buildEmailMessageForNewSubscriber(name, email?.toLowerCase()));
+
+        try {
+            await sendEmail(buildEmailMessageForNewSubscriber(name, email?.toLowerCase()));
+        } catch (emailError) {
+            console.error("Failed to send email notification:", emailError);
+            logger.error("Failed to send email notification:", {
+                error: emailError instanceof Error ? emailError.message : String(emailError),
+            });
+        }
 
         response.send({
             success: true,
@@ -291,7 +323,15 @@ export const unsubscribe_to_newsletters = onRequest({ cors: "*" }, async (reques
 
     const { name, email } = subscriberData as { name: string; email: string };
     await subscriber.ref.update({ subscribed: false });
-    await sendEmail(buildEmailMessageForUnsubscribe(name, email));
+
+    try {
+        await sendEmail(buildEmailMessageForUnsubscribe(name, email));
+    } catch (emailError) {
+        console.error("Failed to send email notification:", emailError);
+        logger.error("Failed to send email notification:", {
+            error: emailError instanceof Error ? emailError.message : String(emailError),
+        });
+    }
 
     response.send({
         message: "You have been unsubscribed.",
@@ -375,9 +415,22 @@ export const send_blog_post_info_to_subscribers = onRequest({ cors: "*" }, async
 
         const text = `New Blog Article - sent to: ${request.body.name}, ${request.body.email}`;
 
-        await sendEmail(
-            buildEmailMessageForNewBlogPostEmailNewsletters(subscriber.email, `New Article: ${blog_name}`, text, html)
-        );
+        try {
+            await sendEmail(
+                buildEmailMessageForNewBlogPostEmailNewsletters(
+                    subscriber.email,
+                    `New Article: ${blog_name}`,
+                    text,
+                    html
+                )
+            );
+        } catch (emailError) {
+            console.error(`Failed to send email to ${subscriber.email}:`, emailError);
+            logger.error(`Failed to send email to ${subscriber.email}:`, {
+                error: emailError instanceof Error ? emailError.message : String(emailError),
+            });
+            // Continue with next subscriber
+        }
     }
 
     response.send({
