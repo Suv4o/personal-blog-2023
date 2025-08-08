@@ -111,7 +111,7 @@ function buildEmailMessageForSubscriberAgain(name: string, email: string) {
 
 // Contact form
 export const contact_form = onRequest(
-    { cors: ["https://www.trpkovski.com", "https://trpkovski.com", "http://localhost:3000"] },
+    { cors: ["https://www.trpkovski.com", "https://trpkovski.com"] },
     async (request, response) => {
         if (!initialised) {
             admin.initializeApp();
@@ -193,7 +193,7 @@ export const contact_form = onRequest(
 
 // Subscribe to newsletters
 export const subscribe_to_newsletters = onRequest(
-    { cors: ["https://www.trpkovski.com", "https://trpkovski.com", "http://localhost:3000"] },
+    { cors: ["https://www.trpkovski.com", "https://trpkovski.com"] },
     async (request, response) => {
         if (!initialised) {
             admin.initializeApp();
