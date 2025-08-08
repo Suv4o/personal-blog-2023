@@ -1,4 +1,65 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// Define two rows of photography collection cards (3 each)
+interface PhotoCard {
+    id: number;
+    title: string;
+    href: string;
+    description: string; // comma separated tags consumed by <TheKeyboardLabTags /> via <CardsListing />
+    imageUrl: string;
+}
+
+// NOTE: Using a shared placeholder image for now. Replace with specific Cloudinary assets when available.
+const placeholder =
+    "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_900,e_sharpen:100/v1754654713/blog/Emoji-with-camera_bq6geb";
+
+const firstRow: PhotoCard[] = [
+    {
+        id: 1,
+        title: "🌌 Starlit Wonders",
+        href: "/through-the-lens/starlit-wonders",
+        description: "cosmic-views, night-skies, galactic-dreams",
+        imageUrl: placeholder,
+    },
+    {
+        id: 2,
+        title: "🌿 Wild Horizons",
+        href: "/through-the-lens/wild-horizons",
+        description: "green-escape, earth-tones, into-the-wild",
+        imageUrl: placeholder,
+    },
+    {
+        id: 3,
+        title: "⏳ Time in Motion",
+        href: "/through-the-lens/time-in-motion",
+        description: "light-trails, blurred-beauty, moving-moments",
+        imageUrl: placeholder,
+    },
+];
+
+const secondRow: PhotoCard[] = [
+    {
+        id: 4,
+        title: "🌆 Urban Glow",
+        href: "/through-the-lens/urban-glow",
+        description: "neon-nights, city-lights, street-frames",
+        imageUrl: placeholder,
+    },
+    {
+        id: 5,
+        title: "🌊 Ocean Whispers",
+        href: "/through-the-lens/ocean-whispers",
+        description: "ocean-breese, coastal-views, blue-horizon",
+        imageUrl: placeholder,
+    },
+    {
+        id: 6,
+        title: "🏞️ Liquid Cascades",
+        href: "/through-the-lens/liquid-cascades",
+        description: "falling-waters, mist-and-magic, nature-flow",
+        imageUrl: placeholder,
+    },
+];
+</script>
 
 <template>
     <div>
@@ -23,5 +84,8 @@
             </p>
         </div>
         <arrow-down class="my-12"></arrow-down>
+        <!-- Two rows of CardsListing with photography themed collections -->
+        <CardsListing :cards="firstRow" />
+        <CardsListing :cards="secondRow" />
     </div>
 </template>

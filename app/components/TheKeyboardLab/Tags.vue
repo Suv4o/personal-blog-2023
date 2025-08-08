@@ -39,6 +39,26 @@ const getTagColor = (tag: string): string => {
         "default-2": "bg-primary-light text-white",
         "default-3": "bg-tech text-white",
         "default-4": "bg-entertainment text-secondary",
+
+        // Through The Lens specific photography collection tags
+        "cosmic-views": "bg-cosmic-views text-white",
+        "night-skies": "bg-night-skies text-white",
+        "galactic-dreams": "bg-galactic-dreams text-white",
+        "green-escape": "bg-green-escape text-white",
+        "earth-tones": "bg-earth-tones text-white",
+        "into-the-wild": "bg-into-the-wild text-white",
+        "light-trails": "bg-light-trails text-secondary",
+        "blurred-beauty": "bg-blurred-beauty text-secondary",
+        "moving-moments": "bg-moving-moments text-white",
+        "neon-nights": "bg-neon-nights text-white",
+        "city-lights": "bg-city-lights text-white",
+        "street-frames": "bg-street-frames text-white",
+        "ocean-breese": "bg-ocean-breese text-secondary",
+        "coastal-views": "bg-coastal-views text-white",
+        "blue-horizon": "bg-blue-horizon text-white",
+        "falling-waters": "bg-falling-waters text-secondary",
+        "mist-and-magic": "bg-mist-and-magic text-secondary",
+        "nature-flow": "bg-nature-flow text-white",
     };
 
     // Check for exact matches first

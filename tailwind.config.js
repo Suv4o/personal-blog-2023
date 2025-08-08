@@ -1,6 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ["*.{vue,js,md}", "components/**/*.{vue,js}", "content/**/*.md", "layouts/**/*.vue", "pages/**/*.vue"],
+    content: [
+        "*.{vue,js,md}",
+        "components/**/*.{vue,js}",
+        "app/components/**/*.{vue,js}", // include app directory components
+        "content/**/*.md",
+        "layouts/**/*.vue",
+        "pages/**/*.vue",
+    ],
     theme: {
         extend: {
             screens: {
@@ -41,6 +48,25 @@ export default {
                 tech: "rgb(var(--color-tech) / <alpha-value>)", // #83a198
                 entertainment: "rgb(var(--color-entertainment) / <alpha-value>)", // #dba85a
                 other: "rgb(var(--color-other) / <alpha-value>)", // #ee5f53
+                // Through The Lens custom tag colors
+                "cosmic-views": "rgb(var(--color-cosmic-views) / <alpha-value>)", // #5B5FFF
+                "night-skies": "rgb(var(--color-night-skies) / <alpha-value>)", // #4E4CCF
+                "galactic-dreams": "rgb(var(--color-galactic-dreams) / <alpha-value>)", // #3D3BA1
+                "green-escape": "rgb(var(--color-green-escape) / <alpha-value>)", // #3BAF6C
+                "earth-tones": "rgb(var(--color-earth-tones) / <alpha-value>)", // #2C8B53
+                "into-the-wild": "rgb(var(--color-into-the-wild) / <alpha-value>)", // #246C41
+                "light-trails": "rgb(var(--color-light-trails) / <alpha-value>)", // #FFA94D
+                "blurred-beauty": "rgb(var(--color-blurred-beauty) / <alpha-value>)", // #FF8C1A
+                "moving-moments": "rgb(var(--color-moving-moments) / <alpha-value>)", // #CC6E00
+                "neon-nights": "rgb(var(--color-neon-nights) / <alpha-value>)", // #FF3B6B
+                "city-lights": "rgb(var(--color-city-lights) / <alpha-value>)", // #CC2F55
+                "street-frames": "rgb(var(--color-street-frames) / <alpha-value>)", // #A32543
+                "ocean-breese": "rgb(var(--color-ocean-breese) / <alpha-value>)", // #00B8D9
+                "coastal-views": "rgb(var(--color-coastal-views) / <alpha-value>)", // #0094AA
+                "blue-horizon": "rgb(var(--color-blue-horizon) / <alpha-value>)", // #006F82
+                "falling-waters": "rgb(var(--color-falling-waters) / <alpha-value>)", // #4DD0E1
+                "mist-and-magic": "rgb(var(--color-mist-and-magic) / <alpha-value>)", // #26B6C8
+                "nature-flow": "rgb(var(--color-nature-flow) / <alpha-value>)", // #1A98A9
             },
             fontFamily: {
                 sans: ["Ubuntu", "sans-serif"],
