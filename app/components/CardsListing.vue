@@ -33,7 +33,7 @@ const props = defineProps<{
                             {{ card.title }}
                         </h3>
                         <div class="mt-5">
-                            <TheKeyboardLabTags :description="card.description" />
+                            <CardTags :description="card.description" />
                         </div>
                     </div>
                 </div>

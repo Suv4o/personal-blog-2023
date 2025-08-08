@@ -4,7 +4,7 @@ interface PhotoCard {
     id: number;
     title: string;
     href: string;
-    description: string; // comma separated tags consumed by <TheKeyboardLabTags /> via <CardsListing />
+    description: string; // comma separated tags consumed by <CardTags /> via <CardsListing />
     imageUrl: string;
 }
 

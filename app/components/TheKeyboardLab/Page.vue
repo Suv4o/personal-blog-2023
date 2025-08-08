@@ -71,7 +71,7 @@ const parentPath = computed(() => {
                 <h1 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
                     {{ computedH1Title }}
                 </h1>
-                <TheKeyboardLabTags :description="computedTags" />
+                <CardTags :description="computedTags" />
                 <p class="mt-6 text-xl/8 text-gray-600" v-html="computedDescription"></p>
                 <img
                     :src="computedImage"
