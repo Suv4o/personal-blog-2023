@@ -50,7 +50,6 @@ const keyboards = [
             </p>
         </div>
         <arrow-down class="my-12"></arrow-down>
-        <!-- Replace TheKeyboardLabListing with the reusable CardsListing component -->
         <CardsListing :cards="keyboards" />
     </div>
 </template>
