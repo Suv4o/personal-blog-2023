@@ -1,4 +1,31 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const keyboards = [
+    {
+        id: 1,
+        title: "🐾 Pastel Paws",
+        href: "/the-keyboard-lab/pastel-paws",
+        description: "cute, dreamy, pastel, cat-inspired",
+        imageUrl:
+            "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_500,e_sharpen:100/v1754297235/blog/the-keyboard-lab/Pastel_Paws_yuyysg",
+    },
+    {
+        id: 2,
+        title: "🍋 Lemon Milk",
+        href: "/the-keyboard-lab/lemon-milk",
+        description: "refreshing, warm, creamy, sunny",
+        imageUrl:
+            "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_500,e_sharpen:100/v1754209966/blog/the-keyboard-lab/keyboard-2_r8ujln",
+    },
+    {
+        id: 3,
+        title: "🕹️ Retrograde",
+        href: "/the-keyboard-lab/retrograde",
+        description: "sci-fi meets vintage, minimal, retro",
+        imageUrl:
+            "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_500,e_sharpen:100/v1754297235/blog/the-keyboard-lab/Retrograde_lfxjf3",
+    },
+];
+</script>
 
 <template>
     <div>
@@ -23,6 +50,7 @@
             </p>
         </div>
         <arrow-down class="my-12"></arrow-down>
-        <TheKeyboardLabListing />
+        <!-- Replace TheKeyboardLabListing with the reusable CardsListing component -->
+        <CardsListing :cards="keyboards" />
     </div>
 </template>
