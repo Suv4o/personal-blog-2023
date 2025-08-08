@@ -2,7 +2,7 @@
 
 <template>
     <div>
-        <div class="text-4xl text-center text-secondary mt-12 mb-6"><strong>THE KEYBOARD LAB</strong></div>
+        <div class="text-2xl sm:text-4xl text-center text-secondary mt-12 mb-6"><strong>THE KEYBOARD LAB</strong></div>
         <arrow-down class="mb-6"></arrow-down>
         <div class="flex justify-center mt-6">
             <img

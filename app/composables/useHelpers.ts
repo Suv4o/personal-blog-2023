@@ -38,6 +38,7 @@ export function useHelpers() {
         "/the-keyboard-lab/lemon-milk",
         "/the-keyboard-lab/pastel-paws",
         "/the-keyboard-lab/retrograde",
+        "/through-the-lens",
         "/get-in-touch",
         "/unsubscribe",
     ];
