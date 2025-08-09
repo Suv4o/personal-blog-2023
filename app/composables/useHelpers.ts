@@ -39,6 +39,12 @@ export function useHelpers() {
         "/the-keyboard-lab/pastel-paws",
         "/the-keyboard-lab/retrograde",
         "/through-the-lens",
+        "/through-the-lens/starlit-wonders",
+        "/through-the-lens/liquid-cascades",
+        "/through-the-lens/ocean-whispers",
+        "/through-the-lens/urban-glow",
+        "/through-the-lens/time-in-motion",
+        "/through-the-lens/wild-horizons",
         "/get-in-touch",
         "/unsubscribe",
     ];
