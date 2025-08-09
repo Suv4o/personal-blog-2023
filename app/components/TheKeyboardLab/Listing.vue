@@ -28,11 +28,11 @@ const keyboards = [
 </script>
 
 <template>
-    <div class="mx-auto mt-12 mb-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <div class="mt-12 mb-12 grid w-full grid-cols-1 gap-y-20 gap-x-8 px-4 sm:px-6 lg:px-0 lg:mx-0 lg:grid-cols-3">
         <article v-for="keyboard in keyboards" :key="keyboard.id" class="flex flex-col items-start justify-between">
             <NuxtLink
                 :to="keyboard.href"
-                class="block lg:hover:scale-105 lg:focus:scale-105 focus:outline-none transition-transform duration-300 ease-in-out"
+                class="block w-full lg:hover:scale-105 lg:focus:scale-105 focus:outline-none transition-transform duration-300 ease-in-out"
             >
                 <div class="relative w-full">
                     <img
