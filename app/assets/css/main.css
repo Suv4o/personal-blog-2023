@@ -36,6 +36,25 @@
     --color-tech: 131 161 152; /*  #83a198 */
     --color-entertainment: 219 168 90; /*  #dba85a */
     --color-other: 238 95 83; /*  #ee5f53 */
+    /* Through The Lens tag colors */
+    --color-cosmic-views: 91 95 255; /* #5B5FFF */
+    --color-night-skies: 78 76 207; /* #4E4CCF */
+    --color-galactic-dreams: 61 59 161; /* #3D3BA1 */
+    --color-green-escape: 59 175 108; /* #3BAF6C */
+    --color-earth-tones: 44 139 83; /* #2C8B53 */
+    --color-into-the-wild: 36 108 65; /* #246C41 */
+    --color-light-trails: 255 169 77; /* #FFA94D */
+    --color-blurred-beauty: 255 140 26; /* #FF8C1A */
+    --color-moving-moments: 204 110 0; /* #CC6E00 */
+    --color-neon-nights: 255 59 107; /* #FF3B6B */
+    --color-city-lights: 204 47 85; /* #CC2F55 */
+    --color-street-frames: 163 37 67; /* #A32543 */
+    --color-ocean-breese: 0 184 217; /* #00B8D9 */
+    --color-coastal-views: 0 148 170; /* #0094AA */
+    --color-blue-horizon: 0 111 130; /* #006F82 */
+    --color-falling-waters: 77 208 225; /* #4DD0E1 */
+    --color-mist-and-magic: 38 182 200; /* #26B6C8 */
+    --color-nature-flow: 26 152 169; /* #1A98A9 */
 }
 
 html {

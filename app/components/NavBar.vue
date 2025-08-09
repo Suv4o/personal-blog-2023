@@ -16,6 +16,7 @@ const hasArticlesPath = computed(() => {
     return route.path.includes("/articles/") || /\/\d{4}\/\d{2}\/\d{2}\//.test(route.path);
 });
 const hasKeyboardLabPath = computed(() => route.path.includes("/the-keyboard-lab"));
+const hasThroughTheLensPath = computed(() => route.path.includes("/through-the-lens"));
 
 watch(
     () => selectedArticle.value,
@@ -78,6 +79,12 @@ async function navigateToArticle() {
                                 class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                                 :class="{ 'router-link-active': hasKeyboardLabPath }"
                                 >The Keyboard Lab</NuxtLink
+                            >
+                            <NuxtLink
+                                to="/through-the-lens"
+                                class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                                :class="{ 'router-link-active': hasThroughTheLensPath }"
+                                >Through the Lens</NuxtLink
                             >
                             <NuxtLink
                                 to="/get-in-touch"
@@ -158,6 +165,12 @@ async function navigateToArticle() {
                     class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                 >
                     The Keyboard Lab
+                </NuxtLink>
+                <NuxtLink
+                    to="/through-the-lens"
+                    class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                >
+                    Through the Lens
                 </NuxtLink>
                 <NuxtLink
                     to="/get-in-touch"
