@@ -41,6 +41,9 @@ type: page
 
 <div class="mb-8"></div>
 
+::ThroughTheLensGrid
+::
+
 <NuxtLink to="/through-the-lens" class="w-full text-lg sm:text-xl underline text-secondary text-center block font-bold">← Back to Through the Lens Gallery</NuxtLink>
 
 <div class="mb-8"></div>
