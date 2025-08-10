@@ -134,7 +134,7 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ["@nuxt/content"],
+    modules: ["@nuxt/content", "@nuxt/image"],
     css: ["~/assets/css/main.css"],
 
     typescript: {
@@ -164,5 +164,19 @@ export default defineNuxtConfig({
         },
     },
 
+    image: {
+        format: ["webp", "avif", "jpeg"],
+        screens: {
+            xs: 320,
+            sm: 640,
+            md: 768,
+            lg: 1024,
+            xl: 1280,
+            "2xl": 1536,
+        },
+        densities: [1, 2],
+        quality: 80,
+        provider: "ipx",
+    },
     compatibilityDate: "2025-01-04",
 });
