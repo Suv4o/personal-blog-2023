@@ -15,46 +15,60 @@ slug: starlit-wonders
 type: page
 gridImages:
     - filename: aura-australia-airey-inlet-lighthouse.jpg
-      title: Aireys Inlet Lighthouse
+      title: Split Point Lighthouse
+      location: Aireys Inlet, Victoria, Australia
       aspect: portrait
     - filename: aura-australia-airey-inlet-watching.jpg
-      title: Watching the Lighthouse
+      title: Watching the Aurora Borealis
+      location: Aireys Inlet, Victoria, Australia
       aspect: portrait
     - filename: aura-australia-lorne-great-ocean-road.jpg
-      title: Great Ocean Road
+      title: Aurora Borealis over the Great Ocean Road
+      location: Lorne, Victoria, Australia
       aspect: portrait
     - filename: aura-australia-lorne-teddys-lookout.jpg
-      title: "Teddy's Lookout"
+      title: Aurora Borealis from Teddy’s Lookout
+      location: Lorne, Victoria, Australia
       aspect: portrait
-    - filename: camel-rock-bermagui-nsw-31-12-2021.jpg
-      title: Camel Rock Bermagui
+    - filename: camel-rock-bermagui-nsw.jpg
+      title: Star Trails over Camel Rock
+      location: Bermagui, New South Wales, Australia
       aspect: landscape
-    - filename: camp-schanck-lighthouse-29-10-2017.jpg
-      title: Cape Schanck Lighthouse
+    - filename: camp-schanck-lighthouse.jpg
+      title: Star Trails at Cape Schanck Lighthouse
+      location: Cape Schanck, Victoria, Australia
       aspect: portrait
-    - filename: cape-schanck start-trials-2023.jpg
-      title: Cape Schanck Trails
+    - filename: cape-schanck-start-trials.jpg
+      title: Star Trails at Cape Schanck
+      location: Cape Schanck, Victoria, Australia
       aspect: portrait
-    - filename: milkyway-pinacles-mpe- 06-10-2018.jpg
-      title: Milky Way Pinnacles
+    - filename: milkyway-pinacles-mpe.jpg
+      title: Milky Way over the Pinnacles
+      location: Cape Woolamai Surf Beach, Phillip Island, Victoria, Australia
       aspect: square
     - filename: mount-donna-buang-yarra-ranges-national-park.jpg
-      title: Mount Donna Buang
+      title: Milky Way over Mount Donna Buang
+      location: Mount Donna Buang, Victoria, Australia
       aspect: landscape
-    - filename: pinnacles-western australia.jpg
-      title: Pinnacles Western Australia
+    - filename: pinnacles-western-australia.jpg
+      title: Star Trails at Pinnacles
+      location: Pinnacles Desert, Western Australia
       aspect: portrait
-    - filename: pinnacles-with-mile-02-07-2017.jpg
-      title: Pinnacles With Milky Way
+    - filename: pinnacles-phillip-island.jpg
+      title: Star Trails at Pinnacles, Phillip Island
+      location: Pinnacles, Phillip Island, Victoria, Australia
       aspect: portrait
-    - filename: shipwreck-ss-speke-phillip-island-2.jpg
+    - filename: shipwreck-ss-speke-phillip-island.jpg
       title: SS Speke Shipwreck
+      location: Phillip Island, Victoria, Australia
       aspect: landscape
-    - filename: star-trails-big-lake-pelister-16-07-2022.jpg
+    - filename: star-trails-big-lake-pelister.jpg
       title: Star Trails
+      location: Big Lake Pelister, NorthMacedonia
       aspect: portrait
     - filename: uluru-stars.jpg
-      title: Uluru Stars
+      title: Star Trails at Uluru
+      location: Uluru, Northern Territory, Australia
       aspect: landscape
 ---
 
@@ -64,20 +78,10 @@ gridImages:
   </div>
 </h1>
 
-::ArrowDown
+::CardTags{description="cosmic-views, night-skies, galactic-dreams" :center="true"}
 ::
 
-<div class="text-center my-6">
-    <p class="text-xl sm:text-3xl tracking-tight text-secondary drop-shadow-sm">Coming Soon <span class="inline-block animate-pulse">✨</span>
-    </p>
-</div>
-
-::ArrowDown
-::
-
-<blockquote class="text-base sm:text-lg antialiased my-6 px-4 py-2 bg-green-blue text-secondary border-l-4 border-secondary rounded-md mb-8">
-    <p class="my-2">This page is still in the works — soon you’ll find a curated grid of my favourite <strong>astro</strong> shots, from starlit horizons to deep-sky wonders. Each image will be paired with its story, location details, and the gear and settings that brought it to life.</p>
-</blockquote>
+<div class="mb-6"></div>
 
 ::ArrowDown
 ::
@@ -87,7 +91,10 @@ gridImages:
 ::ThroughTheLensGrid{:images="meta.gridImages"}
 ::
 
-<NuxtLink to="/through-the-lens" class="w-full text-lg sm:text-xl underline text-secondary text-center block font-bold">← Back to Through the Lens Gallery</NuxtLink>
+<div class="mb-8"></div>
+
+::ArrowDown
+::
 
 <div class="mb-8"></div>
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 interface Props {
     description: string;
+    center?: boolean;
 }
 
 const props = defineProps<Props>();
@@ -67,7 +68,7 @@ const getTagColor = (tag: string): string => {
 </script>
 
 <template>
-    <div class="card-tags flex flex-wrap">
+    <div class="card-tags flex flex-wrap" :class="{ 'justify-center': props.center }">
         <span
             v-for="(tag, index) in parsedTags"
             :key="index"
