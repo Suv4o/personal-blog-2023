@@ -13,6 +13,49 @@ keywords:
     - Aleks Trpkovski
 slug: starlit-wonders
 type: page
+gridImages:
+    - filename: aura-australia-airey-inlet-lighthouse.jpg
+      title: Aireys Inlet Lighthouse
+      aspect: portrait
+    - filename: aura-australia-airey-inlet-watching.jpg
+      title: Watching the Lighthouse
+      aspect: portrait
+    - filename: aura-australia-lorne-great-ocean-road.jpg
+      title: Great Ocean Road
+      aspect: portrait
+    - filename: aura-australia-lorne-teddys-lookout.jpg
+      title: "Teddy's Lookout"
+      aspect: portrait
+    - filename: camel-rock-bermagui-nsw-31-12-2021.jpg
+      title: Camel Rock Bermagui
+      aspect: landscape
+    - filename: camp-schanck-lighthouse-29-10-2017.jpg
+      title: Cape Schanck Lighthouse
+      aspect: portrait
+    - filename: cape-schanck start-trials-2023.jpg
+      title: Cape Schanck Trails
+      aspect: portrait
+    - filename: milkyway-pinacles-mpe- 06-10-2018.jpg
+      title: Milky Way Pinnacles
+      aspect: square
+    - filename: mount-donna-buang-yarra-ranges-national-park.jpg
+      title: Mount Donna Buang
+      aspect: landscape
+    - filename: pinnacles-western australia.jpg
+      title: Pinnacles Western Australia
+      aspect: portrait
+    - filename: pinnacles-with-mile-02-07-2017.jpg
+      title: Pinnacles With Milky Way
+      aspect: portrait
+    - filename: shipwreck-ss-speke-phillip-island-2.jpg
+      title: SS Speke Shipwreck
+      aspect: landscape
+    - filename: star-trails-big-lake-pelister-16-07-2022.jpg
+      title: Star Trails
+      aspect: portrait
+    - filename: uluru-stars.jpg
+      title: Uluru Stars
+      aspect: landscape
 ---
 
 <h1 class="uppercase font-bold text-2xl sm:text-4xl text-center text-secondary mt-12 mb-6 flex items-center gap-2 tracking-tight">
@@ -41,7 +84,7 @@ type: page
 
 <div class="mb-8"></div>
 
-::ThroughTheLensGrid
+::ThroughTheLensGrid{:images="meta.gridImages"}
 ::
 
 <NuxtLink to="/through-the-lens" class="w-full text-lg sm:text-xl underline text-secondary text-center block font-bold">← Back to Through the Lens Gallery</NuxtLink>

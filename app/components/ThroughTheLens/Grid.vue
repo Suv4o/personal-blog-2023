@@ -1,39 +1,30 @@
 <script setup lang="ts">
-interface LocalImageItem {
+import { computed } from "vue";
+interface ImageItem {
     filename: string;
     title: string;
     alt?: string;
     aspect?: "square" | "portrait" | "landscape";
-    slug?: string; // optional override
+    slug?: string;
 }
 
-// Manually list images in /public/images/through-the-lens/starlit-wonders. If more are added often,
-// consider creating a small server util to read the directory at build-time.
-const localImages: LocalImageItem[] = [
-    { filename: "aura-australia-airey-inlet-lighthouse.jpg", title: "Aireys Inlet Lighthouse", aspect: "portrait" },
-    { filename: "aura-australia-airey-inlet-watching.jpg", title: "Watching the Lighthouse", aspect: "landscape" },
-    { filename: "aura-australia-lorne-great-ocean-road.jpg", title: "Great Ocean Road", aspect: "landscape" },
-    { filename: "aura-australia-lorne-teddys-lookout.jpg", title: "Teddy's Lookout", aspect: "portrait" },
-    { filename: "camel-rock-bermagui-nsw-31-12-2021.jpg", title: "Camel Rock Bermagui", aspect: "landscape" },
-    { filename: "camp-schanck-lighthouse-29-10-2017.jpg", title: "Cape Schanck Lighthouse", aspect: "portrait" },
-    { filename: "cape-schanck start-trials-2023.jpg", title: "Cape Schanck Trails", aspect: "landscape" },
-    { filename: "milkyway-pinacles-mpe- 06-10-2018.jpg", title: "Milky Way Pinnacles", aspect: "portrait" },
-    { filename: "mount-donna-buang-yarra-ranges-national-park.jpg", title: "Mount Donna Buang", aspect: "portrait" },
-    { filename: "pinnacles-western australia.jpg", title: "Pinnacles Western Australia", aspect: "landscape" },
-    { filename: "pinnacles-with-mile-02-07-2017.jpg", title: "Pinnacles With Milky Way", aspect: "portrait" },
-    { filename: "shipwreck-ss-speke-phillip-island-2.jpg", title: "SS Speke Shipwreck", aspect: "landscape" },
-    { filename: "star-trails-big-lake-pelister-16-07-2022.jpg", title: "Star Trails", aspect: "portrait" },
-    { filename: "uluru-stars.jpg", title: "Uluru Stars", aspect: "portrait" },
-];
+const props = defineProps<{ images?: ImageItem[] }>();
+
+const images = computed<ImageItem[]>(() => {
+    if (!Array.isArray(props.images)) return [];
+    return props.images.filter((img) => img && (img.slug || img.filename));
+});
 
 const baseGalleryPath = "/through-the-lens";
 
-function linkFor(img: LocalImageItem) {
-    const baseName = (img.slug || img.filename).replace(/\.[^.]+$/, "");
+function linkFor(img: ImageItem) {
+    const source = img?.slug || img?.filename;
+    if (!source) return baseGalleryPath;
+    const baseName = source.replace(/\.[^.]+$/, "");
     return `${baseGalleryPath}/${baseName}`;
 }
 
-function aspectClass(img: LocalImageItem) {
+function aspectClass(img: ImageItem) {
     switch (img.aspect) {
         case "portrait":
             return "aspect-[3/4]";
@@ -51,7 +42,7 @@ function aspectClass(img: LocalImageItem) {
     <div class="w-full">
         <div class="masonry columns-1 sm:columns-2 lg:columns-3 xl:columns-3 gap-4">
             <div
-                v-for="img in localImages"
+                v-for="img in images"
                 :key="img.filename"
                 class="mb-4 break-inside-avoid group relative cursor-pointer overflow-hidden rounded-md shadow-sm ring-1 ring-black/5"
             >
