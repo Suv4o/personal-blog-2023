@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import { useRoute } from "vue-router";
 interface ImageItem {
     filename: string;
     title: string;
@@ -17,11 +18,33 @@ const images = computed<ImageItem[]>(() => {
 
 const baseGalleryPath = "/through-the-lens";
 
+const route = useRoute();
+
+const extraSegment = computed(() => {
+    const path = route.path || "";
+    if (!path.startsWith(baseGalleryPath)) return "";
+    const pathParts = path.split("/").filter(Boolean);
+    const baseParts = baseGalleryPath.split("/").filter(Boolean);
+    if (pathParts.length <= baseParts.length) return "";
+    return pathParts[pathParts.length - 1];
+});
+
 function linkFor(img: ImageItem) {
-    const source = img?.slug || img?.filename;
-    if (!source) return baseGalleryPath;
-    const baseName = source.replace(/\.[^.]+$/, "");
-    return `${baseGalleryPath}/${baseName}`;
+    const raw = img?.title?.trim();
+    let slug: string | undefined;
+    if (raw && raw.length) {
+        slug = raw
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9\-]/g, "");
+    }
+    if (!slug || !slug.length) {
+        const filename = img?.filename;
+        if (!filename) return baseGalleryPath;
+        slug = filename.replace(/\.[^.]+$/, "");
+    }
+    const prefix = extraSegment.value ? `${baseGalleryPath}/${extraSegment.value}` : baseGalleryPath;
+    return `${prefix}/${slug}`;
 }
 
 function aspectClass(img: ImageItem) {
