@@ -15,35 +15,35 @@ type: page
 gridImages:
     - filename: alfred-nicholas-gardens.jpg
       title: Alfred Nicholas Gardens
-      location: Sherbrooke, Victoria, Australia
+      location: Alfred Nicholas Memorial Garden, Victoria, Australia
       aspect: landscape
     - filename: alfred-nicholson-gardens.jpg
       title: Alfred Nicholson Gardens
-      location: Sherbrooke, Victoria, Australia
+      location: Alfred Nicholas Memorial Garden, Victoria, Australia
       aspect: portrait
     - filename: ballarat-boat-house.jpg
       title: Ballarat Boat House
-      location: Ballarat, Victoria, Australia
+      location: Lake Wendouree, Victoria, Australia
       aspect: landscape
     - filename: blue-both-house-perth.jpg
       title: Blue Boat House
-      location: Perth, Western Australia
+      location: Blue Boat House, Western Australia
       aspect: landscape
     - filename: brighton-beach.jpg
       title: Brighton Beach
-      location: Brighton, Victoria, Australia
+      location: Brighton Bathing Boxes, Victoria, Australia
       aspect: landscape
     - filename: cape-woolamai-walk.jpg
       title: Cape Woolamai Walk
-      location: Phillip Island, Victoria, Australia
+      location: Cape Woolamai Walk, Victoria, Australia
       aspect: portrait
     - filename: cape-woolamai.jpg
       title: Cape Woolamai
-      location: Phillip Island, Victoria, Australia
+      location: Cape Woolamai, Victoria, Australia
       aspect: landscape
     - filename: corio-bay-geelong-pie.jpg
       title: Corio Bay Geelong Pier
-      location: Geelong, Victoria, Australia
+      location: Corio Bay Geelong Pier, Victoria, Australia
       aspect: landscape
     - filename: galicica-vidikovec.jpg
       title: Galicica Viewpoint
@@ -51,11 +51,11 @@ gridImages:
       aspect: landscape
     - filename: george-bass-coastal-walk.jpg
       title: George Bass Coastal Walk
-      location: Phillip Island, Victoria, Australia
+      location: George Bass Coastal Walk, Victoria, Australia
       aspect: landscape
     - filename: george-bass-walk.jpg
       title: George Bass Walk
-      location: Phillip Island, Victoria, Australia
+      location: George Bass Coastal Walk, Victoria, Australia
       aspect: portrait
     - filename: kow-swamp.jpg
       title: Kow Swamp
@@ -63,35 +63,35 @@ gridImages:
       aspect: landscape
     - filename: lonely-tree.jpg
       title: Lonely Tree
-      location: Victoria, Australia
+      location: Tenby Point, Victoria, Australia
       aspect: landscape
     - filename: mildura-perry-sandhills.jpg
       title: Perry Sandhills
-      location: Mildura, Victoria, Australia
+      location: Perry Sandhills, Mildura, Victoria, Australia
       aspect: landscape
     - filename: mount-oberon-summit-wilsons-promontory.jpg
       title: Mount Oberon Summit
-      location: Wilsons Promontory, Victoria, Australia
+      location: Mount Oberon Summit, Victoria, Australia
       aspect: landscape
     - filename: mt-marta.jpg
       title: Mount Marta
-      location: North Macedonia
+      location: Mount Martha, Mornington Peninsula, Victoria, Australia
       aspect: landscape
     - filename: on-the-edge-together.jpg
       title: On the Edge Together
-      location: Victoria, Australia
+      location: Whisky Bay,Victoria, Australia
       aspect: landscape
     - filename: shelley-beach-portsea.jpg
       title: Shelley Beach
-      location: Portsea, Victoria, Australia
+      location: Shelley Beach, Portsea, Victoria, Australia
       aspect: landscape
     - filename: shelly-beach-portsea.jpg
       title: Shelly Beach
-      location: Portsea, Victoria, Australia
+      location: Shelly Beach, Portsea, Victoria, Australia
       aspect: portrait
     - filename: st-kilda-pier-melbourne.jpg
       title: St Kilda Pier
-      location: Melbourne, Victoria, Australia
+      location: St Kilda Pier, Victoria, Australia
       aspect: landscape
     - filename: sun-remo.jpg
       title: San Remo
@@ -107,31 +107,31 @@ gridImages:
       aspect: landscape
     - filename: teddys-lookout.jpg
       title: Teddy's Lookout
-      location: Lorne, Victoria, Australia
+      location: Teddy's Lookout,Lorne, Victoria, Australia
       aspect: square
     - filename: the-cliffes.jpg
       title: The Cliffs
-      location: Victoria, Australia
+      location: George Bass Coastal Walk, Victoria, Australia
       aspect: landscape
     - filename: the-pinnacles.jpg
       title: The Pinnacles
-      location: Phillip Island, Victoria, Australia
+      location: Pinnacles Lookout, Phillip Island, Victoria, Australia
       aspect: portrait
     - filename: veternica-big-lake-pelister.jpg
-      title: Veternica - Big Lake Pelister
-      location: Pelister National Park, North Macedonia
+      title: Veternica Big Lake Pelister
+      location: Large Lake, North Macedonia
       aspect: landscape
     - filename: wilson-promontory-national-park-whisky-bay.jpg
       title: Whisky Bay
-      location: Wilsons Promontory National Park, Victoria, Australia
+      location: Whisky Bay, Victoria, Australia
       aspect: landscape
     - filename: wilsons-prom-pillar-point.jpg
       title: Pillar Point
-      location: Wilsons Promontory, Victoria, Australia
+      location: Pillar Point, Victoria, Australia
       aspect: landscape
     - filename: teddys-lookout-lorne.jpg
       title: Teddy's Lookout
-      location: Lorne, Victoria, Australia
+      location: Teddy's Lookout, Lorne, Victoria, Australia
       aspect: square
 ---
 
