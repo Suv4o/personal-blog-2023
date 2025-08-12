@@ -3,7 +3,7 @@ import type { Article } from "~/types";
 
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
-const { pagePaths, listingPaths } = useHelpers();
+const { pagePaths, listingPaths, isThroughTheLensSlugPage } = useHelpers();
 const isError = ref(false);
 const article = ref<Partial<Article>>();
 
@@ -82,7 +82,7 @@ const isListingPage = computed(() => {
         v-if="article"
         :value="article"
         class="al-container"
-        :class="[isBlogArticle && 'blog-page']"
+        :class="[(isBlogArticle || isThroughTheLensSlugPage) && 'blog-page']"
         :key="route.fullPath"
     />
     <FurtherReading v-if="isBlogArticle && !isError" />
