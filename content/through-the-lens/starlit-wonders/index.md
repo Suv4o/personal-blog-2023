@@ -72,8 +72,8 @@ gridImages:
       aspect: landscape
 ---
 
-<h1 class="uppercase font-bold text-2xl sm:text-4xl text-center text-secondary mt-12 mb-6 flex items-center gap-2 tracking-tight">
-  <div class="w-full">
+<h1 class="uppercase font-bold text-2xl sm:text-4xl text-center text-secondary mb-6 flex items-center gap-2 tracking-tight">
+  <div class="w-full mt-6">
     🌌 <span>Starlit Wonders</span>
   </div>
 </h1>

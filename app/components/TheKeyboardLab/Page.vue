@@ -52,20 +52,11 @@ const computedImage = computed(() => {
     const imageKey = `${camelCaseSlug.value}Image`;
     return (page.value as any)?.meta?.[imageKey] || "";
 });
-
-const parentPath = computed(() => {
-    const pathSegments = route.path.split("/").filter((segment) => segment !== "");
-    if (pathSegments.length > 1) {
-        pathSegments.pop();
-        return "/" + pathSegments.join("/");
-    }
-    return "/";
-});
 </script>
 
 <template>
     <div class="text-gray text-lg break-words">
-        <Button classes="my-8" :link="parentPath">← Back</Button>
+        <BackButton />
         <div class="flex flex-col gap-4 lg:mx-0 lg:max-w-none lg:flex-row lg:gap-16">
             <div class="lg:flex-1 lg:max-w-2xl">
                 <h1 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
