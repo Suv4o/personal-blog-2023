@@ -175,7 +175,7 @@ export default defineNuxtConfig({
             "2xl": 1536,
         },
         densities: [1, 2],
-        quality: 80,
+        quality: 50,
         provider: "ipx",
     },
     compatibilityDate: "2025-01-04",

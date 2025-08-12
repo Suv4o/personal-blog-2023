@@ -79,7 +79,6 @@ function aspectClass(img: ImageItem) {
                             :alt="img.alt || img.title"
                             loading="lazy"
                             :widths="img.aspect === 'portrait' ? [320, 480, 640, 800, 900] : [320, 640, 960, 1200]"
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                     </div>
