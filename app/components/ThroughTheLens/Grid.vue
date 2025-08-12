@@ -75,7 +75,7 @@ function aspectClass(img: ImageItem) {
                         :class="aspectClass(img)"
                     >
                         <NuxtImg
-                            :src="`/images/through-the-lens/starlit-wonders/${img.filename}`"
+                            :src="`/images/through-the-lens/${extraSegment}/${img.filename}`"
                             :alt="img.alt || img.title"
                             loading="lazy"
                             :widths="img.aspect === 'portrait' ? [320, 480, 640, 800, 900] : [320, 640, 960, 1200]"
