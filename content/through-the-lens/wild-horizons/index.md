@@ -133,6 +133,10 @@ gridImages:
       title: Teddy's Lookout
       location: Teddy's Lookout, Lorne, Victoria, Australia
       aspect: square
+    - filename: mundi-mundi-broken-hill.jpg
+      title: Mundi Mundi Broken Hill
+      location: Mundi Mundi, Broken Hill, New South Wales, Australia
+      aspect: portrait
 ---
 
 <h1 class="uppercase font-bold text-2xl sm:text-4xl text-center text-secondary mb-6 flex items-center gap-2 tracking-tight">
