@@ -10,7 +10,7 @@ type: photo
 
 # Cadillac Canyon
 
-<a href="https://www.google.com/maps/search/?api=1&query=Cadillac+Canyon,+Victoria,+Australia" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+<a href="https://www.google.com/maps/search/?api=1&query=Bore+Beach,+Victoria,+Australia" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
 
 ![Cadillac Canyon](/images/through-the-lens/time-in-motion/cadylac-canyon.jpg)
 

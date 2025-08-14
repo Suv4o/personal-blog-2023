@@ -10,7 +10,7 @@ type: photo
 
 # Glasshouse Rocks
 
-<a href="https://www.google.com/maps/search/?api=1&query=Narooma,+New+South+Wales,+Australia" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+<a href="https://www.google.com/maps/search/?api=1&query=Knickers+Beach,Narooma,+New+South+Wales,+Australia" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
 
 ![Glasshouse Rocks](/images/through-the-lens/time-in-motion/glasshouse-rocks-nsw.jpg)
 

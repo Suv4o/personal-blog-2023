@@ -10,7 +10,7 @@ type: photo
 
 # Melbourne Train Trails
 
-<a href="https://www.google.com/maps/search/?api=1&query=Melbourne,+Victoria,+Australia" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+<a href="https://www.google.com/maps/search/?api=1&query=batman+avenue+bridge,+Victoria,+Australia" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
 
 ![Melbourne Train Trails](/images/through-the-lens/time-in-motion/melbourne-train-trails.jpg)
 
