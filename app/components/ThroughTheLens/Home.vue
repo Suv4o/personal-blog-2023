@@ -47,7 +47,7 @@ const secondRow: PhotoCard[] = [
         id: 5,
         title: "🌊 Ocean Whispers",
         href: "/through-the-lens/ocean-whispers",
-        description: "ocean-breese, coastal-views, blue-horizon",
+        description: "ocean-breeze, coastal-views, blue-horizon",
         imageUrl:
             "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_500,e_sharpen:100/v1754699324/blog/through-the-lens/www.AleksTrpkovski.com_-_balnarring_beach_pastel_vr8u5e",
     },

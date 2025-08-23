@@ -28,7 +28,7 @@ gridImages:
     - filename: melbourne-batman-avenue.jpg
       title: Melbourne Batman Avenue
       location: Batman Avenue, Melbourne, Victoria, Australia
-      aspect: landscape
+      aspect: square
     - filename: melbourne-blue-hour-bridge.jpg
       title: Melbourne Blue Hour Bridge
       location: Melbourne, Victoria, Australia
@@ -72,10 +72,14 @@ gridImages:
     - filename: photo-in-the-melbourne-city.jpg
       title: Photo in the Melbourne City
       location: Melbourne, Victoria, Australia
-      aspect: landscape
+      aspect: square
     - filename: port-melbourn.jpg
       title: Port Melbourn
       location: Port Melbourne, Victoria, Australia
+      aspect: landscape
+    - filename: perth-from-the-piar.jpg
+      title: Perth from the Pier
+      location: South Perth Fishing Jetty, South Perth, Western Australia
       aspect: landscape
 ---
 

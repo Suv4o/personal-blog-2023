@@ -50,7 +50,7 @@ const getTagColor = (tag: string): string => {
         "neon-nights": "bg-neon-nights text-white",
         "city-lights": "bg-city-lights text-white",
         "street-frames": "bg-street-frames text-white",
-        "ocean-breese": "bg-ocean-breese text-secondary",
+        "ocean-breeze": "bg-ocean-breeze text-secondary",
         "coastal-views": "bg-coastal-views text-white",
         "blue-horizon": "bg-blue-horizon text-white",
         "falling-waters": "bg-falling-waters text-secondary",

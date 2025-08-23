@@ -61,7 +61,7 @@ export default {
                 "neon-nights": "rgb(var(--color-neon-nights) / <alpha-value>)", // #FF3B6B
                 "city-lights": "rgb(var(--color-city-lights) / <alpha-value>)", // #CC2F55
                 "street-frames": "rgb(var(--color-street-frames) / <alpha-value>)", // #A32543
-                "ocean-breese": "rgb(var(--color-ocean-breese) / <alpha-value>)", // #00B8D9
+                "ocean-breeze": "rgb(var(--color-ocean-breeze) / <alpha-value>)", // #00B8D9
                 "coastal-views": "rgb(var(--color-coastal-views) / <alpha-value>)", // #0094AA
                 "blue-horizon": "rgb(var(--color-blue-horizon) / <alpha-value>)", // #006F82
                 "falling-waters": "rgb(var(--color-falling-waters) / <alpha-value>)", // #4DD0E1
