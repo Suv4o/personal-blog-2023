@@ -1,5 +1,5 @@
 ---
-title: Wild Horizons — Through the Lens
+title: Wild Horizons — Through The Lens
 description: A forthcoming landscape set wandering through green worlds, moody light, and earth‑toned quiet. Full gallery & field notes coming soon.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1754698657/blog/through-the-lens/www.AleksTrpkovski.com_-_Alfred_Nicholas_Gardens_07.05.2017_wwvr1a
 keywords:
@@ -8,7 +8,7 @@ keywords:
     - Mist
     - Nature
     - Australia
-    - Through the Lens
+    - Through The Lens
     - Aleks Trpkovski
 slug: wild-horizons
 type: page

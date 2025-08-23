@@ -84,7 +84,7 @@ async function navigateToArticle() {
                                 to="/through-the-lens"
                                 class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                                 :class="{ 'router-link-active': hasThroughTheLensPath }"
-                                >Through the Lens</NuxtLink
+                                >Through The Lens</NuxtLink
                             >
                             <NuxtLink
                                 to="/get-in-touch"
@@ -170,7 +170,7 @@ async function navigateToArticle() {
                     to="/through-the-lens"
                     class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                 >
-                    Through the Lens
+                    Through The Lens
                 </NuxtLink>
                 <NuxtLink
                     to="/get-in-touch"

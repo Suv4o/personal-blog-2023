@@ -1,5 +1,5 @@
 ---
-title: Urban Glow — Through the Lens
+title: Urban Glow — Through The Lens
 description: Night geometry, neon reflections, and the quiet pulse of a city after midnight. Full story launching soon.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1754699122/blog/through-the-lens/www.trpkovski.com_-_the_first_day_of_winter_nokscf
 keywords:
@@ -8,7 +8,7 @@ keywords:
     - Reflections
     - Urban Photography
     - Long Exposure
-    - Through the Lens
+    - Through The Lens
     - Aleks Trpkovski
 slug: urban-glow
 type: page

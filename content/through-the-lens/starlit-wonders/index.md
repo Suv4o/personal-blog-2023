@@ -1,5 +1,5 @@
 ---
-title: Starlit Wonders — Through the Lens
+title: Starlit Wonders — Through The Lens
 description: A forthcoming photo story exploring night skies, cosmic silence, and the quiet drama above us. Full gallery & behind‑the‑scenes notes coming soon.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1754697769/blog/through-the-lens/www.AleksTrpkovski.com__14_gso2hi
 keywords:
@@ -9,7 +9,7 @@ keywords:
     - Milky Way
     - Landscape
     - Astro
-    - Through the Lens
+    - Through The Lens
     - Aleks Trpkovski
 slug: starlit-wonders
 type: page

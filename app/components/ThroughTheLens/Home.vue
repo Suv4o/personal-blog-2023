@@ -76,7 +76,7 @@ const secondRow: PhotoCard[] = [
         <arrow-down class="mt-12"></arrow-down>
         <div class="flex justify-center mt-12">
             <p class="text-gray text-center text-lg sm:text-xl">
-                <strong>Welcome to Through the Lens</strong> — a personal gallery of images I’ve taken in my free time.
+                <strong>Welcome to Through The Lens</strong> — a personal gallery of images I’ve taken in my free time.
                 Here, you’ll find landscapes shaped by towering mountains, endless coastlines, the vibrant glow of city
                 nights and the quiet magic of starry skies. Alongside each image, I share gear notes, behind-the-scenes
                 stories, and the small details that turned an ordinary scene into something unforgettable. Whether

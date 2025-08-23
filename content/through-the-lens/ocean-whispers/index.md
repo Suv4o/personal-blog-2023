@@ -1,5 +1,5 @@
 ---
-title: Ocean Whispers — Through the Lens
+title: Ocean Whispers — Through The Lens
 description: Salt air, soft gradients, and tidal patience. A coastal study arriving soon with notes on mood & minimalism.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1754699324/blog/through-the-lens/www.AleksTrpkovski.com_-_balnarring_beach_pastel_vr8u5e
 keywords:
@@ -8,7 +8,7 @@ keywords:
     - Pastel Light
     - Minimalism
     - Coast
-    - Through the Lens
+    - Through The Lens
     - Aleks Trpkovski
 slug: ocean-whispers
 type: page

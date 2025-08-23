@@ -1,5 +1,5 @@
 ---
-title: Liquid Cascades — Through the Lens
+title: Liquid Cascades — Through The Lens
 description: Waterfalls, flow states, and mist geometry. A forthcoming exploration of shutter craft and rainforest acoustics.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1754699393/blog/through-the-lens/www.trpkovski.com_-_phantom_falls_otway_national_park_lpai2d
 keywords:
@@ -8,7 +8,7 @@ keywords:
     - Rainforest
     - Nature
     - Texture
-    - Through the Lens
+    - Through The Lens
     - Aleks Trpkovski
 slug: liquid-cascades
 type: page
@@ -40,7 +40,7 @@ type: page
 
 <div class="mb-8"></div>
 
-<NuxtLink to="/through-the-lens" class="w-full text-lg sm:text-xl underline text-secondary text-center block font-bold">← Back to Through the Lens Gallery</NuxtLink>
+<NuxtLink to="/through-the-lens" class="w-full text-lg sm:text-xl underline text-secondary text-center block font-bold">← Back to Through The Lens Gallery</NuxtLink>
 
 <div class="mb-8"></div>
 

@@ -1,5 +1,5 @@
 ---
-title: Time in Motion — Through the Lens
+title: Time in Motion — Through The Lens
 description: Capturing moments where time flows and life moves — from bustling cityscapes to serene coastal scenes, where motion tells the story of place and time.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1754698923/blog/through-the-lens/www.AleksTrpkovski.com_-_Melbourne_Train_Trails_redited_qwg20h
 keywords:
@@ -12,7 +12,7 @@ keywords:
     - City
     - Coast
     - Movement
-    - Through the Lens
+    - Through The Lens
     - Aleks Trpkovski
 slug: time-in-motion
 type: page
