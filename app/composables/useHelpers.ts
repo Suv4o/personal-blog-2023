@@ -61,6 +61,7 @@ export function useHelpers() {
         "/through-the-lens/starlit-wonders/star-trails-at-pinnacles",
         "/through-the-lens/starlit-wonders/star-trails-at-pinnacles-phillip-island",
         "/through-the-lens/starlit-wonders/ss-speke-shipwreck",
+        "/through-the-lens/starlit-wonders/the-shipwreck-ss-speke-phillip-island",
         "/through-the-lens/starlit-wonders/star-trails",
         "/through-the-lens/starlit-wonders/star-trails-at-uluru",
         "/through-the-lens/time-in-motion/flinders-february-sunset",

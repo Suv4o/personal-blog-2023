@@ -62,6 +62,10 @@ gridImages:
       title: SS Speke Shipwreck
       location: Phillip Island, Victoria, Australia
       aspect: landscape
+    - filename: the-shipwreck-ss-speke-phillip-island.jpg
+      title: The Shipwreck SS Speke Phillip Island
+      location: Phillip Island, Victoria, Australia
+      aspect: portrait
     - filename: star-trails-big-lake-pelister.jpg
       title: Star Trails
       location: Big Lake Pelister, NorthMacedonia
