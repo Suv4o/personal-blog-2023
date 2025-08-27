@@ -85,6 +85,10 @@ gridImages:
 ::CardTags{description="cosmic-views, night-skies, galactic-dreams" :center="true"}
 ::
 
+<p class="text-center">
+These are some of my favourite astrophotography shots. Discover the stories behind them. Click on any image to see the full photo, the notes I took while capturing the night sky, and the exact location where it was shot.
+</p>
+
 <div class="mb-6"></div>
 
 ::ArrowDown
