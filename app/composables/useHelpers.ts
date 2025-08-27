@@ -79,6 +79,7 @@ export function useHelpers() {
         "/through-the-lens/time-in-motion/tenby-point-tree",
         "/through-the-lens/time-in-motion/yarra-boulevard",
         "/through-the-lens/wild-horizons/alfred-nicholas-gardens",
+        "/through-the-lens/wild-horizons/stirling-range",
         "/through-the-lens/wild-horizons/alfred-nicholson-gardens",
         "/through-the-lens/wild-horizons/ballarat-boat-house",
         "/through-the-lens/wild-horizons/blue-boat-house",

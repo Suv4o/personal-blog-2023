@@ -37,6 +37,10 @@ gridImages:
       title: Cape Woolamai Walk
       location: Cape Woolamai Walk, Victoria, Australia
       aspect: portrait
+    - filename: stirling-range.jpg
+      title: Stirling Range
+      location: Stirling Range National Park, Western Australia
+      aspect: landscape
     - filename: cape-woolamai.jpg
       title: Cape Woolamai
       location: Cape Woolamai, Victoria, Australia
