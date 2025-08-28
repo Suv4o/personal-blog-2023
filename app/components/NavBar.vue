@@ -11,9 +11,10 @@ const route = useRoute();
 const articles = ref();
 const query = ref("");
 const selectedArticle = ref<Article>();
+const mobileToggle = ref<any>(null);
 
 const hasArticlesPath = computed(() => {
-    return route.path.includes("/articles/") || /\/\d{4}\/\d{2}\/\d{2}\//.test(route.path);
+    return route.path.startsWith("/articles") || /\/\d{4}\/\d{2}\/\d{2}\//.test(route.path);
 });
 const hasKeyboardLabPath = computed(() => route.path.includes("/the-keyboard-lab"));
 const hasThroughTheLensPath = computed(() => route.path.includes("/through-the-lens"));
@@ -53,6 +54,11 @@ async function navigateToArticle() {
     }
 
     router.push(selectedArticle.value.path);
+}
+
+function closeMobileMenu() {
+    const btn = (mobileToggle.value as ComponentPublicInstance)?.$el ?? mobileToggle.value;
+    if (btn && typeof btn.click === "function") btn.click();
 }
 </script>
 
@@ -141,7 +147,8 @@ async function navigateToArticle() {
                 <div class="flex lg:hidden overflow-x-hidden">
                     <!-- Mobile menu button -->
                     <DisclosureButton
-                        class="relative inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        ref="mobileToggle"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white cursor-pointer"
                     >
                         <span class="absolute -inset-0.5" />
                         <span class="sr-only">Open main menu</span>
@@ -156,25 +163,32 @@ async function navigateToArticle() {
             <div class="space-y-1 px-2 pb-3 pt-2">
                 <NuxtLink
                     to="/articles"
-                    class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    @click="closeMobileMenu"
+                    class="block cursor-pointer text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    :class="{ 'router-link-active': hasArticlesPath }"
                 >
                     Articles
                 </NuxtLink>
                 <NuxtLink
                     to="/the-keyboard-lab"
-                    class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    @click="closeMobileMenu"
+                    class="block cursor-pointer text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    :class="{ 'router-link-active': hasKeyboardLabPath }"
                 >
                     The Keyboard Lab
                 </NuxtLink>
                 <NuxtLink
                     to="/through-the-lens"
-                    class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    @click="closeMobileMenu"
+                    class="block cursor-pointer text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    :class="{ 'router-link-active': hasThroughTheLensPath }"
                 >
                     Through The Lens
                 </NuxtLink>
                 <NuxtLink
                     to="/get-in-touch"
-                    class="block text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    @click="closeMobileMenu"
+                    class="block cursor-pointer text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                 >
                     Get In Touch
                 </NuxtLink>

@@ -79,7 +79,7 @@ function aspectClass(img: ImageItem) {
                             :alt="img.alt || img.title"
                             loading="lazy"
                             :widths="img.aspect === 'portrait' ? [320, 480, 640, 800, 900] : [320, 640, 960, 1200]"
-                            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            class="w-full object-cover transition-transform duration-300 group-hover:scale-105 !h-[112%]"
                         />
                     </div>
                 </NuxtLink>
