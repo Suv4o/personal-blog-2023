@@ -134,7 +134,7 @@ gridImages:
       location: Pillar Point, Victoria, Australia
       aspect: landscape
     - filename: teddys-lookout-lorne.jpg
-      title: Teddy's Lookout
+      title: Teddy's Lookout Lorne
       location: Teddy's Lookout, Lorne, Victoria, Australia
       aspect: square
     - filename: mundi-mundi-broken-hill.jpg
@@ -151,6 +151,10 @@ gridImages:
 
 ::CardTags{description="green-escape, earth-tones, into-the-wild" :center="true"}
 ::
+
+<p class="text-center">
+These are some of my favourite landscape shots. Discover the stories behind each scene. Click on any image to see the full photo, the notes I took while capturing it, and the exact location where it was shot.
+</p>
 
 <div class="mb-6"></div>
 
