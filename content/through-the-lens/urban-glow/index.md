@@ -64,7 +64,7 @@ gridImages:
     - filename: melbourne-the-first-day-of-winter.jpg
       title: Melbourne The First Day Of Winter
       location: Melbourne, Victoria, Australia
-      aspect: portrait
+      aspect: square
     - filename: melbourne-the-lego-house.jpg
       title: Melbourne The Lego House
       location: Melbourne, Victoria, Australia
