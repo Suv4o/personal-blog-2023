@@ -160,6 +160,7 @@ export function useHelpers() {
         "/through-the-lens/liquid-cascades/toorongo-falls",
         "/through-the-lens/liquid-cascades/wannon-falls-scenic-reserve",
         "/get-in-touch",
+        "/about-me",
         "/unsubscribe",
     ];
 
