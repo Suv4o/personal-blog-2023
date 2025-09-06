@@ -18,6 +18,7 @@ const hasArticlesPath = computed(() => {
 });
 const hasKeyboardLabPath = computed(() => route.path.includes("/the-keyboard-lab"));
 const hasThroughTheLensPath = computed(() => route.path.includes("/through-the-lens"));
+const hasAboutMePath = computed(() => route.path.startsWith("/about-me"));
 
 watch(
     () => selectedArticle.value,
@@ -91,6 +92,12 @@ function closeMobileMenu() {
                                 class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                                 :class="{ 'router-link-active': hasThroughTheLensPath }"
                                 >Through The Lens</NuxtLink
+                            >
+                            <NuxtLink
+                                to="/about-me"
+                                class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                                :class="{ 'router-link-active': hasAboutMePath }"
+                                >About Me</NuxtLink
                             >
                             <NuxtLink
                                 to="/get-in-touch"
@@ -184,6 +191,14 @@ function closeMobileMenu() {
                     :class="{ 'router-link-active': hasThroughTheLensPath }"
                 >
                     Through The Lens
+                </NuxtLink>
+                <NuxtLink
+                    to="/about-me"
+                    @click="closeMobileMenu"
+                    class="block cursor-pointer text-lg font-medium text-white px-3 py-2 relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
+                    :class="{ 'router-link-active': hasAboutMePath }"
+                >
+                    About Me
                 </NuxtLink>
                 <NuxtLink
                     to="/get-in-touch"
