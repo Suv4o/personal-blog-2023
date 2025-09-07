@@ -92,6 +92,10 @@ gridImages:
 ::CardTags{description="neon-nights, city-lights, street-frames" :center="true"}
 ::
 
+<p class="text-center">
+These are some of my favourite cityscape shots. Discover the stories behind the skyline. Click on any image to see the full photo, the notes I took while capturing it, and the exact location where it was shot.
+</p>
+
 <div class="mb-6"></div>
 
 ::ArrowDown
