@@ -80,6 +80,10 @@ gridImages:
 ::CardTags{description="falling-waters, mist-and-magic, nature-flow" :center="true"}
 ::
 
+<p class="text-center">
+These are some of my favourite waterfall shots. Discover the stories behind each cascade. Click on any image to see the full photo, the notes I took while capturing it, and the exact location where it was shot.
+</p>
+
 <div class="mb-6"></div>
 
 ::ArrowDown
