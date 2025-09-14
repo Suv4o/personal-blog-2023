@@ -24,11 +24,3 @@ Melbourne in autumn has a special charm, especially near the Yarra River where t
 ![Autumn Glow by the Yarra](/images/through-the-lens/urban-glow/melbourne-in-autumn.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

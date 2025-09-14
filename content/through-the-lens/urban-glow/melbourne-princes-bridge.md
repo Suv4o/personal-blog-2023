@@ -24,11 +24,3 @@ From the balcony of Hamer Hall, you get one of Melbourne’s most underrated vie
 ![A Christmas Sunset Over Melbourne CBD](/images/through-the-lens/urban-glow/melbourne-princes-bridge.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

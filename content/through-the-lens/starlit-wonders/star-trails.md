@@ -24,11 +24,3 @@ High in the Baba Mountain range, at 2,200 meters above sea level, lies the Large
 ![Star Trails Above Large Lake Pelister](/images/through-the-lens/starlit-wonders/star-trails-big-lake-pelister.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

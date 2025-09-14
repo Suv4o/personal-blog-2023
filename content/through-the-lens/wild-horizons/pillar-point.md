@@ -24,11 +24,3 @@ Pillar Point Lookout in Wilsons Promontory is one of those spots that makes you 
 ![Golden Hour at Pillar Point Lookout](/images/through-the-lens/wild-horizons/wilsons-prom-pillar-point.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

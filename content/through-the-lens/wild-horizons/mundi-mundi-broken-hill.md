@@ -24,11 +24,3 @@ Just outside the outback town of Broken Hill lies the famous Mundi Mundi Lookout
 ![Endless Horizons at Mundi Mundi Lookout](/images/through-the-lens/wild-horizons/mundi-mundi-broken-hill.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

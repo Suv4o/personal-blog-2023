@@ -24,11 +24,3 @@ Docklands in Melbourne has always had a modern, urban glow, and this photo takes
 ![Docklands, Wide and Bright](/images/through-the-lens/urban-glow/docklands-melbourne.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

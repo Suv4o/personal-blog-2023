@@ -24,11 +24,3 @@ On New Year’s Eve 2021, while camping nearby for the holidays, I decided to sk
 ![Starlit New Year’s Eve at Camel Rock](/images/through-the-lens/starlit-wonders/camel-rock-bermagui-nsw.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

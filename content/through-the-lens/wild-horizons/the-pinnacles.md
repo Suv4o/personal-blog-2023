@@ -24,11 +24,3 @@ The Pinnacles Lookout on Cape Woolamai is one of Phillip Island’s most breatht
 ![Golden Hour at The Pinnacles](/images/through-the-lens/wild-horizons/the-pinnacles.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

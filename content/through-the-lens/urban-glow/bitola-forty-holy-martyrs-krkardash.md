@@ -24,11 +24,3 @@ From the Forty Holy Martyrs Church at Krkardash, the snowy hills above Bitola op
 ![Winter Glow Over Bitola](/images/through-the-lens/urban-glow/bitola-forty-holy-martyrs-krkardash.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

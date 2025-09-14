@@ -24,11 +24,3 @@ Clifton Springs, a small coastal town near Geelong, is home to the remains of an
 ![The Forgotten Pier of Clifton Springs](/images/through-the-lens/ocean-whispers/clifton-springs-oct.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

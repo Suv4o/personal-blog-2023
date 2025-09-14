@@ -24,11 +24,3 @@ On our trip to Lombok, we made our way to the breathtaking Sendang Gile Waterfal
 ![Standing in Awe at Sendang Gile Waterfall](/images/through-the-lens/liquid-cascades/sendang-gile-waterfalls.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

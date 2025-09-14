@@ -15,11 +15,3 @@ type: photo
 ![Flinders February Sunset](/images/through-the-lens/time-in-motion/flinders-in-february-sunset.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

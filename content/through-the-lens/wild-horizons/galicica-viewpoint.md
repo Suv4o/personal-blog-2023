@@ -25,11 +25,3 @@ High above Lake Ohrid, Koritski Rid in Galicica National Park offers one of the 
 ![Blue Hour Over Trpejca from Koritski Rid at Galicica National Park](/images/through-the-lens/wild-horizons/galicica-vidikovec.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

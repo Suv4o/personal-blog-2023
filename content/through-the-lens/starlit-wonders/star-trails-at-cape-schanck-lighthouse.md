@@ -24,11 +24,3 @@ Pulpit Rock at Cape Schanck is one of Victoria’s most dramatic coastal landmar
 ![Star Trails at Pulpit Rock, Cape Schanck Lighthouse](/images/through-the-lens/starlit-wonders/camp-schanck-lighthouse.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

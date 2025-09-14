@@ -23,11 +23,3 @@ The SS Speke shipwreck at Kitty Miller Bay on Phillip Island is a hauntingly bea
 ![Stars Over the SS Speke](/images/through-the-lens/starlit-wonders/the-shipwreck-ss-speke-phillip-island.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -29,11 +29,3 @@ The lush, misty landscape of Carrington Falls in New South Wales is truly a sigh
 ![A Panoramic View of Carrington Falls](/images/through-the-lens/liquid-cascades/carrington-falls.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Standing on the William Barak Bridge, I watched Melbourne’s skyline transform 
 ![Urban Glow from William Barak Bridge](/images/through-the-lens/urban-glow/melbourne-batman-avenue.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

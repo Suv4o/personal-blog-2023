@@ -24,11 +24,3 @@ Teddy’s Lookout in Lorne is one of the most iconic spots along the Great Ocean
 ![Great Ocean Road in Motion](/images/through-the-lens/wild-horizons/teddys-lookout-lorne.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ The George Bass Coastal Walk in Victoria is one of those places that feels endle
 ![Golden Light on the George Bass Coast](/images/through-the-lens/wild-horizons/the-cliffes.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

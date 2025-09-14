@@ -24,11 +24,3 @@ San Remo, a charming coastal town just before Phillip Island in Victoria, is bes
 ![Golden Fields of San Remo](/images/through-the-lens/wild-horizons/sun-remo.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

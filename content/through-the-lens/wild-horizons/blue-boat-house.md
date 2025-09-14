@@ -25,11 +25,3 @@ The Blue Boat House in Perth, Western Australia, is one of the city’s most pho
 ![Blue Hour at the Blue Boat House](/images/through-the-lens/wild-horizons/blue-both-house-perth.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

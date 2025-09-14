@@ -24,11 +24,3 @@ Lorne, along Victoria’s iconic Great Ocean Road, turned into pure magic the ni
 ![Chasing Aurora Australis on the Great Ocean Road](/images/through-the-lens/starlit-wonders/aura-australia-lorne-great-ocean-road.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

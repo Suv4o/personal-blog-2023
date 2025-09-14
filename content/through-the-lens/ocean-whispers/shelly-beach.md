@@ -24,11 +24,3 @@ Shelly Beach in Portsea, Victoria, is one of those hidden gems along the Morning
 ![A Quiet Moment in Portsea](/images/through-the-lens/ocean-whispers/shelly-beach.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Teddy’s Lookout in Lorne is one of the most breathtaking vantage points along 
 ![Aurora Dreams at Teddy’s Lookout](/images/through-the-lens/starlit-wonders/aura-australia-lorne-teddys-lookout.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

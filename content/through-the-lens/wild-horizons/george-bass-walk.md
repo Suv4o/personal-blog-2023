@@ -24,11 +24,3 @@ The George Bass Coastal Walk in Victoria is a rugged trail with sweeping views o
 ![Standing Above the Coastline – George Bass Coastal Walk](/images/through-the-lens/wild-horizons/george-bass-walk.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Hawker Beach in Mount Martha, on Victoria’s Mornington Peninsula, is one of th
 ![Calm Between the Beach Boxes](/images/through-the-lens/ocean-whispers/mount-martha-mornington.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

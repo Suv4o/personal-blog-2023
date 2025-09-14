@@ -24,11 +24,3 @@ Yarra Boulevard in Melbourne offers hidden vantage points with stunning views of
 ![Leading Lines to the Melbourne CBD](/images/through-the-lens/time-in-motion/yarra-bulvd.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

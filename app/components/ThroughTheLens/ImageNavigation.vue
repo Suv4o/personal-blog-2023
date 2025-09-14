@@ -67,15 +67,20 @@ const nextImageUrl = computed(() => {
 </script>
 
 <template>
-    <div class="flex justify-between items-center my-8 px-4 al-container">
-        <Button v-if="hasPrevious" :link="previousImageUrl" classes="justify-start" :width="'width: 140px;'">
-            ← Previous
-        </Button>
-        <div v-else class="w-[140px]"></div>
+    <div class="al-container">
+        <div class="flex justify-between items-center my-8">
+            <Button v-if="hasPrevious" :link="previousImageUrl" classes="justify-start" :width="'width: 90px;'">
+                ← Previous
+            </Button>
+            <div v-else class="w-[90px]"></div>
 
-        <div class="text-center text-gray-600 text-sm">{{ currentIndex + 1 }} of {{ totalImages }}</div>
+            <div class="text-center text-base text-gray">{{ currentIndex + 1 }} of {{ totalImages }}</div>
 
-        <Button v-if="hasNext" :link="nextImageUrl" classes="justify-end" :width="'width: 140px;'"> Next → </Button>
-        <div v-else class="w-[140px]"></div>
+            <Button v-if="hasNext" :link="nextImageUrl" classes="justify-end" :width="'width: 90px;'"> Next → </Button>
+            <div v-else class="w-[90px]"></div>
+        </div>
+        <ArrowDown />
+        <div class="mb-8"></div>
+        <HorizontalRule />
     </div>
 </template>

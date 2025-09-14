@@ -24,11 +24,3 @@ Brighton Beach in Melbourne is known for its colourful bathing boxes and sweepin
 ![Lightning Over Melbourne’s Skyline](/images/through-the-lens/urban-glow/melbourne-lightning-storm.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

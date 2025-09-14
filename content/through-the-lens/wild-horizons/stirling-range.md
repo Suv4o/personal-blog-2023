@@ -24,11 +24,3 @@ The Stirling Range National Park in Western Australia is famous for its rugged p
 ![Through the Clouds - Stirling Range](/images/through-the-lens/wild-horizons/stirling-range.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

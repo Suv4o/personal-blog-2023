@@ -24,11 +24,3 @@ Hawker Beach in Mount Martha, on Victoria’s Mornington Peninsula, is a hidden 
 ![Wild Horizons at Mount Martha](/images/through-the-lens/wild-horizons/mt-marta.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Balnarring Beach on Victoria’s Mornington Peninsula is known for its wide sand
 ![Pastel Waves at Balnarring Beach](/images/through-the-lens/time-in-motion/blnaring-beach.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

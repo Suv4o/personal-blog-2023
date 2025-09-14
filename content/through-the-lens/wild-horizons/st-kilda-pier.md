@@ -24,11 +24,3 @@ St Kilda Pier in Melbourne has always been a spot where the city meets the sea, 
 ![The Lost View of St Kilda Pier](/images/through-the-lens/wild-horizons/st-kilda-pier-melbourne.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

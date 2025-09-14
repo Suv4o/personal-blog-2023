@@ -24,11 +24,3 @@ Just near Albert Park sits a building that locals often call â€œthe Lego Houseâ€
 ![The Lego House of Melbourne](/images/through-the-lens/urban-glow/melbourne-the-lego-house.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

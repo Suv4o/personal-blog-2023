@@ -24,11 +24,3 @@ Docklands in Melbourne is best known for its modern skyline and lively events, b
 ![Sunset Glow at Docklands](/images/through-the-lens/urban-glow/docklands-firelight-festival.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Along Victoria’s Great Ocean Road, the Twelve Apostles rise dramatically from 
 ![Sunset Glory on the Great Ocean Road](/images/through-the-lens/ocean-whispers/great-ocean-road-the-twelve-apostles.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Tenby Point in Victoria is home to the iconic Lonely Tree, a favourite among pho
 ![Lonely Tree at Tenby Point](/images/through-the-lens/time-in-motion/tenby-point-tree.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

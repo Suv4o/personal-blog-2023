@@ -24,11 +24,3 @@ Cape Schanck is usually known for its wild winds and rugged cliffs, but on this 
 ![Calm Night of Star Trails at Cape Schanck](/images/through-the-lens/starlit-wonders/cape-schanck-start-trials.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

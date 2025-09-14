@@ -24,11 +24,3 @@ Just outside Mildura in northwest Victoria lies the Perry Sandhills, a striking 
 ![Lost in the Perry Sandhills](/images/through-the-lens/wild-horizons/mildura-perry-sandhills.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

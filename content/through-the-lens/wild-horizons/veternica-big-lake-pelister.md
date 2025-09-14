@@ -24,11 +24,3 @@ Nestled high in Pelister National Park near my hometown of Bitola, Large Lake si
 ![Pelister National Park’s Large Lake View](/images/through-the-lens/wild-horizons/veternica-big-lake-pelister.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

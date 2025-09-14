@@ -25,11 +25,3 @@ Elwood Beach in Victoria is usually known for its lively shoreline and wide hori
 ![Silent Boat Under a Hazy Sun](/images/through-the-lens/ocean-whispers/boat-and-sunrise.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -15,11 +15,3 @@ type: photo
 ![Elwood Point Ormond](/images/through-the-lens/time-in-motion/elwood.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

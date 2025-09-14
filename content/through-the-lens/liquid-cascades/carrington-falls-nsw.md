@@ -25,11 +25,3 @@ Carrington Falls in New South Wales is one of those places that makes you stop i
 ![Framing the Falls](/images/through-the-lens/liquid-cascades/carrington-falls-nsw.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

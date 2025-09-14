@@ -24,11 +24,3 @@ Shelley Beach in Portsea, Victoria, is dotted with charming wooden jetties, each
 ![A Peaceful Moment on the Wooden Jetty](/images/through-the-lens/ocean-whispers/the-shelley-beach-portsea.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

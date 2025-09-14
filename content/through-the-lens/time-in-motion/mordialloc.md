@@ -24,11 +24,3 @@ This old jetty at Mordialloc Beach standing worn and weathered as if each tide t
 ![Dramatic Skies Over Mordialloc Beach](/images/through-the-lens/time-in-motion/mordialloc.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

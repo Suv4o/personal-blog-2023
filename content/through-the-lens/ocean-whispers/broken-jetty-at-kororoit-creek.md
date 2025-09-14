@@ -24,11 +24,3 @@ Kororoit Creek in Victoria has a quiet charm, and what really drew me here was a
 ![Broken Jetty Reflections at Kororoit Creek](/images/through-the-lens/ocean-whispers/broken-jetty-at-kororoit-creek.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

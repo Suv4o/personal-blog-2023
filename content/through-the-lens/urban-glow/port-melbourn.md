@@ -24,11 +24,3 @@ Sandridge Lookout gives a sweeping view across Port Melbourne, and this photo ho
 ![Pink Dawn at Port Melbourne](/images/through-the-lens/urban-glow/port-melbourn.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

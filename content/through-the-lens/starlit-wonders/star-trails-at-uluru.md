@@ -24,11 +24,3 @@ Deep in the heart of Australia’s Red Centre, Uluru rises from the desert like 
 ![Stars Above Uluru](/images/through-the-lens/starlit-wonders/uluru-stars.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

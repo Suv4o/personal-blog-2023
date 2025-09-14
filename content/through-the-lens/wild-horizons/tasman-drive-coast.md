@@ -24,11 +24,3 @@ The Tasman Drive Coast is one of those places you stumble upon by pure chance, a
 ![A Hidden Sunset on Tasman Drive Coast](/images/through-the-lens/wild-horizons/tasman-drive-coast-rye.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

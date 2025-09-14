@@ -24,11 +24,3 @@ Hidden deep in Victoria’s Great Otway National Park, Beauchamp Falls is one of
 ![Through the Ferns to the Falls](/images/through-the-lens/liquid-cascades/beauchamp-falls.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

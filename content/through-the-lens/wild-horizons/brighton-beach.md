@@ -24,11 +24,3 @@ Brighton Beach in Melbourne is best known for its colourful Bathing Boxes, a spo
 ![Brighton Bathing Boxes in Motion](/images/through-the-lens/wild-horizons/brighton-beach.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

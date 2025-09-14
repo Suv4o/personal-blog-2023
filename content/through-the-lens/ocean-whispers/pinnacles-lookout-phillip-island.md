@@ -24,11 +24,3 @@ Pinnacles Lookout on Cape Woolamai is one of Phillip Island’s most dramatic co
 ![Wild Seas at Pinnacles Lookout](/images/through-the-lens/ocean-whispers/pinnacles-lookout-phillip-island.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

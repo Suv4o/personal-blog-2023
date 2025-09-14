@@ -15,11 +15,3 @@ type: photo
 ![Corio Bay Geelong Pier](/images/through-the-lens/wild-horizons/corio-bay-geelong-pie.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

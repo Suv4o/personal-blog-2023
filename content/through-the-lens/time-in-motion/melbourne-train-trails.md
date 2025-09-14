@@ -24,11 +24,3 @@ Standing on the William Barak Bridge, one of Melbourne’s pedestrian walkways l
 ![Time in Motion Over Melbourne](/images/through-the-lens/time-in-motion/melbourne-train-trails.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

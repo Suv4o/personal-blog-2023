@@ -24,11 +24,3 @@ Pinnacles Lookout on Phillip Island is already stunning at sunset, but the real 
 ![Chasing the Milky Way at Pinnacles Lookout](/images/through-the-lens/starlit-wonders/milkyway-pinacles-mpe.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

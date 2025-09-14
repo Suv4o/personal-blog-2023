@@ -24,11 +24,3 @@ At the rugged Flinders Blowhole on the Mornington Peninsula, me and my wife arri
 ![Rainbow Over Flinders Blowhole](/images/through-the-lens/ocean-whispers/flinders-blowhole.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

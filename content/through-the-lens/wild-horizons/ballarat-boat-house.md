@@ -24,11 +24,3 @@ Lake Wendouree in Ballarat, Victoria, is a place where locals gather for sailing
 ![Vintage Boat House at Lake Wendouree](/images/through-the-lens/wild-horizons/ballarat-boat-house.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::
