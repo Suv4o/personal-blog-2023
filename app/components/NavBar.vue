@@ -74,9 +74,10 @@ function closeMobileMenu() {
                         </NuxtLink>
                     </div>
                     <div class="hidden lg:ml-6 lg:block">
-                        <div class="flex space-x-4">
+                        <div class="flex space-x-4" :key="route.fullPath">
                             <NuxtLink
                                 to="/articles"
+                                key="/articles"
                                 class="px-3 py-2 text-lg font-medium text-white relative hover:before:absolute hover:before:bottom-0 before:right-0 before:h-0.5 before:bg-primary before:w-full focus:outline-none focus:before:absolute focus:before:bottom-0"
                                 :class="{ 'router-link-active': hasArticlesPath }"
                                 >Articles</NuxtLink
@@ -167,7 +168,7 @@ function closeMobileMenu() {
         </div>
 
         <DisclosurePanel class="lg:hidden">
-            <div class="space-y-1 px-2 pb-3 pt-2">
+            <div class="space-y-1 px-2 pb-3 pt-2" :key="route.fullPath">
                 <NuxtLink
                     to="/articles"
                     @click="closeMobileMenu"
