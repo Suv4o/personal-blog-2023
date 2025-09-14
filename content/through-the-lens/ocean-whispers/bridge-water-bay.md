@@ -24,11 +24,3 @@ Bridgewater Bay in Victoria is known for its rugged rock formations and shallow 
 ![Surreal Waves at Low Tide](/images/through-the-lens/ocean-whispers/bridge-water-bay.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -17,11 +17,3 @@ Uluru, the sacred heart of Australia’s Red Centre, is often imagined under end
 ![Sunrise Fire Over Uluru](/images/through-the-lens/wild-horizons/sunrise-uluru.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

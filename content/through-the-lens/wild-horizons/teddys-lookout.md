@@ -24,11 +24,3 @@ Teddy’s Lookout in Lorne is known for its sweeping views of the Great Ocean Ro
 ![Stormy Skies Over Teddy’s Lookout](/images/through-the-lens/wild-horizons/teddys-lookout.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

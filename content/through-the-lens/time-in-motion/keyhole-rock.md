@@ -24,11 +24,3 @@ Bridgewater Bay’s Keyhole Rock is a striking formation that’s now unfortunat
 ![Keyhole Rock at Bridgewater Bay](/images/through-the-lens/time-in-motion/keyhole-rock.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

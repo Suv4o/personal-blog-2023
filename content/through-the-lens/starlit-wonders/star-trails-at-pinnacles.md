@@ -25,11 +25,3 @@ In 2017, I found myself in the otherworldly Pinnacles Desert of Western Australi
 ![Star Trails at Pinnacles](/images/through-the-lens/starlit-wonders/pinnacles-western-australia.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Knickers Beach in Narooma, New South Wales, is home to striking volcanic rock fo
 ![Exploring Glasshouse Rocks at Knickers Beach](/images/through-the-lens/time-in-motion/glasshouse-rocks-nsw.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

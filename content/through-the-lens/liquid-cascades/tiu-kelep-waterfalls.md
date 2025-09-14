@@ -24,11 +24,3 @@ Hidden deep in the lush forests of Lombok, Indonesia, Tiu Kelep Waterfalls feels
 ![Lost in the Jungle at Tiu Kelep Waterfalls](/images/through-the-lens/liquid-cascades/tiu-kelep-waterfalls.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

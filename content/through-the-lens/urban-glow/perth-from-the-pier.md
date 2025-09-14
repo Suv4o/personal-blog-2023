@@ -25,11 +25,3 @@ The South Perth Fishing Jetty offers one of the best views of the Perth skyline,
 ![Perth Skyline Panorama from South Perth Jetty](/images/through-the-lens/urban-glow/perth-from-the-piar.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

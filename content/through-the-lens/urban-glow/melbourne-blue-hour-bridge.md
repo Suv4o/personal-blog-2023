@@ -24,11 +24,3 @@ Standing by the Yarra River opposite the Melbourne Exhibition Centre, I wanted t
 ![Calm Waters, Bright City](/images/through-the-lens/urban-glow/melbourne-blue-hour-bridge.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

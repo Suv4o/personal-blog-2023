@@ -26,11 +26,3 @@ In May 2024, my phone buzzed with an alert from my aurora app. The index was pre
 ![Aurora at Split Point Lighthouse](/images/through-the-lens/starlit-wonders/aura-australia-airey-inlet-lighthouse.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Pinnacles Lookout on Phillip Island is one of those places that feels untouched 
 ![Star Trails Above the Pinnacles](/images/through-the-lens/starlit-wonders/pinnacles-phillip-island.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

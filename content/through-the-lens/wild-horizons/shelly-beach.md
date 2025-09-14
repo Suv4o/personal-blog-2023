@@ -24,11 +24,3 @@ Shelly Beach in Portsea, Victoria, is one of those quiet coastal spots that loca
 ![The Hidden Jetty at Shelly Beach](/images/through-the-lens/wild-horizons/shelly-beach-portsea.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

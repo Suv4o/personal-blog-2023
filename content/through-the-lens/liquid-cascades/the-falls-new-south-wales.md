@@ -24,11 +24,3 @@ Tucked away in New South Wales, The Falls is one of those hidden gems you won’
 ![Hidden Gem at The Falls, NSW](/images/through-the-lens/liquid-cascades/the-falls-new-south-wales.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

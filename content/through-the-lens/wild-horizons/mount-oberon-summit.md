@@ -24,11 +24,3 @@ Perched high above Wilsons Promontory, Mount Oberon Summit offers one of the mos
 ![Sunset Dreams from Mount Oberon Summit](/images/through-the-lens/wild-horizons/mount-oberon-summit-wilsons-promontory.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

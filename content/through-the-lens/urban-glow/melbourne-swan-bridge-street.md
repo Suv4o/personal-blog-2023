@@ -24,11 +24,3 @@ Just by the Yarra River, looking out toward the Swan Street Bridge and Melbourne
 ![Evening View of Melbourne CBD](/images/through-the-lens/urban-glow/melbourne-swan-bridge-street.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

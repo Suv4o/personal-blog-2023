@@ -24,11 +24,3 @@ Tucked away along Yarra Boulevard in Kew sits one of Melbourne’s most romantic
 ![The Most Romantic Sunset Spot in Melbourne](/images/through-the-lens/urban-glow/melbourne-city-sunset-view.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

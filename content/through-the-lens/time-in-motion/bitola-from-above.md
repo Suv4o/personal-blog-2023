@@ -28,11 +28,3 @@ Gazing out over my hometown of Bitola, North Macedonia, the view from the Church
 ![Bitola from Above](/images/through-the-lens/time-in-motion/bitola-from-above.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

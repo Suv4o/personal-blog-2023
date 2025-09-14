@@ -30,11 +30,3 @@ While our initial plan was a trip to the iconic Great Ocean Road, we decided to 
 ![Discovering Wannon Falls](/images/through-the-lens/liquid-cascades/wannon-falls-scenic-reserve.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Whisky Bay in Wilsons Promontory is one of those hidden gems where golden sand m
 ![On the Edge Together at Whisky Bay](/images/through-the-lens/wild-horizons/on-the-edge-together.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

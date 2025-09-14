@@ -24,11 +24,3 @@ Melbourne’s CBD always carries a unique energy, and on this summer evening alo
 ![A Summer Evening in Melbourne](/images/through-the-lens/urban-glow/photo-in-the-melbourne-city.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

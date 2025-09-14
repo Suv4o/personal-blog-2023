@@ -26,6 +26,3 @@ Exploring Otway National Park with my wife, we stumbled upon the Phantom Falls. 
 ![A Quiet Moment at Phantom Falls](/images/through-the-lens/liquid-cascades/phantom-falls-otway-national-park.jpg)
 
 <div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Tenby Point in Victoria, Australia, is known for its famous Lonely Tree, a solit
 ![The Lonely Tree at Tenby Point](/images/through-the-lens/ocean-whispers/the-tree-at-tenby-point.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

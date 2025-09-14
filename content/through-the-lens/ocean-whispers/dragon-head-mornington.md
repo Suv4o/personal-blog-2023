@@ -23,11 +23,3 @@ Dragon Head on the Mornington Peninsula is one of those places that feels almost
 ![Pastel Skies Over Dragon Head](/images/through-the-lens/ocean-whispers/dragon-head-mornington.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

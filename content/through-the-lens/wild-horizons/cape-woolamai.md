@@ -24,11 +24,3 @@ Cape Woolamai on Phillip Island is famous for its rugged cliffs and sweeping oce
 ![The Cliffs of Cape Woolamai](/images/through-the-lens/wild-horizons/cape-woolamai.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

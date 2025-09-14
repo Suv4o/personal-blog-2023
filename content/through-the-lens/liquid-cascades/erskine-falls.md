@@ -28,11 +28,3 @@ Erskine Falls is a stunning waterfall tucked away in the Otways, a lush, verdant
 ![Photographing the Giants of Erskine Falls](/images/through-the-lens/liquid-cascades/erskine-falls.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

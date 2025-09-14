@@ -24,11 +24,3 @@ Flinders Street Railway Station is one of Melbourne’s most iconic landmarks, b
 ![Sunset in Motion at Flinders Street Station](/images/through-the-lens/time-in-motion/flinders-in-february-sunset.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

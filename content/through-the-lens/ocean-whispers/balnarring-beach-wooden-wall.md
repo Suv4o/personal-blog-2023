@@ -24,11 +24,3 @@ Balnarring Beach in Victoria has these mysterious wooden fences standing quietly
 ![Wooden Guardians of Balnarring Beach](/images/through-the-lens/ocean-whispers/balnarring-beach-wooden-wall.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

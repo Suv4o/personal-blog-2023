@@ -24,11 +24,3 @@ Whisky Bay in Wilsons Promontory National Park is one of those places where time
 ![Whisky Bay Sunset at Wilsons Promontory](/images/through-the-lens/wild-horizons/wilson-promontory-national-park-whisky-bay.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

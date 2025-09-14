@@ -24,11 +24,3 @@ The Pinnacles Lookout at Cape Woolamai, Phillip Island, is one of those places w
 ![Sunset Rays at the Pinnacles, Phillip Island](/images/through-the-lens/ocean-whispers/pinnacles-phillip-island.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

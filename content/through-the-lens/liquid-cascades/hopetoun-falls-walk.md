@@ -24,11 +24,3 @@ Hopetoun Falls in Victoria’s Great Otway National Park is one of those places 
 ![Hand in Hand at Hopetoun Falls](/images/through-the-lens/liquid-cascades/hopetoun-falls-walk.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

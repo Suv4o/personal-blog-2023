@@ -24,11 +24,3 @@ Loch Ard Gorge, along Victoria’s iconic Great Ocean Road, is a place where rug
 ![Sunrise Whispers at Loch Ard Gorge](/images/through-the-lens/ocean-whispers/lord-arch-great-ocean-road.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

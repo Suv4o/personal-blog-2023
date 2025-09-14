@@ -24,11 +24,3 @@ From the rooftop of a tucked-away parking lot in Melbourne, I found one of those
 ![Golden Hour Over Docklands](/images/through-the-lens/urban-glow/melbourne-docklands-from-above.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

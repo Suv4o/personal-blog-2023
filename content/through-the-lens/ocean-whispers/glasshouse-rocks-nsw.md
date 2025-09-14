@@ -24,11 +24,3 @@ Glasshouse Rocks at Knickers Beach in Narooma is one of those places that feels 
 ![Lost in the Scale](/images/through-the-lens/ocean-whispers/glasshouse-rocks-nsw.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

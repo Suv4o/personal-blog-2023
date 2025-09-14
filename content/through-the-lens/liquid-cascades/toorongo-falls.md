@@ -28,11 +28,3 @@ Standing on the wooden lookout platform at Toorongo Falls feels like stepping in
 ![Long Exposure at Toorongo Falls](/images/through-the-lens/liquid-cascades/toorongo-falls.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

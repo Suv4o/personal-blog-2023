@@ -24,11 +24,3 @@ The Melbourne Star once lit up Docklands with its slow, graceful rotations, and 
 ![When the Wheel Turned in Docklands](/images/through-the-lens/time-in-motion/melbourne-star.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ From the William Barak Bridge, Melbourne’s skyline comes alive as the workday 
 ![Melbourne City Lights](/images/through-the-lens/time-in-motion/melbourne-city.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

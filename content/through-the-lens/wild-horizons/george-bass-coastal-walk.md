@@ -24,11 +24,3 @@ The George Bass Coastal Walk in Victoria is a rugged stretch of coastline where 
 ![Where Cliffs Meet the Horizon](/images/through-the-lens/wild-horizons/george-bass-coastal-walk.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

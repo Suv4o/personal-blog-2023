@@ -24,11 +24,3 @@ Kow Swamp, tucked away in northern Victoria, is a place I stumbled upon almost b
 ![Reflections at Kow Swamp](/images/through-the-lens/wild-horizons/kow-swamp.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

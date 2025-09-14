@@ -24,11 +24,3 @@ Balnarring Beach, tucked along Victoria’s coastline, is home to a unique woode
 ![When the Tide Meets the Jetty](/images/through-the-lens/ocean-whispers/balnarring-beach.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

@@ -24,11 +24,3 @@ Point Ormond Lookout in Elwood is a small hill by the beach, a favourite spot fo
 ![Clouds Over Point Ormond](/images/through-the-lens/time-in-motion/elwood.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

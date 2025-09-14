@@ -24,11 +24,3 @@ Somewhere between Melbourne and Bendigo, I came across this lone tree perched on
 ![Lonely Tree on the Horizon](/images/through-the-lens/wild-horizons/lonely-tree.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

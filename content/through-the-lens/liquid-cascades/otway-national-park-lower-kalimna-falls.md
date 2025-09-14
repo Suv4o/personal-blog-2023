@@ -25,11 +25,3 @@ Hidden deep within the lush rainforest of Otway National Park lies the Lower Kal
 ![Ferns and Falls](/images/through-the-lens/liquid-cascades/otway-national-park-lower-kalimna-falls.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

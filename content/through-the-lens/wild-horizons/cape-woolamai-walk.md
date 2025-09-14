@@ -24,11 +24,3 @@ Cape Woolamai Walk on Phillip Island is known for its dramatic cliffs, rugged co
 ![Stormy Horizons at Cape Woolamai](/images/through-the-lens/wild-horizons/cape-woolamai-walk.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

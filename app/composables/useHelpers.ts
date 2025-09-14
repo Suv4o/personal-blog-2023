@@ -1,4 +1,6 @@
-export function useHelpers() {
+import type { Ref } from "vue";
+
+export function useHelpers(article?: Ref<any>) {
     const route = useRoute();
 
     function delay(timeout = 1000) {
@@ -15,6 +17,16 @@ export function useHelpers() {
 
     const isThroughTheLensSlugPage = computed(() => {
         return route.path.startsWith("/through-the-lens/") && route.path !== "/through-the-lens";
+    });
+
+    const isPhotoPage = computed(() => {
+        return isThroughTheLensSlugPage.value && article?.value?.type === "photo";
+    });
+
+    const currentImageSlug = computed(() => {
+        if (!isPhotoPage.value) return "";
+        const pathParts = route.path.split("/").filter(Boolean);
+        return pathParts[pathParts.length - 1] || "";
     });
 
     const pagePaths = [
@@ -191,8 +203,9 @@ export function useHelpers() {
         listingPaths,
         isBlogArticle,
         isListingPage,
-
         isThroughTheLensSlugPage,
+        isPhotoPage,
+        currentImageSlug,
         delay,
     };
 }

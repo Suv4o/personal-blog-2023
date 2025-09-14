@@ -26,11 +26,3 @@ Great Ocean Road is a place I’ve visited many times, but this night was differ
 ![Under the Aurora at Aireys Inlet](/images/through-the-lens/starlit-wonders/aura-australia-airey-inlet-watching.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

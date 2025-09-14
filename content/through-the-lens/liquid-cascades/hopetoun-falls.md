@@ -24,11 +24,3 @@ Deep in the Otways along the Great Ocean Road, Hopetoun Falls feels like a hidde
 ![Where the Forest Meets the Falls](/images/through-the-lens/liquid-cascades/hopetoun-falls.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

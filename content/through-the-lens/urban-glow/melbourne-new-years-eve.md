@@ -24,11 +24,3 @@ From Brighton’s Green Point City View, you get one of the best panoramic looks
 ![Melbourne’s New Year’s Eve Glow from Brighton Beach](/images/through-the-lens/urban-glow/melbourne-new-years-eve.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

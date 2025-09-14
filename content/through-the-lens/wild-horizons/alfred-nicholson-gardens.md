@@ -24,11 +24,3 @@ Nestled in the Dandenong Ranges, the Alfred Nicholas Memorial Garden is a favour
 ![Autumn Reds at Alfred Nicholas Gardens](/images/through-the-lens/wild-horizons/alfred-nicholson-gardens.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

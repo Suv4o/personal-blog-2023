@@ -3,9 +3,11 @@ import type { Article } from "~/types";
 
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
-const { pagePaths, listingPaths, isThroughTheLensSlugPage } = useHelpers();
 const isError = ref(false);
 const article = ref<Partial<Article>>();
+const galleryImages = ref<any[]>([]);
+
+const { pagePaths, listingPaths, isThroughTheLensSlugPage, isPhotoPage, currentImageSlug } = useHelpers(article);
 
 async function getCurrentArticle() {
     try {
@@ -20,7 +22,31 @@ async function getCurrentArticle() {
     }
 }
 
+async function getGalleryImages() {
+    if (!isThroughTheLensSlugPage.value) return [];
+
+    try {
+        // Extract gallery name from route (e.g., "/through-the-lens/starlit-wonders/some-image" -> "starlit-wonders")
+        const pathParts = route.path.split("/").filter(Boolean);
+        if (pathParts.length >= 3 && pathParts[0] === "through-the-lens") {
+            const galleryName = pathParts[1];
+            const galleryPath = `/through-the-lens/${galleryName}`;
+
+            const { data: galleryPage } = await useAsyncData(`gallery-${galleryName}`, () => {
+                return queryCollection("content").path(galleryPath).first();
+            });
+
+            return (galleryPage.value as any)?.meta?.gridImages || [];
+        }
+    } catch (error) {
+        console.error("Error fetching gallery images:", error);
+    }
+
+    return [];
+}
+
 article.value = await getCurrentArticle();
+galleryImages.value = await getGalleryImages();
 
 if (article.value && !Object.keys(article.value).length) {
     isError.value = true;
@@ -84,6 +110,11 @@ const isListingPage = computed(() => {
         class="al-container"
         :class="[(isBlogArticle || isThroughTheLensSlugPage) && 'blog-page']"
         :key="route.fullPath"
+    />
+    <ThroughTheLensImageNavigation
+        v-if="isPhotoPage && galleryImages.length > 0"
+        :images="galleryImages"
+        :current-image-slug="currentImageSlug"
     />
     <FurtherReading v-if="isBlogArticle && !isError" />
 </template>

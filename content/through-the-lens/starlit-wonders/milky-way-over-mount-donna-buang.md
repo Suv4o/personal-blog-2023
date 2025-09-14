@@ -24,11 +24,3 @@ Mount Donna Buang, tucked away in the Yarra Ranges National Park, is one of thos
 ![Milky Way at Mount Donna Buang](/images/through-the-lens/starlit-wonders/mount-donna-buang-yarra-ranges-national-park.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

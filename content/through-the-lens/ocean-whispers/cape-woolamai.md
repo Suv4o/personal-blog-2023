@@ -24,11 +24,3 @@ Magiclands Steps at Cape Woolamai is a spot you might easily pass on the way to 
 ![Ocean Glow at Cape Woolamai](/images/through-the-lens/ocean-whispers/cape-woolamai.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::

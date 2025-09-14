@@ -24,11 +24,3 @@ The Melbourne skyline on the very first day of winter. This was the building whe
 ![Melbourne Skyline on the First Day of Winter](/images/through-the-lens/urban-glow/melbourne-the-first-day-of-winter.jpg)
 
 <div class="mb-8"></div>
-
-::ArrowDown
-::
-
-<div class="mb-8"></div>
-
-::HorizontalRule
-::
