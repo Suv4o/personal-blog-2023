@@ -1,10 +1,7 @@
-import { dirname, join, resolve } from "path";
-import { fileURLToPath } from "url";
+import { join } from "path";
 
-export function getEmbeddingsFilePath(importMetaUrl: string) {
-    const __filename = fileURLToPath(importMetaUrl);
-    const __dirname = dirname(__filename);
-    const projectRoot = resolve(__dirname, "../..");
+export function getEmbeddingsFilePath() {
+    const projectRoot = process.cwd();
     const embeddingsDir = join(projectRoot, "server/utils");
     const embeddingsFilePath = join(embeddingsDir, "articles-embeddings.json");
 

@@ -78,7 +78,7 @@ async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
     const jsonString = JSON.stringify(articlesEmbeddings, null, 2);
 
     // Get the path to the embeddings file
-    const { embeddingsDir, embeddingsFilePath } = getEmbeddingsFilePath(import.meta.url);
+    const { embeddingsDir, embeddingsFilePath } = getEmbeddingsFilePath();
 
     // Make sure the directory exists
     if (!fs.existsSync(embeddingsDir)) {

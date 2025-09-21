@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
         const { slug } = getRouterParams(event);
 
         // Get the path to the embeddings file
-        const { embeddingsFilePath } = getEmbeddingsFilePath(import.meta.url);
+        const { embeddingsFilePath } = getEmbeddingsFilePath();
 
         // Check if the file exists
         try {
