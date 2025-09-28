@@ -99,10 +99,8 @@ async function getArticles() {
     try {
         const [number, posts] = await Promise.all([getTheNumberOfAllArticles(), getArticlesFromCurrentPage()]);
         emit("countLoadedArticles", posts?.length);
-        if (import.meta.prerender) {
-            articlesCount.value = number;
-            articles.value = posts;
-        }
+        articlesCount.value = number;
+        articles.value = posts;
         return [number, posts];
     } catch (error) {
         fetchCompleted.value = true;
@@ -115,13 +113,6 @@ watch(
         fetchCompleted.value = true;
     }
 );
-
-onMounted(async () => {
-    await nextTick();
-    const [number, posts] = (await getArticles()) as [number, Article[]];
-    articlesCount.value = number;
-    articles.value = posts;
-});
 
 await getArticles();
 </script>

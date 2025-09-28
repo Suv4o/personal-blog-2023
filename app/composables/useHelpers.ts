@@ -3,6 +3,10 @@ import type { Ref } from "vue";
 export function useHelpers(article?: Ref<any>) {
     const route = useRoute();
 
+    const isClient = computed(() => {
+        return import.meta.client;
+    });
+
     function delay(timeout = 1000) {
         return new Promise((resolve) => setTimeout(resolve, timeout));
     }
@@ -206,6 +210,7 @@ export function useHelpers(article?: Ref<any>) {
         isThroughTheLensSlugPage,
         isPhotoPage,
         currentImageSlug,
+        isClient,
         delay,
     };
 }

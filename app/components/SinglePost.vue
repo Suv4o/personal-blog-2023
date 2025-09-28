@@ -6,6 +6,7 @@ const contentBlockRef = ref();
 const descriptionRef = ref();
 const lineClamp = ref();
 const route = useRoute();
+const { isClient } = useHelpers();
 
 defineProps({
     index: {
@@ -129,7 +130,9 @@ const basePath = computed(() => {
 </script>
 
 <template>
-    <ArrowDown v-if="startWithArrow && index === 0" />
+    <ClientOnly>
+        <ArrowDown v-if="startWithArrow && index === 0" />
+    </ClientOnly>
     <NuxtLink
         :to="url"
         class="block w-full h-80 bg-beige rounded-md my-9 lg:hover:scale-105 lg:focus:scale-105 focus:outline-none transition-transform duration-300 ease-in-out card_shadow overflow-hidden"
@@ -151,15 +154,21 @@ const basePath = computed(() => {
             </div>
         </div>
     </NuxtLink>
-    <ArrowDown v-if="index !== length - 1" />
-    <ArrowDown v-if="endWithArrow && index === length - 1" />
+    <ClientOnly>
+        <ArrowDown v-if="index !== length - 1" />
+    </ClientOnly>
+    <ClientOnly>
+        <ArrowDown v-if="endWithArrow && index === length - 1" />
+    </ClientOnly>
     <div class="mt-10" v-if="readMore && index === length - 1">
         <Button link="/articles">Read More Articles →</Button>
-        <div class="mt-10 mb-6">
-            <ArrowDown />
-        </div>
+        <ClientOnly>
+            <div class="mt-10 mb-6">
+                <ArrowDown />
+            </div>
+        </ClientOnly>
     </div>
-    <div v-if="pagination && index === length - 1">
+    <div v-show="pagination && index === length - 1 && isClient">
         <div class="flex justify-between flex-wrap">
             <Button
                 v-if="hasPreviousPage"
