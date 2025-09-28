@@ -80,7 +80,7 @@ watch(
     () => {
         relatedArticles.value = processRelatedArticles();
     },
-    { immediate: true }
+    { immediate: true, deep: true }
 );
 
 const posts = computed(() => {
