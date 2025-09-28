@@ -27,7 +27,7 @@ function processRelatedArticles() {
         return [] as Article[];
     }
 
-    if (similarArticlesData.value && similarArticlesData.value.data.length) {
+    if (similarArticlesData.value && similarArticlesData.value.data?.length) {
         return similarArticlesData.value.data
             .map((item) => {
                 return filteredArticles.find((article: Article) => article.path === item.articlePath);
