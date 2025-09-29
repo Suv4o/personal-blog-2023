@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import type { Article } from "~/types";
 
+interface SimilarArticlesResponse {
+    success: boolean;
+    data: Array<{
+        articlePath: string;
+        embeddings: number[];
+    }>;
+    requestedPath?: string | string[];
+    error?: string;
+}
+
 const route = useRoute();
 const relatedArticles = ref<Article[]>([]);
 
@@ -11,8 +21,30 @@ const { data: allArticles } = useAsyncData(route.fullPath + "-further-reading", 
 
 const currentArticlePath = route.path;
 
-const { data: similarArticlesData } = await useAsyncData(route.fullPath + "-similar-articles", async () => {
-    return await $fetch(`/api/similar-articles${currentArticlePath}`);
+const { data: similarArticlesRaw } = await useAsyncData<SimilarArticlesResponse | string>(
+    route.fullPath + "-similar-articles",
+    async () => {
+        return await $fetch(`/api/similar-articles${currentArticlePath}`);
+    }
+);
+
+const similarArticlesData = computed<SimilarArticlesResponse | null>(() => {
+    const payload = similarArticlesRaw.value;
+
+    if (!payload) {
+        return null;
+    }
+
+    if (typeof payload === "string") {
+        try {
+            return JSON.parse(payload) as SimilarArticlesResponse;
+        } catch (error) {
+            console.error("Failed to parse similar articles payload", error);
+            return null;
+        }
+    }
+
+    return payload;
 });
 
 // This function is now synchronous and works with already fetched data
@@ -78,9 +110,6 @@ function processRelatedArticles() {
 watch(
     [allArticles, similarArticlesData],
     () => {
-        console.log("All Articles:", allArticles.value);
-        console.log("Similar Articles Data:", similarArticlesData.value);
-        console.log("Similar Articles Data:", typeof similarArticlesData.value);
         relatedArticles.value = processRelatedArticles();
     },
     { immediate: true }
