@@ -80,6 +80,7 @@ watch(
     () => {
         console.log("All Articles:", allArticles.value);
         console.log("Similar Articles Data:", similarArticlesData.value);
+        console.log("Similar Articles Data:", typeof similarArticlesData.value);
         relatedArticles.value = processRelatedArticles();
     },
     { immediate: true }
