@@ -11,7 +11,7 @@ const { data: allArticles } = useAsyncData(route.fullPath + "-further-reading", 
 
 const currentArticlePath = route.path;
 
-const { data: similarArticlesData } = useAsyncData(route.fullPath + "-similar-articles", async () => {
+const { data: similarArticlesData } = await useAsyncData(route.fullPath + "-similar-articles", async () => {
     return await $fetch(`/api/similar-articles${currentArticlePath}`);
 });
 
@@ -78,9 +78,11 @@ function processRelatedArticles() {
 watch(
     [allArticles, similarArticlesData],
     () => {
+        console.log("All Articles:", allArticles.value);
+        console.log("Similar Articles Data:", similarArticlesData.value);
         relatedArticles.value = processRelatedArticles();
     },
-    { immediate: true, deep: true }
+    { immediate: true }
 );
 
 const posts = computed(() => {
