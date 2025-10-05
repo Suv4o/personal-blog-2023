@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SinglePostEmptySkeleton from "./SinglePostEmptySkeleton.vue";
 import type { Article } from "~/types";
 
 const props = defineProps({
@@ -119,6 +120,13 @@ await getArticles();
 
 <template>
     <div>
+        <SinglePostEmptySkeleton
+            v-if="!fetchCompleted"
+            :count="limit"
+            :readMore="readMore"
+            :startWithArrow="startWithArrow"
+            :endWithArrow="endWithArrow"
+        />
         <div v-show="fetchCompleted" v-for="(article, index) in articles" :key="article.path">
             <SinglePost
                 :index="index"
