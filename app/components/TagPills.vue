@@ -45,7 +45,9 @@
                                                         ? tagDetails[18].link
                                                         : tag == 'Entertainment'
                                                           ? tagDetails[19].link
-                                                          : tagDetails[20].link
+                                                          : tag == 'AWS'
+                                                            ? tagDetails[21].link
+                                                            : tagDetails[20].link
             }`"
         >
             <div
@@ -90,7 +92,9 @@
                                                             ? 'bg-tech'
                                                             : tag == 'Entertainment'
                                                               ? 'bg-entertainment'
-                                                              : 'bg-other',
+                                                              : tag == 'AWS'
+                                                                ? 'bg-aws'
+                                                                : 'bg-other',
                     small ? 'text-xs' : 'text-sm',
                     tag == 'Vue.js'
                         ? '!text-white'
@@ -132,7 +136,9 @@
                                                             ? 'text-white'
                                                             : tag == 'Entertainment'
                                                               ? 'text-black'
-                                                              : 'text-white',
+                                                              : tag == 'AWS'
+                                                                ? 'text-white'
+                                                                : 'text-white',
                 ]"
             >
                 {{ tag }}
@@ -176,6 +182,7 @@ export default {
                 { bg: "#d4703e", txt: "#3d3d3d", link: "/hobby" },
                 { bg: "#83a198", txt: "#3d3d3d", link: "/tech" },
                 { bg: "#dba85a", txt: "#3d3d3d", link: "/entertainment" },
+                { bg: "#242B37", txt: "#ffffff", link: "/aws" },
                 { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
             ],
         };

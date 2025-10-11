@@ -48,6 +48,7 @@ export default {
                 tech: "rgb(var(--color-tech) / <alpha-value>)", // #83a198
                 entertainment: "rgb(var(--color-entertainment) / <alpha-value>)", // #dba85a
                 other: "rgb(var(--color-other) / <alpha-value>)", // #ee5f53
+                aws: "rgb(var(--color-aws) / <alpha-value>)", // #242B37
                 // Through The Lens custom tag colors
                 "cosmic-views": "rgb(var(--color-cosmic-views) / <alpha-value>)", // #5B5FFF
                 "night-skies": "rgb(var(--color-night-skies) / <alpha-value>)", // #4E4CCF
