@@ -3,16 +3,21 @@ title: Decoupling a System with Nest.js Microservices
 description: Turn your Nest.js app into a distributed microservice system. Discover how message queues and shared libraries help create a loosely coupled backend. Each service handles its own responsibility, from order creation to persistence and notifications, without waiting on others. This approach makes your backend more resilient, fault-tolerant, and ready for real-world workloads.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1760140132/blog/decoupling-a-system-with-nestjs-microservices/decoupling-a-system-with-nestjs-microservices_hvyd6p
 keywords:
-    - CSS hover
-    - CSS media queries
-    - detect hover devices
-    - CSS @media hover
-    - hover effects mobile
-    - responsive CSS hover
-    - touch vs hover
-    - hover detection
-    - cross-device CSS
-    - CSS accessibility
+    - Nest.js microservices
+    - Nest.js monorepo
+    - decoupled architecture
+    - AWS SQS Nest.js
+    - Amazon SES Nest.js
+    - DynamoDB Nest.js
+    - message queues
+    - microservice communication
+    - event-driven architecture
+    - order processing system
+    - LocalStack
+    - Node.js backend
+    - SQS message patterns
+    - Nest.js project structure
+    - scalable backend design
 type: page
 blog: post
 published: 11th October 2025
@@ -57,6 +62,8 @@ order-microservices/
 
 - **Apps** → Each folder is a microservice.
 - **Libs** → Shared libraries so we don't repeat ourselves (AWS clients, DTOs, utilities).
+
+If you want to learn how to set up a Nest.js monorepo, check out my other post: [How to Structure a Nest.js Project for Microservices (Monorepo Setup)](/2025/10/12/how-to-structure-a-nestjs-project-for-microservices-monorepo-setup).
 
 ## Meet the Services
 
