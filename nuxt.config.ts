@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import { checker } from "vite-plugin-checker";
 import fs from "fs";
 import path from "path";
 import { isBlogPostUrl } from "./app/utils/url-helpers";
@@ -152,7 +153,7 @@ export default defineNuxtConfig({
     },
 
     vite: {
-        plugins: [tailwindcss()],
+        plugins: [tailwindcss(), checker({ vueTsc: true })],
     },
 
     nitro: {
