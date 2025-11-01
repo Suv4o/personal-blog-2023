@@ -162,7 +162,7 @@ export default defineNuxtConfig({
             concurrency: 1,
             retry: 3,
             routes: [...(await getAllMarkdownFiles("content"))],
-            ignore: ["/2"],
+            ignore: [(route) => route === "/2"],
         },
     },
 
