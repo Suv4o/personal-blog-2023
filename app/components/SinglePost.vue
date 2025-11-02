@@ -69,6 +69,10 @@ defineProps({
         type: Number,
         default: 1,
     },
+    totalPages: {
+        type: Number,
+        default: 0,
+    },
 });
 
 onMounted(async () => {
@@ -169,19 +173,22 @@ const basePath = computed(() => {
         </ClientOnly>
     </div>
     <div v-show="pagination && index === length - 1 && isClient">
-        <div class="flex justify-between flex-wrap">
-            <Button
-                v-if="hasPreviousPage"
-                :link="`${basePath}/${pageNumber - 1}`"
-                classes="mt-2"
-                :width="'width: 130px;'"
-                >← Previous</Button
-            >
-            <div v-else></div>
-            <Button v-if="hasNextPage" :link="`${basePath}/${pageNumber + 1}`" classes="mt-2" :width="'width: 130px;'"
-                >Next →</Button
-            >
-            <div v-else></div>
+        <div class="flex justify-center items-center gap-2 sm:gap-4">
+            <div class="flex-1 flex justify-start">
+                <div v-if="hasPreviousPage" class="w-[130px]">
+                    <Button :link="`${basePath}/${pageNumber - 1}`" classes="w-full"> ← Previous </Button>
+                </div>
+            </div>
+
+            <div v-if="totalPages > 1" class="text-center text-sm sm:text-base text-gray whitespace-nowrap">
+                {{ pageNumber }} of {{ totalPages }}
+            </div>
+
+            <div class="flex-1 flex justify-end">
+                <div v-if="hasNextPage">
+                    <Button :link="`${basePath}/${pageNumber + 1}`" classes="w-full"> Next → </Button>
+                </div>
+            </div>
         </div>
         <div class="mt-6 mb-6">
             <ArrowDown />

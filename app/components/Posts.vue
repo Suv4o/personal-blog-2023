@@ -52,6 +52,10 @@ const hasPreviousPage = computed(() => {
     return pageNumber.value > 1;
 });
 
+const totalPages = computed(() => {
+    return Math.ceil(articlesCount.value / props.limit);
+});
+
 async function getTheNumberOfAllArticles() {
     if (!searchTerm.value.length) {
         const { data } = await useAsyncData(route.fullPath + "-number-of-pages", () => {
@@ -144,6 +148,7 @@ await getArticles();
                 :hasNextPage="hasNextPage"
                 :hasPreviousPage="hasPreviousPage"
                 :pageNumber="pageNumber"
+                :totalPages="totalPages"
             />
         </div>
     </div>
