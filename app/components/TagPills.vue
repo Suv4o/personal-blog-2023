@@ -46,8 +46,8 @@
                                                         : tag == 'Entertainment'
                                                           ? tagDetails[19].link
                                                           : tag == 'AWS'
-                                                            ? tagDetails[21].link
-                                                            : tagDetails[20].link
+                                                            ? tagDetails[20].link
+                                                            : tagDetails[21].link
             }`"
         >
             <div
@@ -97,7 +97,7 @@
                                                                 : 'bg-other',
                     small ? 'text-xs' : 'text-sm',
                     tag == 'Vue.js'
-                        ? '!text-white'
+                        ? 'text-white!'
                         : tag == 'JavaScript'
                           ? 'text-secondary'
                           : tag == 'FrontEnd'
