@@ -34,6 +34,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="/audio/11/16/make-your-audio-play-with-real-time-transcript-highlighting/podcast_episode.mp3" :transcriptSrc="/audio/11/16/make-your-audio-play-with-real-time-transcript-highlighting/podcast_episode_transcript.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1763271005/blog/make-your-audio-play-with-real-time-transcript-highlighting/make-your-audio-play-with-real-time-transcript-highlighting_hgmjsl)
 
 This blog article is a continuation of my previous post where I showed you how to convert markdown into podcasts using OpenAI agents. If you haven't read that one yet, you can <NuxtLink to="/2025/11/13/turning-markdown-into-podcasts-with-openai-agents">check it out here</NuxtLink>.
