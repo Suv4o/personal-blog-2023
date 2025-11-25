@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from "vue";
-
 const props = defineProps<{
     audioSrc: string;
     transcriptSrc: string;
@@ -120,28 +118,29 @@ const scrollToActiveSegment = () => {
 };
 
 // Watch for showTranscript to scroll to active segment when opened
-watch(showTranscript, (newVal) => {
+watch(showTranscript, async (newVal) => {
     if (newVal && activeSegmentIndex.value !== -1) {
+        await nextTick();
         scrollToActiveSegment();
     }
 });
 </script>
 
 <template>
-    <div
-        class="my-6 rounded-xl bg-secondary text-white shadow-lg transition-all duration-300 overflow-hidden"
-        :class="isExpanded ? 'p-5' : 'p-3 px-4'"
-    >
+    <div class="my-6 rounded-lg bg-secondary text-white shadow-lg transition-all duration-300 overflow-hidden p-3 px-4">
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <!-- Play Icon (Triangle) -->
                 <button
                     @click="togglePlay"
-                    class="focus:outline-none hover:opacity-80 transition-opacity p-1 cursor-pointer"
+                    class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-secondary/50 hover:bg-gray-secondary transition-all duration-200 focus:outline-none cursor-pointer group"
                     aria-label="Play/Pause"
                 >
-                    <IconPlay v-if="!isPlaying" class="w-6 h-6 text-white" />
-                    <IconPause v-else class="w-6 h-6 text-white" />
+                    <IconPlay
+                        v-if="!isPlaying"
+                        class="w-5 h-5 text-white group-hover:scale-110 transition-transform ml-1"
+                    />
+                    <IconPause v-else class="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
                 </button>
                 <span class="text-lg font-medium">Play audio summary</span>
             </div>
@@ -183,12 +182,11 @@ watch(showTranscript, (newVal) => {
                 <!-- Transcript Toggle Icon -->
                 <button
                     @click="showTranscript = !showTranscript"
-                    class="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer"
-                    :class="showTranscript ? 'text-primary' : 'text-gray-300'"
+                    class="p-2 rounded-full transition-colors cursor-pointer hover:bg-secondary-light"
+                    :class="showTranscript ? 'text-primary' : 'text-gray-300 hover:text-white'"
                     title="Toggle Transcript"
                 >
-                    <IconTranscript class="w-5 h-5" />
-                    <span class="text-base font-medium">Transcript</span>
+                    <IconTranscript class="w-6 h-6" />
                 </button>
             </div>
 
