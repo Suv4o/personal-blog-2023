@@ -34,7 +34,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-::audio-player{:audioSrc="/audio/11/16/make-your-audio-play-with-real-time-transcript-highlighting/podcast_episode.mp3" :transcriptSrc="/audio/11/16/make-your-audio-play-with-real-time-transcript-highlighting/podcast_episode_transcript.json"}
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023@feature/add-audio-player/audio-summary/2025/11/16/make-your-audio-play-with-real-time-transcript-highlighting/podcast_episode.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023@feature/add-audio-player/audio-summary/2025/11/16/make-your-audio-play-with-real-time-transcript-highlighting/podcast_episode_transcript.json"}
 ::
 
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1763271005/blog/make-your-audio-play-with-real-time-transcript-highlighting/make-your-audio-play-with-real-time-transcript-highlighting_hgmjsl)
