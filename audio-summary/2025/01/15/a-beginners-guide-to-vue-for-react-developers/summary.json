@@ -1,0 +1,42 @@
+[
+  {
+    "start": 0,
+    "end": 5.039999961853027,
+    "text": "Join us as we dive into helping React developers make an effortless switch to Vue."
+  },
+  {
+    "start": 5.039999961853027,
+    "end": 8.479999542236328,
+    "text": "This guide covers the main differences between Vue and React,"
+  },
+  {
+    "start": 8.479999542236328,
+    "end": 13.039999961853027,
+    "text": "focusing on components, styling, state management, and lifecycle hooks."
+  },
+  {
+    "start": 13.039999961853027,
+    "end": 17.760000228881836,
+    "text": "Discover Vue's unique features, such as ref and reactive functions, directives,"
+  },
+  {
+    "start": 17.760000228881836,
+    "end": 19.280000686645508,
+    "text": "and computed properties."
+  },
+  {
+    "start": 19.280000686645508,
+    "end": 23.440000534057617,
+    "text": "With practical examples, we compare React concepts to Vue's methods,"
+  },
+  {
+    "start": 23.440000534057617,
+    "end": 28.31999969482422,
+    "text": "offering clear insights into using Vue as a powerful web development alternative."
+  },
+  {
+    "start": 28.31999969482422,
+    "end": 33.68000030517578,
+    "text": "Interested in more? Check out the full article for detailed explanations and examples."
+  }
+]

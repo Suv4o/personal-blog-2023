@@ -1,0 +1,22 @@
+[
+  {
+    "start": 0,
+    "end": 4.800000190734863,
+    "text": "Explore how to define multiple components in a single file using JSX and Nuxt."
+  },
+  {
+    "start": 4.800000190734863,
+    "end": 10.15999984741211,
+    "text": "You can combine Vue and JSX components in one file to keep Vue's reactivity while improving"
+  },
+  {
+    "start": 10.15999984741211,
+    "end": 15.4399995803833,
+    "text": "code readability for small parts. Although it's usually best to separate components,"
+  },
+  {
+    "start": 15.4399995803833,
+    "end": 21.200000762939453,
+    "text": "this can be helpful in specific cases. Interested? Dive into the full article for more insights."
+  }
+]

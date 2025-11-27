@@ -1,0 +1,57 @@
+[
+  {
+    "start": 0,
+    "end": 3.359999895095825,
+    "text": "In this article, we explore how to integrate Firebase Auth"
+  },
+  {
+    "start": 3.359999895095825,
+    "end": 5.840000152587891,
+    "text": "tokens with a custom back-end server,"
+  },
+  {
+    "start": 5.840000152587891,
+    "end": 8.239999771118164,
+    "text": "discover how to verify user authentication"
+  },
+  {
+    "start": 8.239999771118164,
+    "end": 11.760000228881836,
+    "text": "on a custom back-end using Firebase and Node.js."
+  },
+  {
+    "start": 11.760000228881836,
+    "end": 15.119999885559082,
+    "text": "The guide explains how to utilize Firebase's admin SDK"
+  },
+  {
+    "start": 15.119999885559082,
+    "end": 18.440000534057617,
+    "text": "to securely manage ID tokens from the client side."
+  },
+  {
+    "start": 18.440000534057617,
+    "end": 21.239999771118164,
+    "text": "It also discusses token lifetime limitations"
+  },
+  {
+    "start": 21.239999771118164,
+    "end": 23.959999084472656,
+    "text": "and offers tips on storing tokens in Firestore"
+  },
+  {
+    "start": 23.959999084472656,
+    "end": 25.479999542236328,
+    "text": "for enhanced security."
+  },
+  {
+    "start": 25.479999542236328,
+    "end": 27.84000015258789,
+    "text": "If you're interested, be sure to read the full article"
+  },
+  {
+    "start": 27.84000015258789,
+    "end": 30.639999389648438,
+    "text": "for detailed instructions."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "start": 0,
+    "end": 4.519999980926514,
+    "text": "In this post, we'll explore how to efficiently master View Props binding."
+  },
+  {
+    "start": 4.519999980926514,
+    "end": 12.260000228881836,
+    "text": "Discover how to pass strings, numbers, booleans, objects, arrays, and functions as props in View Components."
+  },
+  {
+    "start": 12.260000228881836,
+    "end": 19.65999984741211,
+    "text": "We'll address common mistakes, delve into prop types, and share best practices to help you write clean, error-free code."
+  },
+  {
+    "start": 19.65999984741211,
+    "end": 26.100000381469727,
+    "text": "Whether you're working with static or dynamic props, this guide will enhance your understanding and implementation skills."
+  },
+  {
+    "start": 26.100000381469727,
+    "end": 30.100000381469727,
+    "text": "For more in-depth insights, be sure to read the full article."
+  }
+]

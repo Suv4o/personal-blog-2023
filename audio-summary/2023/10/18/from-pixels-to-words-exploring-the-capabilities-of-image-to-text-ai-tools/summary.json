@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0,
+    "end": 3.4200000762939453,
+    "text": "Discover how AI can revolutionize image descriptions"
+  },
+  {
+    "start": 3.4200000762939453,
+    "end": 4.760000228881836,
+    "text": "in our latest article."
+  },
+  {
+    "start": 4.760000228881836,
+    "end": 6.380000114440918,
+    "text": "Explore the creation of a web app"
+  },
+  {
+    "start": 6.380000114440918,
+    "end": 9.279999732971191,
+    "text": "that uses AI to generate image descriptions,"
+  },
+  {
+    "start": 9.279999732971191,
+    "end": 11.760000228881836,
+    "text": "streamlining photographers' workflows."
+  },
+  {
+    "start": 11.760000228881836,
+    "end": 16.040000915527344,
+    "text": "By integrating LangChain, TensorFlow, and Transformers.js,"
+  },
+  {
+    "start": 16.040000915527344,
+    "end": 17.959999084472656,
+    "text": "the app classifies image content"
+  },
+  {
+    "start": 17.959999084472656,
+    "end": 20.600000381469727,
+    "text": "and generates captions and alt text."
+  },
+  {
+    "start": 20.600000381469727,
+    "end": 22.68000030517578,
+    "text": "See how various models work together"
+  },
+  {
+    "start": 22.68000030517578,
+    "end": 25.31999969482422,
+    "text": "for accurate predictions and meaningful text."
+  },
+  {
+    "start": 25.31999969482422,
+    "end": 28.520000457763672,
+    "text": "For a deeper dive into enhancing image workflows,"
+  },
+  {
+    "start": 28.520000457763672,
+    "end": 30.1200008392334,
+    "text": "read the full article."
+  }
+]

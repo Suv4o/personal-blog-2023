@@ -1,0 +1,22 @@
+[
+  {
+    "start": 0,
+    "end": 8.699999809265137,
+    "text": "In this article, we'll explore how to build a simple web server using Nitro, an open source framework, and connect it to an SQLite database."
+  },
+  {
+    "start": 8.699999809265137,
+    "end": 18.139999389648438,
+    "text": "Discover how to set up a Nitro server, perform database migrations with TypeWorm, and apply data transfer object patterns for data validation."
+  },
+  {
+    "start": 18.139999389648438,
+    "end": 24.440000534057617,
+    "text": "The guide also walks you through creating endpoints to manage users and leveraging Nitro's caching capabilities."
+  },
+  {
+    "start": 24.440000534057617,
+    "end": 27.299999237060547,
+    "text": "Dive into the full article for more detailed insights."
+  }
+]

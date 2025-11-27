@@ -1,0 +1,27 @@
+[
+  {
+    "start": 0,
+    "end": 5.599999904632568,
+    "text": "Welcome! Today's article delves into the process of reloading child components in Vue 3."
+  },
+  {
+    "start": 5.599999904632568,
+    "end": 10.319999694824219,
+    "text": "Learn how to reload just a child component in your Vue app using the key attribute."
+  },
+  {
+    "start": 10.319999694824219,
+    "end": 15.680000305175781,
+    "text": "The article provides a clear step-by-step guide, featuring a random number generator example."
+  },
+  {
+    "start": 16.31999969482422,
+    "end": 20.799999237060547,
+    "text": "Plus, it explores the Composition API and an efficient script setup."
+  },
+  {
+    "start": 20.799999237060547,
+    "end": 26,
+    "text": "Be sure to read the full article for more on mastering this essential Vue technique."
+  }
+]

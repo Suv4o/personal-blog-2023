@@ -1,0 +1,32 @@
+[
+  {
+    "start": 0,
+    "end": 5,
+    "text": "This article explores how to build a reactive system in JavaScript with Proxy."
+  },
+  {
+    "start": 5,
+    "end": 10.239999771118164,
+    "text": "Learn to monitor changes, use a Vue.js-inspired ref function, and integrate TypeScript for"
+  },
+  {
+    "start": 10.239999771118164,
+    "end": 11.680000305175781,
+    "text": "added type safety."
+  },
+  {
+    "start": 11.680000305175781,
+    "end": 16.68000030517578,
+    "text": "The guide concludes with a practical demo on two-way HTML bindings, ideal for developers"
+  },
+  {
+    "start": 16.68000030517578,
+    "end": 19.760000228881836,
+    "text": "keen on reactivity and modern web apps."
+  },
+  {
+    "start": 19.760000228881836,
+    "end": 22.600000381469727,
+    "text": "Dive deeper into the details by reading more below."
+  }
+]

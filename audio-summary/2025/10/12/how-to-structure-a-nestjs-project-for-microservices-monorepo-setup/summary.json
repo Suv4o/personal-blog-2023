@@ -1,0 +1,32 @@
+[
+  {
+    "start": 0,
+    "end": 6.539999961853027,
+    "text": "In this article, we'll explore how to set up a NestJS project for microservices using a mono-repo structure."
+  },
+  {
+    "start": 6.539999961853027,
+    "end": 10.84000015258789,
+    "text": "Discover how to organize your NestJS project into three essential services,"
+  },
+  {
+    "start": 10.84000015258789,
+    "end": 15.239999771118164,
+    "text": "Order Producer, Order Persistence, and Order Notification."
+  },
+  {
+    "start": 15.239999771118164,
+    "end": 23,
+    "text": "These services interact with Amazon SQS, utilize DynamoDB for storage, and send notifications via Amazon SES."
+  },
+  {
+    "start": 23,
+    "end": 29.299999237060547,
+    "text": "The guide also covers creating shared libraries, updating configurations, and setting up scripts for efficient building and running."
+  },
+  {
+    "start": 29.299999237060547,
+    "end": 33.29999923706055,
+    "text": "If you're interested, delve into the full setup guide below."
+  }
+]

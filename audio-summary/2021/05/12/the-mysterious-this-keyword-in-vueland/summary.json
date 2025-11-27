@@ -1,0 +1,42 @@
+[
+  {
+    "start": 0,
+    "end": 4.800000190734863,
+    "text": "Join us as we dive into the intriguing world of the this keyword in Vue.js."
+  },
+  {
+    "start": 4.800000190734863,
+    "end": 10.399999618530273,
+    "text": "Discover how this is not just a Vue concept, but a fundamental part of JavaScript."
+  },
+  {
+    "start": 10.399999618530273,
+    "end": 15.399999618530273,
+    "text": "Learn how its behavior changes in regular versus arrow functions governed by default"
+  },
+  {
+    "start": 15.399999618530273,
+    "end": 17.299999237060547,
+    "text": "and implicit binding rules."
+  },
+  {
+    "start": 17.299999237060547,
+    "end": 22.899999618530273,
+    "text": "We'll share tips on avoiding common pitfalls in Vue using closures, explicit binding, and"
+  },
+  {
+    "start": 22.899999618530273,
+    "end": 24.600000381469727,
+    "text": "arrow functions effectively."
+  },
+  {
+    "start": 24.600000381469727,
+    "end": 25.899999618530273,
+    "text": "Curious for more?"
+  },
+  {
+    "start": 25.899999618530273,
+    "end": 28.299999237060547,
+    "text": "Read the full article for a deeper understanding."
+  }
+]

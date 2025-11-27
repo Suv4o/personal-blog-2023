@@ -1,0 +1,32 @@
+[
+  {
+    "start": 0,
+    "end": 5.679999828338623,
+    "text": "Join us as we delve into monitoring JavaScript variable changes using getters and setters."
+  },
+  {
+    "start": 5.679999828338623,
+    "end": 10.800000190734863,
+    "text": "This guide shows how to use object.defineProperty to keep an eye on variable changes."
+  },
+  {
+    "start": 11.359999656677246,
+    "end": 16.8799991607666,
+    "text": "By setting up getters and setters, you can see when and how your variables are modified,"
+  },
+  {
+    "start": 16.8799991607666,
+    "end": 22.719999313354492,
+    "text": "even within object methods. It also offers reusable functions for straightforward implementation"
+  },
+  {
+    "start": 22.719999313354492,
+    "end": 26.559999465942383,
+    "text": "and covers how to subscribe and unsubscribe from notifications."
+  },
+  {
+    "start": 26.559999465942383,
+    "end": 29.600000381469727,
+    "text": "Curious to learn more? Check out the details below."
+  }
+]
