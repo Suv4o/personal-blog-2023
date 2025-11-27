@@ -27,6 +27,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/03/19/setting-up-global-variables-in-the-rest-client-vs-code-extension/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/03/19/setting-up-global-variables-in-the-rest-client-vs-code-extension/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1679178671/blog/setting-up-global-variables-in-the-rest-client-vs-code-extension/hero-image_wywhks)
 
 REST Client is a Visual Studio Code (VS Code) extension (<a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client" target="_blank" rel="noopener noreferrer">link</a>) that allows you to send HTTP requests and view the responses directly in VS Code.

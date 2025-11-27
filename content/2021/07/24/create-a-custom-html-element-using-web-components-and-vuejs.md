@@ -30,6 +30,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2021/07/24/create-a-custom-html-element-using-web-components-and-vuejs/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2021/07/24/create-a-custom-html-element-using-web-components-and-vuejs/summary.json"}
+::
+
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1627371334/blog/create-a-custom-HTML-element-using-Web-Components-and-Vuejs)
 
 In this day and age writing reusable components that can be used multiple times in your application or shared between other web platforms can actually save you a lot of time and effort. Web Components offer this benefit and makes it easier to build custom complex components. At the same time, this improves its reusability.

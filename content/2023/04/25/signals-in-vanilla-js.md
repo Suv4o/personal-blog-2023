@@ -30,6 +30,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/04/25/signals-in-vanilla-js/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/04/25/signals-in-vanilla-js/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1682415127/blog/signals-in-vanilla-js/signals-in-vanilla-js-hero_lsdah8)
 
 If you're a JavaScript developer, you may have heard about the buzz around signals lately. Several popular JavaScript frameworks, such as <a href="https://vuejs.org/guide/extras/reactivity-in-depth.html#connection-to-signals" target="_blank" rel="noopener noreferrer">Vue</a>, <a href="https://preactjs.com/guide/v10/signals/" target="_blank" rel="noopener noreferrer">Preact</a>, <a href="https://www.solidjs.com/docs/latest/api#createsignal" target="_blank" rel="noopener noreferrer">Solid</a>, <a href="https://github.com/angular/angular/discussions/49090" target="_blank" rel="noopener noreferrer">Angular</a>, and <a href="https://qwik.builder.io/docs/components/state/#usesignal" target="_blank" rel="noopener noreferrer">Quick</a>, have recently implemented and supported the use of signals. But what exactly are signals?

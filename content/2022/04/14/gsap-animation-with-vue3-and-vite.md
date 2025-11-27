@@ -30,6 +30,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/04/14/gsap-animation-with-vue3-and-vite/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/04/14/gsap-animation-with-vue3-and-vite/summary.json"}
+::
+
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1649846664/blog/gsap-animation-with-vue3-and-vite/gsap-animation-with-vue3-and-vite)
 
 GreenSock Animation Platform (GSAP) is the most robust JavaScript animation library to date that allows developers to animate literally any DOM element with a breeze. GSAP provides an API that can be used for complex animation to be created. Hence, is still supported by all major browsers. In comparison to CSS animation, sequencing in GSAP is very easy. So let's have a look at GSAP. We are going to use GSAP in a Vue 3 project. We will use Vite as a build tool.

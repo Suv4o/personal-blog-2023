@@ -36,6 +36,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/10/12/how-to-structure-a-nestjs-project-for-microservices-monorepo-setup/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/10/12/how-to-structure-a-nestjs-project-for-microservices-monorepo-setup/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1760240493/blog/how-to-structure-a-nestjs-project-for-microservices-monorepo-setup/how-to-structure-a-nestjs-project-for-microservices-monorepo-setup_hfc2gz)
 
 In this post, we'll walk through setting up a simple microservices project using Nest.js. Our goal is to create three separate services: **order-producer**, **order-persistence**, and **order-notification**, that communicate via **Amazon SQS**, store data in **DynamoDB**, and send notifications to customers using **Amazon SES**.

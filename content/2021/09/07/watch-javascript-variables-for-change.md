@@ -28,6 +28,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2021/09/07/watch-javascript-variables-for-change/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2021/09/07/watch-javascript-variables-for-change/summary.json"}
+::
+
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1630971440/blog/watch-javascript-variables-for-change)
 
 We all know that in JavaScript there is no event that fires when a value of a variable changes. But by defining <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters" target="_blank" rel="noopener noreferrer">getters</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters" target="_blank" rel="noopener noreferrer">setters</a> in the object this is now possible.

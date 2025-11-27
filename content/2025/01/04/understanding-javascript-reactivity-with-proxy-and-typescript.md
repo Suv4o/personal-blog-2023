@@ -45,6 +45,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/01/04/understanding-javascript-reactivity-with-proxy-and-typescript/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/01/04/understanding-javascript-reactivity-with-proxy-and-typescript/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1735957390/blog/understanding-javascript-reactivity-with-proxy-and-typescript/yklh8nkuomwfu8gbmcqq)
 
 Reactivity is a core concept in modern JavaScript frameworks like Vue.js, where UI automatically updates when the underlying data changes. But have you ever wondered how to implement a similar reactivity system yourself? In this blog post, we’ll explore how you can use JavaScript's `Proxy` to monitor and react to data changes. By the end, we’ll create a simple reactive system with two-way HTML bindings using TypeScript.

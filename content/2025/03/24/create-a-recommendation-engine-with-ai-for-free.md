@@ -34,6 +34,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/03/24/create-a-recommendation-engine-with-ai-for-free/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/03/24/create-a-recommendation-engine-with-ai-for-free/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1742804621/blog/create-a-recommendation-engine-with-ai-for-free/create-a-recommendation-engine-with-ai-for-free_ysdjwd)
 
 Recently, I had some free time since I was taking a month off work for the arrival of my daughter. While at home, I decided to make some updates to my personal blog.

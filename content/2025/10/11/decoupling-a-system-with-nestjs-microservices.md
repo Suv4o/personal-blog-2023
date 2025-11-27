@@ -36,6 +36,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/10/11/decoupling-a-system-with-nestjs-microservices/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/10/11/decoupling-a-system-with-nestjs-microservices/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1760140132/blog/decoupling-a-system-with-nestjs-microservices/decoupling-a-system-with-nestjs-microservices_hvyd6p)
 
 Over the past few weeks, I've been experimenting with building a small microservice architecture using Nest.js, Amazon SQS, Amazon SES and DynamoDB. My goal was to create a decoupled system where three services work together through queues, one accepts orders, another saves them, and a third notifies the customer.

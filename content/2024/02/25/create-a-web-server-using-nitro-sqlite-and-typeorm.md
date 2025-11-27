@@ -32,6 +32,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2024/02/25/create-a-web-server-using-nitro-sqlite-and-typeorm/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2024/02/25/create-a-web-server-using-nitro-sqlite-and-typeorm/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1708844513/blog/create-a-web-server-using-nitro-sqlite-and-typeorm/create-a-web-server-using-nitro-sqlite-and-typeorm_ozdamt)
 
 If you're familiar with <a href="https://nuxt.com/" target="_blank" rel="noopener noreferrer">Nuxt.js</a>, you might know that the latest version, Nuxt version 3, runs on a new server engine called Nitro. Nitro isn't just used in Nuxt, it's also an independent open-source framework for developing web server applications. It provides several built-in features that make it a modern, user-friendly backend framework. Nitro is open-source and maintained by the same core team as Nuxt.js.

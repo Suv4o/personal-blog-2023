@@ -30,6 +30,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/04/02/single-sign-on-with-firebase-authentication-across-multiple-domains/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/04/02/single-sign-on-with-firebase-authentication-across-multiple-domains/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1680413367/blog/single-sign-on-with-firebase-authentication-across-multiple-domains/SSO-with-firebase-authentication-across-multiple-domains_nil2ba)
 
 <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase</a> is a great platform that offers a wide range of services to developers, making it easy to build, improve, and grow their apps. One of these services is Firebase Auth, which allows for easy user authentication using its JavaScript SDK.

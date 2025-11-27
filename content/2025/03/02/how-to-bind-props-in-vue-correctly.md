@@ -42,6 +42,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/03/02/how-to-bind-props-in-vue-correctly/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/03/02/how-to-bind-props-in-vue-correctly/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1740813459/blog/how-to-bind-props-in-vue-correctly/building_blocks_of_vue_3d_representation_of_1_wsoaxn)
 
 Vue makes data binding in props simple and intuitive, but small syntax errors, especially when coming from other frameworks or languages, can lead to unexpected behaviour.

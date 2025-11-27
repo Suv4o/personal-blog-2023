@@ -28,6 +28,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/10/22/sharing-components-between-multiple-nuxt-projects/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/10/22/sharing-components-between-multiple-nuxt-projects/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1666399302/blog/nuxt-extends/nuxt-extends)
 
 Nuxt 3 and its new foundation come with many powerful new features, such as the new server engine <a href="https://v3.nuxtjs.org/guide/concepts/server-engine/" target="_blank" rel="noopener noreferrer">Nitro</a> that made the framework lighter and faster and supported by Vue's 3 Composition API and Vite.

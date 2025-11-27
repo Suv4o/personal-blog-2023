@@ -29,6 +29,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/04/18/reload-child-component-in-vue3/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/04/18/reload-child-component-in-vue3/summary.json"}
+::
+
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1650277793/blog/reload-child-component-in-vue-3/reload-child-component-in-vue-3-1_ccze7d)
 
 Components in Vue are reusable custom elements (for example `<card>` ) that can be reused in Vue templates throughout the app. In a large scale application, we will come across a situation where we have nested components such as parents and children.

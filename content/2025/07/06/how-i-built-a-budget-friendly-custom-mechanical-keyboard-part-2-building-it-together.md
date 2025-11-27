@@ -57,6 +57,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/07/06/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-2-building-it-together/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/07/06/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-2-building-it-together/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1751714544/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-2-building-it-together/cover-image_ovafxl)
 
 If you've landed here and haven't read <NuxtLink to="/2025/04/22/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build">Part 1</NuxtLink>, I highly recommend checking it out first. That's where I laid the groundwork — diving deep into keyboard sizes, keycap profiles, switch types, and all the essential components that make a mechanical keyboard feel _just right_.

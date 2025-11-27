@@ -42,6 +42,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/10/18/from-pixels-to-words-exploring-the-capabilities-of-image-to-text-ai-tools/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/10/18/from-pixels-to-words-exploring-the-capabilities-of-image-to-text-ai-tools/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1697369313/blog/from-pixels-to-words/hero)
 
 I had an idea to create an image-to-text automation tool for writing descriptions for my images. As a hobby landscape photographer, I have a lot of images, and this tool would speed up my workflow when posting on Instagram. I thought, "Well, I am a software developer. I can develop something like that very quickly, right?" I only need to add my credit card details to OpenAI, and then I can start using their API. This sounds simple enough. Well, let's discuss how it all went.

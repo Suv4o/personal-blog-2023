@@ -44,6 +44,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/04/22/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/04/22/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1745223262/blog/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build/how-i-built-a-budget-friendly-custom-mechanical-keyboard-part-1-the-deep-dive-before-the-build_lc4bhn)
 
 I’ve been meaning to write this blog post for a few years now — I just never got around to it. But here we are. This is the story of how I got into custom mechanical keyboards and how that small curiosity turned into a full-blown obsession.

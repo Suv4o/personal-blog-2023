@@ -44,6 +44,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/01/09/the-container-presentational-pattern-with-react-and-vue/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/01/09/the-container-presentational-pattern-with-react-and-vue/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1736332534/blog/the-container-presentational-pattern-with-react-and-vue/the-container-presentational-pattern-with-react-and-vue_tx5c9t)
 
 The **Container/Presentational Pattern** is a fundamental concept in frontend development. By separating logic and UI, it creates clean, reusable, and testable components. Traditionally, this pattern was implemented using "container components" to manage state and "presentational components" to handle UI rendering. However, modern tools like **React Hooks** and **Vue Composables** provide an alternative, more modular way to achieve the same goals, without relying on explicit container components.

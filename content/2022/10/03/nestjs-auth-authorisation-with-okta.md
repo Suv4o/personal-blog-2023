@@ -29,6 +29,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/10/03/nestjs-auth-authorisation-with-okta/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/10/03/nestjs-auth-authorisation-with-okta/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1664708491/blog/nestjs-auth-authorisation-with-okta/nestjs-auth-authorisation-with-okta)
 
 ## What is Nest (NestJS)?

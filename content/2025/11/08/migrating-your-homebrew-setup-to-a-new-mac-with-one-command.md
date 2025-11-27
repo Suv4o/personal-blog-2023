@@ -37,6 +37,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/11/08/migrating-your-homebrew-setup-to-a-new-mac-with-one-command/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/11/08/migrating-your-homebrew-setup-to-a-new-mac-with-one-command/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1762580731/blog/migrating-your-homebrew-setup-to-a-new-mac-with-one-command/migrating-your-homebrew-setup-to-a-new-mac-with-one-command_krwbvw)
 
 ## **How to Backup and Restore Homebrew Packages on macOS**

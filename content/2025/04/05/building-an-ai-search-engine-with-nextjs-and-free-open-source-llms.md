@@ -56,6 +56,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/04/05/building-an-ai-search-engine-with-nextjs-and-free-open-source-llms/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/04/05/building-an-ai-search-engine-with-nextjs-and-free-open-source-llms/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1743826108/blog/building-an-ai-search-engine-with-nextjs-and-free-open-source-llms/ChatGPT_Image_Apr_5_2025_01_58_48_PM_famrgp)
 
 Following my article on <NuxtLink to="/2025/03/24/create-a-recommendation-engine-with-ai-for-free">Create a Recommendation Engine with AI for Free</NuxtLink>, I'd like to show you how to build an intelligent search engine.

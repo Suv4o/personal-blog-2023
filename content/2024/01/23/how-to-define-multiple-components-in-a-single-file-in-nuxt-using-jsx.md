@@ -33,6 +33,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2024/01/23/how-to-define-multiple-components-in-a-single-file-in-nuxt-using-jsx/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2024/01/23/how-to-define-multiple-components-in-a-single-file-in-nuxt-using-jsx/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1705811682/blog/how-to-defining-multiple-components-in-a-single-file-in-nuxt/dx3lzu2av0hwbu2hkuob)
 
 I've been using Vue and Nuxt for quite a while now. One feature I've always been missing is the ability to declare more than one component in a single `.vue` file. This has been possible in other frameworks like React for a long time. I know that most people will say that if you want more than one component, it's a good idea to separate those components into separate files. I agree with that statement and it makes sense. However, sometimes for very small components that won't be used in other places in the code, it also makes sense to declare them in the same file to make the code more readable.

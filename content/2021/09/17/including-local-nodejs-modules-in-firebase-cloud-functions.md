@@ -30,6 +30,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2021/09/17/including-local-nodejs-modules-in-firebase-cloud-functions/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2021/09/17/including-local-nodejs-modules-in-firebase-cloud-functions/summary.json"}
+::
+
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1631602643/blog/including-local-nodejs-modules-in-firebase-cloud-functions/including-local-modules)
 
 Modules have become a major part of the JavaScript ecosystem. They allow us to split our JavaScript programs up into separate smaller parts, called modules, that can be imported when needed.

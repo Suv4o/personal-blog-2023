@@ -29,6 +29,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/10/10/nestjs-current-user-custom-decorator/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2022/10/10/nestjs-current-user-custom-decorator/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1665138447/blog/nestjs-current-user-custom-decorator/nestjs-current-user-custom-decorator)
 
 > This blog article is a continuation from the previous blog article about Nest.js Authorisation with Firebase Auth. If you have’t read that article you will not be able to follow along. The previous article can be found at the following <a href="https://www.trpkovski.com/2022/10/07/nestjs-authorisation-with-firebase-auth/" target="_blank" rel="noopener noreferrer">link</a>.

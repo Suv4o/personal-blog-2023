@@ -39,6 +39,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/11/04/why-you-shouldnt-use-localstorage-for-transactions-and-what-to-use-instead/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/11/04/why-you-shouldnt-use-localstorage-for-transactions-and-what-to-use-instead/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1762215611/blog/why-you-shouldnt-use-localstorage-for-transactions-and-what-to-use-instead/why-you-shouldnt-use-localstorage-for-transactions-and-what-to-use-instead_kqnbsb)
 
 When it comes to storing data in the browser, many of us reach for `localStorage` out of habit. It's simple, it works, and it's supported everywhere. But here's the thing - under the hood, `localStorage` has some serious limitations, especially when you're dealing with _transactions_, _concurrent updates_, and _performance-heavy tasks_.

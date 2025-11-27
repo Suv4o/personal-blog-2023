@@ -33,6 +33,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/11/13/turning-markdown-into-podcasts-with-openai-agents/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/11/13/turning-markdown-into-podcasts-with-openai-agents/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1762858276/blog/turning-markdown-into-podcasts-with-openai-agents/turning-markdown-into-podcasts-with-openai-agents_aav3tt)
 
 I've been writing my blog entirely in Markdown for years. It's perfect for me as a developer - it's something we're familiar with, and it works great with static site generators. But turning those posts into podcasts style audio always felt like starting a whole second project. That was true five years ago. Now, with the new wave of LLMs and generative AI and the rise of agentic frameworks - that manual work has become much easier. You can easily build your own little team of AI helpers, ones that handle scriptwriting, editing, and even voiceover work. The result? A system that transforms my Markdown articles into polished MP3 podcasts in just a few minutes.

@@ -31,6 +31,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/09/21/the-right-way-to-handle-hover-in-css-across-devices/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/09/21/the-right-way-to-handle-hover-in-css-across-devices/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_850,e_sharpen:100/v1758442342/blog/the-right-way-to-handle-hover-in-css-across-devices/the-right-way-to-handle-hover-in-css-across-devices_j4pxou)
 
 In today's diverse technological landscape, browsers run on a wide variety of devices, but hover functionality isn't universally supported across all of them. For example, mobile phones and tablets don't support hover functionality, so hover animations on buttons or cards don't make sense in CSS for these devices. In some cases, you might have devices that support hover when using a mouse but not when using touch screens.

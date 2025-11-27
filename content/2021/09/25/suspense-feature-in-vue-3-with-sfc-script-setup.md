@@ -29,6 +29,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2021/09/25/suspense-feature-in-vue-3-with-sfc-script-setup/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2021/09/25/suspense-feature-in-vue-3-with-sfc-script-setup/summary.json"}
+::
+
 ![blog hero image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1632533795/blog/vue3-suspense/vue3-suspence-cover)
 
 `<Suspense>` is a special component in Vue 3 that lets us wait for some data to be loaded, before our component can be rendered. In other words, Suspense allows us to render some fallback content. A good example will be a loading spinner while waiting for an asynchronous API call to fetch some data from the server. Once the data has been loaded, the main content will show up. This feature allows us to create a smooth user experience.

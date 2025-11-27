@@ -56,6 +56,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/01/15/a-beginners-guide-to-vue-for-react-developers/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/01/15/a-beginners-guide-to-vue-for-react-developers/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1736935516/blog/a-beginners-guide-to-vue-for-react-developers/A_scenic_landscape_featuring_a_slightly_curved_road_that_extends_infinitely_into_the_horizon._The_road_starts_with_a_vibrant_blue_hue_and_gradually_tr)
 
 Vue is a frontend framework that shares many concepts with React while taking its own unique approach. This guide will walk you through Vue's key concepts and compare them to their React equivalents. By the end, you'll have a solid foundation for working with Vue.

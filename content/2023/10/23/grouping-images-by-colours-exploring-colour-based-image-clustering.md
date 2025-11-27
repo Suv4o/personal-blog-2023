@@ -31,6 +31,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/10/23/grouping-images-by-colours-exploring-colour-based-image-clustering/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2023/10/23/grouping-images-by-colours-exploring-colour-based-image-clustering/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1697956564/blog/grouping-images-by-colours/ot79c0slnfykfnvy5i9e.jpg)
 
 The idea for this experimental project, which I am going to demonstrate in this blog article, came to me from the Office Works website. Here's how it all happened.
