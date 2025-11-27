@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0,
+    "end": 2.9200000762939453,
+    "text": "curious about transforming a NestJS application"
+  },
+  {
+    "start": 2.9200000762939453,
+    "end": 5.559999942779541,
+    "text": "into a distributed microservice system."
+  },
+  {
+    "start": 5.559999942779541,
+    "end": 8.239999771118164,
+    "text": "This article dives into building a decoupled backend"
+  },
+  {
+    "start": 8.239999771118164,
+    "end": 10.920000076293945,
+    "text": "with message queues and shared libraries."
+  },
+  {
+    "start": 10.920000076293945,
+    "end": 13.239999771118164,
+    "text": "It shows how services like order processing"
+  },
+  {
+    "start": 13.239999771118164,
+    "end": 16.219999313354492,
+    "text": "and customer notifications operate independently,"
+  },
+  {
+    "start": 16.219999313354492,
+    "end": 18.920000076293945,
+    "text": "boosting resilience and fault tolerance."
+  },
+  {
+    "start": 18.920000076293945,
+    "end": 23,
+    "text": "Using NestJS, AWS SQS, and DynamoDB,"
+  },
+  {
+    "start": 23,
+    "end": 24.440000534057617,
+    "text": "you'll learn how each service"
+  },
+  {
+    "start": 24.440000534057617,
+    "end": 26.68000030517578,
+    "text": "efficiently manages its own tasks,"
+  },
+  {
+    "start": 26.68000030517578,
+    "end": 29.040000915527344,
+    "text": "handling real-world workloads seamlessly."
+  },
+  {
+    "start": 29.040000915527344,
+    "end": 32.15999984741211,
+    "text": "Don't miss the full article for all the details."
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "start": 0,
+    "end": 4.880000114440918,
+    "text": "In this post, we'll walk you through setting up user authentication and authorization"
+  },
+  {
+    "start": 4.880000114440918,
+    "end": 8.239999771118164,
+    "text": "in a NestJS application using Firebase Auth."
+  },
+  {
+    "start": 8.239999771118164,
+    "end": 12.720000267028809,
+    "text": "Discover how to build an app where users can sign up and sign in with different roles,"
+  },
+  {
+    "start": 13.359999656677246,
+    "end": 16.559999465942383,
+    "text": "accessing specific endpoints based on permissions."
+  },
+  {
+    "start": 16.559999465942383,
+    "end": 21.440000534057617,
+    "text": "We'll guide you through installing the necessary tools, configuring Nest with Firebase Auth,"
+  },
+  {
+    "start": 22,
+    "end": 25.1200008392334,
+    "text": "and setting up authentication guards for protected routes."
+  },
+  {
+    "start": 25.68000030517578,
+    "end": 30.15999984741211,
+    "text": "This is a comprehensive guide to integrating a robust authentication system"
+  },
+  {
+    "start": 30.15999984741211,
+    "end": 32.15999984741211,
+    "text": "in your NestJS applications."
+  },
+  {
+    "start": 32.15999984741211,
+    "end": 34.15999984741211,
+    "text": "To dive deeper, read more below."
+  }
+]

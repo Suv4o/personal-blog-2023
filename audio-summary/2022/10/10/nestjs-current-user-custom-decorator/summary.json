@@ -1,0 +1,27 @@
+[
+  {
+    "start": 0,
+    "end": 4.800000190734863,
+    "text": "Join us as we dive into creating a custom at-current user decorator in Nest.js."
+  },
+  {
+    "start": 4.800000190734863,
+    "end": 10.800000190734863,
+    "text": "This decorator simplifies access to the current logged-in user within your module controllers."
+  },
+  {
+    "start": 10.800000190734863,
+    "end": 15.800000190734863,
+    "text": "You'll set up an interceptor to manage user data from Firebase Auth and modify the AuthGuard."
+  },
+  {
+    "start": 15.800000190734863,
+    "end": 20.899999618530273,
+    "text": "Plus, you'll learn to extract specific user properties using TypeScript types."
+  },
+  {
+    "start": 20.899999618530273,
+    "end": 26.600000381469727,
+    "text": "To enhance your Nest.js app with custom decorators, explore the full article for all the details."
+  }
+]

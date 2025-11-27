@@ -1,0 +1,52 @@
+[
+  {
+    "start": 0,
+    "end": 3.5399999618530273,
+    "text": "Discover how to build your own free AI recommendation engine"
+  },
+  {
+    "start": 3.5399999618530273,
+    "end": 6.099999904632568,
+    "text": "with open source embedding models."
+  },
+  {
+    "start": 6.099999904632568,
+    "end": 7.739999771118164,
+    "text": "Learn to generate text embeddings"
+  },
+  {
+    "start": 7.739999771118164,
+    "end": 9.680000305175781,
+    "text": "and compare article similarities"
+  },
+  {
+    "start": 9.680000305175781,
+    "end": 12.300000190734863,
+    "text": "for personalized content suggestions."
+  },
+  {
+    "start": 12.300000190734863,
+    "end": 15.140000343322754,
+    "text": "By using HuggingFace and Transformer.js,"
+  },
+  {
+    "start": 15.140000343322754,
+    "end": 19.34000015258789,
+    "text": "you can create a cost-effective solution without paid APIs."
+  },
+  {
+    "start": 19.34000015258789,
+    "end": 20.84000015258789,
+    "text": "Enhance reader experience"
+  },
+  {
+    "start": 20.84000015258789,
+    "end": 23.6200008392334,
+    "text": "by recommending relevant articles through AI."
+  },
+  {
+    "start": 23.6200008392334,
+    "end": 26.020000457763672,
+    "text": "Interested? Dive into the details below."
+  }
+]

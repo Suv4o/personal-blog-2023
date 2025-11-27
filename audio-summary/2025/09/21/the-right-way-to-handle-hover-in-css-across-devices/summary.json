@@ -1,0 +1,37 @@
+[
+  {
+    "start": 0,
+    "end": 4,
+    "text": "Curious about mastering hover effects in CSS on various devices?"
+  },
+  {
+    "start": 4,
+    "end": 5,
+    "text": "Let's dive in."
+  },
+  {
+    "start": 5,
+    "end": 9.5,
+    "text": "Discover why traditional methods, such as screen size queries and touch detection,"
+  },
+  {
+    "start": 9.5,
+    "end": 14.199999809265137,
+    "text": "often fall short and meet the more reliable at-media feature."
+  },
+  {
+    "start": 14.199999809265137,
+    "end": 19,
+    "text": "This method improves responsive designs by detecting a device's primary input mechanism,"
+  },
+  {
+    "start": 19,
+    "end": 25,
+    "text": "boosting both accessibility and performance without relying on outdated techniques."
+  },
+  {
+    "start": 25,
+    "end": 31,
+    "text": "Explore the full article for step-by-step guidance on applying this solution to your projects."
+  }
+]

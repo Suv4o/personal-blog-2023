@@ -1,0 +1,42 @@
+[
+  {
+    "start": 0,
+    "end": 5.71999979019165,
+    "text": "Discover how to integrate the GreenSock Animation Platform, or GSAP, into a Vue 3 project using"
+  },
+  {
+    "start": 5.71999979019165,
+    "end": 7.480000019073486,
+    "text": "Vite as a build tool."
+  },
+  {
+    "start": 7.480000019073486,
+    "end": 13.100000381469727,
+    "text": "GSAP stands out as a powerful JavaScript library for effortlessly animating DOM elements."
+  },
+  {
+    "start": 13.100000381469727,
+    "end": 18.760000228881836,
+    "text": "This post walks you through setting up a Vue 3 app with Vite, installing GSAP, and animating"
+  },
+  {
+    "start": 18.760000228881836,
+    "end": 21.31999969482422,
+    "text": "elements like logos and circles."
+  },
+  {
+    "start": 21.31999969482422,
+    "end": 27.15999984741211,
+    "text": "Key features include sequencing with stagger and delay, and utilizing timelines for complex"
+  },
+  {
+    "start": 27.15999984741211,
+    "end": 28.15999984741211,
+    "text": "animations."
+  },
+  {
+    "start": 28.15999984741211,
+    "end": 29.959999084472656,
+    "text": "Discover more by reading the full article below."
+  }
+]

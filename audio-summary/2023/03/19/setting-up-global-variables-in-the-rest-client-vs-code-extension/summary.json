@@ -1,0 +1,67 @@
+[
+  {
+    "start": 0,
+    "end": 4.199999809265137,
+    "text": "Curious about testing REST API endpoints easily in VS Code?"
+  },
+  {
+    "start": 4.199999809265137,
+    "end": 6,
+    "text": "This article dives into just that"
+  },
+  {
+    "start": 6,
+    "end": 7.920000076293945,
+    "text": "with the REST client extension."
+  },
+  {
+    "start": 7.920000076293945,
+    "end": 9.720000267028809,
+    "text": "Learn how to set up global variables"
+  },
+  {
+    "start": 9.720000267028809,
+    "end": 11.239999771118164,
+    "text": "for different environments,"
+  },
+  {
+    "start": 11.239999771118164,
+    "end": 13.34000015258789,
+    "text": "cutting down on repetitive code,"
+  },
+  {
+    "start": 13.34000015258789,
+    "end": 16.399999618530273,
+    "text": "store common elements like URLs and tokens,"
+  },
+  {
+    "start": 16.399999618530273,
+    "end": 19.459999084472656,
+    "text": "and seamlessly switch between local, staging,"
+  },
+  {
+    "start": 19.459999084472656,
+    "end": 21.440000534057617,
+    "text": "or production settings."
+  },
+  {
+    "start": 21.440000534057617,
+    "end": 24.299999237060547,
+    "text": "This enhances your workflow right in VS Code,"
+  },
+  {
+    "start": 24.299999237060547,
+    "end": 26.040000915527344,
+    "text": "eliminating the need for Postman."
+  },
+  {
+    "start": 26.040000915527344,
+    "end": 27.399999618530273,
+    "text": "Interested in more?"
+  },
+  {
+    "start": 27.399999618530273,
+    "end": 30.200000762939453,
+    "text": "Be sure to read the full article for all the details."
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "start": 0,
+    "end": 2.9200000762939453,
+    "text": "Curious about enhancing functionality in Nuxt?"
+  },
+  {
+    "start": 2.9200000762939453,
+    "end": 6.360000133514404,
+    "text": "This article shows how to overcome a common limitation."
+  },
+  {
+    "start": 6.360000133514404,
+    "end": 9.15999984741211,
+    "text": "In Vue or Nuxt, the VHTML directive"
+  },
+  {
+    "start": 9.15999984741211,
+    "end": 11,
+    "text": "doesn't render Nuxt link, causing"
+  },
+  {
+    "start": 11,
+    "end": 12.899999618530273,
+    "text": "anchor tags to be static."
+  },
+  {
+    "start": 12.899999618530273,
+    "end": 15.079999923706055,
+    "text": "This article introduces a custom directive"
+  },
+  {
+    "start": 15.079999923706055,
+    "end": 18.639999389648438,
+    "text": "that converts A tags into dynamic Nuxt link elements,"
+  },
+  {
+    "start": 18.639999389648438,
+    "end": 21.920000076293945,
+    "text": "enabling native Vue router navigation."
+  },
+  {
+    "start": 21.920000076293945,
+    "end": 24.600000381469727,
+    "text": "It also guides you through using Nuxt's plugin system"
+  },
+  {
+    "start": 24.600000381469727,
+    "end": 27.959999084472656,
+    "text": "to create and integrate this feature for smooth interaction."
+  },
+  {
+    "start": 27.959999084472656,
+    "end": 32.15999984741211,
+    "text": "Dive into the full article for an in-depth guide."
+  }
+]

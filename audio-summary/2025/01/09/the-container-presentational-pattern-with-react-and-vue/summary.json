@@ -1,0 +1,47 @@
+[
+  {
+    "start": 0,
+    "end": 3.4000000953674316,
+    "text": "In this article, we dive into the container presentational pattern"
+  },
+  {
+    "start": 3.4000000953674316,
+    "end": 6.400000095367432,
+    "text": "and how it's used in modern React and Vue development."
+  },
+  {
+    "start": 7.5,
+    "end": 11.899999618530273,
+    "text": "Learn to separate UI from logic for cleaner, more modular code."
+  },
+  {
+    "start": 11.899999618530273,
+    "end": 14.800000190734863,
+    "text": "It explores moving from traditional container components"
+  },
+  {
+    "start": 14.800000190734863,
+    "end": 17.299999237060547,
+    "text": "to React hooks and Vue 3 composables,"
+  },
+  {
+    "start": 17.299999237060547,
+    "end": 19.200000762939453,
+    "text": "offering a scalable approach,"
+  },
+  {
+    "start": 19.200000762939453,
+    "end": 22.399999618530273,
+    "text": "ideal for developers looking to streamline their coding process."
+  },
+  {
+    "start": 22.399999618530273,
+    "end": 24.899999618530273,
+    "text": "Want to modernize your front-end patterns?"
+  },
+  {
+    "start": 24.899999618530273,
+    "end": 27.100000381469727,
+    "text": "Read the full article for more details."
+  }
+]

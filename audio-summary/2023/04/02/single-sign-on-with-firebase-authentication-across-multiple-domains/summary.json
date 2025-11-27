@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0,
+    "end": 3,
+    "text": "In today's discussion, we dive into the challenges"
+  },
+  {
+    "start": 3,
+    "end": 6.639999866485596,
+    "text": "of using Firebase Authentication across different domains."
+  },
+  {
+    "start": 6.639999866485596,
+    "end": 10.079999923706055,
+    "text": "Firebase Auth doesn't maintain sessions between domains,"
+  },
+  {
+    "start": 10.079999923706055,
+    "end": 14.039999961853027,
+    "text": "requiring separate logins for apps on different sites."
+  },
+  {
+    "start": 14.039999961853027,
+    "end": 15.920000076293945,
+    "text": "The article suggests a workaround"
+  },
+  {
+    "start": 15.920000076293945,
+    "end": 18.600000381469727,
+    "text": "using an iframe to share authentication."
+  },
+  {
+    "start": 18.600000381469727,
+    "end": 20.760000228881836,
+    "text": "By embedding an auth app into other apps,"
+  },
+  {
+    "start": 20.760000228881836,
+    "end": 23.6200008392334,
+    "text": "users can stay logged in across domains."
+  },
+  {
+    "start": 23.6200008392334,
+    "end": 26.600000381469727,
+    "text": "This method uses JavaScript's PostMessage API"
+  },
+  {
+    "start": 26.600000381469727,
+    "end": 29.079999923706055,
+    "text": "for effective cross-domain communication."
+  },
+  {
+    "start": 29.1200008392334,
+    "end": 31.520000457763672,
+    "text": "Interested in implementing this solution?"
+  },
+  {
+    "start": 31.520000457763672,
+    "end": 34.84000015258789,
+    "text": "Be sure to read the full article for step-by-step guidance."
+  }
+]

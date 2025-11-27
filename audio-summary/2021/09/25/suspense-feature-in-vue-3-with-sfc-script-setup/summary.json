@@ -1,0 +1,32 @@
+[
+  {
+    "start": 0,
+    "end": 4.400000095367432,
+    "text": "Discover how Vue 3's Suspense feature can enhance user experience."
+  },
+  {
+    "start": 4.400000095367432,
+    "end": 9.9399995803833,
+    "text": "Vue 3's Suspense component manages asynchronous data loading by showing fallback content,"
+  },
+  {
+    "start": 9.9399995803833,
+    "end": 13.34000015258789,
+    "text": "such as a loading spinner, until the data is ready."
+  },
+  {
+    "start": 13.34000015258789,
+    "end": 19.059999465942383,
+    "text": "It seamlessly integrates with the new Script Setup syntax and top-level await."
+  },
+  {
+    "start": 19.059999465942383,
+    "end": 25.959999084472656,
+    "text": "The article also covers handling errors with Vue's onErrorCaptured lifecycle hook to ensure a smooth user experience."
+  },
+  {
+    "start": 25.959999084472656,
+    "end": 31.959999084472656,
+    "text": "To improve your app's data loading with Vue 3, explore the full article for more insights."
+  }
+]

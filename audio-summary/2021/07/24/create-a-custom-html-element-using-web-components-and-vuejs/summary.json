@@ -1,0 +1,37 @@
+[
+  {
+    "start": 0,
+    "end": 6.340000152587891,
+    "text": "In this article, discover how to craft custom, reusable HTML elements using Web Components and Vue.js."
+  },
+  {
+    "start": 6.340000152587891,
+    "end": 13.15999984741211,
+    "text": "Web Components enable the creation of complex, reusable HTML elements with encapsulated functionality,"
+  },
+  {
+    "start": 13.15999984741211,
+    "end": 17.65999984741211,
+    "text": "boosting productivity and consistency across web platforms."
+  },
+  {
+    "start": 17.65999984741211,
+    "end": 20.399999618530273,
+    "text": "This guide will walk you through crafting these components,"
+  },
+  {
+    "start": 20.399999618530273,
+    "end": 24.899999618530273,
+    "text": "including how Vue.js can be used to build efficient web components."
+  },
+  {
+    "start": 24.899999618530273,
+    "end": 30.200000762939453,
+    "text": "You'll also learn how the Vue.cli simplifies exporting Vue.components as Web Components."
+  },
+  {
+    "start": 30.200000762939453,
+    "end": 31.5,
+    "text": "Dive in to learn more."
+  }
+]

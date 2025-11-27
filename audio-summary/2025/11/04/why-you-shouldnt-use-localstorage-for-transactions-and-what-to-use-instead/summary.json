@@ -1,0 +1,57 @@
+[
+  {
+    "start": 0,
+    "end": 5.400000095367432,
+    "text": "Ever wondered why local storage might not be the best choice for transactions in web apps?"
+  },
+  {
+    "start": 5.400000095367432,
+    "end": 6.400000095367432,
+    "text": "Let's dive in."
+  },
+  {
+    "start": 6.400000095367432,
+    "end": 8.199999809265137,
+    "text": "While local storage is convenient,"
+  },
+  {
+    "start": 8.199999809265137,
+    "end": 11.800000190734863,
+    "text": "it's not fit for complex operations due to its synchronous nature,"
+  },
+  {
+    "start": 11.800000190734863,
+    "end": 16.399999618530273,
+    "text": "which can freeze UIs and lead to unreliable transactions."
+  },
+  {
+    "start": 16.399999618530273,
+    "end": 19.700000762939453,
+    "text": "Modern alternatives like IndexedDB and LocalForage"
+  },
+  {
+    "start": 19.700000762939453,
+    "end": 24,
+    "text": "provide asynchronous, scalable, and safer storage options."
+  },
+  {
+    "start": 24,
+    "end": 27.100000381469727,
+    "text": "They support transactions without blocking the main thread,"
+  },
+  {
+    "start": 27.100000381469727,
+    "end": 31.899999618530273,
+    "text": "ensuring faster performance and improved data integrity for your applications."
+  },
+  {
+    "start": 31.899999618530273,
+    "end": 33.29999923706055,
+    "text": "Curious to learn more?"
+  },
+  {
+    "start": 33.29999923706055,
+    "end": 35.29999923706055,
+    "text": "Check out the full article below."
+  }
+]

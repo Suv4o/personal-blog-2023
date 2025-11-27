@@ -1,0 +1,32 @@
+[
+  {
+    "start": 0,
+    "end": 4.800000190734863,
+    "text": "Discover how to elevate your Vue 3 components by incorporating style binding."
+  },
+  {
+    "start": 4.800000190734863,
+    "end": 12.539999961853027,
+    "text": "In Vue 3.2, the vbind syntax lets you use reactive style variables directly in your single file components."
+  },
+  {
+    "start": 12.539999961853027,
+    "end": 17.299999237060547,
+    "text": "This means you can dynamically update styles based on your components' data."
+  },
+  {
+    "start": 17.299999237060547,
+    "end": 22.360000610351562,
+    "text": "The article includes examples of applying random colors and other styles with reactive variables,"
+  },
+  {
+    "start": 22.360000610351562,
+    "end": 25.399999618530273,
+    "text": "making your UI more interactive and engaging."
+  },
+  {
+    "start": 25.399999618530273,
+    "end": 29.299999237060547,
+    "text": "For a deeper dive into these features, explore the full article."
+  }
+]

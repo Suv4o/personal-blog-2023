@@ -1,0 +1,67 @@
+[
+  {
+    "start": 0,
+    "end": 2.680000066757202,
+    "text": "Discover how to set up a NestJS application"
+  },
+  {
+    "start": 2.680000066757202,
+    "end": 6.360000133514404,
+    "text": "with user authentication and authorization using Okta."
+  },
+  {
+    "start": 6.360000133514404,
+    "end": 8.760000228881836,
+    "text": "This guide helps you create a NestJS app"
+  },
+  {
+    "start": 8.760000228881836,
+    "end": 12.199999809265137,
+    "text": "where users can sign up and sign in with various roles,"
+  },
+  {
+    "start": 12.199999809265137,
+    "end": 14.399999618530273,
+    "text": "providing specific endpoint permissions"
+  },
+  {
+    "start": 14.399999618530273,
+    "end": 16.040000915527344,
+    "text": "based on these roles."
+  },
+  {
+    "start": 16.040000915527344,
+    "end": 17.399999618530273,
+    "text": "It leverages Okta,"
+  },
+  {
+    "start": 17.399999618530273,
+    "end": 19.68000030517578,
+    "text": "a cloud-based identity management service"
+  },
+  {
+    "start": 19.68000030517578,
+    "end": 22.040000915527344,
+    "text": "for seamless user authentication."
+  },
+  {
+    "start": 22.040000915527344,
+    "end": 24.520000457763672,
+    "text": "The article also explores integrating key features"
+  },
+  {
+    "start": 24.520000457763672,
+    "end": 28.360000610351562,
+    "text": "like NestJS Guards and the Okta Node.js SDK"
+  },
+  {
+    "start": 28.360000610351562,
+    "end": 29.719999313354492,
+    "text": "for managing users."
+  },
+  {
+    "start": 29.719999313354492,
+    "end": 33.31999969482422,
+    "text": "For more details, be sure to check out the full article."
+  }
+]

@@ -79,6 +79,45 @@ async function generateVoiceLine(text: string): Promise<Buffer> {
 }
 
 /**
+ * Generate transcript with timestamps using Whisper API
+ */
+async function generateTranscript(audioFile: string) {
+    try {
+        console.log(`  🎙️  Transcribing ${path.basename(audioFile)}...`);
+
+        // Call Whisper API with verbose JSON format to get timestamps
+        const transcription = await client.audio.transcriptions.create({
+            file: fs.createReadStream(audioFile),
+            model: "whisper-1",
+            response_format: "verbose_json",
+            timestamp_granularities: ["segment"],
+        });
+
+        // Format the transcript as a clean array with start, end, and text
+        const transcript =
+            (transcription as any).segments?.map((segment: any) => ({
+                start: segment.start,
+                end: segment.end,
+                text: segment.text.trim(),
+            })) || [];
+
+        // Generate output filename (summary.json)
+        const transcriptFileName = audioFile.replace(/\.(mp3|wav|m4a)$/i, ".json");
+
+        // Save as JSON
+        fs.writeFileSync(transcriptFileName, JSON.stringify(transcript, null, 2));
+
+        console.log(`  ✅ Transcript saved to ${transcriptFileName}`);
+        // console.log(`📊 Total segments: ${transcript.length}`);
+
+        return transcript;
+    } catch (error) {
+        console.error("  ❌ Failed to generate transcript:", error instanceof Error ? error.message : error);
+        // Don't throw, just log error so we don't stop the whole process
+    }
+}
+
+/**
  * Generate Summary for a single file
  */
 async function generateSummaryForFile(filePath: string, outputDir: string) {
@@ -126,6 +165,9 @@ async function generateSummaryForFile(filePath: string, outputDir: string) {
     const outputFile = path.join(outputDir, "summary.mp3");
     fs.writeFileSync(outputFile, combined);
     console.log(`  ✅ Saved audio to: ${outputFile}`);
+
+    // Step 3: Generate Transcript
+    await generateTranscript(outputFile);
 }
 
 /**
@@ -166,12 +208,24 @@ async function processAllBlogPosts(contentDir: string, outputBaseDir: string) {
                     const dirParts = pathParts.slice(0, -1); // Remove filename
                     const targetDir = path.join(outputBaseDir, ...dirParts, slug);
                     const targetFile = path.join(targetDir, "summary.mp3");
+                    const transcriptFile = path.join(targetDir, "summary.json");
 
-                    if (fs.existsSync(targetFile)) {
-                        console.log(`  ⏭️  Skipping (already exists): ${targetFile}`);
+                    const audioExists = fs.existsSync(targetFile);
+                    const transcriptExists = fs.existsSync(transcriptFile);
+
+                    if (audioExists && transcriptExists) {
+                        console.log(`  ⏭️  Skipping (all exist): ${targetFile}`);
                         continue;
                     }
 
+                    if (audioExists && !transcriptExists) {
+                        console.log(`  ⚠️ Audio exists but transcript missing. Generating transcript only...`);
+                        await generateTranscript(targetFile);
+                        processedCount++; // Count this as work done
+                        continue;
+                    }
+
+                    // If audio doesn't exist, generate everything
                     await generateSummaryForFile(fullPath, targetDir);
                     processedCount++;
                 } else {

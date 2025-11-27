@@ -1,0 +1,27 @@
+[
+  {
+    "start": 0,
+    "end": 6.320000171661377,
+    "text": "Join us as we dive into creating an interactive audio player with real-time transcript highlighting."
+  },
+  {
+    "start": 6.320000171661377,
+    "end": 11.220000267028809,
+    "text": "Learn to build an audio player with HTML, CSS, and JavaScript that syncs with captions,"
+  },
+  {
+    "start": 11.220000267028809,
+    "end": 17.899999618530273,
+    "text": "highlights spoken text, auto-scrolls the transcript, and allows users to jump to specific moments."
+  },
+  {
+    "start": 17.899999618530273,
+    "end": 21.299999237060547,
+    "text": "Perfect for enhancing podcasts or tutorials visually."
+  },
+  {
+    "start": 21.299999237060547,
+    "end": 26.31999969482422,
+    "text": "Explore the full article for more details and start crafting your own interactive audio player."
+  }
+]

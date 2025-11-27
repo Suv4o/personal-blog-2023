@@ -1,0 +1,27 @@
+[
+  {
+    "start": 0,
+    "end": 4.199999809265137,
+    "text": "Discover an exciting project that uses AI to sort images by color."
+  },
+  {
+    "start": 4.199999809265137,
+    "end": 9.4399995803833,
+    "text": "A landscape photographer tackled the task of sorting 160 images for a photo book."
+  },
+  {
+    "start": 9.4399995803833,
+    "end": 15.079999923706055,
+    "text": "By utilizing Python, LangChain, and ChatGPT, they automated the process through image clustering"
+  },
+  {
+    "start": 15.079999923706055,
+    "end": 19.559999465942383,
+    "text": "and color classification, streamlining photo organization."
+  },
+  {
+    "start": 19.559999465942383,
+    "end": 22.520000457763672,
+    "text": "Visit the full article to learn more about the implementation."
+  }
+]

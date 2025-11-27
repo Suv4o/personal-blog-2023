@@ -1,0 +1,67 @@
+[
+  {
+    "start": 0,
+    "end": 2.5999999046325684,
+    "text": "Discover how to build an affordable AI search engine"
+  },
+  {
+    "start": 2.5999999046325684,
+    "end": 6.380000114440918,
+    "text": "with Next.js and open source LLMs in this article."
+  },
+  {
+    "start": 6.380000114440918,
+    "end": 9.319999694824219,
+    "text": "Explore how to use retrieval augmented generation"
+  },
+  {
+    "start": 9.319999694824219,
+    "end": 10.460000038146973,
+    "text": "to create a search engine"
+  },
+  {
+    "start": 10.460000038146973,
+    "end": 13.84000015258789,
+    "text": "that delivers precise context-aware results."
+  },
+  {
+    "start": 13.84000015258789,
+    "end": 16.020000457763672,
+    "text": "The guide shows how to integrate SQLite"
+  },
+  {
+    "start": 16.020000457763672,
+    "end": 19.15999984741211,
+    "text": "and vector databases for efficient indexing."
+  },
+  {
+    "start": 19.15999984741211,
+    "end": 20.719999313354492,
+    "text": "By using local models,"
+  },
+  {
+    "start": 20.719999313354492,
+    "end": 23.360000610351562,
+    "text": "achieve a powerful privacy-focused search"
+  },
+  {
+    "start": 23.360000610351562,
+    "end": 25.200000762939453,
+    "text": "without expensive APIs."
+  },
+  {
+    "start": 25.200000762939453,
+    "end": 26.520000457763672,
+    "text": "Interested?"
+  },
+  {
+    "start": 26.520000457763672,
+    "end": 29.18000030517578,
+    "text": "Dive into the full article for a step-by-step guide"
+  },
+  {
+    "start": 29.18000030517578,
+    "end": 31.540000915527344,
+    "text": "to creating your own AI search engine."
+  }
+]
