@@ -14,6 +14,7 @@ const audioRef = ref<HTMLAudioElement | null>(null);
 const transcriptContainerRef = ref<HTMLElement | null>(null);
 const isPlaying = ref(false);
 const currentTime = ref(0);
+let rafId: number | null = null;
 const duration = ref(0);
 const transcript = ref<TranscriptSegment[]>([]);
 const showTranscript = ref(false);
@@ -48,19 +49,40 @@ onMounted(async () => {
     }
 });
 
+onUnmounted(() => {
+    if (rafId) {
+        cancelAnimationFrame(rafId);
+    }
+});
+
+const updateLoop = () => {
+    if (!audioRef.value) return;
+    currentTime.value = audioRef.value.currentTime;
+    rafId = requestAnimationFrame(updateLoop);
+};
+
 const togglePlay = () => {
     if (!audioRef.value) return;
     if (isPlaying.value) {
         audioRef.value.pause();
+        if (rafId) {
+            cancelAnimationFrame(rafId);
+            rafId = null;
+        }
     } else {
         audioRef.value.play();
+        updateLoop();
     }
     isPlaying.value = !isPlaying.value;
 };
 
 const onTimeUpdate = () => {
     if (!audioRef.value) return;
-    currentTime.value = audioRef.value.currentTime;
+    // When playing, RAF handles currentTime updates for smoothness.
+    // We only sync here if not playing (e.g. external seek) or as a fallback.
+    if (!isPlaying.value) {
+        currentTime.value = audioRef.value.currentTime;
+    }
 
     // Find active segment
     const index = transcript.value.findIndex((seg) => currentTime.value >= seg.start && currentTime.value <= seg.end);
@@ -81,6 +103,10 @@ const onEnded = () => {
     isPlaying.value = false;
     currentTime.value = 0;
     activeSegmentIndex.value = -1;
+    if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+    }
 };
 
 const seek = (event: Event) => {
@@ -168,7 +194,7 @@ watch(showTranscript, async (newVal) => {
                     :max="duration"
                     :value="currentTime"
                     @input="seek"
-                    class="w-full h-1 bg-gray-secondary/50 rounded-lg appearance-none cursor-pointer accent-primary hover:h-1.5 transition-all"
+                    class="w-full cursor-pointer"
                 />
             </div>
 
@@ -239,5 +265,43 @@ watch(showTranscript, async (newVal) => {
 }
 .scrollbar-thin::-webkit-scrollbar-thumb {
     @apply bg-gray-secondary/50 rounded-[20px];
+}
+
+/* Cross-browser range input styling */
+input[type="range"] {
+    @apply appearance-none w-full h-[6px] bg-gray-secondary/50 rounded-[3px] outline-none;
+    -webkit-appearance: none;
+}
+
+/* Chrome / Safari / Edge - TRACK */
+input[type="range"]::-webkit-slider-runnable-track {
+    @apply h-[6px] bg-gray-secondary/50 rounded-[3px];
+}
+
+/* Chrome / Safari / Edge - THUMB */
+input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 bg-primary rounded-full cursor-pointer -mt-[7px] transition-colors duration-200;
+    -webkit-appearance: none;
+}
+
+/* Firefox - TRACK */
+input[type="range"]::-moz-range-track {
+    @apply h-[6px] bg-gray-secondary/50 rounded-[3px];
+}
+
+/* Firefox - THUMB */
+input[type="range"]::-moz-range-thumb {
+    @apply w-5 h-5 bg-primary border-none rounded-full cursor-pointer transition-colors duration-200;
+}
+
+/* Firefox - REMOVE focus border */
+input[type="range"]::-moz-focus-outer {
+    @apply border-0;
+}
+
+/* Hover states */
+input[type="range"]::-webkit-slider-thumb:hover,
+input[type="range"]::-moz-range-thumb:hover {
+    @apply bg-primary-light;
 }
 </style>
