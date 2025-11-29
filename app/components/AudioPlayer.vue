@@ -12,6 +12,7 @@ interface TranscriptSegment {
 
 const audioRef = ref<HTMLAudioElement | null>(null);
 const transcriptContainerRef = ref<HTMLElement | null>(null);
+const rangeInputRef = ref<HTMLInputElement | null>(null);
 const isPlaying = ref(false);
 const currentTime = ref(0);
 let rafId: number | null = null;
@@ -55,9 +56,21 @@ onUnmounted(() => {
     }
 });
 
+const updateProgressVariable = (percent: number) => {
+    if (rangeInputRef.value) {
+        rangeInputRef.value.style.setProperty("--progress", `${percent}%`);
+    }
+};
+
 const updateLoop = () => {
     if (!audioRef.value) return;
     currentTime.value = audioRef.value.currentTime;
+
+    if (duration.value > 0) {
+        const percent = (currentTime.value / duration.value) * 100;
+        updateProgressVariable(percent);
+    }
+
     rafId = requestAnimationFrame(updateLoop);
 };
 
@@ -112,6 +125,13 @@ const onEnded = () => {
 const seek = (event: Event) => {
     const input = event.target as HTMLInputElement;
     const time = parseFloat(input.value);
+
+    // Immediate visual update
+    if (duration.value > 0) {
+        const percent = (time / duration.value) * 100;
+        updateProgressVariable(percent);
+    }
+
     if (audioRef.value) {
         audioRef.value.currentTime = time;
         currentTime.value = time;
@@ -148,6 +168,14 @@ watch(showTranscript, async (newVal) => {
     if (newVal && activeSegmentIndex.value !== -1) {
         await nextTick();
         scrollToActiveSegment();
+    }
+});
+
+// Update progress variable when not playing (e.g. initial load or external seek)
+watch(currentTime, () => {
+    if (!isPlaying.value && duration.value > 0) {
+        const percent = (currentTime.value / duration.value) * 100;
+        updateProgressVariable(percent);
     }
 });
 </script>
@@ -189,12 +217,15 @@ watch(showTranscript, async (newVal) => {
             <!-- Progress Bar -->
             <div class="relative mb-2 group">
                 <input
+                    ref="rangeInputRef"
                     type="range"
                     min="0"
                     :max="duration"
+                    step="any"
                     :value="currentTime"
                     @input="seek"
                     class="w-full cursor-pointer"
+                    style="--progress: 0%"
                 />
             </div>
 
@@ -269,8 +300,13 @@ watch(showTranscript, async (newVal) => {
 
 /* Cross-browser range input styling */
 input[type="range"] {
-    @apply appearance-none w-full h-[6px] bg-gray-secondary/50 rounded-[3px] outline-none;
+    @apply appearance-none w-full h-[6px] rounded-[3px] outline-none bg-transparent transition-none;
     -webkit-appearance: none;
+    background: linear-gradient(
+        to right,
+        rgb(var(--color-primary)) var(--progress),
+        rgb(var(--color-gray-secondary) / 0.5) var(--progress)
+    );
 }
 
 /* Chrome / Safari / Edge - TRACK */
