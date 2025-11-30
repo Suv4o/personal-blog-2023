@@ -1,0 +1,41 @@
+name: Generate Audio Summaries
+
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - "content/**"
+
+permissions:
+    contents: write
+
+jobs:
+    generate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "24"
+
+            - name: Install Dependencies
+              run: |
+                  cd scripts
+                  npm install
+
+            - name: Run Audio Generation
+              env:
+                  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+              run: |
+                  cd scripts
+                  npm start
+
+            - name: Commit and Push Changes
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: "chore: generate audio summaries and inject players"
+                  file_pattern: "content/** audio-summary/**"

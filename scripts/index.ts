@@ -171,6 +171,35 @@ async function generateSummaryForFile(filePath: string, outputDir: string) {
 }
 
 /**
+ * Inject the ::audio-player component into the markdown file
+ */
+function injectAudioPlayer(filePath: string, audioUrl: string, transcriptUrl: string) {
+    let content = fs.readFileSync(filePath, "utf-8");
+
+    // Check if player already exists
+    if (content.includes("::audio-player")) {
+        console.log("  ⏭️  Audio player already exists in markdown.");
+        return;
+    }
+
+    // Construct the component string
+    const playerComponent = `\n::audio-player{:audioSrc="${audioUrl}" :transcriptSrc="${transcriptUrl}"}\n::\n`;
+
+    // Find insertion point: after ::tag-pills block
+    const tagPillsRegex = /::tag-pills\{[^}]*\}\n::/g;
+    const match = tagPillsRegex.exec(content);
+
+    if (match) {
+        const insertionIndex = match.index + match[0].length;
+        content = content.slice(0, insertionIndex) + playerComponent + content.slice(insertionIndex);
+        fs.writeFileSync(filePath, content, "utf-8");
+        console.log("  ✅ Injected audio player into markdown.");
+    } else {
+        console.warn("  ⚠️ Could not find ::tag-pills to inject audio player.");
+    }
+}
+
+/**
  * Recursively find all blog posts and process them
  */
 async function processAllBlogPosts(contentDir: string, outputBaseDir: string) {
@@ -210,11 +239,20 @@ async function processAllBlogPosts(contentDir: string, outputBaseDir: string) {
                     const targetFile = path.join(targetDir, "summary.mp3");
                     const transcriptFile = path.join(targetDir, "summary.json");
 
+                    // Construct CDN URLs
+                    // https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/{path}/summary.mp3
+                    const urlPath = [...dirParts, slug].join("/");
+                    const audioUrl = `https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/${urlPath}/summary.mp3`;
+                    const transcriptUrl = `https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/${urlPath}/summary.json`;
+
+                    // Always try to inject the player, even if audio exists
+                    injectAudioPlayer(fullPath, audioUrl, transcriptUrl);
+
                     const audioExists = fs.existsSync(targetFile);
                     const transcriptExists = fs.existsSync(transcriptFile);
 
                     if (audioExists && transcriptExists) {
-                        console.log(`  ⏭️  Skipping (all exist): ${targetFile}`);
+                        console.log(`  ⏭️  Skipping generation (files exist): ${targetFile}`);
                         continue;
                     }
 
