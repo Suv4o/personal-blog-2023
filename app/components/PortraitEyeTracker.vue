@@ -260,7 +260,12 @@ onUnmounted(() => {
 
         <!-- Motion toggle button for mobile devices -->
         <div v-if="isMobile && motionSupported" class="flex justify-center mt-4">
-            <Button :classes="motionEnabled ? 'blue' : ''" subscribe :subscribeBtnName="buttonText" @click="toggleMotion" />
+            <Button
+                :classes="motionEnabled ? 'blue' : ''"
+                subscribe
+                :subscribeBtnName="buttonText"
+                @click="toggleMotion"
+            />
         </div>
 
         <!-- Instruction text -->
