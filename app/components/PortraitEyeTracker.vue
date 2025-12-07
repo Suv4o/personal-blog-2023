@@ -252,8 +252,8 @@ onUnmounted(() => {
                     format="webp"
                     :widths="[320, 480, 640]"
                     fetchpriority="high"
-                    class="absolute inset-0 w-full h-full object-contain transition-opacity duration-50"
-                    :class="{ 'opacity-100': currentImage === file, 'opacity-0': currentImage !== file }"
+                    class="absolute inset-0 w-full h-full object-contain"
+                    :class="{ 'opacity-100 z-10': currentImage === file, 'opacity-0 z-0': currentImage !== file }"
                 />
             </div>
         </div>
