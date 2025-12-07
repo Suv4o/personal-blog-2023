@@ -4,7 +4,12 @@
     <div>
         <div class="text-2xl sm:text-4xl text-center text-secondary mt-12 mb-6"><strong>ABOUT ME</strong></div>
         <arrow-down class=""></arrow-down>
-        <div class="flex justify-center mt-12">
+
+        <PortraitEyeTracker />
+
+        <arrow-down class=""></arrow-down>
+
+        <div class="flex justify-center mt-4">
             <p class="text-gray text-lg sm:text-xl">
                 Hi 👋🏼 I'm Aleks Trpkovski, a <strong>Software Engineer</strong> with nearly a decade of experience
                 building websites and web apps that work well and are easy to use. I've led teams, designed large-scale
