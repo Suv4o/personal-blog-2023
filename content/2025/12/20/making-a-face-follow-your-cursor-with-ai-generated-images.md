@@ -134,7 +134,7 @@ Now we get to the really exciting part - writing the code that will automaticall
 
 First, let's create a new file called `index.ts` in our project folder. At the top of this file, we'll define the sets of values we want to sample for each parameter. Remember, we're choosing strategic values rather than trying every possible number:
 
-```tsx
+```ts
 const pitchValues = [-20, -10, 0, 10, 20];
 const pupilXValues = [-15, 0, 15];
 const pupilYValues = [-15, 0, 15];
@@ -144,7 +144,7 @@ These arrays represent all the different angles and eye positions we want to gen
 
 We also need to specify where our base face image is located. Upload your face photo to an image hosting service - I used <a href="https://cloudinary.com/" target="_blank" rel="noopener noreferrer">Cloudinary</a>, but any service that gives you a direct URL will work. Then add this line to your code:
 
-```tsx
+```ts
 const IMAGE_URL = "https://your-image-host.com/path/to/your-face.jpg";
 ```
 
@@ -154,7 +154,7 @@ Replace that URL with your actual uploaded face photo. Use a clear, well-lit por
 
 Now let's import the libraries we need and set up our connection to Replicate. Add these lines at the top of your `index.ts` file:
 
-```tsx
+```ts
 import Replicate from "replicate";
 import fs from "node:fs";
 import path from "node:path";
@@ -170,7 +170,7 @@ We import the Replicate library to communicate with the AI model, then create a 
 
 Next, we need to generate all possible combinations of our three parameters. Let's create a TypeScript interface to define what each combination looks like, and then a function that builds all the combinations:
 
-```tsx
+```ts
 interface ImageParams {
     rotate_pitch: number;
     pupil_x: number;
@@ -260,7 +260,7 @@ Finally, we take the output from the model, convert it to a binary buffer, and w
 
 Now let's create our main function that ties everything together and actually runs the generation process:
 
-```tsx
+```ts
 async function main() {
     // Create the output folder if it doesn't exist yet
     if (!fs.existsSync("generated-images")) {
