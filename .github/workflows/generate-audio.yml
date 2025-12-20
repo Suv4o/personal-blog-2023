@@ -27,9 +27,15 @@ jobs:
                   cd scripts
                   npm install
 
-            - name: Run Audio Generation
+            - name: Create .env file
               env:
                   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+              run: |
+                  cd scripts
+                  echo "::add-mask::$OPENAI_API_KEY"
+                  echo "OPENAI_API_KEY=$OPENAI_API_KEY" >> .env
+
+            - name: Run Audio Generation
               run: |
                   cd scripts
                   npm start
