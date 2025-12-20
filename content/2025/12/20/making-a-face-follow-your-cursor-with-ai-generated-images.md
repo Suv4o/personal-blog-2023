@@ -24,9 +24,9 @@ published: 20th December 2025
 readTime: 12
 author: Aleksandar Trpkovski
 articleTags:
-    - AI
     - FrontEnd
     - Node.js
+    - AI
 ---
 
 # Making a Face Follow Your Cursor with AI‑Generated Images
