@@ -1,0 +1,37 @@
+[
+  {
+    "start": 0,
+    "end": 6.739999771118164,
+    "text": "In this article, we'll explore how to create an interactive face-tracking effect using AI-generated images."
+  },
+  {
+    "start": 6.739999771118164,
+    "end": 11.300000190734863,
+    "text": "The tutorial walks you through generating facial variations with an AI model,"
+  },
+  {
+    "start": 11.300000190734863,
+    "end": 14.460000038146973,
+    "text": "setting up a Node.js script for automated image handling,"
+  },
+  {
+    "start": 14.460000038146973,
+    "end": 21.399999618530273,
+    "text": "and implementing smooth cursor and device motion tracking in the browser with HTML, CSS, and JavaScript."
+  },
+  {
+    "start": 21.399999618530273,
+    "end": 26.360000610351562,
+    "text": "By preloading images, it ensures smooth transitions without live AI processing,"
+  },
+  {
+    "start": 26.360000610351562,
+    "end": 29.540000915527344,
+    "text": "making it quick and accessible even on slower devices."
+  },
+  {
+    "start": 29.540000915527344,
+    "end": 34.18000030517578,
+    "text": "Be sure to check out the full article for detailed steps and start your own project."
+  }
+]

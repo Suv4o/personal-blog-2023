@@ -35,6 +35,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 
 ::tag-pills{:tags="articleTags"}
 ::
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/12/20/making-a-face-follow-your-cursor-with-ai-generated-images/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/12/20/making-a-face-follow-your-cursor-with-ai-generated-images/summary.json"}
+::
+
 
 ::portrait-eye-tracker
 ::
