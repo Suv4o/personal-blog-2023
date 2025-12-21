@@ -182,8 +182,8 @@ function injectAudioPlayer(filePath: string, audioUrl: string, transcriptUrl: st
         return;
     }
 
-    // Construct the component string
-    const playerComponent = `\n::audio-player{:audioSrc="${audioUrl}" :transcriptSrc="${transcriptUrl}"}\n::\n`;
+    // Construct the component string (with empty line before and after)
+    const playerComponent = `\n\n::audio-player{:audioSrc="${audioUrl}" :transcriptSrc="${transcriptUrl}"}\n::`;
 
     // Find insertion point: after ::tag-pills block
     const tagPillsRegex = /::tag-pills\{[^}]*\}\n::/g;
@@ -191,7 +191,13 @@ function injectAudioPlayer(filePath: string, audioUrl: string, transcriptUrl: st
 
     if (match) {
         const insertionIndex = match.index + match[0].length;
-        content = content.slice(0, insertionIndex) + playerComponent + content.slice(insertionIndex);
+        const before = content.slice(0, insertionIndex);
+        let after = content.slice(insertionIndex);
+
+        // Remove leading whitespace/newlines from after, then add exactly one empty line
+        after = after.replace(/^\s*/, "\n\n");
+
+        content = before + playerComponent + after;
         fs.writeFileSync(filePath, content, "utf-8");
         console.log("  ✅ Injected audio player into markdown.");
     } else {
