@@ -1,0 +1,32 @@
+[
+  {
+    "start": 0,
+    "end": 5.099999904632568,
+    "text": "Discover how interfaces can automatically adjust their appearance based on content."
+  },
+  {
+    "start": 5.099999904632568,
+    "end": 11.039999961853027,
+    "text": "Dive into Google's open-source A2 UI protocol, which enables AI to create and style UI components"
+  },
+  {
+    "start": 11.039999961853027,
+    "end": 12.319999694824219,
+    "text": "dynamically."
+  },
+  {
+    "start": 12.319999694824219,
+    "end": 18.360000610351562,
+    "text": "Learn to build a content-driven blog application using Gemini 2.5 Flash and Lit Web Components,"
+  },
+  {
+    "start": 18.360000610351562,
+    "end": 24.040000915527344,
+    "text": "creating personalized and adaptive user experiences without needing hard-coded rules."
+  },
+  {
+    "start": 24.040000915527344,
+    "end": 25.559999465942383,
+    "text": "Read on to explore further."
+  }
+]

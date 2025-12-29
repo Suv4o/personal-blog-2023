@@ -40,6 +40,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/12/29/building-content-adaptive-interfaces-with-googles-a2ui/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/12/29/building-content-adaptive-interfaces-with-googles-a2ui/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1766977382/blog/building-content-adaptive-interfaces-with-googles-a2ui/hero-building-content-adaptive-interfaces-with-googles-a2ui_jc2fg2)
 
 > **How to build adaptive interfaces where the AI decides not just _what_ to show, but _how_ to style it.**
