@@ -71,8 +71,8 @@ useSeoMeta({
     ogTitle: article.value?.title ?? "",
     title: article.value?.title ?? "",
     ogImage: article.value?.image ?? "",
-    ogUrl: `https://www.trpkovski.com/${route.path}`,
-    ogSiteName: article.value?.title ?? "",
+    ogUrl: `https://www.trpkovski.com${route.path}`,
+    ogSiteName: "Trpkovski",
     ogType: "article",
     ogImageWidth: 1200,
     ogImageHeight: 630,
@@ -80,14 +80,14 @@ useSeoMeta({
     twitterTitle: article.value?.title ?? "",
     twitterDescription: article.value?.description ?? "",
     twitterImage: article.value?.image ?? "",
-    twitterCard: "summary",
+    twitterCard: "summary_large_image",
 });
 
 useHead({
     meta: [
         {
             name: "twitter:url",
-            content: `https://www.trpkovski.com/${route.path}`,
+            content: `https://www.trpkovski.com${route.path}`,
         },
     ],
 });
