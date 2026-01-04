@@ -36,6 +36,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/01/04/blogging-in-2026-building-your-own-knowledge-base/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/01/04/blogging-in-2026-building-your-own-knowledge-base/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1767486674/blog/blogging-in-2026-building-your-own-knowledge-base/are-blogs-dying-because-of-ai-not-quite-2_djhvpq)
 
 I published my first <NuxtLink to="/2021/05/12/the-mysterious-this-keyword-in-vueland">tech blog article</NuxtLink> in 2021. Since then, I've written 39 more - making this my 40th. That number isn't massive, but it's meaningful to me. Hitting this milestone in 2026 felt like the right moment to pause and reflect on what blogging has meant to me - and how dramatically it has changed along the way.
