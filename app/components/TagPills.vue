@@ -47,7 +47,11 @@
                                                           ? tagDetails[19].link
                                                           : tag == 'AWS'
                                                             ? tagDetails[20].link
-                                                            : tagDetails[21].link
+                                                            : tag == 'Advice'
+                                                              ? tagDetails[22].link
+                                                              : tag == 'Productivity'
+                                                                ? tagDetails[23].link
+                                                                : tagDetails[21].link
             }`"
         >
             <div
@@ -94,7 +98,11 @@
                                                               ? 'bg-entertainment'
                                                               : tag == 'AWS'
                                                                 ? 'bg-aws'
-                                                                : 'bg-other',
+                                                                : tag == 'Advice'
+                                                                  ? 'bg-advice'
+                                                                  : tag == 'Productivity'
+                                                                    ? 'bg-productivity'
+                                                                    : 'bg-other',
                     small ? 'text-xs' : 'text-sm',
                     tag == 'Vue.js'
                         ? 'text-white!'
@@ -138,7 +146,11 @@
                                                               ? 'text-black'
                                                               : tag == 'AWS'
                                                                 ? 'text-white'
-                                                                : 'text-white',
+                                                                : tag == 'Advice'
+                                                                  ? 'text-white'
+                                                                  : tag == 'Productivity'
+                                                                    ? 'text-white'
+                                                                    : 'text-white',
                 ]"
             >
                 {{ tag }}
@@ -184,6 +196,8 @@ export default {
                 { bg: "#dba85a", txt: "#3d3d3d", link: "/entertainment" },
                 { bg: "#242B37", txt: "#ffffff", link: "/aws" },
                 { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
+                { bg: "#8B5CF6", txt: "#ffffff", link: "/advice" },
+                { bg: "#10B981", txt: "#ffffff", link: "/productivity" },
             ],
         };
     },
