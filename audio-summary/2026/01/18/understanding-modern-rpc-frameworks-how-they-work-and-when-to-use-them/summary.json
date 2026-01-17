@@ -1,0 +1,72 @@
+[
+  {
+    "start": 0,
+    "end": 2.9200000762939453,
+    "text": "Today, we'll explore modern RPC frameworks"
+  },
+  {
+    "start": 2.9200000762939453,
+    "end": 4.480000019073486,
+    "text": "and how they compare to REST."
+  },
+  {
+    "start": 4.480000019073486,
+    "end": 7.639999866485596,
+    "text": "This guide covers RPC frameworks such as JSON-RPC,"
+  },
+  {
+    "start": 7.639999866485596,
+    "end": 10.720000267028809,
+    "text": "gRPC, tRPC, and oRPC."
+  },
+  {
+    "start": 10.720000267028809,
+    "end": 13.5600004196167,
+    "text": "Discover how they ensure end-to-end type safety,"
+  },
+  {
+    "start": 13.5600004196167,
+    "end": 15.680000305175781,
+    "text": "boost microservices architecture,"
+  },
+  {
+    "start": 15.680000305175781,
+    "end": 18.420000076293945,
+    "text": "and simplify full-stack TypeScript development."
+  },
+  {
+    "start": 18.420000076293945,
+    "end": 20.959999084472656,
+    "text": "Learn why RPC could be a superior choice to REST"
+  },
+  {
+    "start": 20.959999084472656,
+    "end": 23.15999984741211,
+    "text": "for action-oriented APIs,"
+  },
+  {
+    "start": 23.15999984741211,
+    "end": 25.799999237060547,
+    "text": "especially when you manage both the client and server,"
+  },
+  {
+    "start": 25.799999237060547,
+    "end": 27.520000457763672,
+    "text": "offering stronger type safety"
+  },
+  {
+    "start": 27.520000457763672,
+    "end": 29.280000686645508,
+    "text": "and a better developer experience."
+  },
+  {
+    "start": 29.31999969482422,
+    "end": 31.479999542236328,
+    "text": "Read the full article for more insights"
+  },
+  {
+    "start": 31.479999542236328,
+    "end": 33.279998779296875,
+    "text": "and practical examples."
+  }
+]

@@ -41,6 +41,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/01/18/understanding-modern-rpc-frameworks-how-they-work-and-when-to-use-them/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/01/18/understanding-modern-rpc-frameworks-how-they-work-and-when-to-use-them/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1768564822/blog/understanding-modern-rpc-frameworks-how-they-work-and-when-to-use-them/understanding-modern-rpc-frameworks-how-they-work-and-when-to-use-them_pkdooe)
 
 When building a web application where the frontend needs to communicate with the backend, we almost always reach for <a href="https://en.wikipedia.org/wiki/REST" target="_blank" rel="noopener noreferrer">REST</a>. It's what we know best, well-documented and works beautifully with the browser's `fetch` API using HTTP methods like `GET`, `POST`, `PUT`, and `DELETE`.
