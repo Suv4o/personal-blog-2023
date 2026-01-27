@@ -11,10 +11,10 @@
     "license": "ISC",
     "type": "module",
     "devDependencies": {
-        "tsx": "^4.20.6"
+        "tsx": "^4.21.0"
     },
     "dependencies": {
-        "@openai/agents": "^0.3.3",
-        "openai": "^6.9.1"
+        "@openai/agents": "^0.4.3",
+        "openai": "^6.16.0"
     }
 }
