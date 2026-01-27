@@ -26,7 +26,7 @@ keywords:
 type: page
 blog: post
 published: 26th January 2026
-readTime: 15
+readTime: 8
 author: Aleksandar Trpkovski
 articleTags:
     - DevOps
