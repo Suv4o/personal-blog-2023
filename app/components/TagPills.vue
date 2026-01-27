@@ -51,7 +51,9 @@
                                                               ? tagDetails[22].link
                                                               : tag == 'Productivity'
                                                                 ? tagDetails[23].link
-                                                                : tagDetails[21].link
+                                                                : tag == 'DevOps'
+                                                                  ? tagDetails[24].link
+                                                                  : tagDetails[21].link
             }`"
         >
             <div
@@ -102,7 +104,9 @@
                                                                   ? 'bg-advice'
                                                                   : tag == 'Productivity'
                                                                     ? 'bg-productivity'
-                                                                    : 'bg-other',
+                                                                    : tag == 'DevOps'
+                                                                      ? 'bg-devops'
+                                                                      : 'bg-other',
                     small ? 'text-xs' : 'text-sm',
                     tag == 'Vue.js'
                         ? 'text-white!'
@@ -150,7 +154,9 @@
                                                                   ? 'text-white'
                                                                   : tag == 'Productivity'
                                                                     ? 'text-white'
-                                                                    : 'text-white',
+                                                                    : tag == 'DevOps'
+                                                                      ? 'text-white'
+                                                                      : 'text-white',
                 ]"
             >
                 {{ tag }}
@@ -198,6 +204,7 @@ export default {
                 { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
                 { bg: "#8B5CF6", txt: "#ffffff", link: "/advice" },
                 { bg: "#10B981", txt: "#ffffff", link: "/productivity" },
+                { bg: "#2563EB", txt: "#ffffff", link: "/devops" },
             ],
         };
     },
