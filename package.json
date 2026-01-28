@@ -12,25 +12,25 @@
         "postinstall": "nuxt prepare"
     },
     "devDependencies": {
-        "@nuxt/content": "^3.8.0",
-        "@nuxt/devtools": "latest",
-        "@tailwindcss/forms": "^0.5.10",
-        "autoprefixer": "^10.4.21",
-        "nuxt": "^4.2.0",
-        "prettier": "^3.6.2",
-        "prettier-plugin-tailwindcss": "^0.7.1",
+        "@nuxt/content": "^3.11.0",
+        "@nuxt/devtools": "^3.0.1",
+        "@tailwindcss/forms": "^0.5.11",
+        "autoprefixer": "^10.4.23",
+        "nuxt": "^4.3.0",
+        "prettier": "^3.8.1",
+        "prettier-plugin-tailwindcss": "^0.7.2",
         "typescript": "^5.9.3"
     },
     "dependencies": {
         "@headlessui/vue": "^1.7.23",
         "@heroicons/vue": "^2.2.0",
-        "@huggingface/transformers": "^3.7.6",
-        "@nuxt/image": "^1.11.0",
-        "@tailwindcss/vite": "^4.1.16",
-        "@types/node": "^24.9.2",
-        "better-sqlite3": "^12.4.1",
-        "tailwindcss": "^4.1.16",
-        "vue-tsc": "^3.1.2"
+        "@huggingface/transformers": "^3.8.1",
+        "@nuxt/image": "^2.0.0",
+        "@tailwindcss/vite": "^4.1.18",
+        "@types/node": "^25.0.10",
+        "better-sqlite3": "^12.6.2",
+        "tailwindcss": "^4.1.18",
+        "vue-tsc": "^3.2.4"
     },
     "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }
