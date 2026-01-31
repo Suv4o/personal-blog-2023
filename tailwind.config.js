@@ -51,6 +51,7 @@ export default {
                 aws: "rgb(var(--color-aws) / <alpha-value>)", // #242B37
                 advice: "rgb(var(--color-advice) / <alpha-value>)", // #8B5CF6
                 productivity: "rgb(var(--color-productivity) / <alpha-value>)", // #10B981
+                devops: "rgb(var(--color-devops) / <alpha-value>)", // #2563EB
                 // Through The Lens custom tag colors
                 "cosmic-views": "rgb(var(--color-cosmic-views) / <alpha-value>)", // #5B5FFF
                 "night-skies": "rgb(var(--color-night-skies) / <alpha-value>)", // #4E4CCF

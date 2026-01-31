@@ -1,0 +1,27 @@
+[
+  {
+    "start": 0,
+    "end": 4.400000095367432,
+    "text": "Learn how to run and debug GitHub actions locally with the tool ACT."
+  },
+  {
+    "start": 4.400000095367432,
+    "end": 9,
+    "text": "Discover a detailed guide on setting up ACT to run workflows on your machine."
+  },
+  {
+    "start": 9,
+    "end": 14.899999618530273,
+    "text": "You'll tackle tasks such as installation, managing secrets, and handling multi-job pipelines."
+  },
+  {
+    "start": 14.899999618530273,
+    "end": 20.700000762939453,
+    "text": "Using ACT helps you catch errors early, saving time by avoiding the slow commit-push cycle."
+  },
+  {
+    "start": 20.700000762939453,
+    "end": 24.600000381469727,
+    "text": "Interested? Dive into the full article for detailed instructions."
+  }
+]
