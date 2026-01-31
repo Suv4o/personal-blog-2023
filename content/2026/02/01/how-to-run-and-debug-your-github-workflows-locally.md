@@ -25,7 +25,7 @@ keywords:
     - Apple Silicon
 type: page
 blog: post
-published: 26th January 2026
+published: 1st February 2026
 readTime: 8
 author: Aleksandar Trpkovski
 articleTags:
