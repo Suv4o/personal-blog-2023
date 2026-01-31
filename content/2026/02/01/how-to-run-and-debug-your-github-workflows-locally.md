@@ -41,6 +41,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/02/01/how-to-run-and-debug-your-github-workflows-locally/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/02/01/how-to-run-and-debug-your-github-workflows-locally/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1769425117/blog/how-to-run-and-debug-your-github-workflows-locally/how-to-run-and-debug-your-github-workflows-locally_afbogh)
 
 > **_Test your workflows before you push a commit._**
