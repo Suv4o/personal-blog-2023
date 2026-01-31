@@ -1,0 +1,72 @@
+name: Convert Draft Article
+
+on:
+    push:
+        branches:
+            - dev
+        paths:
+            - "*.md"
+            - "!README.md"
+
+permissions:
+    contents: write
+
+jobs:
+    convert:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Check for draft article
+              id: check-draft
+              run: |
+                  # Find any .md file in root that isn't README.md
+                  DRAFT=$(find . -maxdepth 1 -name "*.md" ! -name "README.md" -type f | head -1)
+                  if [ -z "$DRAFT" ]; then
+                    echo "No draft article found in root"
+                    echo "has_draft=false" >> $GITHUB_OUTPUT
+                  else
+                    echo "Found draft article: $DRAFT"
+                    echo "has_draft=true" >> $GITHUB_OUTPUT
+                  fi
+
+            - name: Setup Node.js
+              if: steps.check-draft.outputs.has_draft == 'true'
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
+
+            - name: Setup GitHub CLI
+              if: steps.check-draft.outputs.has_draft == 'true'
+              uses: cli/gh-extension-preload@v2
+              with:
+                  extensions: github/gh-copilot
+
+            - name: Authenticate GitHub CLI
+              if: steps.check-draft.outputs.has_draft == 'true'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  gh auth status
+
+            - name: Install Dependencies
+              if: steps.check-draft.outputs.has_draft == 'true'
+              run: |
+                  cd scripts
+                  npm install
+
+            - name: Run Article Conversion
+              if: steps.check-draft.outputs.has_draft == 'true'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  cd scripts
+                  npm run convert
+
+            - name: Commit and Push Changes
+              if: steps.check-draft.outputs.has_draft == 'true'
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: "chore: convert draft article to blog post"
+                  file_pattern: "content/** *.md"
