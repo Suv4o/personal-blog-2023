@@ -27,3 +27,4 @@ logs
 .netlify
 
 server/utils/articles-embeddings.json
+.vscode
