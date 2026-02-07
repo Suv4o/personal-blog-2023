@@ -153,7 +153,7 @@ export default defineNuxtConfig({
     },
 
     vite: {
-        plugins: [tailwindcss(), checker({ vueTsc: true })],
+        plugins: [tailwindcss(), checker({ vueTsc: true })] as any,
     },
 
     nitro: {
