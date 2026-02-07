@@ -41,6 +41,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/02/08/automating-my-blog-workflow-with-github-copilot-sdk/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/02/08/automating-my-blog-workflow-with-github-copilot-sdk/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1770033517/blog/automating-my-blog-workflow-with-github-copilot-sdk/automating-my-blog-workflow-with-github-copilot-sdk_atnuqy)
 
 When GitHub announced the Copilot SDK in technical preview a few weeks back in January, my mind immediately started racing with possibilities. I've been writing blog articles for half a decade now, and while I love the creative process of putting thoughts into words, there's always been a part of the workflow that felt... tedious.
