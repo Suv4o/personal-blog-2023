@@ -45,6 +45,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/02/15/the-protocol-behind-bluesky-rethinking-social-media-architecture/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/02/15/the-protocol-behind-bluesky-rethinking-social-media-architecture/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1770893361/blog/the-protocol-behind-bluesky-rethinking-social-media-architecture/the-protocol-behind-bluesky-rethinking-social-media-architecture-2_bqif19)
 
 What if you could take your entire social media presence - your posts, your followers, your identity - and move it to a different platform the same way you'd switch email providers? No data loss, no starting over, no asking for permission.
