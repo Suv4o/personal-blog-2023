@@ -1,21 +1,20 @@
 ---
 on:
-  issues:
-    types: [opened, reopened]
-  workflow_dispatch:
+    issues:
+        types: [opened, reopened]
 
 permissions:
-  contents: read
-  issues: read
-  pull-requests: read
+    contents: read
+    issues: read
+    pull-requests: read
 
 safe-outputs:
-  add-comment: {}
-  add-labels:
-    allowed: [bug, content-request, enhancement, typo, question]
+    add-comment: {}
+    add-labels:
+        allowed: [bug, content-request, enhancement, typo, question]
 
 tools:
-  github:
+    github:
 ---
 
 # Blog Issue Triage
@@ -25,6 +24,7 @@ When a new issue is opened or reopened on this repository, analyze it and provid
 ## Context
 
 This is a personal technical blog built with Nuxt 3 (`@nuxt/content`), deployed to Netlify. The blog has:
+
 - ~239 Markdown articles in `content/YYYY/MM/DD/article-slug.md`
 - 33 Vue components in `app/components/`
 - Audio summary generation via OpenAI (in `scripts/`)
@@ -47,17 +47,17 @@ Apply exactly ONE of these labels based on the issue content:
 
 1. **Read the issue** carefully - understand the title and body
 2. **Research the codebase** for context:
-   - If the issue mentions a specific article, find it in `content/`
-   - If it mentions a component or feature, locate the relevant files
-   - If it reports a bug, check if the referenced functionality exists
+    - If the issue mentions a specific article, find it in `content/`
+    - If it mentions a component or feature, locate the relevant files
+    - If it reports a bug, check if the referenced functionality exists
 3. **Apply the most appropriate label** from the list above
 4. **Leave a helpful comment** that includes:
-   - A brief acknowledgment of the issue
-   - Your analysis of the issue (what you found in the codebase)
-   - If it's a bug: identify the likely affected files or components
-   - If it's a content request: note any related existing articles
-   - If it's a typo: identify the specific file and location if possible
-   - A friendly note that Aleksandar will review it soon
+    - A brief acknowledgment of the issue
+    - Your analysis of the issue (what you found in the codebase)
+    - If it's a bug: identify the likely affected files or components
+    - If it's a content request: note any related existing articles
+    - If it's a typo: identify the specific file and location if possible
+    - A friendly note that Aleksandar will review it soon
 
 ## Tone
 

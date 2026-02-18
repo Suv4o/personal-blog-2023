@@ -22,7 +22,7 @@
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
 #
-# frontmatter-hash: efef6ac6b864c6e4883b87de2cb248c4cc74cb52269a22860587ed4b061285d5
+# frontmatter-hash: aafe20e1cc2fe23098d6aa62dd96e937fabbd1733717e77bfb0e80cca61acca4
 
 name: "Article Quality Reviewer"
 "on":
@@ -31,7 +31,6 @@ name: "Article Quality Reviewer"
     - main
     paths:
     - content/**
-  workflow_dispatch:
 
 permissions: {}
 

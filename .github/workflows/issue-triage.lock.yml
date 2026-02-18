@@ -22,7 +22,7 @@
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
 #
-# frontmatter-hash: b0045c0724d93e618fa16e998126af337ea23fa227e50cc396b7e8d24ec7d729
+# frontmatter-hash: 1fb234f37ad250c0e23db7b89692e279447209f894f7c11600b440d3a64879bd
 
 name: "Blog Issue Triage"
 "on":
@@ -30,7 +30,6 @@ name: "Blog Issue Triage"
     types:
     - opened
     - reopened
-  workflow_dispatch:
 
 permissions: {}
 

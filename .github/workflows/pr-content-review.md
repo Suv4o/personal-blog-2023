@@ -1,19 +1,18 @@
 ---
 on:
-  pull_request:
-    types: [opened, synchronize]
-  workflow_dispatch:
+    pull_request:
+        types: [opened, synchronize]
 
 permissions:
-  contents: read
-  issues: read
-  pull-requests: read
+    contents: read
+    issues: read
+    pull-requests: read
 
 safe-outputs:
-  add-comment: {}
+    add-comment: {}
 
 tools:
-  github:
+    github:
 ---
 
 # Pull Request Content Reviewer
@@ -34,30 +33,30 @@ This is a Nuxt 3 blog using `@nuxt/content`. Key technical details:
 - **Build**: `yarn generate:prod` with Node.js 22
 - **Deployment**: Netlify via GitHub Actions
 
-## Review Checklist for Content Changes (content/**)
+## Review Checklist for Content Changes (content/\*\*)
 
 If the PR modifies files in `content/`:
 
 1. **Frontmatter validation**:
-   - All required fields present (title, description, image, keywords, type, blog, published, readTime, author, articleTags)
-   - `image` is a valid URL (preferably Cloudinary)
-   - `articleTags` has exactly 3 entries
-   - `readTime` is a reasonable number (3-20 minutes)
-   - `published` follows the human-readable date format (e.g., "15th February 2026")
+    - All required fields present (title, description, image, keywords, type, blog, published, readTime, author, articleTags)
+    - `image` is a valid URL (preferably Cloudinary)
+    - `articleTags` has exactly 3 entries
+    - `readTime` is a reasonable number (3-20 minutes)
+    - `published` follows the human-readable date format (e.g., "15th February 2026")
 
 2. **Content quality**:
-   - Markdown syntax is valid
-   - Code blocks specify a language for syntax highlighting
-   - Custom Nuxt Content components are properly formatted (e.g., `::tag-pills{:tags="articleTags"}`)
-   - No broken or empty links
+    - Markdown syntax is valid
+    - Code blocks specify a language for syntax highlighting
+    - Custom Nuxt Content components are properly formatted (e.g., `::tag-pills{:tags="articleTags"}`)
+    - No broken or empty links
 
 3. **SEO check**:
-   - `description` is 120-160 characters
-   - `keywords` has at least 3 entries
-   - `title` is under 60 characters
+    - `description` is 120-160 characters
+    - `keywords` has at least 3 entries
+    - `title` is under 60 characters
 
 4. **Link safety**:
-   - External `<a>` tags include `target="_blank"` and `rel="noopener noreferrer"`
+    - External `<a>` tags include `target="_blank"` and `rel="noopener noreferrer"`
 
 ## Review Checklist for Code Changes (app/**, server/**)
 

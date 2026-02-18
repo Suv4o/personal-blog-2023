@@ -22,14 +22,13 @@
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
 #
-# frontmatter-hash: fa7f58bdca91bf6f9df526be594d6d5832e7b0826194648627f59806bcd245b0
+# frontmatter-hash: fd27b490fe469180b2c4af5402beb2055fc0bc35b13e8d4a72bbd26f6a20be55
 
 name: "CI Doctor"
 "on":
   issue_comment:
     types:
     - created
-  workflow_dispatch:
 
 permissions: {}
 

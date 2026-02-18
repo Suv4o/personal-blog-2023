@@ -1,23 +1,22 @@
 ---
 on:
-  push:
-    branches: [main]
-    paths:
-      - "content/**"
-  workflow_dispatch:
+    push:
+        branches: [main]
+        paths:
+            - "content/**"
 
 permissions:
-  contents: read
-  issues: read
-  pull-requests: read
+    contents: read
+    issues: read
+    pull-requests: read
 
 safe-outputs:
-  create-issue:
-    title-prefix: "[Article Review] "
-    labels: [content-review]
+    create-issue:
+        title-prefix: "[Article Review] "
+        labels: [content-review]
 
 tools:
-  github:
+    github:
 ---
 
 # Article Quality Reviewer
@@ -49,9 +48,9 @@ Every blog article (files where `type: page` and `blog: post`) must have ALL of 
 2. **Skip non-article files**: Ignore files like `index.md`, `about-me.md`, `get-in-touch.md`, `unsubscribe.md`, and files under `the-keyboard-lab/` or `through-the-lens/`
 3. **Validate frontmatter**: Check each article has all required fields with correct types
 4. **Check SEO quality**:
-   - Is the `description` between 120-160 characters?
-   - Are there at least 3 `keywords`?
-   - Does the `title` accurately reflect the content?
+    - Is the `description` between 120-160 characters?
+    - Are there at least 3 `keywords`?
+    - Does the `title` accurately reflect the content?
 5. **Check tag consistency**: Verify `articleTags` contains exactly 3 tags from the established list
 6. **Check content patterns**: Look for proper use of Nuxt Content components (`::tag-pills`, `::audio-player`, `::posts`)
 7. **Check external links**: Verify `<a>` tags targeting external URLs include `target="_blank"` and `rel="noopener noreferrer"`

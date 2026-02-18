@@ -22,7 +22,7 @@
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
 #
-# frontmatter-hash: 6222ed8336623a22b7e6daf00e5b1d898d12ba0030c7a3b7a3eb0db08ad8a5c6
+# frontmatter-hash: bb9b24740b743f88804815505375d3c88577dd4083b9d8beca44dd513a8db7c3
 
 name: "Stale Content Detector"
 "on":
