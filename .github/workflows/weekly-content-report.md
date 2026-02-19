@@ -1,22 +1,21 @@
 ---
 on:
-  schedule: weekly
-  workflow_dispatch:
+    schedule: weekly
 
 permissions:
-  contents: read
-  issues: read
-  pull-requests: read
+    contents: read
+    issues: read
+    pull-requests: read
 
 safe-outputs:
-  create-issue:
-    title-prefix: "[Weekly Report] "
-    labels: [report]
-    group: true
-    expires: 14
+    create-issue:
+        title-prefix: "[Weekly Report] "
+        labels: [report]
+        group: true
+        expires: 14
 
 tools:
-  github:
+    github:
 ---
 
 # Weekly Content Health Report
@@ -30,32 +29,38 @@ This is a personal technical blog built with Nuxt 3 and `@nuxt/content`. Blog ar
 ## What to Analyze
 
 ### 1. Publishing Cadence
+
 - Count articles published per year (2021-2026)
 - Count articles published in the current month and compare to previous months
 - Identify the longest gap between publications
 - Note if publishing frequency is increasing or decreasing
 
 ### 2. Tag Distribution
+
 - Count how many articles use each `articleTags` value
 - Identify the most and least covered topics
 - Suggest underrepresented tags that could benefit from more content (e.g., if there are many FrontEnd articles but few BackEnd ones)
 
 ### 3. Audio Summary Coverage
+
 - Cross-reference articles in `content/` with audio summaries in `audio-summary/`
 - List articles that are missing audio summaries
 - Calculate the percentage of articles with audio summaries
 
 ### 4. SEO Health Check
+
 - Find articles with `description` shorter than 100 characters (poor SEO)
 - Find articles with fewer than 3 `keywords`
 - Find articles where the `title` is longer than 60 characters (may be truncated in search results)
 
 ### 5. Content Quality Indicators
+
 - Average `readTime` across all articles
 - Distribution of `readTime` values (find outliers)
 - Articles with unusually short or long content relative to their `readTime`
 
 ### 6. Recent Activity
+
 - Summarize the most recent 5 commits to the repository
 - Note any open issues or pull requests
 - Highlight any recently merged PRs
