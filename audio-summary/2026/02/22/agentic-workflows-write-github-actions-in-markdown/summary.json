@@ -1,0 +1,42 @@
+[
+  {
+    "start": 0,
+    "end": 5.28000020980835,
+    "text": "Discover a new approach to automating GitHub tasks with AI agents in this article on GitHub"
+  },
+  {
+    "start": 5.28000020980835,
+    "end": 7.239999771118164,
+    "text": "agentic workflows."
+  },
+  {
+    "start": 7.239999771118164,
+    "end": 11.359999656677246,
+    "text": "Learn how to write GitHub actions in Markdown instead of complex YAML files."
+  },
+  {
+    "start": 11.359999656677246,
+    "end": 17.399999618530273,
+    "text": "The guide covers setting up triggers, managing permissions, and ensuring safe outputs."
+  },
+  {
+    "start": 17.399999618530273,
+    "end": 22.799999237060547,
+    "text": "Using AI agents, like GitHub Copilot, you can automate tasks like issue triage, pull"
+  },
+  {
+    "start": 22.799999237060547,
+    "end": 26.5,
+    "text": "request reviews, and content report generation."
+  },
+  {
+    "start": 26.5,
+    "end": 31.579999923706055,
+    "text": "This method makes automation more accessible and secure through natural language instructions."
+  },
+  {
+    "start": 31.579999923706055,
+    "end": 34.220001220703125,
+    "text": "For more details, check out the full article below."
+  }
+]

@@ -41,6 +41,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/02/22/agentic-workflows-write-github-actions-in-markdown/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/02/22/agentic-workflows-write-github-actions-in-markdown/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1771503278/blog/github-agentic-workflows-build-github-actions-in-markdown-with-ai-agents/github-agentic-workflows-build-github-actions-in-markdown-with-ai-agents_r153nu)
 
 What if your GitHub repository could triage its own issues, review pull requests for quality, generate weekly health reports, and investigate CI failures - all without you writing a single line of YAML?
