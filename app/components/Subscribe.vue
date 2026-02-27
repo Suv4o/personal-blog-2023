@@ -3,7 +3,14 @@
         class="gradiant-orange h-[400px] shadow-[10px_10px] shadow-beige border-2 border-white rounded-md flex flex-col items-center justify-center mt-12 mb-14"
     >
         <h2 class="text-2xl sm:text-3xl text-center text-secondary mb-6"><strong>SIGN UP FOR UPDATES</strong></h2>
-        <form @submit.prevent="submit" ref="form" class="flex flex-col items-center">
+        <form
+            @submit.prevent="submit"
+            ref="form"
+            class="flex flex-col items-center"
+            toolname="subscribe_newsletter"
+            tooldescription="Subscribe to the Trpkovski tech blog newsletter to receive updates about new articles on Vue.js, JavaScript, TypeScript, Node.js, AI, and web development"
+            toolautosubmit
+        >
             <div class="flex items-center">
                 <label for="name" class="text-xl sm:text-2xl text-secondary sm:w-24 w-20 hidden xs:block">Name:</label>
                 <input
