@@ -4,159 +4,13 @@
             class="focus:outline-none inline-block hover:scale-110 focus:scale-110 transition-all duration-300 ease-in-out"
             v-for="(tag, index) in tags"
             :key="index"
-            :to="`${
-                tag == 'Vue.js'
-                    ? tagDetails[0].link
-                    : tag == 'JavaScript'
-                      ? tagDetails[1].link
-                      : tag == 'FrontEnd'
-                        ? tagDetails[2].link
-                        : tag == 'Firebase'
-                          ? tagDetails[3].link
-                          : tag == 'Node.js'
-                            ? tagDetails[4].link
-                            : tag == 'BackEnd'
-                              ? tagDetails[5].link
-                              : tag == 'CSS'
-                                ? tagDetails[6].link
-                                : tag == 'TypeScript'
-                                  ? tagDetails[7].link
-                                  : tag == 'Nest.js'
-                                    ? tagDetails[8].link
-                                    : tag == 'Nuxt.js'
-                                      ? tagDetails[9].link
-                                      : tag == 'VSCode'
-                                        ? tagDetails[10].link
-                                        : tag == 'Vite'
-                                          ? tagDetails[11].link
-                                          : tag == 'AI'
-                                            ? tagDetails[12].link
-                                            : tag == 'LangChain'
-                                              ? tagDetails[13].link
-                                              : tag == 'Python'
-                                                ? tagDetails[14].link
-                                                : tag == 'Nitro'
-                                                  ? tagDetails[15].link
-                                                  : tag == 'React.js'
-                                                    ? tagDetails[16].link
-                                                    : tag == 'Hobby'
-                                                      ? tagDetails[17].link
-                                                      : tag == 'Tech'
-                                                        ? tagDetails[18].link
-                                                        : tag == 'Entertainment'
-                                                          ? tagDetails[19].link
-                                                          : tag == 'AWS'
-                                                            ? tagDetails[20].link
-                                                            : tag == 'Advice'
-                                                              ? tagDetails[22].link
-                                                              : tag == 'Productivity'
-                                                                ? tagDetails[23].link
-                                                                : tag == 'DevOps'
-                                                                  ? tagDetails[24].link
-                                                                  : tagDetails[21].link
-            }`"
+            :to="getCategory(tag)?.path || '/other'"
         >
             <div
                 :class="[
-                    tag == 'Vue.js'
-                        ? 'bg-green'
-                        : tag == 'JavaScript'
-                          ? 'bg-javascript'
-                          : tag == 'FrontEnd'
-                            ? 'bg-secondary'
-                            : tag == 'Firebase'
-                              ? 'bg-firebase'
-                              : tag == 'Node.js'
-                                ? 'bg-node'
-                                : tag == 'BackEnd'
-                                  ? 'bg-backend'
-                                  : tag == 'CSS'
-                                    ? 'bg-css'
-                                    : tag == 'TypeScript'
-                                      ? 'bg-typescript'
-                                      : tag == 'Nest.js'
-                                        ? 'bg-nestjs'
-                                        : tag == 'Nuxt.js'
-                                          ? 'bg-nuxtjs'
-                                          : tag == 'VSCode'
-                                            ? 'bg-vscode'
-                                            : tag == 'Vite'
-                                              ? 'bg-vite'
-                                              : tag == 'AI'
-                                                ? 'bg-ai'
-                                                : tag == 'LangChain'
-                                                  ? 'bg-langchain'
-                                                  : tag == 'Python'
-                                                    ? 'bg-python'
-                                                    : tag == 'Nitro'
-                                                      ? 'bg-nitro'
-                                                      : tag == 'React.js'
-                                                        ? 'bg-reactjs'
-                                                        : tag == 'Hobby'
-                                                          ? 'bg-hobby'
-                                                          : tag == 'Tech'
-                                                            ? 'bg-tech'
-                                                            : tag == 'Entertainment'
-                                                              ? 'bg-entertainment'
-                                                              : tag == 'AWS'
-                                                                ? 'bg-aws'
-                                                                : tag == 'Advice'
-                                                                  ? 'bg-advice'
-                                                                  : tag == 'Productivity'
-                                                                    ? 'bg-productivity'
-                                                                    : tag == 'DevOps'
-                                                                      ? 'bg-devops'
-                                                                      : 'bg-other',
+                    getCategory(tag)?.bgClass || 'bg-other',
                     small ? 'text-xs' : 'text-sm',
-                    tag == 'Vue.js'
-                        ? 'text-white!'
-                        : tag == 'JavaScript'
-                          ? 'text-secondary'
-                          : tag == 'FrontEnd'
-                            ? 'text-white'
-                            : tag == 'Firebase'
-                              ? 'text-secondary'
-                              : tag == 'Node.js'
-                                ? 'text-white'
-                                : tag == 'BackEnd'
-                                  ? 'text-white'
-                                  : tag == 'CSS'
-                                    ? 'text-white'
-                                    : tag == 'TypeScript'
-                                      ? 'text-white'
-                                      : tag == 'Nest.js'
-                                        ? 'text-white'
-                                        : tag == 'Nuxt.js'
-                                          ? 'text-green-light'
-                                          : tag == 'VSCode'
-                                            ? 'text-white'
-                                            : tag == 'Vite'
-                                              ? 'text-white'
-                                              : tag == 'AI'
-                                                ? 'text-secondary'
-                                                : tag == 'LangChain'
-                                                  ? 'text-secondary'
-                                                  : tag == 'Python'
-                                                    ? 'text-white'
-                                                    : tag == 'Nitro'
-                                                      ? 'text-black'
-                                                      : tag == 'React.js'
-                                                        ? 'text-black'
-                                                        : tag == 'Hobby'
-                                                          ? 'text-white'
-                                                          : tag == 'Tech'
-                                                            ? 'text-white'
-                                                            : tag == 'Entertainment'
-                                                              ? 'text-black'
-                                                              : tag == 'AWS'
-                                                                ? 'text-white'
-                                                                : tag == 'Advice'
-                                                                  ? 'text-white'
-                                                                  : tag == 'Productivity'
-                                                                    ? 'text-white'
-                                                                    : tag == 'DevOps'
-                                                                      ? 'text-white'
-                                                                      : 'text-white',
+                    getCategory(tag)?.textClass || 'text-white',
                 ]"
             >
                 {{ tag }}
@@ -166,6 +20,8 @@
 </template>
 
 <script>
+import { CATEGORIES_MAP } from "~/utils/categories";
+
 export default {
     props: {
         tags: {
@@ -177,36 +33,10 @@ export default {
             default: false,
         },
     },
-    data() {
-        return {
-            tagDetails: [
-                { bg: "#40979d", txt: "#ffffff", link: "/vuejs" },
-                { bg: "#FFD700", txt: "#173353", link: "/javascript" },
-                { bg: "#173353", txt: "#ffffff", link: "/frontend" },
-                { bg: "#ff9900", txt: "#173353", link: "/firebase" },
-                { bg: "#3e863d", txt: "#ffffff", link: "/nodejs" },
-                { bg: "#4d1300", txt: "#ffffff", link: "/backend" },
-                { bg: "#a30d8a", txt: "#ffffff", link: "/css" },
-                { bg: "#3075bf", txt: "#ffffff", link: "/typescript" },
-                { bg: "#d42148", txt: "#ffffff", link: "/nestjs" },
-                { bg: "#022832", txt: "#00dd82", link: "/nuxtjs" },
-                { bg: "#3aa8f0", txt: "#ffffff", link: "/vscode" },
-                { bg: "#bd34fe", txt: "#ffc31d", link: "/vite" },
-                { bg: "#03e3fc", txt: "#ffffff", link: "/ai" },
-                { bg: "#6ffc03", txt: "#ffffff", link: "/langchain" },
-                { bg: "#356B99", txt: "#ffffff", link: "/python" },
-                { bg: "#f777b0", txt: "#191919", link: "/nitro" },
-                { bg: "#61dafb", txt: "#3d3d3d", link: "/reactjs" },
-                { bg: "#d4703e", txt: "#3d3d3d", link: "/hobby" },
-                { bg: "#83a198", txt: "#3d3d3d", link: "/tech" },
-                { bg: "#dba85a", txt: "#3d3d3d", link: "/entertainment" },
-                { bg: "#242B37", txt: "#ffffff", link: "/aws" },
-                { bg: "#ee5f53", txt: "#ffffff", link: "/other" },
-                { bg: "#8B5CF6", txt: "#ffffff", link: "/advice" },
-                { bg: "#10B981", txt: "#ffffff", link: "/productivity" },
-                { bg: "#2563EB", txt: "#ffffff", link: "/devops" },
-            ],
-        };
+    methods: {
+        getCategory(tag) {
+            return CATEGORIES_MAP.get(tag);
+        },
     },
 };
 </script>

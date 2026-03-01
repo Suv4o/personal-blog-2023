@@ -1,4 +1,5 @@
 import type { Article } from "~/types";
+import { CATEGORIES } from "~/utils/categories";
 
 interface SimilarArticlesResponse {
     success: boolean;
@@ -9,29 +10,6 @@ interface SimilarArticlesResponse {
     requestedPath?: string | string[];
     error?: string;
 }
-
-const CATEGORIES = [
-    { name: "All Articles", path: "/articles" },
-    { name: "Vue.js", path: "/vuejs" },
-    { name: "JavaScript", path: "/javascript" },
-    { name: "Front End", path: "/frontend" },
-    { name: "Firebase", path: "/firebase" },
-    { name: "Node.js", path: "/nodejs" },
-    { name: "Back End", path: "/backend" },
-    { name: "CSS", path: "/css" },
-    { name: "TypeScript", path: "/typescript" },
-    { name: "NestJS", path: "/nestjs" },
-    { name: "Nuxt.js", path: "/nuxtjs" },
-    { name: "VS Code", path: "/vscode" },
-    { name: "Vite", path: "/vite" },
-    { name: "AWS", path: "/aws" },
-    { name: "LangChain", path: "/langchain" },
-    { name: "Python", path: "/python" },
-    { name: "Nitro", path: "/nitro" },
-    { name: "AI", path: "/ai" },
-    { name: "React.js", path: "/reactjs" },
-    { name: "Other", path: "/other" },
-];
 
 function formatArticle(article: Article) {
     return {
@@ -183,15 +161,12 @@ export async function registerWebMCPTools(nuxtApp: any) {
                     .all()) as Article[];
 
                 const categoriesWithCounts = CATEGORIES.map((cat) => {
-                    const count =
-                        cat.path === "/articles"
-                            ? allArticles.length
-                            : allArticles.filter((a) =>
-                                  a.articleTags.some(
-                                      (t) => t.toLowerCase() === cat.name.toLowerCase(),
-                                  ),
-                              ).length;
-                    return { ...cat, articleCount: count };
+                    const count = allArticles.filter((a) =>
+                        a.articleTags.some(
+                            (t) => t.toLowerCase() === cat.tag.toLowerCase(),
+                        ),
+                    ).length;
+                    return { name: cat.name, path: cat.path, articleCount: count };
                 });
 
                 return {
