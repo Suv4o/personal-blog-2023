@@ -19,6 +19,9 @@ const isError = ref(false);
             <p class="text-center text-secondary text-base mt-2 mb-12">
                 © <ClientOnly>{{ new Date().getFullYear() }}</ClientOnly> Aleksandar Trpkovski
             </p>
+            <ClientOnly>
+                <WebMcpStatus />
+            </ClientOnly>
         </footer>
     </div>
 </template>

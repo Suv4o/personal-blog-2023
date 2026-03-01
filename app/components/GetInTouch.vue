@@ -2,7 +2,14 @@
     <div class="flex flex-col items-center justify-center">
         <div class="title mt-12 mb-6"><strong>GET IN TOUCH</strong></div>
         <arrow-down class="mb-6"></arrow-down>
-        <form @submit.prevent="submit" ref="form" class="flex flex-col justify-center items-center w-full">
+        <form
+            @submit.prevent="submit"
+            ref="form"
+            class="flex flex-col justify-center items-center w-full"
+            toolname="send_message"
+            tooldescription="Send a message to Aleksandar Trpkovski, the blog author. Requires name, email, mobile number (8-12 digits), subject, and message (max 500 characters)"
+            toolautosubmit
+        >
             <div class="flex items-center w-full">
                 <label for="name-contact" class="lable">Name:</label>
                 <div class="w-full">

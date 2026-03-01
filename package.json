@@ -26,6 +26,7 @@
         "@headlessui/vue": "^1.7.23",
         "@heroicons/vue": "^2.2.0",
         "@huggingface/transformers": "^3.8.1",
+        "@mcp-b/global": "^1.6.0",
         "@nuxt/image": "^2.0.0",
         "@tailwindcss/vite": "^4.1.18",
         "@types/node": "^25.0.10",
