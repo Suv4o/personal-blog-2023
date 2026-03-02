@@ -206,6 +206,7 @@ export async function registerWebMCPTools(nuxtApp: any) {
 
                 const articles = (await queryCollection("content")
                     .where("blog", "=", "post")
+                    .order("path", "DESC")
                     .limit(count)
                     .all()) as Article[];
 
@@ -248,6 +249,7 @@ export async function registerWebMCPTools(nuxtApp: any) {
             try {
                 const response = await $fetch<SimilarArticlesResponse>(
                     `/api/similar-articles${params.path}`,
+                    { responseType: "json" },
                 );
 
                 if (!response.success || !response.data.length) {
