@@ -40,6 +40,9 @@ _{{$document.published}} • {{$document.readTime}} min read - by **[{{$document
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/03/08/mcp-is-coming-to-the-browser/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/03/08/mcp-is-coming-to-the-browser/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1772448782/blog/mcp-is-coming-to-the-browser-webmcp-and-the-future-of-ai-powered-websites/hero-mcp-is-coming-to-the-browser_ntmegq)
 
 What if your website could talk directly to AI agents - not through brittle screen-scraping or DOM crawling, but through clean, structured tool calls? What if an agent could search your product catalogue, submit a form, or navigate your site the same way a developer would call an API?
