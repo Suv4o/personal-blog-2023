@@ -2,9 +2,8 @@
 const config = useRuntimeConfig();
 const isDev = config.public.isDev as boolean;
 
-const status = ref<"loading" | "ready" | "unavailable" | "error">("loading");
+const status = ref<"loading" | "ready" | "unavailable">("loading");
 const toolCount = ref(0);
-const errorMessage = ref("");
 
 onMounted(async () => {
     if (!isDev) {
@@ -13,17 +12,17 @@ onMounted(async () => {
     }
 
     try {
-        await import("@mcp-b/global");
         if (!navigator.modelContext) {
             status.value = "unavailable";
             return;
         }
-        const { $webmcpToolCount } = useNuxtApp();
-        toolCount.value = $webmcpToolCount as number;
+        const testing = (navigator as any).modelContextTesting;
+        if (testing?.listTools) {
+            toolCount.value = testing.listTools().length;
+        }
         status.value = toolCount.value > 0 ? "ready" : "unavailable";
-    } catch (err) {
-        errorMessage.value = String(err);
-        status.value = "error";
+    } catch {
+        status.value = "unavailable";
     }
 });
 </script>
