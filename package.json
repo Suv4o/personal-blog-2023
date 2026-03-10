@@ -30,7 +30,7 @@
         "@tailwindcss/vite": "^4.1.18",
         "@types/node": "^25.0.10",
         "better-sqlite3": "^12.6.2",
-        "nuxt-mcp-b": "^0.1.2",
+        "nuxt-mcp-b": "^1.0.0",
         "tailwindcss": "^4.1.18",
         "vue-tsc": "^3.2.4"
     },

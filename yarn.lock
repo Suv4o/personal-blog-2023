@@ -5401,10 +5401,10 @@ nuxt-component-meta@0.17.1:
     ufo "^1.6.2"
     vue-component-meta "^3.2.2"
 
-nuxt-mcp-b@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/nuxt-mcp-b/-/nuxt-mcp-b-0.1.2.tgz#128fa283fc4277126c989e4c5d46d72e13566c69"
-  integrity sha512-SBv3wOEfaYw4UUJwlUgHl4W28qsbAfwJzYmsFCpPEMi8oRR6oW9+DlfY4KK4LYlifWQkGhMLHUoxpmPSj9+v/Q==
+nuxt-mcp-b@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/nuxt-mcp-b/-/nuxt-mcp-b-1.0.0.tgz#2b5b90be988ad8b4c030bdcde610f0dca4e87dc0"
+  integrity sha512-zBF+TDNCyevzHNrGNWGhKTJddn9lFJ6qVA0S47siN+C2VdCM4BUNrIzXUVURsu82Hb5le/Nd09WTeOhcu/0fbA==
   dependencies:
     "@mcp-b/global" "^2.0.13"
     "@nuxt/kit" "^4.3.1"
