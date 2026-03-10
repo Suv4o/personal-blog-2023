@@ -135,7 +135,7 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ["@nuxt/content", "@nuxt/image"],
+    modules: ["@nuxt/content", "@nuxt/image", "nuxt-mcp-b"],
     css: ["~/assets/css/main.css"],
 
     typescript: {

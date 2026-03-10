@@ -20,6 +20,7 @@ const isError = ref(false);
                 © <ClientOnly>{{ new Date().getFullYear() }}</ClientOnly> Aleksandar Trpkovski
             </p>
             <ClientOnly>
+                <WebMcpTools />
                 <WebMcpStatus />
             </ClientOnly>
         </footer>
