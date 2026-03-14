@@ -43,6 +43,9 @@ _{{$document.published}} • {{$document.readTime}} min read - by **[{{$document
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/03/15/how-to-create-a-nuxt-module-a-beginner-friendly-guide/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/03/15/how-to-create-a-nuxt-module-a-beginner-friendly-guide/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1773227493/blog/how-to-create-a-nuxt-module-a-beginner-friendly-guide/how-to-create-a-nuxt-module-a-beginner-friendly-guide-2_kn1xkg)
 
 If you've used Nuxt for any length of time, you've probably installed a few modules - `@nuxtjs/tailwindcss`, `@pinia/nuxt`, `nuxt-icon`. You add one line to your `modules` array, and everything just works: auto-imports, configuration, SSR handling, the lot. But have you ever looked inside one of those modules and wondered how they actually work? Or thought about building your own?

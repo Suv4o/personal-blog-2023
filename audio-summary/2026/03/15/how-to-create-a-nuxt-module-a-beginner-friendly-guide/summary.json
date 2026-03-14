@@ -1,0 +1,42 @@
+[
+  {
+    "start": 0,
+    "end": 4.599999904632568,
+    "text": "Discover how to build your own functional and publishable Nuxt module from the ground up."
+  },
+  {
+    "start": 5.599999904632568,
+    "end": 8.800000190734863,
+    "text": "This guide walks you through the creation of a Nuxt module,"
+  },
+  {
+    "start": 8.899999618530273,
+    "end": 13.5,
+    "text": "covering essential concepts like module architecture, plugins, and composables."
+  },
+  {
+    "start": 14.300000190734863,
+    "end": 18.700000762939453,
+    "text": "It includes TypeScript support and automates processes with agentic workflows."
+  },
+  {
+    "start": 19.299999237060547,
+    "end": 22.700000762939453,
+    "text": "Learn to integrate libraries seamlessly into Nuxt projects,"
+  },
+  {
+    "start": 22.799999237060547,
+    "end": 27.600000381469727,
+    "text": "ensuring smooth client-server execution and convenient auto-imports for users."
+  },
+  {
+    "start": 28.299999237060547,
+    "end": 33.29999923706055,
+    "text": "By the end, you'll have the confidence to develop modules that enhance your Nuxt applications."
+  },
+  {
+    "start": 33.400001525878906,
+    "end": 35,
+    "text": "Interested? Read more below."
+  }
+]
