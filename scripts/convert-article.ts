@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { CopilotClient } from "@github/copilot-sdk";
+import { CopilotClient, approveAll } from "@github/copilot-sdk";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -307,6 +307,7 @@ async function main() {
 
         const session = await client.createSession({
             model: "claude-opus-4.5",
+            onPermissionRequest: approveAll,
         });
         console.log("Session created with model: claude-opus-4.5");
 
