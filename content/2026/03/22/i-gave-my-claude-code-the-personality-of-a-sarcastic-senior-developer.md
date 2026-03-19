@@ -49,7 +49,7 @@ What if you could make your Claude Code a bit more... playful? Give it the chara
 
 Turns out, you can. Claude Code lets you customise almost everything about its personality - the loading messages, the tips it shows you, how it formats responses, even the sound it makes when it's done. And the best part? You don't edit any config files. You just tell Claude Code what you want in plain English - or even say it out loud using `/voice` mode - and it configures itself.
 
-In this article, I'll walk you through a collection of customisations that turned my Claude Code from a generic terminal tool into something with genuine character — part helpful colleague, part code reviewer who's had one too many coffees. Pick the ones that appeal to you, skip the rest, or do them all. I've put all the configuration examples, scripts, and skills from this article into a <a href="https://github.com/Suv4o/claude-code-setting-of-the-personality-of-a-sarcastic-senior-developer" target="_blank" rel="noopener noreferrer">GitHub repository</a> so you can browse the full setup or use it as a starting point for your own.
+In this article, I'll walk you through a collection of customisations that turned my Claude Code from a generic terminal tool into something with genuine character - part helpful colleague, part code reviewer who's had one too many coffees. Pick the ones that appeal to you, skip the rest, or do them all. I've put all the configuration examples, scripts, and skills from this article into a <a href="https://github.com/Suv4o/claude-code-setting-of-the-personality-of-a-sarcastic-senior-developer" target="_blank" rel="noopener noreferrer">GitHub repository</a> so you can browse the full setup or use it as a starting point for your own.
 
 Let's dive in.
 
