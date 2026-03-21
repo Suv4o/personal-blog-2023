@@ -41,6 +41,9 @@ _{{$document.published}} • {{$document.readTime}} min read - by **[{{$document
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/03/22/i-gave-my-claude-code-the-personality-of-a-sarcastic-senior-developer/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/03/22/i-gave-my-claude-code-the-personality-of-a-sarcastic-senior-developer/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1773917254/blog/i-gave-my-claude-code-the-personality-of-a-sarcastic-senior-developer/i-gave-my-claude-code-the-personality-of-a-sarcastic-senior-developer_jpghb5)
 
 What if you could make your Claude Code a bit more... playful? Give it the character of a joking senior engineer who's been through too many code reviews and has developed a dry sense of humour about the whole thing. Instead of watching "`Thinking...`" spin in your terminal, you'd see "`Blaming the previous developer (it was me)...`" or "`Convincing myself this is clean code...`" 🙃.
