@@ -1,7 +1,7 @@
 ---
 title: Create a Recommendation Engine with AI for Free
-description: Learn how to build a free AI-powered recommendation engine using open-source embedding models from Hugging Face and Transformer.js. This step-by-step guide will show you how to generate text embeddings, compare article similarities, and create personalised content suggestions—without relying on paid APIs.
-image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1742804621/blog/create-a-recommendation-engine-with-ai-for-free/create-a-recommendation-engine-with-ai-for-free_ysdjwd
+description: Learn how to build a free AI-powered recommendation engine using open-source embedding models from Hugging Face and Transformer.js. This step-by-step guide will show you how to generate text embeddings, compare article similarities, and create personalised content suggestions - without relying on paid APIs.
+image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1774661369/blog/create-a-recommendation-engine-with-ai-for-free/create_a_recommendation_engine_with_ai_for_free_slimzx
 keywords:
     - AI
     - Machine Learning
@@ -37,7 +37,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/03/24/create-a-recommendation-engine-with-ai-for-free/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2025/03/24/create-a-recommendation-engine-with-ai-for-free/summary.json"}
 ::
 
-![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1742804621/blog/create-a-recommendation-engine-with-ai-for-free/create-a-recommendation-engine-with-ai-for-free_ysdjwd)
+![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1774661369/blog/create-a-recommendation-engine-with-ai-for-free/create_a_recommendation_engine_with_ai_for_free_slimzx)
 
 Recently, I had some free time since I was taking a month off work for the arrival of my daughter. While at home, I decided to make some updates to my personal blog.
 
@@ -45,15 +45,15 @@ Previously, my blog displayed three recommended articles at the bottom of each p
 
 ![Image One](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1742804593/blog/create-a-recommendation-engine-with-ai-for-free/image-1_dtbwt2)
 
-However, these recommendations weren't very relevant—readers rarely found articles that matched their interests.
+However, these recommendations weren't very relevant - readers rarely found articles that matched their interests.
 
-In this article, I'll walk you through exactly how I did it—for free—using open-source AI models to make article suggestions more relevant for readers. Let's dive in!
+In this article, I'll walk you through exactly how I did it - for free - using open-source AI models to make article suggestions more relevant for readers. Let's dive in!
 
 ## What Are Embedding Models and Why Do We Need Them?
 
 Before we dive into the implementation, let's first understand embedding models and why they are essential for building a recommendation system.
 
-At a high level, embedding models are AI models that convert text into **numerical vectors**—essentially transforming words, sentences, or even entire articles into numbers that a computer can understand. These vectors help capture the meaning and relationships between different pieces of text.
+At a high level, embedding models are AI models that convert text into **numerical vectors** - essentially transforming words, sentences, or even entire articles into numbers that a computer can understand. These vectors help capture the meaning and relationships between different pieces of text.
 
 For example, imagine we want to represent words in a 2D space where similar words are close together. An embedding model can do this. Take the words `cat`, `dog`, `fish`, and `sun`. We can represent them with vectors like this: `cat` becomes `[2, 3]`, `dog` `[3, 4]`, `fish` `[6, 2]`, and `sun` `[8, 9]`. Here, `cat` and `dog` are close because they are both animals, while `fish` is further away (another animal but different category), and `sun` is very far because it's unrelated.
 
@@ -89,7 +89,7 @@ In the world of embedding models, "dimensions" or "sizes" refer to the number of
 
 Remember our earlier example with two-dimensional coordinates (x, y)? Embedding models work the same way but use hundreds or thousands of dimensions instead of just 2 or 3.
 
-More dimensions allow the model to capture finer nuances and relationships between words and concepts—like having a more detailed meaning map. Fewer dimensions create a simpler representation, which produces a smaller numerical representation (the "embedding"). Higher dimensions offer better accuracy but require more storage and computing power.
+More dimensions allow the model to capture finer nuances and relationships between words and concepts - like having a more detailed meaning map. Fewer dimensions create a simpler representation, which produces a smaller numerical representation (the "embedding"). Higher dimensions offer better accuracy but require more storage and computing power.
 
 For example, OpenAI and VoyageAI offer various types of embedding models. Their larger models like `text-embedding-3-large` and `voyage-3-large` use **3072** and **2048** dimensions respectively, while their lighter models like `embedding-3-small` and `voyage-3-lite` use as few as **512** dimensions.
 
@@ -101,7 +101,7 @@ For my blog article, I decided to use a free recommendation engine by leveraging
 
 <a href="https://huggingface.co/docs/transformers.js/en/index" target="_blank" rel="noopener noreferrer">Transformer.js</a> is a JavaScript library that lets you run AI models directly in your web browser or Node.js application. It downloads models locally, allowing them to run entirely on your device.
 
-It supports various models including text generation, translation, image recognition, and embedding generation—all without relying on external APIs. This means zero usage fees, making it ideal for my personal blog project.
+It supports various models including text generation, translation, image recognition, and embedding generation - all without relying on external APIs. This means zero usage fees, making it ideal for my personal blog project.
 
 ### Choosing the Right Model
 
@@ -174,7 +174,7 @@ The console log from the above code will output the following 384-dimensional ve
 ]
 ```
 
-At first glance, these numbers might look meaningless, but trust me—we'll see later how these numbers help us compare vectors of different texts to determine their similarity. But before that, let's see what each part of the code above does:
+At first glance, these numbers might look meaningless, but trust me - we'll see later how these numbers help us compare vectors of different texts to determine their similarity. But before that, let's see what each part of the code above does:
 
 - **Load a Feature Extraction Model** – The `pipeline` function loads the `Xenova/all-MiniLM-L6-v2` model. It downloads once and caches locally, making subsequent runs faster.
 - **Process the Text** – The extractor converts the input text (`"The Importance of Machine Learning in Modern Web Development"`) into a **384**-dimensional vector.
