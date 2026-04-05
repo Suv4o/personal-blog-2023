@@ -42,6 +42,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/04/05/i-tried-redesigning-my-blog-with-google-stitch-heres-how-it-actually-went/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/04/05/i-tried-redesigning-my-blog-with-google-stitch-heres-how-it-actually-went/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1775344739/blog/i-tried-redesigning-my-blog-with-google-stitch-heres-how-it-actually-went/cover-3_ufwobo)
 
 Google first launched Stitch at <a href="https://developers.googleblog.com/stitch-a-new-way-to-design-uis/" target="_blank" rel="noopener noreferrer">I/O 2025</a> as an AI experiment - you'd type a prompt or upload a sketch, and it would generate UI designs and front-end code using Gemini. It was interesting but limited. Then in March 2026, they shipped a <a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/" target="_blank" rel="noopener noreferrer">major update</a> that turned it into something much more ambitious: an infinite AI canvas with a design agent, interactive prototyping, voice commands, a `DESIGN.md` export for design systems, and an MCP server for plugging into developer tools. Google calls the new approach **"vibe design"** - you describe the mood and objectives you want, and the AI handles the visual decisions.
