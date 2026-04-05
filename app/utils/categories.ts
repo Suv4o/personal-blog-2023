@@ -32,6 +32,7 @@ export const CATEGORIES: Category[] = [
     { tag: "Advice", name: "Advice", path: "/advice", bgClass: "bg-advice", textClass: "text-white" },
     { tag: "Productivity", name: "Productivity", path: "/productivity", bgClass: "bg-productivity", textClass: "text-white" },
     { tag: "DevOps", name: "DevOps", path: "/devops", bgClass: "bg-devops", textClass: "text-white" },
+    { tag: "UI", name: "UI", path: "/ui", bgClass: "bg-ui", textClass: "text-white" },
 ];
 
 export const CATEGORIES_MAP = new Map(CATEGORIES.map((c) => [c.tag, c]));
