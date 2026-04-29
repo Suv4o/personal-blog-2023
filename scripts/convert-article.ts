@@ -306,10 +306,10 @@ async function main() {
         console.log("Copilot client started successfully.");
 
         const session = await client.createSession({
-            model: "claude-opus-4.5",
+            model: "claude-sonnet-4.6",
             onPermissionRequest: approveAll,
         });
-        console.log("Session created with model: claude-opus-4.5");
+        console.log("Session created with model: claude-sonnet-4.6");
 
         console.log("\nStep 7: Sending prompt to Copilot with file attachments (this may take a moment)...");
         const result = await session.sendAndWait(
@@ -317,7 +317,7 @@ async function main() {
                 prompt,
                 attachments,
             },
-            300000 // 5 minutes timeout for complex conversion
+            900000, // 15 minutes timeout for complex conversion
         );
 
         // Extract the text response from the result
