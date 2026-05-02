@@ -1,0 +1,37 @@
+[
+  {
+    "start": 0,
+    "end": 4.960000038146973,
+    "text": "In this article, we delve into the journey of transforming a Google Stitch-created design"
+  },
+  {
+    "start": 4.960000038146973,
+    "end": 9.84000015258789,
+    "text": "into a live Nuxt 4 site using Cloud Code and GitHub's SpecKit."
+  },
+  {
+    "start": 9.84000015258789,
+    "end": 15.039999961853027,
+    "text": "Discover how a spec-driven development approach harnessed AI to create a seamless static site,"
+  },
+  {
+    "start": 15.039999961853027,
+    "end": 18,
+    "text": "highlighting successes and necessary manual adjustments."
+  },
+  {
+    "start": 18.559999465942383,
+    "end": 23.200000762939453,
+    "text": "Explore creative solutions like custom SVG cursors and syntax highlighting,"
+  },
+  {
+    "start": 23.200000762939453,
+    "end": 26.959999084472656,
+    "text": "showcasing AI's expanding role in design-to-code processes."
+  },
+  {
+    "start": 26.959999084472656,
+    "end": 33.279998779296875,
+    "text": "Read the full article for a deeper look into this cutting-edge development process."
+  }
+]

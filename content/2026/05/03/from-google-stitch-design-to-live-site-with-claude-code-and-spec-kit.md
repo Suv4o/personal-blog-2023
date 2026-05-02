@@ -45,6 +45,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/05/03/from-google-stitch-design-to-live-site-with-claude-code-and-spec-kit/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/05/03/from-google-stitch-design-to-live-site-with-claude-code-and-spec-kit/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1777292353/blog/from-google-stitch-design-to-live-site-with-claude-code-and-spec-kit/from-google-stitch-design-to-live-site-with-claude-code-and-spec-kit_eym9q2.jpg)
 
 In <NuxtLink to="/2026/04/05/i-tried-redesigning-my-blog-with-google-stitch-heres-how-it-actually-went">Part 1</NuxtLink>, I spent a couple of weeks experimenting with Google Stitch - testing different modes, refining prompts, and generating a full set of screens for a retro-futuristic "Neon Terminal" redesign of this blog. The designs were genuinely impressive. But the conclusion was honest: Stitch gets you about halfway there. The screens looked great individually, but the design system wasn't consistent across pages, and the exported code wasn't production-ready.
