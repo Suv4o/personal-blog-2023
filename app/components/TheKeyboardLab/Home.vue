@@ -24,6 +24,22 @@ const keyboards = [
         imageUrl:
             "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_500,e_sharpen:100/v1754297235/blog/the-keyboard-lab/Retrograde_lfxjf3",
     },
+    {
+        id: 4,
+        title: "🍡 Bubblegum",
+        href: "/the-keyboard-lab/bubblegum",
+        description: "playful, pastel, sweet, dreamy",
+        imageUrl:
+            "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_500,e_sharpen:100/v1777637128/blog/the-keyboard-lab/image-1_lv9lf7.jpg",
+    },
+    {
+        id: 5,
+        title: "🌊 Shoreline",
+        href: "/the-keyboard-lab/shoreline",
+        description: "nautical, bold, coastal, classic",
+        imageUrl:
+            "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_500,e_sharpen:100/v1777637182/blog/the-keyboard-lab/_DSC5608_evraeg.jpg",
+    },
 ];
 </script>
 

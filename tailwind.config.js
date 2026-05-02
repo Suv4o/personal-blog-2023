@@ -72,6 +72,13 @@ export default {
                 "falling-waters": "rgb(var(--color-falling-waters) / <alpha-value>)", // #4DD0E1
                 "mist-and-magic": "rgb(var(--color-mist-and-magic) / <alpha-value>)", // #26B6C8
                 "nature-flow": "rgb(var(--color-nature-flow) / <alpha-value>)", // #1A98A9
+                // Keyboard Lab custom tag colors
+                "bubblegum-playful": "rgb(var(--color-bubblegum-playful) / <alpha-value>)", // #F06292
+                "bubblegum-sweet": "rgb(var(--color-bubblegum-sweet) / <alpha-value>)", // #F8A5C2
+                "shoreline-nautical": "rgb(var(--color-shoreline-nautical) / <alpha-value>)", // #1E3A5F
+                "shoreline-bold": "rgb(var(--color-shoreline-bold) / <alpha-value>)", // #FF6347
+                "shoreline-coastal": "rgb(var(--color-shoreline-coastal) / <alpha-value>)", // #74A7C4
+                "shoreline-classic": "rgb(var(--color-shoreline-classic) / <alpha-value>)", // #0D2545
             },
             fontFamily: {
                 sans: ["Ubuntu", "sans-serif"],

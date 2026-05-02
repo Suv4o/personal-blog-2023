@@ -60,6 +60,13 @@
     --color-falling-waters: 77 208 225; /* #4DD0E1 */
     --color-mist-and-magic: 38 182 200; /* #26B6C8 */
     --color-nature-flow: 26 152 169; /* #1A98A9 */
+    /* Keyboard Lab tag colors */
+    --color-bubblegum-playful: 240 98 146; /* #F06292 */
+    --color-bubblegum-sweet: 248 165 194; /* #F8A5C2 */
+    --color-shoreline-nautical: 30 58 95; /* #1E3A5F */
+    --color-shoreline-bold: 255 99 71; /* #FF6347 */
+    --color-shoreline-coastal: 116 167 196; /* #74A7C4 */
+    --color-shoreline-classic: 13 37 69; /* #0D2545 */
 }
 
 html {
