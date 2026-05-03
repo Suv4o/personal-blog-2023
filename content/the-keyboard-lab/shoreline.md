@@ -72,7 +72,7 @@ shorelineSpecs:
               <li>Keycap and switch combo tuned for a crisp, classic Cherry sound profile</li>
           </ul>
 shorelineTitle: "🌊 Shoreline"
-shorelineDescription: "Bold, classic, and unmistakably coastal — <strong>Shoreline</strong> is a 96% custom mechanical keyboard built on the F96 Coral Sea. Its navy blue case pairs beautifully with crisp white and vibrant orange Cherry profile PBT keycaps, evoking the colours of a sun-soaked harbour. Powered by smooth Cherry MX Red switches, every keystroke is light, fast, and effortless — perfect for marathon typing and gaming sessions alike. With wired and wireless modes plus RGB lighting, <strong>Shoreline</strong> blends timeless aesthetics with modern flexibility, making it a confident daily driver for anyone who loves a nautical edge."
+shorelineDescription: "Bold, classic, and unmistakably coastal - <strong>Shoreline</strong> is a 96% custom mechanical keyboard built on the F96 Coral Sea. Its navy blue case pairs beautifully with crisp white and vibrant orange Cherry profile PBT keycaps, evoking the colours of a sun-soaked harbour. Powered by smooth Cherry MX Red switches, every keystroke is light, fast, and effortless - perfect for marathon typing and gaming sessions alike. With wired and wireless modes plus RGB lighting, <strong>Shoreline</strong> blends timeless aesthetics with modern flexibility, making it a confident daily driver for anyone who loves a nautical edge."
 shorelineTags: "nautical, bold, coastal, classic"
 shorelineImage: "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_900,e_sharpen:100/v1777637182/blog/the-keyboard-lab/_DSC5608_evraeg.jpg"
 ---

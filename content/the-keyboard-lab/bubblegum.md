@@ -80,7 +80,7 @@ bubblegumSpecs:
               <li>Gasket structure tuned for a softer, more cushioned typing feel</li>
           </ul>
 bubblegumTitle: "🍡 Bubblegum"
-bubblegumDescription: "Sweet, soft, and full of personality — <strong>Bubblegum</strong> is a TKL custom mechanical keyboard built on the Akko 5087B v2 Sailor Moon Crystal edition. Its gasket-mounted construction gives every keystroke a soft, cushioned bounce, while hand-lubed and filmed Akko CS Piano switches deliver a smooth, refined linear feel. Pastel XDA PBT keycaps and a matching light green coiled cable bring the dreamy, candy-shop aesthetic to life. With tri-mode connectivity (Bluetooth 5.0, 2.4GHz, and USB-C) and a generous 3000mAh battery, <strong>Bubblegum</strong> is as flexible as it is playful — a daily driver that feels as good as it looks."
+bubblegumDescription: "Sweet, soft, and full of personality - <strong>Bubblegum</strong> is a TKL custom mechanical keyboard built on the Akko 5087B v2 Sailor Moon Crystal edition. Its gasket-mounted construction gives every keystroke a soft, cushioned bounce, while hand-lubed and filmed Akko CS Piano switches deliver a smooth, refined linear feel. Pastel XDA PBT keycaps and a matching light green coiled cable bring the dreamy, candy-shop aesthetic to life. With tri-mode connectivity (Bluetooth 5.0, 2.4GHz, and USB-C) and a generous 3000mAh battery, <strong>Bubblegum</strong> is as flexible as it is playful - a daily driver that feels as good as it looks."
 bubblegumTags: "playful, pastel, sweet, dreamy"
 bubblegumImage: "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_900,e_sharpen:100/v1777637128/blog/the-keyboard-lab/image-1_lv9lf7.jpg"
 ---
