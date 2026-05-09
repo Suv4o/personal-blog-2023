@@ -31,6 +31,16 @@ const getTagColor = (tag: string): string => {
         sunny: "bg-javascript text-secondary",
         "sci-fi": "bg-ai text-secondary",
 
+        // Bubblegum keyboard tags
+        playful: "bg-bubblegum-playful text-white",
+        sweet: "bg-bubblegum-sweet text-secondary",
+
+        // Shoreline keyboard tags
+        nautical: "bg-shoreline-nautical text-white",
+        bold: "bg-shoreline-bold text-white",
+        coastal: "bg-shoreline-coastal text-secondary",
+        classic: "bg-shoreline-classic text-white",
+
         // Default fallback colors using custom palette
         "default-1": "bg-green-light text-secondary",
         "default-2": "bg-primary-light text-white",

@@ -76,7 +76,7 @@ lemonMilkSpecs:
               <li>Padding applied between top and bottom case housing to prevent aluminum ping</li>
           </ul>
 lemonMilkTitle: "🍋 Lemon Milk"
-lemonMilkDescription: "Bright, bold, and buttery smooth — <strong>Lemon Milk</strong> is a 75% custom mechanical keyboard designed to strike a balance between premium feel and vibrant personality. Built around the solid and mod-friendly Keychron Q1, this build features silky Tealios V2 switches that are lubed and filmed for optimal performance. The XDA yellow and white keycaps offer a minimalist yet playful vibe, while internal mods like case foam and tape mod help achieve a thocky and clean acoustic profile. Topped off with a yellow coiled cable and aviator connector, <strong>Lemon Milk</strong> is a sunny daily driver you’ll actually want to use — and show off."
+lemonMilkDescription: "Bright, bold, and buttery smooth - <strong>Lemon Milk</strong> is a 75% custom mechanical keyboard designed to strike a balance between premium feel and vibrant personality. Built around the solid and mod-friendly Keychron Q1, this build features silky Tealios V2 switches that are lubed and filmed for optimal performance. The XDA yellow and white keycaps offer a minimalist yet playful vibe, while internal mods like case foam and tape mod help achieve a thocky and clean acoustic profile. Topped off with a yellow coiled cable and aviator connector, <strong>Lemon Milk</strong> is a sunny daily driver you’ll actually want to use - and show off."
 lemonMilkTags: "refreshing, warm, creamy, sunny"
 lemonMilkImage: "https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_900,e_sharpen:100/v1754209966/blog/the-keyboard-lab/keyboard-2_r8ujln"
 ---

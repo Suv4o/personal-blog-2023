@@ -59,6 +59,8 @@ export function useHelpers(article?: Ref<any>) {
         "/the-keyboard-lab/lemon-milk",
         "/the-keyboard-lab/pastel-paws",
         "/the-keyboard-lab/retrograde",
+        "/the-keyboard-lab/bubblegum",
+        "/the-keyboard-lab/shoreline",
         "/through-the-lens",
         "/through-the-lens/starlit-wonders",
         "/through-the-lens/liquid-cascades",
