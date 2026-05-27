@@ -44,6 +44,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/05/27/what-openclip-did-to-my-photo-library/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/05/27/what-openclip-did-to-my-photo-library/summary.json"}
+::
+
 ![What OpenCLIP Did to My Photo Library](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1779711340/blog/what-openclip-did-to-my-photo-library/what-openclip-did-to-my-photo-library_qecnvm)
 
 I love taking photos. I've been at it for years now - landscapes, cityscapes, astrophotography, coastal scenes, mountains, seascapes, waterfalls. The kind of photography where you set an alarm for 3am to catch the Milky Way, where you wait for the right tide at the right beach, and where you drive for a few hours out of town just because the light might be good.
