@@ -1,62 +1,62 @@
 [
-  {
-    "start": 0,
-    "end": 3.7200000286102295,
-    "text": "Discover how OpenSlip can revolutionize your photo library."
-  },
-  {
-    "start": 3.7200000286102295,
-    "end": 6.559999942779541,
-    "text": "This post delves into using OpenCClip,"
-  },
-  {
-    "start": 6.559999942779541,
-    "end": 8.15999984741211,
-    "text": "an open-source vision model,"
-  },
-  {
-    "start": 8.15999984741211,
-    "end": 11.319999694824219,
-    "text": "to efficiently categorize and search photos."
-  },
-  {
-    "start": 11.319999694824219,
-    "end": 13.960000038146973,
-    "text": "With zero-shot classification and vector embeddings,"
-  },
-  {
-    "start": 13.960000038146973,
-    "end": 16.399999618530273,
-    "text": "you can create a semantic photo search engine"
-  },
-  {
-    "start": 16.399999618530273,
-    "end": 19.079999923706055,
-    "text": "using FastAPI and PGVector."
-  },
-  {
-    "start": 19.079999923706055,
-    "end": 20.780000686645508,
-    "text": "It even lets you explore photos"
-  },
-  {
-    "start": 20.780000686645508,
-    "end": 22.68000030517578,
-    "text": "in a 3D cluster cloud locally,"
-  },
-  {
-    "start": 22.68000030517578,
-    "end": 25.31999969482422,
-    "text": "all without API keys or recurring costs."
-  },
-  {
-    "start": 25.31999969482422,
-    "end": 26.68000030517578,
-    "text": "Read the full article"
-  },
-  {
-    "start": 26.68000030517578,
-    "end": 29.3799991607666,
-    "text": "to learn how to build your own semantic search engine."
-  }
+    {
+        "start": 0,
+        "end": 3.7200000286102295,
+        "text": "Discover how OpenClip can revolutionize your photo library."
+    },
+    {
+        "start": 3.7200000286102295,
+        "end": 6.559999942779541,
+        "text": "This post delves into using OpenClip,"
+    },
+    {
+        "start": 6.559999942779541,
+        "end": 8.15999984741211,
+        "text": "an open-source vision model,"
+    },
+    {
+        "start": 8.15999984741211,
+        "end": 11.319999694824219,
+        "text": "to efficiently categorize and search photos."
+    },
+    {
+        "start": 11.319999694824219,
+        "end": 13.960000038146973,
+        "text": "With zero-shot classification and vector embeddings,"
+    },
+    {
+        "start": 13.960000038146973,
+        "end": 16.399999618530273,
+        "text": "you can create a semantic photo search engine"
+    },
+    {
+        "start": 16.399999618530273,
+        "end": 19.079999923706055,
+        "text": "using FastAPI and PGVector."
+    },
+    {
+        "start": 19.079999923706055,
+        "end": 20.780000686645508,
+        "text": "It even lets you explore photos"
+    },
+    {
+        "start": 20.780000686645508,
+        "end": 22.68000030517578,
+        "text": "in a 3D cluster cloud locally,"
+    },
+    {
+        "start": 22.68000030517578,
+        "end": 25.31999969482422,
+        "text": "all without API keys or recurring costs."
+    },
+    {
+        "start": 25.31999969482422,
+        "end": 26.68000030517578,
+        "text": "Read the full article"
+    },
+    {
+        "start": 26.68000030517578,
+        "end": 29.3799991607666,
+        "text": "to learn how to build your own semantic search engine."
+    }
 ]

@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "tsx --env-file=.env ./index.ts",
-        "convert": "tsx ./convert-article.ts"
+        "convert": "tsx ./convert-article.ts",
+        "regenerate-audio": "tsx --env-file=.env ./regenerate-audio.ts"
     },
     "keywords": [],
     "author": "",
