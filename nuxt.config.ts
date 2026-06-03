@@ -43,6 +43,22 @@ async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
         })
         .map((filePath) => `/api/similar-articles${filePath}`);
 
+    const photoApiRoutes = files
+        .map((file) => {
+            let filePath = file.replace("content/", "/").replace(".md", "").replace("index", "");
+
+            if (filePath.endsWith("/") && filePath !== "/") {
+                filePath = filePath.slice(0, -1);
+            }
+
+            return filePath;
+        })
+        .filter((filePath) => {
+            // Match individual photo pages: /through-the-lens/{gallery}/{slug}
+            return /^\/through-the-lens\/[^/]+\/[^/]+$/.test(filePath);
+        })
+        .map((filePath) => `/api/similar-photos${filePath}`);
+
     const routes = files.map((file) => {
         let filePath = file.replace("content/", "/").replace(".md", "").replace("index", "");
 
@@ -91,7 +107,7 @@ async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
 
     console.log(`Embeddings saved to: ${embeddingsFilePath}`);
 
-    return [...routes, ...apiRoutes];
+    return [...routes, ...apiRoutes, ...photoApiRoutes];
 }
 
 export default defineNuxtConfig({
