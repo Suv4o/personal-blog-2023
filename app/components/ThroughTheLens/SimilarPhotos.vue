@@ -88,7 +88,7 @@ const cards = computed(() =>
 
 <template>
     <div v-if="cards.length" class="al-container mt-12">
-        <div>
+        <div class="pb-8">
             <div class="mx-auto max-w-2xl text-center">
                 <h2 class="text-4xl font-semibold tracking-tight text-balance text-secondary sm:text-5xl">
                     Similar Photos
