@@ -1,27 +1,27 @@
 [
-  {
-    "start": 0,
-    "end": 9.239999771118164,
-    "text": "In this post, we'll explore how combining OpenCClip image embeddings with all MiniLM L12v2 text embeddings can improve photo recommendations."
-  },
-  {
-    "start": 9.239999771118164,
-    "end": 18.540000915527344,
-    "text": "The article shows how integrating visual and contextual signals with a single, adjustable weight can create an advanced photo recommendation system."
-  },
-  {
-    "start": 18.540000915527344,
-    "end": 26.540000915527344,
-    "text": "It covers the mathematics of late fusion and offers a step-by-step guide to building the entire pipeline using Node.js and Python,"
-  },
-  {
-    "start": 26.540000915527344,
-    "end": 29.940000534057617,
-    "text": "without the need for a database or vector store."
-  },
-  {
-    "start": 29.940000534057617,
-    "end": 33.880001068115234,
-    "text": "Visit the full article to learn how to set up your own system."
-  }
+    {
+        "start": 0,
+        "end": 9.239999771118164,
+        "text": "In this post, we'll explore how combining OpenClip image embeddings with all MiniLM L12v2 text embeddings can improve photo recommendations."
+    },
+    {
+        "start": 9.239999771118164,
+        "end": 18.540000915527344,
+        "text": "The article shows how integrating visual and contextual signals with a single, adjustable weight can create an advanced photo recommendation system."
+    },
+    {
+        "start": 18.540000915527344,
+        "end": 26.540000915527344,
+        "text": "It covers the mathematics of late fusion and offers a step-by-step guide to building the entire pipeline using Node.js and Python,"
+    },
+    {
+        "start": 26.540000915527344,
+        "end": 29.940000534057617,
+        "text": "without the need for a database or vector store."
+    },
+    {
+        "start": 29.940000534057617,
+        "end": 33.880001068115234,
+        "text": "Visit the full article to learn how to set up your own system."
+    }
 ]

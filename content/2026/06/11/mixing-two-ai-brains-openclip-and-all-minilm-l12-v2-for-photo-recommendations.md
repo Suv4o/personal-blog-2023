@@ -46,7 +46,7 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
-::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/06/14/mixing-two-ai-brains-openclip-and-all-minilm-l12-v2-for-photo-recommendations/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/06/14/mixing-two-ai-brains-openclip-and-all-minilm-l12-v2-for-photo-recommendations/summary.json"}
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/06/11/mixing-two-ai-brains-openclip-and-all-minilm-l12-v2-for-photo-recommendations/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/06/11/mixing-two-ai-brains-openclip-and-all-minilm-l12-v2-for-photo-recommendations/summary.json"}
 ::
 
 ![Mixing Two AI Brains: OpenCLIP + all-MiniLM-L12-v2 for Photo Recommendations](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1780917315/blog/mixing-openclip-and-all-miniLm-l12-v2-for-photo-recommendations/hero_euzkva)
