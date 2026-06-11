@@ -120,5 +120,6 @@ const isListingPage = computed(() => {
         :images="galleryImages"
         :current-image-slug="currentImageSlug"
     />
+    <ThroughTheLensSimilarPhotos v-if="isPhotoPage && !isError" />
     <FurtherReading v-if="isBlogArticle && !isError" />
 </template>

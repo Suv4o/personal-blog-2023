@@ -6,7 +6,10 @@
     "scripts": {
         "start": "tsx --env-file=.env ./index.ts",
         "convert": "tsx ./convert-article.ts",
-        "regenerate-audio": "tsx --env-file=.env ./regenerate-audio.ts"
+        "regenerate-audio": "tsx --env-file=.env ./regenerate-audio.ts",
+        "gen:photo-text": "tsx ./generate-photo-text-embeddings.ts",
+        "gen:photo-merge": "tsx ./merge-photo-embeddings.ts",
+        "gen:photos": "yarn gen:photo-text && uv run ./generate_photo_image_embeddings.py && yarn gen:photo-merge"
     },
     "keywords": [],
     "author": "",
@@ -17,7 +20,9 @@
     },
     "dependencies": {
         "@github/copilot-sdk": "^0.1.32",
+        "@huggingface/transformers": "^3.8.1",
         "@openai/agents": "^0.4.3",
+        "gray-matter": "^4.0.3",
         "openai": "^6.16.0"
     }
 }
