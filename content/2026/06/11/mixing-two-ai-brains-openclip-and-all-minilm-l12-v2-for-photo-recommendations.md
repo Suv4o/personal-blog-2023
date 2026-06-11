@@ -30,7 +30,7 @@ keywords:
     - photo blog
 type: page
 blog: post
-published: 14th June 2026
+published: 11th June 2026
 readTime: 8
 author: Aleksandar Trpkovski
 articleTags:
