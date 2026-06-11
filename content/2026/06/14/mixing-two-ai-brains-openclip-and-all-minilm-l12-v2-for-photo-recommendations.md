@@ -46,6 +46,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/06/14/mixing-two-ai-brains-openclip-and-all-minilm-l12-v2-for-photo-recommendations/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/06/14/mixing-two-ai-brains-openclip-and-all-minilm-l12-v2-for-photo-recommendations/summary.json"}
+::
+
 ![Mixing Two AI Brains: OpenCLIP + all-MiniLM-L12-v2 for Photo Recommendations](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1780917315/blog/mixing-openclip-and-all-miniLm-l12-v2-for-photo-recommendations/hero_euzkva)
 
 A few weeks back I wrote about what `OpenCLIP` did to my photo library - turning my entire collection into 1024-dimensional vectors I could search through. That post was about finding photos. This one is about a quieter feature I'd been wanting to add for months: on every image inside the <NuxtLink to="/through-the-lens">Through The Lens</NuxtLink> section of my blog, suggest three more photos the reader might like to see next.

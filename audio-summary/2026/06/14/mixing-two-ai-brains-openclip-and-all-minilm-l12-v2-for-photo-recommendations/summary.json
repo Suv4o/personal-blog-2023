@@ -1,0 +1,37 @@
+[
+  {
+    "start": 0,
+    "end": 7,
+    "text": "Explore how combining OpenCClip and all MiniLM L12v2 can build a powerful photo recommendation system."
+  },
+  {
+    "start": 7,
+    "end": 13.5,
+    "text": "By merging OpenCClip's image embeddings with all MiniLM L12v2's text embeddings,"
+  },
+  {
+    "start": 13.5,
+    "end": 17,
+    "text": "learn how to improve photo recommendations through late fusion."
+  },
+  {
+    "start": 17,
+    "end": 22,
+    "text": "This method uses a tunable weight to seamlessly integrate visual and contextual data,"
+  },
+  {
+    "start": 22,
+    "end": 25,
+    "text": "offering a refined approach without a database."
+  },
+  {
+    "start": 25,
+    "end": 29,
+    "text": "A straightforward setup with Node.js and Python makes it easy to implement."
+  },
+  {
+    "start": 29,
+    "end": 35,
+    "text": "Dive into the full article for detailed instructions on setting up this innovative system."
+  }
+]
