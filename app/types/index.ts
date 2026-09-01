@@ -1,3 +1,5 @@
+export * from "./search";
+
 export interface Article {
     articleTags: string[];
     author: string;

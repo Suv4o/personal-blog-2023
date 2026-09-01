@@ -5,6 +5,7 @@ import path from "path";
 import { isBlogPostUrl } from "./app/utils/url-helpers";
 import { processEmbeddings } from "./app/utils/process-embeddings";
 import { getEmbeddingsFilePath } from "./app/utils/file-paths";
+import { buildSearchIndex } from "./app/utils/build-search-index";
 import { pipeline } from "@huggingface/transformers";
 
 async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
@@ -107,7 +108,12 @@ async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
 
     console.log(`Embeddings saved to: ${embeddingsFilePath}`);
 
-    return [...routes, ...apiRoutes, ...photoApiRoutes];
+    const searchResult = await buildSearchIndex({ projectRoot: process.cwd() });
+    console.log(
+        `Search index saved: content=${searchResult.contentCount} (${JSON.stringify(searchResult.byKind)}), visual=${searchResult.visualCount}`
+    );
+
+    return [...routes, ...apiRoutes, ...photoApiRoutes, "/api/search-index"];
 }
 
 export default defineNuxtConfig({

@@ -9,7 +9,8 @@
         "regenerate-audio": "tsx --env-file=.env ./regenerate-audio.ts",
         "gen:photo-text": "tsx ./generate-photo-text-embeddings.ts",
         "gen:photo-merge": "tsx ./merge-photo-embeddings.ts",
-        "gen:photos": "yarn gen:photo-text && uv run ./generate_photo_image_embeddings.py && yarn gen:photo-merge"
+        "gen:photos": "yarn gen:photo-text && uv run ./generate_photo_image_embeddings.py && yarn gen:photo-merge",
+        "gen:search": "tsx ./generate-search-index.ts"
     },
     "keywords": [],
     "author": "",

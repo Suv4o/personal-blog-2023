@@ -1,16 +1,9 @@
 <script setup lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
-import { MagnifyingGlassIcon } from "@heroicons/vue/20/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { computed, ref } from "vue";
-import { Combobox, ComboboxInput, ComboboxLabel, ComboboxOption, ComboboxOptions } from "@headlessui/vue";
-import type { Article } from "~/types";
-const router = useRouter();
 const route = useRoute();
 
-const articles = ref();
-const query = ref("");
-const selectedArticle = ref<Article>();
 const mobileToggle = ref<any>(null);
 
 const hasArticlesPath = computed(() => {
@@ -19,43 +12,6 @@ const hasArticlesPath = computed(() => {
 const hasKeyboardLabPath = computed(() => route.path.includes("/the-keyboard-lab"));
 const hasThroughTheLensPath = computed(() => route.path.includes("/through-the-lens"));
 const hasAboutMePath = computed(() => route.path.startsWith("/about-me"));
-
-watch(
-    () => selectedArticle.value,
-    () => {
-        navigateToArticle();
-    }
-);
-
-async function getArticles() {
-    const { data } = await useAsyncData(route.fullPath + "-nav", () => {
-        return queryCollection("content").where("blog", "=", "post").all();
-    });
-    return data.value ?? [];
-}
-
-articles.value = await getArticles();
-
-const filteredArticles = computed(() =>
-    query.value === ""
-        ? articles.value
-        : articles.value.filter((article: Article) => {
-              return article.title.toLowerCase().includes(query.value.toLowerCase());
-          })
-);
-
-async function navigateToArticle() {
-    await nextTick();
-    if (!filteredArticles.value.length) {
-        return;
-    }
-
-    if (!selectedArticle.value) {
-        return;
-    }
-
-    router.push(selectedArticle.value.path);
-}
 
 function closeMobileMenu() {
     const btn = (mobileToggle.value as ComponentPublicInstance)?.$el ?? mobileToggle.value;
@@ -110,46 +66,7 @@ function closeMobileMenu() {
                 </div>
                 <div class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
                     <div class="w-full max-w-lg lg:max-w-xs">
-                        <Combobox as="div" v-model="selectedArticle">
-                            <ComboboxLabel class="sr-only">Search</ComboboxLabel>
-                            <div class="relative">
-                                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                                    <MagnifyingGlassIcon class="h-5 w-5 text-gray" aria-hidden="true" />
-                                </div>
-                                <ComboboxInput
-                                    class="block w-full rounded-md border-2 border-transparent py-1.5 pl-10 pr-3 text-gray placeholder:text-gray focus:ring-0 sm:text-lg sm:leading-6 focus:border-primary"
-                                    @change="query = $event.target.value"
-                                    placeholder="Search"
-                                    type="search"
-                                />
-
-                                <ComboboxOptions
-                                    v-if="filteredArticles.length > 0"
-                                    class="search_results absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-beige py-1 shadow-lg ring-1 ring-primary ring-opacity-5 focus:outline-none sm:text-lg border border-secondary"
-                                >
-                                    <ComboboxOption
-                                        v-for="article in filteredArticles"
-                                        :key="article.path"
-                                        :value="article"
-                                        as="template"
-                                        v-slot="{ active }"
-                                    >
-                                        <NuxtLink :to="article.path">
-                                            <li
-                                                :class="[
-                                                    'relative cursor-pointer select-none py-2 pl-3 pr-9',
-                                                    active ? 'bg-secondary text-primary' : 'text-secondary',
-                                                ]"
-                                            >
-                                                <span :class="['block truncate']">
-                                                    {{ article.title }}
-                                                </span>
-                                            </li>
-                                        </NuxtLink>
-                                    </ComboboxOption>
-                                </ComboboxOptions>
-                            </div>
-                        </Combobox>
+                        <SearchBar />
                     </div>
                 </div>
                 <div class="flex lg:hidden overflow-x-hidden">
