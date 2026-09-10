@@ -1,5 +1,5 @@
 ---
-title: Did You Know You Can Control Your Tesla From Your MacBook?
+title: Did You Know You Can Control Your Tesla Car From Your MacBook?
 description: Tesla open-sourced an official Go SDK that lets you talk to your car over Bluetooth, with no cloud account, API key, or subscription. Here's how to pair your MacBook as a car key, read the battery state of charge for a home automation, and work around the gotchas nobody warns you about.
 image: https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_1200,e_sharpen:100/v1788238623/blog/did-you-know-you-can-control-your-tesla-from-your-macbook/did-you-know-you-can-control-your-tesla-from-your-macbook_gym2eo
 keywords:
@@ -29,7 +29,7 @@ keywords:
     - command line
 type: page
 blog: post
-published: 6th September 2026
+published: 15th September 2026
 readTime: 12
 author: Aleksandar Trpkovski
 articleTags:
@@ -38,7 +38,7 @@ articleTags:
     - Tesla
 ---
 
-# Did You Know You Can Control Your Tesla From Your MacBook?
+# Did You Know You Can Control Your Tesla Car From Your MacBook?
 
 _{{$document.published}} • {{$document.readTime}} min read — by **[{{$document.author}}](/)**_
 
