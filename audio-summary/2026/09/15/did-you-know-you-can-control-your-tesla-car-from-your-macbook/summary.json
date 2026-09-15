@@ -1,0 +1,52 @@
+[
+  {
+    "start": 0,
+    "end": 2.9600000381469727,
+    "text": "Discover how you can control your Tesla Model Y"
+  },
+  {
+    "start": 2.9600000381469727,
+    "end": 4.400000095367432,
+    "text": "using just your MacBook."
+  },
+  {
+    "start": 4.400000095367432,
+    "end": 7.28000020980835,
+    "text": "Tesla has released an open source Go SDK,"
+  },
+  {
+    "start": 7.28000020980835,
+    "end": 10.520000457763672,
+    "text": "enabling drivers to connect to their cars via Bluetooth"
+  },
+  {
+    "start": 10.520000457763672,
+    "end": 13.619999885559082,
+    "text": "without needing a cloud account or API key."
+  },
+  {
+    "start": 13.619999885559082,
+    "end": 16.219999313354492,
+    "text": "Learn how to pair your MacBook as a car key,"
+  },
+  {
+    "start": 16.219999313354492,
+    "end": 18.68000030517578,
+    "text": "monitor battery charge for home automation,"
+  },
+  {
+    "start": 18.68000030517578,
+    "end": 20.639999389648438,
+    "text": "and overcome common hurdles."
+  },
+  {
+    "start": 20.639999389648438,
+    "end": 22.520000457763672,
+    "text": "For more on integrating your Tesla"
+  },
+  {
+    "start": 22.520000457763672,
+    "end": 25.260000228881836,
+    "text": "with your own tech setup, read the full article."
+  }
+]

@@ -45,6 +45,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/09/15/did-you-know-you-can-control-your-tesla-car-from-your-macbook/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/09/15/did-you-know-you-can-control-your-tesla-car-from-your-macbook/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1788238623/blog/did-you-know-you-can-control-your-tesla-from-your-macbook/did-you-know-you-can-control-your-tesla-from-your-macbook_gym2eo)
 
 I bought my electric vehicle not long ago. I wanted to switch to full electric, partly inspired by high petrol prices, but mostly because I'm a technology enthusiast and I'm genuinely amazed by what modern car software can do. I ended up with a Tesla Model Y Juniper.
