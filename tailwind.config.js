@@ -53,6 +53,7 @@ export default {
                 productivity: "rgb(var(--color-productivity) / <alpha-value>)", // #10B981
                 devops: "rgb(var(--color-devops) / <alpha-value>)", // #2563EB
                 ui: "rgb(var(--color-ui) / <alpha-value>)", // #F97316
+                tesla: "rgb(var(--color-tesla) / <alpha-value>)", // #E31937
                 // Through The Lens custom tag colors
                 "cosmic-views": "rgb(var(--color-cosmic-views) / <alpha-value>)", // #5B5FFF
                 "night-skies": "rgb(var(--color-night-skies) / <alpha-value>)", // #4E4CCF

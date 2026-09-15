@@ -436,6 +436,6 @@ I'm already thinking about what else I could automate. What if the script could 
 
 The Copilot SDK is still early days, but for those of us who like to experiment with new tools, it's already proving useful. If you have repetitive tasks that involve processing text or files with some intelligence required, it might be worth giving it a try.
 
-You can find the official SDK repository and documentation at <a href="https://github.com/github/copilot-sdk" target="_blank" rel="noopener noreferrer">github.com/github/copilot-sdk</a>. And if you want to see the complete conversion script I built, check out the <a href="https://github.com/Suv4o/personal-blog-2023/blob/main/scripts/convert-article.ts" target="_blank" rel="noopener noreferrer">`scripts/convert-article.ts`</a> file in my blog's repository.
+You can find the official SDK repository and documentation at <a href="https://github.com/github/copilot-sdk" target="_blank" rel="noopener noreferrer">github.com/github/copilot-sdk</a>. And if you want to see the complete conversion script I built, check out the <a href="https://github.com/Suv4o/personal-blog-2023/blob/2b3c03d/scripts/convert-article.ts" target="_blank" rel="noopener noreferrer">`scripts/convert-article.ts`</a> file in my blog's repository.
 
 Happy automating! 🚀

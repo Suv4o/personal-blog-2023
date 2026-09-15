@@ -9,8 +9,7 @@
         "generate:local": "NODE_OPTIONS='--max-old-space-size=8192' nuxt generate --dotenv .env.local",
         "generate:prod": "NODE_OPTIONS='--max-old-space-size=8192' nuxt generate --dotenv .env.prod",
         "preview": "nuxt preview",
-        "postinstall": "nuxt prepare",
-        "convert": "yarn --cwd scripts convert"
+        "postinstall": "nuxt prepare"
     },
     "devDependencies": {
         "@nuxt/content": "^3.11.0",
