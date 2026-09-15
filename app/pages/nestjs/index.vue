@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Nest.js, Nest.js development, Nest.js tutorials, web development, Nest.js projects, scalable applications, backend development, Node.js, API development, web development blog",
     description:
         "Explore a collection of Nest.js development projects, tutorials, and best practices on my web development blog. Learn how to build scalable and efficient applications with Nest.js.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Nest.js, Nest.js development, Nest.js tutorials, web development, Nest.js projects, scalable applications, backend development, Node.js, API development, web development blog",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

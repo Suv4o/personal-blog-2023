@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "AWS, Amazon Web Services, cloud computing, serverless architecture, AWS tutorials, AWS best practices, cloud infrastructure, DevOps, scalable systems, cloud security, AWS Lambda, AWS SQS, AWS SNS, AWS microservices, cloud-native applications",
     description:
         "Browse hands-on AWS tutorials, architecture guides, and best practices for building scalable, resilient cloud applications. Learn how to design, deploy, and operate modern systems on Amazon Web Services.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "AWS, Amazon Web Services, cloud computing, serverless architecture, AWS tutorials, AWS best practices, cloud infrastructure, DevOps, scalable systems, cloud security, AWS Lambda, AWS SQS, AWS SNS, AWS microservices, cloud-native applications",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Firebase development, Firebase tutorials, Firebase resources, Firebase guides, Firebase web apps, Firebase mobile apps, Firebase tips, Firebase authentication, Firebase database, Firebase hosting, Firebase functions, Firebase for developers, Firebase integration, web development, app development",
     description:
         "Explore comprehensive Firebase development tutorials, tips, and resources. Learn how to build robust web and mobile applications with Firebase's powerful features.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Firebase development, Firebase tutorials, Firebase resources, Firebase guides, Firebase web apps, Firebase mobile apps, Firebase tips, Firebase authentication, Firebase database, Firebase hosting, Firebase functions, Firebase for developers, Firebase integration, web development, app development",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

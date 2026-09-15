@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Backend Development, Node.js Tutorials, Python for Backend, Backend Development Best Practices, Learn Node.js Backend, Python Backend Articles, Backend Development Tips, Node.js vs Python for Backend, Backend Development Insights",
     description:
         "Explore the best articles on backend development featuring Node.js and Python. Get practical insights, tutorials, and best practices to enhance your backend development skills.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Backend Development, Node.js Tutorials, Python for Backend, Backend Development Best Practices, Learn Node.js Backend, Python Backend Articles, Backend Development Tips, Node.js vs Python for Backend, Backend Development Insights",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

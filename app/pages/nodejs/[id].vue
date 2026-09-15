@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Node.js development, Node.js tutorials, Node.js best practices, Node.js resources, backend development, JavaScript, server-side development, Node.js framework, Node.js guide",
     description:
         "Explore a collection of Node.js development tutorials, best practices, and resources. Learn the latest techniques for building scalable and efficient applications with Node.js",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Node.js development, Node.js tutorials, Node.js best practices, Node.js resources, backend development, JavaScript, server-side development, Node.js framework, Node.js guide",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "technology, tech news, tech tips, gadgets, AI, artificial intelligence, web development, software, coding, tech trends, digital tools, programming, innovation, tech tutorials",
     description:
         "Stay up-to-date with the latest in tech on our blog. Explore all posts tagged with Tech—covering gadgets, software, AI, web development, and the future of technology.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "technology, tech news, tech tips, gadgets, AI, artificial intelligence, web development, software, coding, tech trends, digital tools, programming, innovation, tech tutorials",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

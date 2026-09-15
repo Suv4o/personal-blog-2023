@@ -65,7 +65,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords: article.value?.keywords?.join(", ") ?? "",
     ogDescription: article.value?.description ?? "",
     description: article.value?.description ?? "",
     ogTitle: article.value?.title ?? "",
@@ -85,6 +84,10 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content: article.value?.keywords?.join(", ") ?? "",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com${route.path}`,

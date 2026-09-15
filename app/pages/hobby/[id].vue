@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "hobbies, fun hobbies, hobby ideas, creative hobbies, leisure activities, DIY projects, crafting, outdoor hobbies, indoor hobbies, new hobbies to try, personal interests, weekend activities, hobby blog, hobby inspiration, hobby exploration, hobby community, hobby enthusiasts, hobby trends, unique hobbies, popular hobbies, hobby resources",
     description:
         "Discover a variety of fun and inspiring hobby ideas on our blog. From creative crafts to outdoor adventures, explore all posts tagged with hobbies and find your next passion project.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "hobbies, fun hobbies, hobby ideas, creative hobbies, leisure activities, DIY projects, crafting, outdoor hobbies, indoor hobbies, new hobbies to try, personal interests, weekend activities, hobby blog, hobby inspiration, hobby exploration, hobby community, hobby enthusiasts, hobby trends, unique hobbies, popular hobbies, hobby resources",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "advice, career tips, developer advice, coding tips, productivity, blogging tips, tech career, software development tips, best practices, learning to code, professional growth, developer journey",
     description:
         "Browse advice articles on career growth, productivity, and developer best practices. Get insights and tips from real experiences in software development and tech.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "advice, career tips, developer advice, coding tips, productivity, blogging tips, tech career, software development tips, best practices, learning to code, professional growth, developer journey",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

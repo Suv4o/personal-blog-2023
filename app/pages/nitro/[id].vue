@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Nitro development, web development, Nitro projects, modern web development, programming tutorials, web development blog, Nitro framework, web development tips",
     description:
         "Explore my personal blog showcasing cutting-edge Nitro development projects, including tutorials, tips, and best practices to help you stay ahead in the world of modern web development.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Nitro development, web development, Nitro projects, modern web development, programming tutorials, web development blog, Nitro framework, web development tips",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

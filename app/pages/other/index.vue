@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "web development projects, frontend development, backend development, full-stack development, web development tutorials, coding projects, web development blog, modern web technologies, frontend web development, web development inspiration, coding resources",
     description:
         "Explore a collection of web development projects on my personal blog, showcasing the latest in frontend, backend, and full-stack development. Get inspired, learn, and stay updated with my hands-on experience in modern web technologies.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "web development projects, frontend development, backend development, full-stack development, web development tutorials, coding projects, web development blog, modern web technologies, frontend web development, web development inspiration, coding resources",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

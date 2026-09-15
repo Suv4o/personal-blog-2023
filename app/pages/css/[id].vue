@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "CSS development, CSS tutorials, Web development tips, CSS resources, Learn CSS, Modern CSS techniques, Responsive design with CSS, CSS animations, CSS best practices",
     description:
         "Explore the latest CSS development tutorials, tips, and resources to enhance your web development skills. Stay updated with modern CSS techniques and trends!",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "CSS development, CSS tutorials, Web development tips, CSS resources, Learn CSS, Modern CSS techniques, Responsive design with CSS, CSS animations, CSS best practices",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

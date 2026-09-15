@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "entertainment, tech, technology, books, podcasts, tech reviews, gadgets, software, innovation, book recommendations, tech news",
     description:
         "Explore the intersection of entertainment and technology on our blog. From tech books to tech podcasts to the latest in tech and gadgets it all in one place.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "entertainment, tech, technology, books, podcasts, tech reviews, gadgets, software, innovation, book recommendations, tech news",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

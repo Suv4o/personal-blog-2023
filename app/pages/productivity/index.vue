@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "productivity, developer productivity, workflow tips, efficiency, time management, coding workflow, developer tools, automation, productivity hacks, getting things done, focus, deep work",
     description:
         "Explore productivity articles covering workflow tips, efficiency strategies, and tools to help developers work smarter. Learn how to optimise your coding workflow and get more done.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "productivity, developer productivity, workflow tips, efficiency, time management, coding workflow, developer tools, automation, productivity hacks, getting things done, focus, deep work",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

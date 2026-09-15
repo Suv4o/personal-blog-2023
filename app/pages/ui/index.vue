@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "UI, user interface, UI design, design systems, component design, responsive design, accessibility, UX, web design, interface patterns, visual design",
     description:
         "Explore UI articles covering user interface design, design systems, component patterns, and accessibility best practices. Learn how to create beautiful and functional web interfaces.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "UI, user interface, UI design, design systems, component design, responsive design, accessibility, UX, web design, interface patterns, visual design",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

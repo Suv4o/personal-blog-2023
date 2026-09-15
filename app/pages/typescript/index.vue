@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "TypeScript projects, TypeScript web development, web development tutorials, TypeScript code examples, TypeScript programming, web development with TypeScript, TypeScript development, front-end TypeScript projects, backend TypeScript projects, TypeScript development tutorials",
     description:
         "Browse a curated list of TypeScript-based web development projects on [Your Blog Name]. Discover tutorials, code samples, and insights to level up your skills with TypeScript in web development.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "TypeScript projects, TypeScript web development, web development tutorials, TypeScript code examples, TypeScript programming, web development with TypeScript, TypeScript development, front-end TypeScript projects, backend TypeScript projects, TypeScript development tutorials",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

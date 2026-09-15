@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Vue.js, web development, Vue.js projects, Vue.js tutorials, Vue.js resources, front-end development, JavaScript, web development projects, personal blog, coding projects, Vue.js solutions, web app development, Vue.js code snippets",
     description:
         "Explore a curated list of Vue.js projects in web development. Discover innovative solutions, tutorials, and resources for mastering Vue.js. Perfect for developers looking to expand their skills with practical examples and code snippets.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Vue.js, web development, Vue.js projects, Vue.js tutorials, Vue.js resources, front-end development, JavaScript, web development projects, personal blog, coding projects, Vue.js solutions, web app development, Vue.js code snippets",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Vite, Vite projects, web development, modern web apps, fast web development, frontend development, Vite tutorials, Vite examples, web app solutions",
     description:
         "Discover a curated list of Vite projects in web development. Explore innovative solutions, best practices, and hands-on examples for building fast and modern web applications with Vite.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Vite, Vite projects, web development, modern web apps, fast web development, frontend development, Vite tutorials, Vite examples, web app solutions",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

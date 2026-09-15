@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "DevOps, CI/CD, continuous integration, continuous deployment, GitHub Actions, Docker, Kubernetes, automation, infrastructure, deployment pipelines, containerisation, cloud computing, monitoring, testing",
     description:
         "Explore DevOps articles covering CI/CD pipelines, automation, containerisation, and infrastructure best practices. Learn how to streamline your development workflow and deploy with confidence.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "DevOps, CI/CD, continuous integration, continuous deployment, GitHub Actions, Docker, Kubernetes, automation, infrastructure, deployment pipelines, containerisation, cloud computing, monitoring, testing",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

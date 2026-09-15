@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Vue.js, React.js, Nuxt.js, Node.js, Nest.js, Firebase, JavaScript, Frontend Development, Web Development, PHP, Python, AI, Artificial Intelligence, CSS, HTML, Tech Tutorials, Melbourne, Australia, Aleks Trpkovski, Articles, Tutorials, Web Apps, Software Development",
     description:
         "Explore insightful articles and tutorials by Aleks Trpkovski on web development, JavaScript frameworks, AI, and more.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Vue.js, React.js, Nuxt.js, Node.js, Nest.js, Firebase, JavaScript, Frontend Development, Web Development, PHP, Python, AI, Artificial Intelligence, CSS, HTML, Tech Tutorials, Melbourne, Australia, Aleks Trpkovski, Articles, Tutorials, Web Apps, Software Development",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Artificial Intelligence articles, AI insights, machine learning trends, AI advancements, AI tutorials, AI blogs, artificial intelligence news, AI developments, AI technology updates",
     description:
         "Dive into our curated collection of articles on Artificial Intelligence. Stay updated with the latest advancements, trends, and insights in AI, machine learning, and more.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Artificial Intelligence articles, AI insights, machine learning trends, AI advancements, AI tutorials, AI blogs, artificial intelligence news, AI developments, AI technology updates",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

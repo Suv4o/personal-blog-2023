@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "LangChain, LangChain development, LangChain tutorials, LangChain resources, language model development, LangChain projects, AI development, LLMs, language models, machine learning tools, LangChain examples, AI tools, natural language processing, NLP projects",
     description:
         "Explore a curated list of LangChain development projects and resources. Stay updated with the latest tutorials, tools, and examples to leverage LangChain for building powerful language models and applications.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "LangChain, LangChain development, LangChain tutorials, LangChain resources, language model development, LangChain projects, AI development, LLMs, language models, machine learning tools, LangChain examples, AI tools, natural language processing, NLP projects",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

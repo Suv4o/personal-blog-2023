@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Nuxt.js development, Nuxt.js tutorials, Nuxt.js guides, web development, Vue.js, JavaScript frameworks, Nuxt.js best practices, Nuxt.js tips, modern web apps",
     description:
         "Explore a collection of detailed tutorials, guides, and tips focused on Nuxt.js development. Perfect for developers looking to enhance their skills in building modern web applications.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Nuxt.js development, Nuxt.js tutorials, Nuxt.js guides, web development, Vue.js, JavaScript frameworks, Nuxt.js best practices, Nuxt.js tips, modern web apps",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

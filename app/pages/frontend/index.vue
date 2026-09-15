@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "FrontEnd development, FrontEnd tutorials, web development tips, JavaScript frameworks, CSS techniques, UI/UX best practices, frontend tools, modern web design, frontend coding tips",
     description:
         "Explore the latest FrontEnd development tutorials, tips, and tools. From modern frameworks to UI/UX best practices, dive into expert insights and practical guides.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "FrontEnd development, FrontEnd tutorials, web development tips, JavaScript frameworks, CSS techniques, UI/UX best practices, frontend tools, modern web design, frontend coding tips",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

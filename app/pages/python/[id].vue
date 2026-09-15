@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Python web development, Python projects, web development with Python, Python for web apps, Python web applications, web development projects, Python development tutorials, Python frameworks",
     description:
         "Explore a curated list of Python-based projects for web development. Find inspiration and insights for building powerful web applications using Python.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Python web development, Python projects, web development with Python, Python for web apps, Python web applications, web development projects, Python development tutorials, Python frameworks",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "VSCode, web development projects, VSCode tools, coding workflow, VSCode extensions, web development tips, VSCode resources, frontend development, VSCode for developers",
     description:
         "Explore a curated list of VSCode projects for web development. Discover powerful tools, tips, and resources for building efficient web apps and improving your coding workflow.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "VSCode, web development projects, VSCode tools, coding workflow, VSCode extensions, web development tips, VSCode resources, frontend development, VSCode for developers",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

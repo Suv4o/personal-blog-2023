@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "Tesla, electric vehicle, EV, Tesla API, vehicle-command, Tesla Bluetooth, home automation, solar charging, Model Y, Tesla open source",
     description:
         "Explore Tesla articles covering vehicle APIs, home automation integrations, and building tools around Tesla's software and hardware.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "Tesla, electric vehicle, EV, Tesla API, vehicle-command, Tesla Bluetooth, home automation, solar charging, Model Y, Tesla open source",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

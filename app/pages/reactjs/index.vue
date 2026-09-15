@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "React.js, React projects, web development, JavaScript, React tutorials, frontend development, React code examples, React best practices, web development projects, React apps",
     description:
         "Explore a curated collection of React.js projects in web development. Find tutorials, code examples, and best practices to level up your React skills.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "React.js, React projects, web development, JavaScript, React tutorials, frontend development, React code examples, React best practices, web development projects, React apps",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,

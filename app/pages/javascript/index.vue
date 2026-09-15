@@ -8,8 +8,6 @@ definePageMeta({
 });
 
 useSeoMeta({
-    keywords:
-        "JavaScript tutorials, JavaScript articles, JavaScript tips, frontend development, JavaScript techniques, JavaScript guides, modern JavaScript, web development, coding tips, frontend developer resources",
     description:
         "Explore insightful JavaScript articles and tutorials designed for frontend developers. From core concepts to advanced techniques, stay updated with practical tips and examples.",
     ogDescription:
@@ -30,6 +28,11 @@ useSeoMeta({
 
 useHead({
     meta: [
+        {
+            name: "keywords",
+            content:
+                "JavaScript tutorials, JavaScript articles, JavaScript tips, frontend development, JavaScript techniques, JavaScript guides, modern JavaScript, web development, coding tips, frontend developer resources",
+        },
         {
             name: "twitter:url",
             content: `https://www.trpkovski.com/${route.path}`,
