@@ -64,6 +64,9 @@ articleTags:
 ---
 ```
 
+There is one more optional field, `updated`, which is **not** used when converting a new draft. It
+is added later, when an already-published article is revised — see the `update-article` skill.
+
 Rules:
 
 - `title` — quote it only when it contains a colon or other YAML-significant character; otherwise leave unquoted.

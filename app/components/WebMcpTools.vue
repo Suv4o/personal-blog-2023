@@ -18,6 +18,7 @@ function formatArticle(article: Article) {
         path: article.path,
         description: article.description,
         published: article.published,
+        updated: article.updated,
         readTime: article.readTime,
         author: article.author,
         tags: article.articleTags,
@@ -98,7 +99,7 @@ useMcpTool({
 useMcpTool({
     name: "get_article",
     description:
-        "Get full details of a specific blog article by its path. Returns title, description, image, tags, published date, read time, and author.",
+        "Get full details of a specific blog article by its path. Returns title, description, image, tags, published date, last updated date (when the article has been revised), read time, and author.",
     inputSchema: {
         type: "object",
         properties: {

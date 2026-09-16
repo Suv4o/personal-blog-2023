@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Article } from "~/types";
+import { toIsoDate } from "~/utils/article-dates";
 
 const route = useRoute();
 const { loadPrismScript, unloadPrismScript } = usePrism();
@@ -80,6 +81,8 @@ useSeoMeta({
     twitterDescription: article.value?.description ?? "",
     twitterImage: article.value?.image ?? "",
     twitterCard: "summary_large_image",
+    articlePublishedTime: toIsoDate(article.value?.published),
+    articleModifiedTime: toIsoDate(article.value?.updated ?? article.value?.published),
 });
 
 useHead({

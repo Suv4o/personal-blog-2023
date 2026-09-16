@@ -235,11 +235,6 @@
   resolved "https://registry.yarnpkg.com/@bomb.sh/tab/-/tab-0.0.12.tgz#68d9babce5d49df8c201fa993f1157ba3f61c2f0"
   integrity sha512-dYRwg4MqfHR5/BcTy285XOGRhjQFmNpaJBZ0tl2oU+RY595MQ5ApTF6j3OvauPAooHL6cfoOZMySQrOQztT8RQ==
 
-"@cfworker/json-schema@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@cfworker/json-schema/-/json-schema-4.1.1.tgz#4a2a3947ee9fa7b7c24be981422831b8674c3be6"
-  integrity sha512-gAmrUZSGtKc3AiBL71iNWxDsyUC5uMaKKGdvzYsBoTW/xi42JQHl7eKV2OYzCUqvc+D2RCcf7EXY2iCyFIk6og==
-
 "@clack/core@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@clack/core/-/core-1.0.0.tgz#7ff31271eba8255f8171a5b607bbc9c46cb3cc8c"
@@ -712,45 +707,63 @@
     semver "^7.5.3"
     tar "^7.4.0"
 
-"@mcp-b/global@^2.0.13":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@mcp-b/global/-/global-2.1.0.tgz#35ab7106f9f2fc39ea6851367903b94e5f928658"
-  integrity sha512-LGIf7ruzuTAD69Nv7lYJJ2F0kba7FaIwO5IT0YMpEhwg/H6QPqHkF8xQIxzku4j6MZrPas97jFGYFAsFB8W8ug==
+"@mcp-b/global@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@mcp-b/global/-/global-5.1.0.tgz#8a0da509442d99dbe4f889dc993780f74add069f"
+  integrity sha512-svEHmo31XhPluoA5HJ+F2jGQ+O6Cx7Kpo6dFgI/pGC1g0knvrMOAq9Wb2+9fJycgOFqKcMsYAvM7qTusY5lmsQ==
   dependencies:
-    "@mcp-b/transports" "2.1.0"
-    "@mcp-b/webmcp-polyfill" "2.1.0"
-    "@mcp-b/webmcp-ts-sdk" "2.1.0"
-    "@mcp-b/webmcp-types" "2.1.0"
+    "@mcp-b/transports" "5.1.0"
+    "@mcp-b/webmcp-polyfill" "5.1.0"
+    "@mcp-b/webmcp-ts-sdk" "5.1.0"
+    "@mcp-b/webmcp-types" "5.1.0"
+    "@modelcontextprotocol/server" "2.0.0"
 
-"@mcp-b/transports@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@mcp-b/transports/-/transports-2.1.0.tgz#aa39acc0a16c28f912f564372c379ac280290034"
-  integrity sha512-dWTVLjkJtCafHw1SOm93cHt84PvC+fgXSHPUySJlRXTaOHorohgifpLhhxx9XNoYlpNzjwDir53XSEtQXq247w==
+"@mcp-b/transports@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@mcp-b/transports/-/transports-5.1.0.tgz#77189dd58f8b82be2991cb86486ef0c851d8b124"
+  integrity sha512-x+Czu2ZcUaLuiVAzViFMfno2NwPkHIfmUVYP3VeCa0tbAuZ8jRPrgboUuk86bVF0FI3qZ8u7OX7UUR3WmwVsKw==
   dependencies:
-    "@mcp-b/webmcp-ts-sdk" "2.1.0"
-    zod "3.25.76"
+    "@modelcontextprotocol/core" "2.0.0"
+    "@modelcontextprotocol/server" "2.0.0"
 
-"@mcp-b/webmcp-polyfill@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@mcp-b/webmcp-polyfill/-/webmcp-polyfill-2.1.0.tgz#1233a2a855067ca92fc20194dbbdfb6c4093d784"
-  integrity sha512-AKvdv49WRNvzrmgRo+3M3/RPriudc/fyfkRwaC6gaIpReleNUnRFe55W2DpTu9hiY8gdMDgIF4Qag7YrGR/JAQ==
+"@mcp-b/webmcp-polyfill@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@mcp-b/webmcp-polyfill/-/webmcp-polyfill-5.1.0.tgz#05b0e2c29ff649765ec4bf7dc8ee4bda0bb59032"
+  integrity sha512-KL09hniFssPY8HBO3qzurWPqm+1JYRwV3wx6x2XSySgo+6BL1XHGsHGIoAO7U9zzigv7TA5keNBoZ+3P1jq18g==
   dependencies:
-    "@cfworker/json-schema" "^4.1.1"
-    "@mcp-b/webmcp-types" "2.1.0"
+    "@mcp-b/webmcp-types" "5.1.0"
     "@standard-schema/spec" "^1.1.0"
 
-"@mcp-b/webmcp-ts-sdk@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@mcp-b/webmcp-ts-sdk/-/webmcp-ts-sdk-2.1.0.tgz#9589862e8e5e45515186079d101390d633517d80"
-  integrity sha512-eJyD0fy660bsiMLrnVJOGTNcbkuyGGoqSX5sOBjlVOi+I9Rcd5TFJZSD2aznNqJPG2ubt1lZg4hCqGt/Hec/EQ==
+"@mcp-b/webmcp-ts-sdk@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@mcp-b/webmcp-ts-sdk/-/webmcp-ts-sdk-5.1.0.tgz#2f7035b17075a0484216724a7a1127c7c7927233"
+  integrity sha512-iCR6Vzz6zpoWW2w0NRidlxw54mH0a/HhseCAzVaZsPjPm5o2VMQ+AJbZlFoYnNwCiqMFrba9/OQO33xO2RdNGQ==
   dependencies:
-    "@mcp-b/webmcp-polyfill" "2.1.0"
-    "@mcp-b/webmcp-types" "2.1.0"
+    "@mcp-b/webmcp-polyfill" "5.1.0"
+    "@mcp-b/webmcp-types" "5.1.0"
+    "@modelcontextprotocol/server" "2.0.0"
 
-"@mcp-b/webmcp-types@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@mcp-b/webmcp-types/-/webmcp-types-2.1.0.tgz#82f3cd14bc1e9cd5619836b5b6312600586f41e1"
-  integrity sha512-49PRpE8LiLKtfEbM04E4qKnXfy+PEjVAqE1Z7PAykdw9YyBV0fRxEHVhX/KJfyVCatxgZIoMZChdX8uz7HpRMQ==
+"@mcp-b/webmcp-types@5.1.0", "@mcp-b/webmcp-types@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@mcp-b/webmcp-types/-/webmcp-types-5.1.0.tgz#993f85121f5c271bdac8ad5b05ffaaa97b3fca19"
+  integrity sha512-twOKDUr7al60K890HvRcNvoHSfQ2rnGeKJiQs6eUr+Leg+LQ6K+yz3F4K70jykMK1a09ZIgYb3Oc7mAypuKPig==
+  dependencies:
+    "@modelcontextprotocol/server" "2.0.0"
+
+"@modelcontextprotocol/core@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@modelcontextprotocol/core/-/core-2.0.0.tgz#c918a4c6aef22a7c59dfb0aabc2a82c187cce157"
+  integrity sha512-pJCEwGG7Lfr/+PQp9ZTwKXNeO5wzbfKL7H3MYpCorM4oFBoQrdjnBgEoqG+RjhsvS1FKrDbKux+M1HhlnGWqcA==
+  dependencies:
+    zod "^4.2.0"
+
+"@modelcontextprotocol/server@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@modelcontextprotocol/server/-/server-2.0.0.tgz#4fae5ccb8f7925ed9a6bf6595bb3b58617063ffd"
+  integrity sha512-YhHWdHfpFMQfd0prsEnxKeS3Qz3ytIGmsS0sth4KDjnacIT7hxk6hXHkJ9KysxlkvTM+WZAtQbbcUhdoP4Hvtw==
+  dependencies:
+    "@modelcontextprotocol/core" "2.0.0"
+    zod "^4.2.0"
 
 "@napi-rs/wasm-runtime@^1.1.0", "@napi-rs/wasm-runtime@^1.1.1":
   version "1.1.1"
@@ -953,7 +966,7 @@
   optionalDependencies:
     ipx "^3.1.1"
 
-"@nuxt/kit@4.3.1", "@nuxt/kit@^4.2.0", "@nuxt/kit@^4.2.1", "@nuxt/kit@^4.2.2", "@nuxt/kit@^4.3.1":
+"@nuxt/kit@4.3.1", "@nuxt/kit@^4.2.0", "@nuxt/kit@^4.2.1", "@nuxt/kit@^4.2.2":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-4.3.1.tgz#e65f49b11a2ecb56c32a7173b3826f0eeee2b682"
   integrity sha512-UjBFt72dnpc+83BV3OIbCT0YHLevJtgJCHpxMX0YRKWLDhhbcDdUse87GtsQBrjvOzK7WUNUYLDS/hQLYev5rA==
@@ -5401,14 +5414,6 @@ nuxt-component-meta@0.17.1:
     ufo "^1.6.2"
     vue-component-meta "^3.2.2"
 
-nuxt-mcp-b@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/nuxt-mcp-b/-/nuxt-mcp-b-1.0.0.tgz#2b5b90be988ad8b4c030bdcde610f0dca4e87dc0"
-  integrity sha512-zBF+TDNCyevzHNrGNWGhKTJddn9lFJ6qVA0S47siN+C2VdCM4BUNrIzXUVURsu82Hb5le/Nd09WTeOhcu/0fbA==
-  dependencies:
-    "@mcp-b/global" "^2.0.13"
-    "@nuxt/kit" "^4.3.1"
-
 nuxt@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-4.3.1.tgz#f6fefbec9b838e3c3908181b9444d1daedfe7fdb"
@@ -7789,10 +7794,15 @@ zod-to-json-schema@^3.25.1:
   resolved "https://registry.yarnpkg.com/zod-to-json-schema/-/zod-to-json-schema-3.25.1.tgz#7f24962101a439ddade2bf1aeab3c3bfec7d84ba"
   integrity sha512-pM/SU9d3YAggzi6MtR4h7ruuQlqKtad8e9S0fmxcMi+ueAK5Korys/aWcV9LIIHTVbj01NdzxcnXSN+O74ZIVA==
 
-zod@3.25.76, zod@^3.25.76:
+zod@^3.25.76:
   version "3.25.76"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.25.76.tgz#26841c3f6fd22a6a2760e7ccb719179768471e34"
   integrity sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==
+
+zod@^4.2.0:
+  version "4.6.5"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-4.6.5.tgz#e3af3edbdc260239c52f73caad05dbbffe6e82cd"
+  integrity sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==
 
 zwitch@^2.0.0, zwitch@^2.0.4:
   version "2.0.4"

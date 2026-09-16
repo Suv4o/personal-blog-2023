@@ -13,6 +13,7 @@ export default defineContentConfig({
                 type: z.string(),
                 blog: z.string(),
                 published: z.string(),
+                updated: z.string().optional(),
                 readTime: z.number(),
                 author: z.string(),
                 articleTags: z.array(z.string()),

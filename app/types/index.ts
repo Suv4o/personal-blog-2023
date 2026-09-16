@@ -11,6 +11,7 @@ export interface Article {
     navigation: boolean;
     path: string;
     published: string;
+    updated?: string;
     readTime: number;
     stem: string;
     title: string;
