@@ -5,7 +5,7 @@ import path from "path";
 import { isBlogPostUrl } from "./app/utils/url-helpers";
 import { processEmbeddings } from "./app/utils/process-embeddings";
 import { getEmbeddingsFilePath } from "./app/utils/file-paths";
-import { pipeline } from "@huggingface/transformers";
+import { env, pipeline } from "@huggingface/transformers";
 
 async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
     const files: string[] = [];
@@ -80,6 +80,8 @@ async function getAllMarkdownFiles(dirPath: string): Promise<string[]> {
     });
 
     const articlesEmbeddings = [];
+    // Keep the model outside node_modules so the CI cache can restore it between deploys
+    env.cacheDir = path.join(process.cwd(), ".cache/transformers");
     const extractor = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2");
 
     for (const markdown of markdownFiles) {

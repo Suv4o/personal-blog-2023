@@ -31,6 +31,13 @@ jobs:
                   rm -f yarn.lock
                   rm -rf node_modules
 
+            # postinstall (nuxt prepare) loads the embedding model, so restore it before installing
+            - name: Cache Hugging Face model
+              uses: actions/cache@v4
+              with:
+                  path: .cache/transformers
+                  key: transformers-Xenova-all-MiniLM-L6-v2
+
             - name: Run install root
               run: yarn install
 
