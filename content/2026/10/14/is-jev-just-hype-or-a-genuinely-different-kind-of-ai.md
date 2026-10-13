@@ -46,6 +46,9 @@ _{{$document.published}} • {{$document.readTime}} min read — by **[{{$docume
 ::tag-pills{:tags="articleTags"}
 ::
 
+::audio-player{:audioSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/10/14/is-jev-just-hype-or-a-genuinely-different-kind-of-ai/summary.mp3" :transcriptSrc="https://cdn.jsdelivr.net/gh/Suv4o/personal-blog-2023/audio-summary/2026/10/14/is-jev-just-hype-or-a-genuinely-different-kind-of-ai/summary.json"}
+::
+
 ![Landing Image](https://res.cloudinary.com/suv4o/image/upload/q_auto,f_auto,w_750,e_sharpen:100/v1791364244/blog/is-jev-just-hype-or-a-genuinely-different-kind-of-ai/cover-img_y72bjg)
 
 By now, you've probably heard of Jev, a model TypeSafe AI released on 15 September 2026. It doesn't generate text. Instead, it answers structured questions - choosing one of several options, scoring against a rubric, or answering yes or no - in roughly 70 to 500 milliseconds, according to TypeSafe.
